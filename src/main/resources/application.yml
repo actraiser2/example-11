@@ -23,8 +23,7 @@ server:
 #    ciphers: TLS_RSA_WITH_AES_128_CBC_SHA256, INCLUDE_ANY_OTHER_ONES_YOU_NEED_TO_SUPPORT
 #    protocol: TLS
 #    enabled-protocols: TLSv1.2    
-    
-        
+          
 
 spring:
   mvc:    log-request-details: true # Whether logging of (potentially sensitive) request details at DEBUG and TRACE level is allowed.
@@ -32,36 +31,10 @@ spring:
     ansi:
       enabled: detect
   #mandatory-file-encoding: UTF-8 #desactivar en Windows
-  application:
-    name: @project.artifactId@
   jmx:
     enabled: true
     unique-names: true
     
-    
-  cloud:
-    kubernetes:
-      reload:
-        enabled: true
-        #refresh: only @ConfigurationProperties or @RefreshScope
-        #restart_context: all context are reloaded
-        #shutdown
-        strategy: refresh
-        monitoring-config-maps: true
-        monitoring-secrets: true
-      config:
-        name: @project.artifactId@
-        #namespace: ams-dev
-        sources:
-         #if spring.cloud.kubernetes.config.namespace had not been set, the ConfigMap named c1 would be looked up in the namespace that the application runs.
-         # Spring Cloud Kubernetes looks up a ConfigMap named c1 in namespace default-namespace
-         #- name: c1
-         # Spring Cloud Kubernetes looks up a ConfigMap named default-name in whatever namespace n2
-         #- namespace: n2
-         # Spring Cloud Kubernetes looks up a ConfigMap named c3 in namespace n3
-         #- namespace: n3
-           name: @project.artifactId@
-
   security:
     enabled: true
     cors:
@@ -139,25 +112,10 @@ management:
       #cors:
       #  allowed-origins: https://example.com
       #  allowed-methods: GET,POST
-#      exposure:
-#        include: "*"
+      exposure:
+       include: "*"
 #      exclude:
 #        include: env,beans
       path-mapping:
         prometheus: /metrics
         
-
-logging:
-  register-shutdown-hook: true
-  file:
-    name: log/@project.artifactId@.log
-  level:
-    root: INFO
-    com.santalucia: DEBUG
-    org.springframework: INFO
-    org.springframework.web.servlet: DEBUG
-    #org.springframework.security: DEBUG
-    org.springframework.web.client: DEBUG
-    org.springframework.security.oauth2.server.resource: DEBUG #trazas para mostrar los errores de login debido a que salen en modo debug
-
-    
