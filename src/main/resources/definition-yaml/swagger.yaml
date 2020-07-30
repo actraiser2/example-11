@@ -1,0 +1,68 @@
+---
+swagger: 2.0
+info:
+  description: Hello World API
+  version: 1.0
+  title: hello-world
+  contact:
+    name: Arquitectura Software
+    url: none
+    email: ignacio.lopezv@santalucia.es
+  x-dominio: Gadgets
+  x-desc-dominio:
+    schema:
+      $ref: '#/definitions/desc-dominio'
+host: apis.santalucia.es
+basePath: /hello-world/v1
+schemes:
+- https
+consumes:
+- application/json
+produces:
+- application/json
+security:
+- oauthApplication: []
+paths:
+  /hello/{name}:
+    get:
+      tags:
+      - hello-world
+      summary: say hello to name
+      description: say hello to name
+      operationId: getHelloByName
+      parameters:
+      - name: name
+        in: path
+        description: hello name
+        required: true
+        type: string
+        maxLength: 15
+      - name: X-Request-Id
+        in: header
+        description: Identificador único de la petición
+        required: false
+        type: string
+        format: uuid
+        x-example: AVDGSGRT-DHUEYR74R-SJDK75EJDSK
+      responses:
+        "200":
+          description: ok response
+          schema:
+            $ref: '#/definitions/identidadDigitalConsulta'
+
+ 
+securityDefinitions:
+  oauthApplication:
+    type: oauth2
+    tokenUrl: https://sso-sldev.santalucia.es/auth/realms/stl-int/protocol/openid-connect/token
+    flow: application
+    
+definitions:
+  identidadDigitalConsulta:
+    type: object
+    properties:
+      nombre:
+        type: string
+        example: hello juan
+        description: Nombre
+        maxLength: 40

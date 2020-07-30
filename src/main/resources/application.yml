@@ -1,0 +1,163 @@
+#https://docs.spring.io/spring-boot/docs/2.1.9.RELEASE/reference/html/common-application-properties.html
+#Multitenant https://docs.spring.io/spring-security/site/docs/current/reference/html5/#resolving-the-tenant-by-claim
+#https://docs.spring.io/spring-security/site/docs/current/reference/html5/#oauth2resourceserver-opaque-minimalconfiguration
+#https://docs.spring.io/spring-security/site/docs/current/reference/html5/#bearer-token-propagation
+
+server:
+  port: 8080
+  error:
+    include-exception: true # Include the "exception" attribute. default false
+    include-stacktrace: always # When to include a "stacktrace" attribute. default never
+  compression:
+    enabled: true
+#  forward-headers-strategy: native #default is ncsa 
+  http2:
+    enabled: false
+  servlet:
+    session:
+      cookie:
+        http-only: true
+        secure: true
+  ssl:
+    enabled: false
+#    ciphers: TLS_RSA_WITH_AES_128_CBC_SHA256, INCLUDE_ANY_OTHER_ONES_YOU_NEED_TO_SUPPORT
+#    protocol: TLS
+#    enabled-protocols: TLSv1.2    
+    
+        
+
+spring:
+  mvc:    log-request-details: true # Whether logging of (potentially sensitive) request details at DEBUG and TRACE level is allowed.
+  output:
+    ansi:
+      enabled: detect
+  #mandatory-file-encoding: UTF-8 #desactivar en Windows
+  application:
+    name: @project.artifactId@
+  jmx:
+    enabled: true
+    unique-names: true
+    
+    
+  cloud:
+    kubernetes:
+      reload:
+        enabled: true
+        #refresh: only @ConfigurationProperties or @RefreshScope
+        #restart_context: all context are reloaded
+        #shutdown
+        strategy: refresh
+        monitoring-config-maps: true
+        monitoring-secrets: true
+      config:
+        name: @project.artifactId@
+        #namespace: ams-dev
+        sources:
+         #if spring.cloud.kubernetes.config.namespace had not been set, the ConfigMap named c1 would be looked up in the namespace that the application runs.
+         # Spring Cloud Kubernetes looks up a ConfigMap named c1 in namespace default-namespace
+         #- name: c1
+         # Spring Cloud Kubernetes looks up a ConfigMap named default-name in whatever namespace n2
+         #- namespace: n2
+         # Spring Cloud Kubernetes looks up a ConfigMap named c3 in namespace n3
+         #- namespace: n3
+           name: @project.artifactId@
+
+  security:
+    enabled: true
+    cors:
+      enabled: false
+    csrf:
+      enabled: false
+    oauth2:
+      resourceserver:      
+        jwt: #para habilitar la validacion 
+          jws-algorithm: RS256 #posibles valores RS256,RS512 depende del realm
+          jwk-set-uri: https://sso-sldev.santalucia.es/auth/realms/stl-int/protocol/openid-connect/certs
+          issuer-uri: https://sso-sldev.santalucia.es/auth/realms/stl-int # URI that an OpenID Connect Provider asserts as its Issuer Identifier.
+#        opaquetoken: #si se quiere validar cada request contra rhsso y el end-point instrospect
+#          introspection-uri: https://sso-sldev.santalucia.es/auth/realms/stl-int/protocol/openid-connect/token/introspect
+#          client-id: nacho-test-sb2-oauth2
+#          client-secret: 397afcf0-9d30-4b19-bf9f-f8b57d7620bc
+          
+          
+#      client: en caso que se quiera configurar el flujo code, no soportado por el back
+#        registration: 
+#          keycloak:   
+#            client-id: nacho-test-sb2-oauth2
+#            client-secret: 397afcf0-9d30-4b19-bf9f-f8b57d7620bc
+#        provider: 
+#          keycloak:
+#            issuer-uri: https://sso-sldev.santalucia.es/auth/realms/stl-int/.well-known/openid-configuration
+            
+
+  #datasource:
+  #  hikari:
+      # leakDetectionThreshold: 10000
+  #    poolName: pool-${spring.application.name}
+  #    maximumPoolSize: 50 # should be the same as the executor thread pool https://stackoverflow.com/questions/49119771/why-does-spring-batch-use-1-database-connection-for-each-thread
+
+info:
+  app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @java.version@
+      target: @java.version@
+
+management:
+  server:
+    port: 8081
+  info:
+    git:
+      mode: full
+  trace:
+    http:
+      enabled: true # Whether to enable HTTP request-response tracing.
+      include: request-headers,response-headers,cookie-headers # Items to be included in the trace.
+  endpoint:
+    security:
+      disable:
+        end-points: info,readiness,health,metrics
+    health:
+      show-details: always 
+    prometheus:
+      enabled: true
+    metrics: 
+      enabled: true
+  metrics:
+    export:
+ #     dynatrace:
+ #       api-token: YOUR_TOKEN
+ #       device-id: YOUR_DEVICE_ID
+ #       dynatrace.uri: YOUR_URI
+ #       step: 5s
+      prometheus:
+        enabled: true   
+  endpoints:
+    enabled-by-default: true # Whether to enable or disable all endpoints by default.
+    web:
+      #cors:
+      #  allowed-origins: https://example.com
+      #  allowed-methods: GET,POST
+#      exposure:
+#        include: "*"
+#      exclude:
+#        include: env,beans
+      path-mapping:
+        prometheus: /metrics
+        
+
+logging:
+  register-shutdown-hook: true
+  file:
+    name: log/@project.artifactId@.log
+  level:
+    root: INFO
+    com.santalucia: DEBUG
+    org.springframework: INFO
+    org.springframework.web.servlet: DEBUG
+    #org.springframework.security: DEBUG
+    org.springframework.web.client: DEBUG
+    org.springframework.security.oauth2.server.resource: DEBUG #trazas para mostrar los errores de login debido a que salen en modo debug
+
+    

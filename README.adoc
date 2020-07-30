@@ -1,0 +1,33 @@
+= MAVEN ARCHETYPE
+
+=== Añadir nuevo fichero
+Para añadir un nuevo fichero hay que seguir los siguientes pasos:
+
+1. Crear el nuevo fichero en la ruta correspondiente.
+2. Añadir una nueva entrada en el fileset correspondiente del fichero src/main/resources/META-INF/maven/archetype-metadata.xml
+   ``https://maven.apache.org/archetype/maven-archetype-plugin/specification/archetype-metadata.html``
+
+=== Añadir nuevo módulo
+Para añadir un nuevo modulo hay que seguir los siguientes pasos:
+
+1. Crear el nuevo directorio en src/main/resources/archetype-resources con el siguiente formato __rootArtifactId__-<nombre_modulo>
+2. Añadir una nueva entrada en <modules></modules> del fichero src/main/resources/META-INF/maven/archetype-metadata.xml
+----
+    <module id="${rootArtifactId}-boot" dir="__rootArtifactId__-boot" name="${rootArtifactId}-boot">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+        </fileSet>
+          <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/main/resources</directory>
+          </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/test/java</directory>
+        </fileSet>
+      <fileSet packaged="true" encoding="UTF-8">
+        <directory>src/test/groovy</directory>
+      </fileSet>
+      </fileSets>
+    </module>
+----
+
