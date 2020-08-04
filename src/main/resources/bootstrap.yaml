@@ -1,4 +1,4 @@
-debug: true # Enable debug logs.
+debug: false # Enable debug logs.
 trace: false # Enable trace logs.
 
 spring:
@@ -49,7 +49,7 @@ spring:
     kubernetes:
         enabled: true
         
-debug: true # Enable debug logs.
+debug: false # Enable debug logs.
 trace: false # Enable trace logs.
 ---
 spring:
@@ -58,5 +58,5 @@ spring:
     kubernetes:
         enabled: false
         
-debug: true # Enable debug logs.
+debug: false # Enable debug logs.
 trace: false # Enable trace logs.
