@@ -27,7 +27,7 @@ server:
 
 spring:
   mvc: 
-  	log-request-details: true # Whether logging of (potentially sensitive) request details at DEBUG and TRACE level is allowed.
+    log-request-details: true # Whether logging of (potentially sensitive) request details at DEBUG and TRACE level is allowed.
   output:
     ansi:
       enabled: detect
