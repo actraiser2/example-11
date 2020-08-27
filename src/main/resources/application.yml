@@ -26,7 +26,7 @@ server:
           
 
 spring:
-  mvc:    log-request-details: true # Whether logging of (potentially sensitive) request details at DEBUG and TRACE level is allowed.
+  mvc: log-request-details: true # Whether logging of (potentially sensitive) request details at DEBUG and TRACE level is allowed.
   output:
     ansi:
       enabled: detect
@@ -118,4 +118,11 @@ management:
 #        include: env,beans
       path-mapping:
         prometheus: /metrics
-        
+ ---
+spring:
+  profiles: kubernetes #Profile habilitado de forma automatica cuando se despliega en OCP
+  mandatory-file-encoding: UTF-8 
+---
+spring:
+  profiles: devops #Profile para deshabilitar kubernetes
+  mandatory-file-encoding: UTF-8 
