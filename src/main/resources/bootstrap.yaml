@@ -7,7 +7,7 @@ spring:
     
   cloud:
     kubernetes:
-      enabled: true
+      enabled: false
       reload:
         enabled: true
         #refresh: only @ConfigurationProperties or @RefreshScope
@@ -45,6 +45,7 @@ logging:
 ---
 spring:
   profiles: kubernetes #Profile habilitado de forma automatica cuando se despliega en OCP
+  mandatory-file-encoding: UTF-8
   cloud:
     kubernetes:
         enabled: true
@@ -54,6 +55,7 @@ trace: false # Enable trace logs.
 ---
 spring:
   profiles: devops #Profile para deshabilitar kubernetes
+  mandatory-file-encoding: UTF-8
   cloud:
     kubernetes:
         enabled: false
