@@ -15,7 +15,7 @@ spring:
         #shutdown: full restart; not recomended
         strategy: refresh
         monitoring-config-maps: true
-        monitoring-secrets: true
+        monitoring-secrets: false
       config:
         name: ${spring.application.name}
         #namespace: juan
