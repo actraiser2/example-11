@@ -20,6 +20,8 @@ server:
 #    enabled-protocols: TLSv1.2
 
 spring:
+  application:
+    name: example-app
   mvc: 
     log-request-details: true # Whether logging of (potentially sensitive) request details at DEBUG and TRACE level is allowed.
   output:
@@ -64,6 +66,12 @@ spring:
   #    poolName: pool-${spring.application.name}
   #    maximumPoolSize: 50 # should be the same as the executor thread pool https://stackoverflow.com/questions/49119771/why-does-spring-batch-use-1-database-connection-for-each-thread
 
+opentracing:
+  jaeger:
+    enabled: true
+    log-spans: true
+    http-sender:
+       url: https://jaeger-collector-lab-arquitectura-dev.app-dev.santalucia.net/api/traces
 info:
   app:
     name: @project.artifactId@
