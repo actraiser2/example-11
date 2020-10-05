@@ -57,11 +57,6 @@
 		
 		<dependency>
 			<groupId>com.santalucia.arq.ams</groupId>
-			<artifactId>ams-starter-events</artifactId>
-		</dependency>
-		
-		<dependency>
-			<groupId>com.santalucia.arq.ams</groupId>
 			<artifactId>ams-componentes-web-security</artifactId>
 		</dependency>
 		
