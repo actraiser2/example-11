@@ -17,9 +17,9 @@ spring:
         monitoring-config-maps: true
         monitoring-secrets: false
       config:
-        name: ${spring.application.name}
+        name: example-app-11
         #namespace: juan
-        sources:
+        #sources:
          #if spring.cloud.kubernetes.config.namespace had not been set, the ConfigMap named c1 would be looked up in the namespace that the application runs.
          # Spring Cloud Kubernetes looks up a ConfigMap named c1 in namespace default-namespace
          #- name: c1
@@ -27,12 +27,12 @@ spring:
          #- namespace: n2
          # Spring Cloud Kubernetes looks up a ConfigMap named c3 in namespace n3
          #- namespace: n3
-           name: ${spring.application.name}
+         #  name: example-app-11
            
 logging:
   register-shutdown-hook: true
   file:
-    name: log/${spring.application.name}.log
+    name: log/example-app-11.log
   level:
     root: INFO
     com.santalucia: DEBUG
