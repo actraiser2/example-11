@@ -21,7 +21,7 @@ server:
 
 spring:
   application:
-    name: example-app
+    name: example-app-11
   mvc: 
     log-request-details: true # Whether logging of (potentially sensitive) request details at DEBUG and TRACE level is allowed.
   output:
