@@ -17,22 +17,12 @@ spring:
         monitoring-config-maps: true
         monitoring-secrets: false
       config:
-        name: example-app-11
-        #namespace: juan
-        #sources:
-         #if spring.cloud.kubernetes.config.namespace had not been set, the ConfigMap named c1 would be looked up in the namespace that the application runs.
-         # Spring Cloud Kubernetes looks up a ConfigMap named c1 in namespace default-namespace
-         #- name: c1
-         # Spring Cloud Kubernetes looks up a ConfigMap named default-name in whatever namespace n2
-         #- namespace: n2
-         # Spring Cloud Kubernetes looks up a ConfigMap named c3 in namespace n3
-         #- namespace: n3
-         #  name: example-app-11
+        name: ${spring.application.name}
            
 logging:
   register-shutdown-hook: true
   file:
-    name: log/example-app-11.log
+    name: log/${spring.application.name}.log
   level:
     root: INFO
     com.santalucia: DEBUG
@@ -55,7 +45,7 @@ trace: false # Enable trace logs.
 ---
 spring:
   profiles: devops #Profile para deshabilitar kubernetes
-#  mandatory-file-encoding: UTF-8
+  mandatory-file-encoding: UTF-8
   cloud:
     kubernetes:
         enabled: false

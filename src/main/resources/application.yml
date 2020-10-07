@@ -9,6 +9,7 @@ server:
   http2:
     enabled: false
   servlet:
+    encoding:      charset: UTF-8
     session:
       cookie:
         http-only: true
@@ -20,8 +21,8 @@ server:
 #    enabled-protocols: TLSv1.2
 
 spring:
-  application:
-    name: example-app-11
+#  application:
+#    name: example-app-11
   mvc: 
     log-request-details: true # Whether logging of (potentially sensitive) request details at DEBUG and TRACE level is allowed.
   output:
@@ -112,6 +113,7 @@ management:
   endpoints:
     enabled-by-default: true # Whether to enable or disable all endpoints by default.
     web:
+      base-path: /management
       #cors:
       #  allowed-origins: https://example.com
       #  allowed-methods: GET,POST
