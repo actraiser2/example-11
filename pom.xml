@@ -74,11 +74,20 @@
 			<groupId>com.santalucia.arq.ams</groupId>
 			<artifactId>ams-componentes-exceptions</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>com.santalucia.arq.ams</groupId>
+			<artifactId>ams-componentes-guardium</artifactId>
+		</dependency>	
+
+		<dependency>
+			<groupId>com.santalucia.arq.ams</groupId>
+			<artifactId>ams-componentes-database</artifactId>
+		</dependency>
 		
 		<dependency>
 			<groupId>com.santalucia.arq.ams</groupId>
 			<artifactId>ams-componentes-tracing</artifactId>
-			<version>2.0.1-SNAPSHOT</version>
 		</dependency>
 
 		<dependency>
@@ -105,6 +114,11 @@
 			<optional>true</optional>
 		</dependency>
 		
+		 <!-- IBM Informix JDBC Driver -->
+        <dependency>
+			<groupId>com.ibm.informix</groupId>
+			<artifactId>jdbc</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>

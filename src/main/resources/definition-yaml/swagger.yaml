@@ -49,8 +49,28 @@ paths:
           description: ok response
           schema:
             $ref: '#/definitions/identidadDigitalConsulta'
-
- 
+  /agencias/list:
+    get:
+      tags:
+      - list-agencias
+      summary: recovery agencias list
+      description: recovery agencias list
+      operationId: getAgenciasList
+      parameters:
+      - name: X-Request-Id
+        in: header
+        description: Identificador único de la petición
+        required: false
+        type: string
+        format: uuid
+        x-example: AVDGSGRT-DHUEYR74R-SJDK75EJDSK
+      responses:
+        "200":
+          description: ok response
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/agencia'
 securityDefinitions:
   oauthApplication:
     type: oauth2
@@ -66,3 +86,31 @@ definitions:
         example: hello juan
         description: Nombre
         maxLength: 40
+  agencia:
+    type: object
+    properties:
+      dprov:
+        type: string
+        example: "Madrid"
+        description: Provincia de la agencia
+        maxLength: 255
+      dpoblaci:
+        type: string
+        example: "Alicante"
+        description: Poblacion de la agencia
+        maxLength: 255
+      dagencia:
+        type: string
+        example: "Nombre agencia"
+        description: Nombre agencia
+        maxLength: 255
+      dtvia:
+        type: string
+        example: "calle"
+        description: tipo de via
+        maxLength: 255
+      ddomici:
+        type: string
+        example: "lepanto 5"
+        description: domicilio de la agencia
+        maxLength: 255

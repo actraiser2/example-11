@@ -9,7 +9,8 @@ server:
   http2:
     enabled: false
   servlet:
-    encoding:      charset: UTF-8
+    encoding:
+      charset: UTF-8
     session:
       cookie:
         http-only: true
@@ -60,8 +61,13 @@ spring:
 #          keycloak:
 #            issuer-uri: https://sso-sldev.santalucia.es/auth/realms/stl-int/.well-known/openid-configuration
             
+  # Conexion para recuperar agencias en pruebas de componente database
+  datasource:
+    driverClassName: com.informix.jdbc.IfxDriver
+    url: jdbc:informix-sqli://slbdifxd11.servidores.net:20101/siis:INFORMIXSERVER=fun_jdbc
+    username: amsdacom
+    password: Am5Spr1ngD4c0m
 
-  #datasource:
   #  hikari:
       # leakDetectionThreshold: 10000
   #    poolName: pool-${spring.application.name}
@@ -123,3 +129,8 @@ management:
 #        include: env,beans
       path-mapping:
         prometheus: /metrics
+santalucia:
+  ams:
+    features:
+      guardium:
+        enabled: false
