@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-import org.mapstruct.factory.Mappers;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
@@ -21,23 +20,23 @@ public class DefaultAgenciasApiDelegate implements AgenciasApiDelegate {
 
 	private final AgenciaService agenciaService;
 
-	public DefaultAgenciasApiDelegate(final AgenciaService agenciaService) {
+	private final AgenciaConverter converter;
+
+	public DefaultAgenciasApiDelegate(AgenciaService agenciaService, AgenciaConverter converter) {
 		this.agenciaService = agenciaService;
+		this.converter = converter;
 	}
 
 	@Override
 	public ResponseEntity<List<Agencia>> getAgenciasList(Optional<UUID> xRequestId) {
 
-		// List<Agencia> listAgencias = new ArrayList<>();
-		// AgenciaConverter converter = Mappers.getMapper(AgenciaConverter.class);
-		//
-		// List<AgenciaDomain> listAgenciasDomain = this.agenciaService.getAgencias();
-		// listAgenciasDomain.forEach((agenciaDomain) -> {
-		// Agencia agencia = converter.convertAgenciaDomainToAgencia(agenciaDomain);
-		// listAgencias.add(agencia);
-		// });
+		List<Agencia> listAgencias = new ArrayList<>();
 
-		List<Agencia> listAgencias = this.agenciaService.getAgencias();
+		List<AgenciaDomain> listAgenciasDomain = this.agenciaService.getAgencias();
+		listAgenciasDomain.forEach((agenciaDomain) -> {
+			Agencia agencia = converter.convertAgenciaDomainToAgencia(agenciaDomain);
+			listAgencias.add(agencia);
+		});
 
 		return new ResponseEntity<List<Agencia>>(listAgencias, HttpStatus.OK);
 	}

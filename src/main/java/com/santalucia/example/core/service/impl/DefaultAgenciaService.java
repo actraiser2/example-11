@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.santalucia.example.api.model.Agencia;
+import com.santalucia.example.core.domain.AgenciaDomain;
 import com.santalucia.example.core.service.AgenciaService;
 import com.santalucia.example.infraestructure.dao.mappers.AgenciaMapper;
 
@@ -18,7 +18,7 @@ public class DefaultAgenciaService implements AgenciaService {
 	}
 
 	@Override
-	public List<Agencia> getAgencias() {
+	public List<AgenciaDomain> getAgencias() {
 		return this.agenciaMapper.getAgencias();
 	}
 

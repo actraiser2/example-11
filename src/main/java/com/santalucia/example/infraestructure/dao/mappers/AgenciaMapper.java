@@ -5,7 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
-import com.santalucia.example.api.model.Agencia;
+import com.santalucia.example.core.domain.AgenciaDomain;
 
 @Mapper
 public interface AgenciaMapper {
@@ -26,6 +26,6 @@ public interface AgenciaMapper {
 			+ "			 and ma.cagencia = c.cagencia"
 			+ "			 and mc.nidmecom = ma.nidmecom and mc.xtmedcom = 'C' and mc.norden > 0"
 			+ "      order by b.cprov, b.clocali, a.cagencia ASC;")
-	List<Agencia> getAgencias();
+	List<AgenciaDomain> getAgencias();
 
 }
