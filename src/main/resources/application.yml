@@ -22,8 +22,8 @@ server:
 #    enabled-protocols: TLSv1.2
 
 spring:
-#  application:
-#    name: example-app-11
+  application:
+    name: example-app-11
   mvc: 
     log-request-details: true # Whether logging of (potentially sensitive) request details at DEBUG and TRACE level is allowed.
   output:
@@ -133,4 +133,11 @@ santalucia:
   ams:
     features:
       guardium:
-        enabled: false
+        enabled: true
+logging:
+  level:
+    root: DEBUG
+    org.mybatis: TRACE
+    com.santalucia.arq.ams.componentes.database: TRACE
+    com.santalucia.arq.ams.componentes.guardium: TRACE
+    com.informix: TRACE

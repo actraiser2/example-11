@@ -21,23 +21,24 @@ public class DefaultAgenciasApiDelegate implements AgenciasApiDelegate {
 
 	private final AgenciaService agenciaService;
 
-	public DefaultAgenciasApiDelegate(final AgenciaService agenciaService) {
+	private final AgenciaConverter agenciaConverter;
+
+	public DefaultAgenciasApiDelegate(final AgenciaService agenciaService, final AgenciaConverter agenciaConverter) {
 		this.agenciaService = agenciaService;
+		this.agenciaConverter = agenciaConverter;
 	}
 
 	@Override
 	public ResponseEntity<List<Agencia>> getAgenciasList(Optional<UUID> xRequestId) {
 
-		// List<Agencia> listAgencias = new ArrayList<>();
+		List<Agencia> listAgencias = new ArrayList<>();
 		// AgenciaConverter converter = Mappers.getMapper(AgenciaConverter.class);
-		//
-		// List<AgenciaDomain> listAgenciasDomain = this.agenciaService.getAgencias();
-		// listAgenciasDomain.forEach((agenciaDomain) -> {
-		// Agencia agencia = converter.convertAgenciaDomainToAgencia(agenciaDomain);
-		// listAgencias.add(agencia);
-		// });
 
-		List<Agencia> listAgencias = this.agenciaService.getAgencias();
+		List<AgenciaDomain> listAgenciasDomain = this.agenciaService.getAgencias();
+		listAgenciasDomain.forEach((agenciaDomain) -> {
+			Agencia agencia = agenciaConverter.convertAgenciaDomainToAgencia(agenciaDomain);
+			listAgencias.add(agencia);
+		});
 
 		return new ResponseEntity<List<Agencia>>(listAgencias, HttpStatus.OK);
 	}

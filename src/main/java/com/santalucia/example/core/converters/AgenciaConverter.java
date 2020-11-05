@@ -5,7 +5,7 @@ import org.mapstruct.Mapper;
 import com.santalucia.example.api.model.Agencia;
 import com.santalucia.example.core.domain.AgenciaDomain;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface AgenciaConverter {
 
 	Agencia convertAgenciaDomainToAgencia(AgenciaDomain agenciaDomain);
