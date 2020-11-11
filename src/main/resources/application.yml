@@ -44,8 +44,8 @@ spring:
       resourceserver:
         jwt: #para habilitar la validacion 
           jws-algorithm: RS256 #posibles valores RS256,RS512 depende del realm
-          jwk-set-uri: https://sso-sldev.santalucia.es/auth/realms/stl-int/protocol/openid-connect/certs
-          issuer-uri: https://sso-sldev.santalucia.es/auth/realms/stl-int # URI that an OpenID Connect Provider asserts as its Issuer Identifier.
+          jwk-set-uri: https://sso-sldev.santalucia.es/auth/realms/3scale/protocol/openid-connect/certs
+          issuer-uri: https://sso-sldev.santalucia.es/auth/realms/3scale # URI that an OpenID Connect Provider asserts as its Issuer Identifier.
 #        opaquetoken: #si se quiere validar cada request contra rhsso y el end-point instrospect
 #          introspection-uri: https://sso-sldev.santalucia.es/auth/realms/stl-int/protocol/openid-connect/token/introspect
 #          client-id: nacho-test-sb2-oauth2
@@ -63,10 +63,26 @@ spring:
             
   # Conexion para recuperar agencias en pruebas de componente database
   datasource:
-    driverClassName: com.informix.jdbc.IfxDriver
-    url: jdbc:informix-sqli://slbdifxd11.servidores.net:20101/siis:INFORMIXSERVER=fun_jdbc
-    username: amsdacom
-    password: Am5Spr1ngD4c0m
+#    driverClassName: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:4306/example-demo?useSSL=false
+#    username: root
+#    password: admin
+#    driverClassName: com.informix.jdbc.IfxDriver
+#    url: jdbc:informix-sqli://slbdifxd11.servidores.net:20101/siis:INFORMIXSERVER=fun_jdbc
+#    username: amsdacom
+#    password: Am5Spr1ngD4c0m
+   
+    
+    informix:
+      driverClassName: com.informix.jdbc.IfxDriver
+      url: jdbc:informix-sqli://slbdifxd11.servidores.net:20101/siis:INFORMIXSERVER=fun_jdbc
+      username: amsdacom
+      password: Am5Spr1ngD4c0m
+    oracle:
+      driverClassName: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:4306/demo?useSSL=false
+      username: root
+      password: admin
 
   #  hikari:
       # leakDetectionThreshold: 10000

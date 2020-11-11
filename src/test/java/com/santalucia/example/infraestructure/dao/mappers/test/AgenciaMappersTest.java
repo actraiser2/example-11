@@ -12,11 +12,11 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.santalucia.example.core.domain.AgenciaDomain;
-import com.santalucia.example.infraestructure.dao.mappers.AgenciaMapper;
+import com.santalucia.example.infraestructure.dao.mappers.agencias.AgenciaMapper;
 
 @ExtendWith(SpringExtension.class)
 @MybatisTest
-@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+// @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class AgenciaMappersTest {
 
 	@Autowired

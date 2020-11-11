@@ -1,4 +1,4 @@
-package com.santalucia.example.infraestructure.dao.mappers;
+package com.santalucia.example.infraestructure.dao.mappers.agencias;
 
 import java.util.List;
 

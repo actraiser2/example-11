@@ -71,6 +71,28 @@ paths:
             type: array
             items:
               $ref: '#/definitions/agencia'
+  /employees/list:
+    get:
+      tags:
+      - list-employees
+      summary: recovery employees list
+      description: recovery employees list
+      operationId: getEmployeesList
+      parameters:
+      - name: X-Request-Id
+        in: header
+        description: Identificador único de la petición
+        required: false
+        type: string
+        format: uuid
+        x-example: AVDGSGRT-DHUEYR74R-SJDK75EJDSK
+      responses:
+        "200":
+          description: ok response
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/employee'
 securityDefinitions:
   oauthApplication:
     type: oauth2
@@ -113,4 +135,22 @@ definitions:
         type: string
         example: "lepanto 5"
         description: domicilio de la agencia
+        maxLength: 255
+  employee:
+    type: object
+    properties:
+      firstName:
+        type: string
+        example: "Juan"
+        description: First name
+        maxLength: 255
+      lastName:
+        type: string
+        example: "Smith"
+        description: Last name
+        maxLength: 255
+      emailAddress:
+        type: string
+        example: "prueba@dominio.es"
+        description: direccion de email
         maxLength: 255
