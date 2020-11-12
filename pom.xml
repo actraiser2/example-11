@@ -6,8 +6,7 @@
 	<parent>
 		<groupId>com.santalucia.arq.ams</groupId>
 		<artifactId>ams-parent-sl</artifactId>
-		<version>2.0.0-SNAPSHOT</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<version>2.0.1-SNAPSHOT</version>
 	</parent>
 	<groupId>com.santalucia.example</groupId>
 	<artifactId>example-app</artifactId>
@@ -32,9 +31,6 @@
 		
 	</properties>
 	
-
-
-
 	<dependencies>
 
 	
@@ -97,11 +93,11 @@
 			<scope>test</scope>
 		</dependency>
 
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.springframework.boot</groupId> -->
-<!-- 			<artifactId>spring-boot-starter-test</artifactId> -->
-<!-- 			<scope>test</scope> -->
-<!-- 		</dependency> -->
+		<dependency> 
+ 			<groupId>org.springframework.boot</groupId>
+ 			<artifactId>spring-boot-starter-test</artifactId>
+ 			<scope>test</scope>
+ 		</dependency> 
 		<dependency>
 		    <groupId>org.mybatis.spring.boot</groupId>
 		    <artifactId>mybatis-spring-boot-starter-test</artifactId>
@@ -109,37 +105,20 @@
 		    <scope>test</scope>
 		</dependency>
 		
-		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-		<dependency>
-		    <groupId>mysql</groupId>
-		    <artifactId>mysql-connector-java</artifactId>
-		    <version>8.0.22</version>
-		</dependency>	
-		
-		
-		
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <scope>test</scope>
-        </dependency>
-		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-configuration-processor</artifactId>
-			<optional>true</optional>
-		</dependency>
-		
+				
 		 <!-- IBM Informix JDBC Driver -->
         <dependency>
 			<groupId>com.ibm.informix</groupId>
 			<artifactId>jdbc</artifactId>
 		</dependency>
+		
+		<!-- Oracle JDBC Driver -->
+		<dependency>
+			<groupId>com.oracle.jdbc</groupId>
+			<artifactId>ojdbc7</artifactId>
+			<version>12.1.0.2</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

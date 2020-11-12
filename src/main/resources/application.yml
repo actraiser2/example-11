@@ -63,31 +63,16 @@ spring:
             
   # Conexion para recuperar agencias en pruebas de componente database
   datasource:
-#    driverClassName: com.mysql.cj.jdbc.Driver
-#    url: jdbc:mysql://localhost:4306/example-demo?useSSL=false
-#    username: root
-#    password: admin
-#    driverClassName: com.informix.jdbc.IfxDriver
-#    url: jdbc:informix-sqli://slbdifxd11.servidores.net:20101/siis:INFORMIXSERVER=fun_jdbc
-#    username: amsdacom
-#    password: Am5Spr1ngD4c0m
-   
-    
-    informix:
+    informix:  
       driverClassName: com.informix.jdbc.IfxDriver
       url: jdbc:informix-sqli://slbdifxd11.servidores.net:20101/siis:INFORMIXSERVER=fun_jdbc
       username: amsdacom
       password: Am5Spr1ngD4c0m
     oracle:
-      driverClassName: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:4306/demo?useSSL=false
-      username: root
-      password: admin
-
-  #  hikari:
-      # leakDetectionThreshold: 10000
-  #    poolName: pool-${spring.application.name}
-  #    maximumPoolSize: 50 # should be the same as the executor thread pool https://stackoverflow.com/questions/49119771/why-does-spring-batch-use-1-database-connection-for-each-thread
+      driverClassName: oracle.jdbc.driver.OracleDriver
+      url: jdbc:oracle:thin:@slbdorad11.servidores.net:1548/DB12UTF8D.DES.SANTALUCIA.ES
+      username: LAB_ARQ_SW_DEV
+      password: lab_arq_sw_dev
 
 opentracing:
   jaeger:

@@ -1,4 +1,4 @@
-package com.santalucia.example.api.config;
+package com.santalucia.example.infraestructure.config;
 
 import javax.sql.DataSource;
 
@@ -26,7 +26,7 @@ public class OracleMyBatisConfig {
 	@Bean(name = ORACLE_SESSION_FACTORY)
 	@Primary
 	public SqlSessionFactory sqlSessionFactoryBean(
-			@Qualifier(MultipleDataSourceConfiguration.ORACLE_DATASOURCE) DataSource dataSource) throws Exception {
+			@Qualifier(InfraestructureLayerConfig.ORACLE_DATASOURCE) DataSource dataSource) throws Exception {
 
 		SqlSessionFactoryBean sessionBean = new SqlSessionFactoryBean();
 		sessionBean.setDataSource(dataSource);
@@ -36,7 +36,7 @@ public class OracleMyBatisConfig {
 	@Bean(name = ORACLE_TRANSACTION_MANAGER)
 	@Primary
 	public DataSourceTransactionManager informixTransactionManager(
-			@Qualifier(MultipleDataSourceConfiguration.ORACLE_DATASOURCE) DataSource dataSource) {
+			@Qualifier(InfraestructureLayerConfig.ORACLE_DATASOURCE) DataSource dataSource) {
 		return new DataSourceTransactionManager(dataSource);
 	}
 
