@@ -14,23 +14,22 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import com.santalucia.example.core.domain.AgenciaDomain;
 import com.santalucia.example.infraestructure.dao.mappers.agencias.AgenciaMapper;
 
-@ExtendWith(SpringExtension.class)
-@MybatisTest
-// @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+//@ExtendWith(SpringExtension.class)
+//@MybatisTest
+//@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class AgenciaMappersTest {
 
-	@Autowired
-	private AgenciaMapper agenciaMapper;
-
-	@Test
-	public void getAgenciasTest() {
-		List<AgenciaDomain> listAgencias = agenciaMapper.getAgencias();
-
-		assertNotNull(listAgencias);
-
-		AgenciaDomain agencia1 = listAgencias.get(0);
-
-		System.out.println("Agencia: " + agencia1.getDagencia());
-	}
+	/**
+	 * @Autowired private AgenciaMapper agenciaMapper;
+	 *
+	 * @Test public void getAgenciasTest() { List<AgenciaDomain> listAgencias =
+	 * agenciaMapper.getAgencias();
+	 *
+	 * assertNotNull(listAgencias);
+	 *
+	 * AgenciaDomain agencia1 = listAgencias.get(0);
+	 *
+	 * System.out.println("Agencia: " + agencia1.getDagencia()); }
+	 */
 
 }

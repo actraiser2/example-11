@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.santalucia.arq.ams</groupId>
 		<artifactId>ams-parent-sl</artifactId>
-		<version>2.0.1-SNAPSHOT</version>
+		<version>0.0.3-SNAPSHOT</version>
 	</parent>
 	<groupId>com.santalucia.example</groupId>
 	<artifactId>example-app</artifactId>
@@ -86,6 +86,12 @@
 			<artifactId>lombok</artifactId>
 			<scope>provided</scope>
 		</dependency>
+
+		<!-- mapstruct -->
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct</artifactId>
+		</dependency>
 		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -113,10 +119,26 @@
 		</dependency>
 		
 		<!-- Oracle JDBC Driver -->
-		<dependency>
+		<!--<dependency>
 			<groupId>com.oracle.jdbc</groupId>
 			<artifactId>ojdbc7</artifactId>
 			<version>12.1.0.2</version>
+		</dependency>-->
+
+		<dependency>
+			<groupId>com.oracle.ojdbc</groupId>
+			<artifactId>ojdbc8</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.oracle.ojdbc</groupId>
+			<artifactId>orai18n</artifactId>
+			<scope>provided</scope>
+			</dependency>
+		<dependency>
+			<groupId>com.oracle.ojdbc</groupId>
+			<artifactId>ucp</artifactId>
+			<scope>provided</scope>
 		</dependency>
 
 	</dependencies>
