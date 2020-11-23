@@ -39,6 +39,7 @@ spring:
   cloud:
     kubernetes:
         enabled: true
+
         
 debug: false # Enable debug logs.
 trace: false # Enable trace logs.
