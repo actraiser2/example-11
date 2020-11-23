@@ -69,7 +69,7 @@ spring:
       username: amsdacom
       password: Am5Spr1ngD4c0m
     oracle:
-      driverClassName: oracle.jdbc.driver.OracleDriver
+      driverClassName: oracle.jdbc.OracleDriver
       url: jdbc:oracle:thin:@slbdorad11.servidores.net:1548/DB12UTF8D.DES.SANTALUCIA.ES
       username: LAB_ARQ_SW_DEV
       password: lab_arq_sw_dev
