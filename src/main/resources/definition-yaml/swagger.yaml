@@ -49,8 +49,50 @@ paths:
           description: ok response
           schema:
             $ref: '#/definitions/identidadDigitalConsulta'
-
- 
+  /agencias/list:
+    get:
+      tags:
+      - list-agencias
+      summary: recovery agencias list
+      description: recovery agencias list
+      operationId: getAgenciasList
+      parameters:
+      - name: X-Request-Id
+        in: header
+        description: Identificador único de la petición
+        required: false
+        type: string
+        format: uuid
+        x-example: AVDGSGRT-DHUEYR74R-SJDK75EJDSK
+      responses:
+        "200":
+          description: ok response
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/agencia'
+  /employees/list:
+    get:
+      tags:
+      - list-employees
+      summary: recovery employees list
+      description: recovery employees list
+      operationId: getEmployeesList
+      parameters:
+      - name: X-Request-Id
+        in: header
+        description: Identificador único de la petición
+        required: false
+        type: string
+        format: uuid
+        x-example: AVDGSGRT-DHUEYR74R-SJDK75EJDSK
+      responses:
+        "200":
+          description: ok response
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/employee'
 securityDefinitions:
   oauthApplication:
     type: oauth2
@@ -66,3 +108,49 @@ definitions:
         example: hello juan
         description: Nombre
         maxLength: 40
+  agencia:
+    type: object
+    properties:
+      dprov:
+        type: string
+        example: "Madrid"
+        description: Provincia de la agencia
+        maxLength: 255
+      dpoblaci:
+        type: string
+        example: "Alicante"
+        description: Poblacion de la agencia
+        maxLength: 255
+      dagencia:
+        type: string
+        example: "Nombre agencia"
+        description: Nombre agencia
+        maxLength: 255
+      dtvia:
+        type: string
+        example: "calle"
+        description: tipo de via
+        maxLength: 255
+      ddomici:
+        type: string
+        example: "lepanto 5"
+        description: domicilio de la agencia
+        maxLength: 255
+  employee:
+    type: object
+    properties:
+      firstName:
+        type: string
+        example: "Juan"
+        description: First name
+        maxLength: 255
+      lastName:
+        type: string
+        example: "Smith"
+        description: Last name
+        maxLength: 255
+      emailAddress:
+        type: string
+        example: "prueba@dominio.es"
+        description: direccion de email
+        maxLength: 255

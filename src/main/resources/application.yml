@@ -9,7 +9,8 @@ server:
   http2:
     enabled: false
   servlet:
-    encoding:      charset: UTF-8
+    encoding:
+      charset: UTF-8
     session:
       cookie:
         http-only: true
@@ -21,8 +22,8 @@ server:
 #    enabled-protocols: TLSv1.2
 
 spring:
-#  application:
-#    name: example-app-11
+  application:
+    name: example-app-11
   mvc: 
     log-request-details: true # Whether logging of (potentially sensitive) request details at DEBUG and TRACE level is allowed.
   output:
@@ -43,8 +44,8 @@ spring:
       resourceserver:
         jwt: #para habilitar la validacion 
           jws-algorithm: RS256 #posibles valores RS256,RS512 depende del realm
-          jwk-set-uri: https://sso-sldev.santalucia.es/auth/realms/stl-int/protocol/openid-connect/certs
-          issuer-uri: https://sso-sldev.santalucia.es/auth/realms/stl-int # URI that an OpenID Connect Provider asserts as its Issuer Identifier.
+          jwk-set-uri: https://sso-sldev.santalucia.es/auth/realms/3scale/protocol/openid-connect/certs
+          issuer-uri: https://sso-sldev.santalucia.es/auth/realms/3scale # URI that an OpenID Connect Provider asserts as its Issuer Identifier.
 #        opaquetoken: #si se quiere validar cada request contra rhsso y el end-point instrospect
 #          introspection-uri: https://sso-sldev.santalucia.es/auth/realms/stl-int/protocol/openid-connect/token/introspect
 #          client-id: nacho-test-sb2-oauth2
@@ -60,12 +61,18 @@ spring:
 #          keycloak:
 #            issuer-uri: https://sso-sldev.santalucia.es/auth/realms/stl-int/.well-known/openid-configuration
             
-
-  #datasource:
-  #  hikari:
-      # leakDetectionThreshold: 10000
-  #    poolName: pool-${spring.application.name}
-  #    maximumPoolSize: 50 # should be the same as the executor thread pool https://stackoverflow.com/questions/49119771/why-does-spring-batch-use-1-database-connection-for-each-thread
+  # Conexion para recuperar agencias en pruebas de componente database
+  datasource:
+    informix:  
+      driverClassName: com.informix.jdbc.IfxDriver
+      url: jdbc:informix-sqli://slbdifxd11.servidores.net:20101/siis:INFORMIXSERVER=fun_jdbc
+      username: amsdacom
+      password: Am5Spr1ngD4c0m
+    oracle:
+      driverClassName: oracle.jdbc.OracleDriver
+      url: jdbc:oracle:thin:@slbdorad11.servidores.net:1548/DB12UTF8D.DES.SANTALUCIA.ES
+      username: LAB_ARQ_SW_DEV
+      password: lab_arq_sw_dev
 
 opentracing:
   jaeger:
@@ -123,3 +130,15 @@ management:
 #        include: env,beans
       path-mapping:
         prometheus: /metrics
+santalucia:
+  ams:
+    features:
+      guardium:
+        enabled: true
+logging:
+  level:
+    root: DEBUG
+    org.mybatis: TRACE
+    com.santalucia.arq.ams.componentes.database: TRACE
+    com.santalucia.arq.ams.componentes.guardium: TRACE
+    com.informix: TRACE
