@@ -18,6 +18,14 @@ spring:
         monitoring-secrets: false
       config:
         name: ${spring.application.name}
+
+info:
+  app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @java.version@
+      target: @java.version@
            
 logging:
   register-shutdown-hook: true

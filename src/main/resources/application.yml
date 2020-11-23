@@ -80,13 +80,7 @@ opentracing:
     log-spans: true
     http-sender:
        url: https://jaeger-collector-lab-arquitectura-dev.app-dev.santalucia.net/api/traces
-info:
-  app:
-    name: @project.artifactId@
-    encoding: @project.build.sourceEncoding@
-    java:
-      source: @java.version@
-      target: @java.version@
+
 
 management:
   server:
