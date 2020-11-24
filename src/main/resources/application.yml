@@ -93,7 +93,7 @@ management:
     metrics: 
       enabled: true
   metrics:
-  	tags:
+    tags:
     	application: ${spring.application.name} #Needed by micrometer +1.1.0
     export:
  #     dynatrace:
