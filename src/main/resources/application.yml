@@ -22,8 +22,10 @@ server:
 #    enabled-protocols: TLSv1.2
 
 spring:
-  application:
-    name: example-app-11
+#  application:
+#    name: example-app-11
+  main:
+    allow-bean-definition-overriding: true
   mvc: 
     log-request-details: true # Whether logging of (potentially sensitive) request details at DEBUG and TRACE level is allowed.
   output:
@@ -83,26 +85,16 @@ opentracing:
 
 
 management:
-  server:
-    port: 8081
-  info:
-    git:
-      mode: full
   trace:
     http:
       enabled: true # Whether to enable HTTP request-response tracing.
       include: request-headers,response-headers,cookie-headers # Items to be included in the trace.
   endpoint:
-    security:
-      disable:
-        end-points: info,readiness,health,metrics
-    health:
-      show-details: always 
-    prometheus:
-      enabled: true
     metrics: 
       enabled: true
   metrics:
+  	tags:
+    	application: ${spring.application.name} #Needed by micrometer +1.1.0
     export:
  #     dynatrace:
  #       api-token: YOUR_TOKEN
@@ -114,7 +106,6 @@ management:
   endpoints:
     enabled-by-default: true # Whether to enable or disable all endpoints by default.
     web:
-      base-path: /management
       #cors:
       #  allowed-origins: https://example.com
       #  allowed-methods: GET,POST
@@ -122,8 +113,7 @@ management:
        include: "*"
 #      exclude:
 #        include: env,beans
-      path-mapping:
-        prometheus: /metrics
+        
 santalucia:
   ams:
     features:
