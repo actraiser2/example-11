@@ -85,8 +85,6 @@ opentracing:
 
 
 management:
-  server:
-    port: 9081
   trace:
     http:
       enabled: true # Whether to enable HTTP request-response tracing.
