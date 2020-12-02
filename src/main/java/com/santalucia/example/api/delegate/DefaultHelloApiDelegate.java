@@ -17,15 +17,20 @@
 package com.santalucia.example.api.delegate;
 
 import java.util.Optional;
+import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-
+import com.santalucia.example.api.model.IdentidadDigitalConsulta;
 import com.santalucia.example.api.web.HelloApiDelegate;
+import com.santalucia.example.core.service.HelloService;
+
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -36,10 +41,13 @@ public class DefaultHelloApiDelegate implements HelloApiDelegate {
 
 	private final HttpServletRequest request;
 
+	private HelloService helloService;
+
 	@Autowired
-	public DefaultHelloApiDelegate(ObjectMapper objectMapper, HttpServletRequest request) {
+	public DefaultHelloApiDelegate(ObjectMapper objectMapper, HttpServletRequest request, HelloService helloService) {
 		this.objectMapper = objectMapper;
 		this.request = request;
+		this.helloService = helloService;
 		log.debug("DefaultHelloApiDelegate loaded");
 	}
 
@@ -51,6 +59,19 @@ public class DefaultHelloApiDelegate implements HelloApiDelegate {
 	@Override
 	public Optional<HttpServletRequest> getRequest() {
 		return Optional.ofNullable(this.request);
+	}
+
+	@Override
+	public ResponseEntity<IdentidadDigitalConsulta> getHelloByName(String name, Optional<UUID> xRequestId) {
+
+		log.info("Received hello request for {}", name);
+
+		String remoteResponse = helloService.getHello(name);
+
+		IdentidadDigitalConsulta response = new IdentidadDigitalConsulta().nombre(remoteResponse);
+
+		return new ResponseEntity<IdentidadDigitalConsulta>(response, HttpStatus.OK);
+
 	}
 
 }

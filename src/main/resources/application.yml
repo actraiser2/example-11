@@ -85,6 +85,8 @@ opentracing:
 
 
 management:
+  server:
+    port: 9081
   trace:
     http:
       enabled: true # Whether to enable HTTP request-response tracing.
@@ -119,6 +121,10 @@ santalucia:
     features:
       guardium:
         enabled: true
+  endpoint:
+    example:
+      uri: http://localhost:8088/hello-world/v1
+      
 logging:
   level:
     root: DEBUG
