@@ -6,8 +6,7 @@
 	<parent>
 		<groupId>com.santalucia.arq.ams</groupId>
 		<artifactId>ams-parent-sl</artifactId>
-		<version>2.0.0-SNAPSHOT</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<version>0.0.3-SNAPSHOT</version>
 	</parent>
 	<groupId>com.santalucia.example</groupId>
 	<artifactId>example-app</artifactId>
@@ -32,9 +31,6 @@
 		
 	</properties>
 	
-
-
-
 	<dependencies>
 
 	
@@ -47,17 +43,16 @@
 	    
 		<dependency>
 		    <groupId>org.springframework.cloud</groupId>
-		    <artifactId>spring-cloud-starter-kubernetes-all</artifactId>
+		    <artifactId>spring-cloud-starter-kubernetes</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework.cloud</groupId>
+		    <artifactId>spring-cloud-starter-kubernetes-config</artifactId>
 		</dependency>
 	
 		<dependency>
 			<groupId>com.santalucia.arq.ams</groupId>
 			<artifactId>ams-componentes-web</artifactId>
-		</dependency>
-		
-		<dependency>
-			<groupId>com.santalucia.arq.ams</groupId>
-			<artifactId>ams-starter-events</artifactId>
 		</dependency>
 		
 		<dependency>
@@ -78,12 +73,28 @@
 		<dependency>
 			<groupId>com.santalucia.arq.ams</groupId>
 			<artifactId>ams-componentes-exceptions</artifactId>
+		</dependency>	
+
+		<dependency>
+			<groupId>com.santalucia.arq.ams</groupId>
+			<artifactId>ams-componentes-database</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.santalucia.arq.ams</groupId>
+			<artifactId>ams-componentes-tracing</artifactId>
 		</dependency>
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<scope>provided</scope>
+		</dependency>
+
+		<!-- mapstruct TODO: REVISAR SI ES NECESARIO EN MODO RUNTIME/ PROVIDED--> 
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct</artifactId>
 		</dependency>
 		
 		<dependency>
@@ -92,18 +103,31 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+		<dependency> 
+ 			<groupId>org.springframework.boot</groupId>
+ 			<artifactId>spring-boot-starter-test</artifactId>
+ 			<scope>test</scope>
+ 		</dependency> 
+				
+		 <!-- IBM Informix JDBC Driver -->
+        <dependency>
+			<groupId>com.ibm.informix</groupId>
+			<artifactId>jdbc</artifactId>
 		</dependency>
-		
+
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-configuration-processor</artifactId>
-			<optional>true</optional>
+			<groupId>com.oracle.ojdbc</groupId>
+			<artifactId>ojdbc8</artifactId>
 		</dependency>
-		
+		<dependency>
+			<groupId>com.oracle.ojdbc</groupId>
+			<artifactId>orai18n</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.oracle.ojdbc</groupId>
+			<artifactId>ucp</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>

@@ -1,3 +1,6 @@
+debug: false # Enable debug logs.
+trace: false # Enable trace logs.
+
 spring:
   application:
     name: example-app-11
@@ -12,19 +15,17 @@ spring:
         #shutdown: full restart; not recomended
         strategy: refresh
         monitoring-config-maps: true
-        monitoring-secrets: true
+        monitoring-secrets: false
       config:
         name: ${spring.application.name}
-        #namespace: juan
-        sources:
-         #if spring.cloud.kubernetes.config.namespace had not been set, the ConfigMap named c1 would be looked up in the namespace that the application runs.
-         # Spring Cloud Kubernetes looks up a ConfigMap named c1 in namespace default-namespace
-         #- name: c1
-         # Spring Cloud Kubernetes looks up a ConfigMap named default-name in whatever namespace n2
-         #- namespace: n2
-         # Spring Cloud Kubernetes looks up a ConfigMap named c3 in namespace n3
-         #- namespace: n3
-           name: ${spring.application.name}
+
+info:
+  app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @java.version@
+      target: @java.version@
            
 logging:
   register-shutdown-hook: true
@@ -42,6 +43,21 @@ logging:
 ---
 spring:
   profiles: kubernetes #Profile habilitado de forma automatica cuando se despliega en OCP
+#  mandatory-file-encoding: UTF-8
   cloud:
     kubernetes:
         enabled: true
+
+        
+debug: false # Enable debug logs.
+trace: false # Enable trace logs.
+---
+spring:
+  profiles: devops #Profile para deshabilitar kubernetes
+  mandatory-file-encoding: UTF-8
+  cloud:
+    kubernetes:
+        enabled: false
+        
+debug: false # Enable debug logs.
+trace: false # Enable trace logs.
