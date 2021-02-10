@@ -10,7 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
 import com.santalucia.example.api.model.Agencia;
-import com.santalucia.example.api.web.AgenciasApiDelegate;
+import com.santalucia.example.api.server.AgenciasApiDelegate;
 import com.santalucia.example.core.converters.AgenciaConverter;
 import com.santalucia.example.core.domain.AgenciaDomain;
 import com.santalucia.example.core.service.AgenciaService;
@@ -39,7 +39,7 @@ public class DefaultAgenciasApiDelegate implements AgenciasApiDelegate {
 			listAgencias.add(agencia);
 		});
 
-		return new ResponseEntity<List<Agencia>>(listAgencias, HttpStatus.OK);
+		return new ResponseEntity<>(listAgencias, HttpStatus.OK);
 	}
 
 }

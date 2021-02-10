@@ -22,8 +22,6 @@ server:
 #    enabled-protocols: TLSv1.2
 
 spring:
-#  application:
-#    name: example-app-11
   main:
     allow-bean-definition-overriding: true
   mvc: 
@@ -37,11 +35,6 @@ spring:
     unique-names: true
     
   security:
-    enabled: true
-    cors:
-      enabled: false
-    csrf:
-      enabled: false
     oauth2:
       resourceserver:
         jwt: #para habilitar la validacion 
@@ -106,27 +99,34 @@ management:
   endpoints:
     enabled-by-default: true # Whether to enable or disable all endpoints by default.
     web:
-      #cors:
-      #  allowed-origins: https://example.com
-      #  allowed-methods: GET,POST
       exposure:
        include: "*"
 #      exclude:
 #        include: env,beans
+     
         
 santalucia:
   ams:
     features:
       guardium:
-        enabled: true
+        enabled: true      security:
+        core:          enabled: true        cors:          enabled: false
+          #allowed-origins: https://example.com
+          #allowed-methods: GET, POST
+        csrf:          enabled: false
+        oauth2:          token-propagation: true
+        #actuator:        #  unsecure-end-points:
+           
   endpoint:
     example:
       uri: http://localhost:8088/hello-world/v1
       
 logging:
   level:
-    root: DEBUG
-    org.mybatis: TRACE
-    com.santalucia.arq.ams.componentes.database: TRACE
-    com.santalucia.arq.ams.componentes.guardium: TRACE
-    com.informix: TRACE
+    root: INFO
+    com.santalucia: DEBUG
+    org.springframework: INFO
+    #org.springframework.web.servlet: DEBUG
+    #org.springframework.security: DEBUG
+    #org.springframework.web.client: DEBUG
+    org.springframework.security.oauth2.server.resource: DEBUG #trazas para mostrar los errores de login debido a que salen en modo debug

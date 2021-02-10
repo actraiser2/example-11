@@ -28,7 +28,7 @@ import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.santalucia.example.api.model.IdentidadDigitalConsulta;
-import com.santalucia.example.api.web.HelloApiDelegate;
+import com.santalucia.example.api.server.HelloApiDelegate;
 import com.santalucia.example.core.service.HelloService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -37,28 +37,13 @@ import lombok.extern.slf4j.Slf4j;
 @Component
 public class DefaultHelloApiDelegate implements HelloApiDelegate {
 
-	private final ObjectMapper objectMapper;
-
-	private final HttpServletRequest request;
-
 	private HelloService helloService;
 
 	@Autowired
-	public DefaultHelloApiDelegate(ObjectMapper objectMapper, HttpServletRequest request, HelloService helloService) {
-		this.objectMapper = objectMapper;
-		this.request = request;
+	public DefaultHelloApiDelegate(HelloService helloService) {
+
 		this.helloService = helloService;
 		log.debug("DefaultHelloApiDelegate loaded");
-	}
-
-	@Override
-	public Optional<ObjectMapper> getObjectMapper() {
-		return Optional.ofNullable(this.objectMapper);
-	}
-
-	@Override
-	public Optional<HttpServletRequest> getRequest() {
-		return Optional.ofNullable(this.request);
 	}
 
 	@Override
@@ -70,7 +55,7 @@ public class DefaultHelloApiDelegate implements HelloApiDelegate {
 
 		IdentidadDigitalConsulta response = new IdentidadDigitalConsulta().nombre(remoteResponse);
 
-		return new ResponseEntity<IdentidadDigitalConsulta>(response, HttpStatus.OK);
+		return new ResponseEntity<>(response, HttpStatus.OK);
 
 	}
 

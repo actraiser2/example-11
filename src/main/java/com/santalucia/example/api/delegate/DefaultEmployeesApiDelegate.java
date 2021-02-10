@@ -10,7 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
 import com.santalucia.example.api.model.Employee;
-import com.santalucia.example.api.web.EmployeesApiDelegate;
+import com.santalucia.example.api.server.EmployeesApiDelegate;
 import com.santalucia.example.core.converters.EmployeeConverter;
 import com.santalucia.example.core.domain.EmployeeDomain;
 import com.santalucia.example.core.service.EmployeeService;
@@ -37,7 +37,7 @@ public class DefaultEmployeesApiDelegate implements EmployeesApiDelegate {
 			listEmployee.add(employee);
 		});
 
-		return new ResponseEntity<List<Employee>>(listEmployee, HttpStatus.OK);
+		return new ResponseEntity<>(listEmployee, HttpStatus.OK);
 	}
 
 }

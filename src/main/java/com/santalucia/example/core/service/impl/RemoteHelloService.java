@@ -17,7 +17,7 @@ public class RemoteHelloService implements HelloService {
 
 	public RemoteHelloService(RestTemplateBuilder builder,
 			@Value("${santalucia.endpoint.example.uri}") String remoteExampleUri) {
-		log.error("Configured endpoint {}", remoteExampleUri);
+		log.info("Configured endpoint {}", remoteExampleUri);
 		this.restTemplate = builder.defaultHeader("Content-Type", "application/json").rootUri(remoteExampleUri).build();
 	}
 

@@ -1,10 +1,12 @@
 debug: false # Enable debug logs.
 trace: false # Enable trace logs.
 
+
 spring:
   application:
     name: example-app-11
-    
+  banner:
+    location: classpath:santalucia-banner.txt
   cloud:
     kubernetes:
       enabled: false
@@ -31,15 +33,7 @@ logging:
   register-shutdown-hook: true
   file:
     name: log/${spring.application.name}.log
-  level:
-    root: INFO
-    com.santalucia: DEBUG
-    org.springframework: INFO
-    org.springframework.web.servlet: DEBUG
-    #org.springframework.security: DEBUG
-    org.springframework.web.client: DEBUG
-    org.springframework.security.oauth2.server.resource: DEBUG #trazas para mostrar los errores de login debido a que salen en modo debug
-
+    
 ---
 spring:
   profiles: kubernetes #Profile habilitado de forma automatica cuando se despliega en OCP
