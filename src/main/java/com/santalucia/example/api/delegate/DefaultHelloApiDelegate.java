@@ -19,14 +19,11 @@ package com.santalucia.example.api.delegate;
 import java.util.Optional;
 import java.util.UUID;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.santalucia.example.api.model.IdentidadDigitalConsulta;
 import com.santalucia.example.api.server.HelloApiDelegate;
 import com.santalucia.example.core.service.HelloService;

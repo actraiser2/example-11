@@ -1,4 +1,4 @@
-package com.santalucia.example.infraestructure.config;
+package com.santalucia.example.infraestructure.mybatisnformix.config;
 
 import javax.sql.DataSource;
 
@@ -12,38 +12,40 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
+import com.santalucia.example.infraestructure.config.InfraestructureLayerConfig;
+
 @Configuration
-@MapperScan(basePackages = "com.santalucia.example.infraestructure.dao.mappers.employees",
-		sqlSessionTemplateRef = "oracleSessionTemplate")
-public class OracleMyBatisConfig {
+@MapperScan(basePackages = "com.santalucia.example.infraestructure.mybatisnformix.mappers",
+		sqlSessionTemplateRef = InformixMyBatisConfig.SESSION_TEMPLATE)
+public class InformixMyBatisConfig {
 
-	private static final String ORACLE_SESSION_FACTORY = "oracleSessionFactory";
+	private static final String SESSION_FACTORY = "informixSessionFactory";
 
-	private static final String ORACLE_TRANSACTION_MANAGER = "oracleTransactionManager";
+	private static final String TRANSACTION_MANAGER = "informixTransactionManager";
 
-	private static final String ORACLE_SESSION_TEMPLATE = "oracleSessionTemplate";
+	protected static final String SESSION_TEMPLATE = "informixSessionTemplate";
 
-	@Bean(name = ORACLE_SESSION_FACTORY)
+	@Bean(name = SESSION_FACTORY)
 	@Primary
 	public SqlSessionFactory sqlSessionFactoryBean(
-			@Qualifier(InfraestructureLayerConfig.ORACLE_DATASOURCE) DataSource dataSource) throws Exception {
+			@Qualifier(InfraestructureLayerConfig.INFORMIX_DATASOURCE) DataSource dataSource) throws Exception {
 
 		SqlSessionFactoryBean sessionBean = new SqlSessionFactoryBean();
 		sessionBean.setDataSource(dataSource);
 		return sessionBean.getObject();
 	}
 
-	@Bean(name = ORACLE_TRANSACTION_MANAGER)
+	@Bean(name = TRANSACTION_MANAGER)
 	@Primary
 	public DataSourceTransactionManager informixTransactionManager(
-			@Qualifier(InfraestructureLayerConfig.ORACLE_DATASOURCE) DataSource dataSource) {
+			@Qualifier(InfraestructureLayerConfig.INFORMIX_DATASOURCE) DataSource dataSource) {
 		return new DataSourceTransactionManager(dataSource);
 	}
 
-	@Bean(name = ORACLE_SESSION_TEMPLATE)
+	@Bean(name = SESSION_TEMPLATE)
 	@Primary
 	public SqlSessionTemplate informixSqlSessionTemplate(
-			@Qualifier(ORACLE_SESSION_FACTORY) SqlSessionFactory sqlSessionFactory) {
+			@Qualifier(SESSION_FACTORY) SqlSessionFactory sqlSessionFactory) {
 		return new SqlSessionTemplate(sqlSessionFactory);
 	}
 

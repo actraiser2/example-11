@@ -1,0 +1,36 @@
+package com.santalucia.example.infraestructure.mybatisoracle.mappers;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+import org.mybatis.spring.boot.test.autoconfigure.MybatisTest;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.jdbc.Sql;
+import org.springframework.test.context.jdbc.SqlMergeMode;
+import org.springframework.test.context.jdbc.SqlMergeMode.MergeMode;
+
+import com.santalucia.example.core.domain.EmployeeDomain;
+
+@MybatisTest
+@SqlMergeMode(MergeMode.MERGE)
+@Sql(scripts = { "/sql/schemas/employees-schema.sql" })
+class EmployeesDaoMappersTests {
+
+	@Autowired
+	private EmployeesDaoMappers employeesDaoMappers;
+
+	@Test
+	@Sql(scripts = { "/sql/data/employees-data.sql" })
+	void getEmployeesTest() {
+		List<EmployeeDomain> employees = employeesDaoMappers.getEmployees();
+		assertNotNull(employees);
+		assertEquals(1, employees.size());
+		assertEquals("firstname", employees.get(0).getFirstName());
+		assertEquals("lastname", employees.get(0).getLastName());
+		assertEquals("a@a.com", employees.get(0).getEmailAddress());
+	}
+
+}

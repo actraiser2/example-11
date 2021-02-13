@@ -104,7 +104,12 @@ management:
 #      exclude:
 #        include: env,beans
      
-        
+###########################
+#                         #
+# santalucia properties   #
+#                         #
+###########################
+    
 santalucia:
   ams:
     features:
@@ -115,11 +120,24 @@ santalucia:
           #allowed-methods: GET, POST
         csrf:          enabled: false
         oauth2:          token-propagation: true
-        #actuator:        #  unsecure-end-points:
            
-  endpoint:
-    example:
-      uri: http://localhost:8088/hello-world/v1
+        #actuator:        #  unsecure-end-points:
+
+
+###########################
+#                         #
+# feign client properties #
+#                         #
+###########################
+        
+helloWorld:
+  url: https://apis.santalucia.es/hello-world/v1
+      
+###########################
+#                         #
+# logging properties      #
+#                         #
+###########################
       
 logging:
   level:

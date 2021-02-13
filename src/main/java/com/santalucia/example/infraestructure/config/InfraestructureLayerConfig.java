@@ -8,10 +8,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
-import lombok.extern.slf4j.Slf4j;
-
 @Configuration
 public class InfraestructureLayerConfig {
+
+	// https://docs.spring.io/spring-boot/docs/2.1.18.RELEASE/reference/html/howto-data-access.html#howto-two-datasources
 
 	public static final String INFORMIX_DATASOURCE = "informixDS";
 
@@ -22,6 +22,8 @@ public class InfraestructureLayerConfig {
 	@Primary
 	public DataSourceProperties dataSourceInformixProperties() {
 		return new DataSourceProperties();
+		// return
+		// firstDataSourceProperties().initializeDataSourceBuilder().type(HikariDataSource.class).build();
 	}
 
 	@Bean(name = INFORMIX_DATASOURCE)
@@ -41,6 +43,8 @@ public class InfraestructureLayerConfig {
 	@ConfigurationProperties(prefix = "spring.datasource.oracle.configuration")
 	public DataSource dataSourceOracle() {
 		return dataSourceOracleProperties().initializeDataSourceBuilder().build();
+		// return
+		// firstDataSourceProperties().initializeDataSourceBuilder().type(HikariDataSource.class).build();
 	}
 
 }

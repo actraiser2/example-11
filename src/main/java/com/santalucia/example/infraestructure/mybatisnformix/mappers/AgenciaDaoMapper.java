@@ -1,4 +1,4 @@
-package com.santalucia.example.infraestructure.dao.mappers.agencias;
+package com.santalucia.example.infraestructure.mybatisnformix.mappers;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Select;
 import com.santalucia.example.core.domain.AgenciaDomain;
 
 @Mapper
-public interface AgenciaMapper {
+public interface AgenciaDaoMapper {
 
 	@Select("select g.dprov, h.dpoblaci, c.dagencia,"
 			+ "              case f.dtvia when null then ' ' else f.dtvia end as dtvia," + "              b.ddomici"

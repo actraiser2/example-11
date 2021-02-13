@@ -1,0 +1,1 @@
+INSERT INTO domicagenc (nidendom) VALUES ('a');
