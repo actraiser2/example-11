@@ -1,4 +1,4 @@
-package com.santalucia.example.infraestructure.mybatisnformix.mappers;
+package com.santalucia.example.infrastructure.mybatisnformix.mappers;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 

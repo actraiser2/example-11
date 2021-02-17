@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.santalucia.example.core.domain.EmployeeDomain;
 import com.santalucia.example.core.service.EmployeeService;
-import com.santalucia.example.infraestructure.dao.repository.EmployeeRepository;
+import com.santalucia.example.infrastructure.dao.repository.EmployeeRepository;
 
 @Service
 public class DefaultEmployeeService implements EmployeeService {

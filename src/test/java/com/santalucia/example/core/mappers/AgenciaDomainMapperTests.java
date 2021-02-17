@@ -2,7 +2,7 @@ package com.santalucia.example.core.mappers;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-
+import org.junit.jupiter.api.DisplayName;
 import java.util.Arrays;
 import java.util.List;
 
@@ -14,6 +14,7 @@ import com.santalucia.example.core.domain.AgenciaDomain;
 class AgenciaDomainMapperTests {
 
 	@Test
+	@DisplayName("I'm a Test Class") // TODO: EXTENDER
 	void toApi_ok() {
 
 		AgenciaDomainMapper mapper = new AgenciaDomainMapperImpl();

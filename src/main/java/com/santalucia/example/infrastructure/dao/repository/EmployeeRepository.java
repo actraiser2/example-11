@@ -1,4 +1,4 @@
-package com.santalucia.example.infraestructure.dao.repository;
+package com.santalucia.example.infrastructure.dao.repository;
 
 import java.util.List;
 

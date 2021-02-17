@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "a663085b-1344-4ea0-a955-3c2f87f13c19",
+		"name": "example-app-11",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "8ee09c82-ef9e-43e2-bff2-bbf28184fb07",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "b6965faf-1f88-4df4-8567-045b5d274bd4",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://sso-sldev.santalucia.es/auth/realms/3scale/protocol/openid-connect/token",
+					"protocol": "https",
+					"host": [
+						"sso-sldev",
+						"santalucia",
+						"es"
+					],
+					"path": [
+						"auth",
+						"realms",
+						"3scale",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Say hello",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI1dGVHUjVrblVFLWQ4UnVJZkRuNlliQkt2UnRMVEhUaUl4dGNRYW9SSjdVIn0.eyJleHAiOjE1OTk1ODI0OTksImlhdCI6MTU5OTU4MjM3OSwianRpIjoiN2M5NTlmMWYtMGRkNC00NGYwLThhOWItZGY5YTQ0MzYyMzU5IiwiaXNzIjoiaHR0cHM6Ly9zc28tc2xkZXYuc2FudGFsdWNpYS5lcy9hdXRoL3JlYWxtcy9zdGwtaW50IiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjA5ZjY5ZDdiLWRjN2UtNGQ1Ny04NGViLWE0YjBmOGI2NjgwOSIsInR5cCI6IkJlYXJlciIsImF6cCI6Im5hY2hvLXRlc3Qtc2IyLW9hdXRoMiIsInNlc3Npb25fc3RhdGUiOiI3NDNmN2I1MC1lNjdkLTQ3NWEtYmU5NC1mZGRlYjQ2YmUzZjAiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImNsaWVudEhvc3QiOiIxNTQuMjYuMTIzLjI0NCIsImNsaWVudElkIjoibmFjaG8tdGVzdC1zYjItb2F1dGgyIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2VydmljZS1hY2NvdW50LW5hY2hvLXRlc3Qtc2IyLW9hdXRoMiIsImNsaWVudEFkZHJlc3MiOiIxNTQuMjYuMTIzLjI0NCJ9.c1tj092IljsOVPekjLESHXilQFoqXsPFJmL2d-PEBN9jEisg8xiyGeV8ddiABh3Yx15iOZ-mCdECVqZSMPMlZjI7ujsRX-vA_R-h3cnYiDLP-22bFCVsG0GeAEnK5tozesYEedWCpejaIX7ry3-D-hUbh-s4mKBbvyLzbvxCfgKh-Je5jmkiblId0MVCC3pLsDbDMPwd7WPewpToHnOv5bqvDo5bLsl8PYbtNhrqLlMFTAof-3Bh3Nf8BHLmATvzVqQEm1Mrq45ypuqhq2svCljjtc9dvMVWNZgYVWBgkhwV1UuqQLxfKirU3PE65lDUh9GpdyvCojiSH0MEHqasvw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Request-Id",
+						"value": "2f773a2b-5d6c-4816-9198-9455adb87532",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/hello-world/v1/hello/world",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello-world",
+						"v1",
+						"hello",
+						"world"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employees",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJTSmlqVlhHRGk3MnA5SjVTRUVQRGx3VERkdmF2NV9FWHYtWHgxVUVCTExBIn0.eyJleHAiOjE2MDY4OTA1NjcsImlhdCI6MTYwNjg4OTY2NywianRpIjoiN2Q0MjY2NWItOGVlNC00N2ExLWExMmMtZGNmYmI2MDE2NzkyIiwiaXNzIjoiaHR0cHM6Ly9zc28tc2xkZXYuc2FudGFsdWNpYS5lcy9hdXRoL3JlYWxtcy8zc2NhbGUiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiMGNiYzFiM2QtM2Q5Yy00NTM3LWE2MDctOTIwZWRhNzY2NGE5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiOGVlMDljODItZWY5ZS00M2UyLWJmZjItYmJmMjgxODRmYjA3Iiwic2Vzc2lvbl9zdGF0ZSI6IjllN2M5MmMxLWU5ZjktNDIzMS05N2U1LTZkNWZmNGJmNjY1YSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cHM6Ly9hcGktbWFya2V0LnNhbnRhbHVjaWEuZXMiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJjbGllbnRJZCI6IjhlZTA5YzgyLWVmOWUtNDNlMi1iZmYyLWJiZjI4MTg0ZmIwNyIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiY2xpZW50SG9zdCI6IjIuMTQzLjI0Ny4xNzQiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtOGVlMDljODItZWY5ZS00M2UyLWJmZjItYmJmMjgxODRmYjA3IiwiY2xpZW50QWRkcmVzcyI6IjIuMTQzLjI0Ny4xNzQifQ.JYuwCCfWplmRE5K2g9-yimcVsJZ3azccTeD7Kz_Vm__6I_9Tlk18FexNShYFsi1K6Gr1o793pivZFqGTfBt-B-_t97N4vUi1EnkHfTXhjNdakFudkljYT-ti-3OyHM-AJLbdwYkmr9h99l96T31cv9R22OBo6Tk1VgDm7gmWP3Tt_AypdKoREE-XdsSwU-XqG4y7sf5SIUS1oQw9uM0n6KL1PZ17GN2L9E6H3MvNMb6ravCPiCLzVOF5CdtKgIjqxjBM86m5NKdSvkbGslZ8zs4x1u_l1RbJ172jKugcHUJrgRZbtqhC0fejIItUwAo_U40E525GViapU8H_WQNihg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Request-Id",
+						"value": "20354d7a-e4fe-47af-8ff6-187bca92f3f9",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/hello-world/v1/employees/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello-world",
+						"v1",
+						"employees",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Agencias",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI1dGVHUjVrblVFLWQ4UnVJZkRuNlliQkt2UnRMVEhUaUl4dGNRYW9SSjdVIn0.eyJleHAiOjE1OTk1ODI0OTksImlhdCI6MTU5OTU4MjM3OSwianRpIjoiN2M5NTlmMWYtMGRkNC00NGYwLThhOWItZGY5YTQ0MzYyMzU5IiwiaXNzIjoiaHR0cHM6Ly9zc28tc2xkZXYuc2FudGFsdWNpYS5lcy9hdXRoL3JlYWxtcy9zdGwtaW50IiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjA5ZjY5ZDdiLWRjN2UtNGQ1Ny04NGViLWE0YjBmOGI2NjgwOSIsInR5cCI6IkJlYXJlciIsImF6cCI6Im5hY2hvLXRlc3Qtc2IyLW9hdXRoMiIsInNlc3Npb25fc3RhdGUiOiI3NDNmN2I1MC1lNjdkLTQ3NWEtYmU5NC1mZGRlYjQ2YmUzZjAiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImNsaWVudEhvc3QiOiIxNTQuMjYuMTIzLjI0NCIsImNsaWVudElkIjoibmFjaG8tdGVzdC1zYjItb2F1dGgyIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2VydmljZS1hY2NvdW50LW5hY2hvLXRlc3Qtc2IyLW9hdXRoMiIsImNsaWVudEFkZHJlc3MiOiIxNTQuMjYuMTIzLjI0NCJ9.c1tj092IljsOVPekjLESHXilQFoqXsPFJmL2d-PEBN9jEisg8xiyGeV8ddiABh3Yx15iOZ-mCdECVqZSMPMlZjI7ujsRX-vA_R-h3cnYiDLP-22bFCVsG0GeAEnK5tozesYEedWCpejaIX7ry3-D-hUbh-s4mKBbvyLzbvxCfgKh-Je5jmkiblId0MVCC3pLsDbDMPwd7WPewpToHnOv5bqvDo5bLsl8PYbtNhrqLlMFTAof-3Bh3Nf8BHLmATvzVqQEm1Mrq45ypuqhq2svCljjtc9dvMVWNZgYVWBgkhwV1UuqQLxfKirU3PE65lDUh9GpdyvCojiSH0MEHqasvw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Request-Id",
+						"value": "20354d7a-e4fe-47af-8ff6-187bca92f3f9",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/hello-world/v1/agencias/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello-world",
+						"v1",
+						"agencias",
+						"list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

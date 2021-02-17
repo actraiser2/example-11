@@ -1,4 +1,4 @@
-package com.santalucia.example.infraestructure.mybatisoracle.config;
+package com.santalucia.example.infrastructure.mybatisoracle.config;
 
 import javax.sql.DataSource;
 
@@ -6,16 +6,17 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.annotation.MapperScan;
+import org.mybatis.spring.boot.autoconfigure.SpringBootVFS;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
-import com.santalucia.example.infraestructure.config.InfraestructureLayerConfig;
+import com.santalucia.example.infrastructure.config.InfrastructureLayerConfig;
 
 @Configuration
-@MapperScan(basePackages = "com.santalucia.example.infraestructure.mybatisoracle.mappers",
+@MapperScan(basePackages = OracleMyBatisConfig.BASE_PACKAGE,
 		sqlSessionTemplateRef = OracleMyBatisConfig.SESSION_TEMPLATE)
 public class OracleMyBatisConfig {
 
@@ -25,20 +26,25 @@ public class OracleMyBatisConfig {
 
 	protected static final String SESSION_TEMPLATE = "oracleSessionTemplate";
 
+	protected static final String BASE_PACKAGE = "com.santalucia.example.infrastructure.mybatisoracle.mappers";
+
 	@Bean(name = SESSION_FACTORY)
 	@Primary
 	public SqlSessionFactory sqlSessionFactoryBean(
-			@Qualifier(InfraestructureLayerConfig.ORACLE_DATASOURCE) DataSource dataSource) throws Exception {
+			@Qualifier(InfrastructureLayerConfig.ORACLE_DATASOURCE) DataSource dataSource) throws Exception {
 
-		SqlSessionFactoryBean sessionBean = new SqlSessionFactoryBean();
-		sessionBean.setDataSource(dataSource);
-		return sessionBean.getObject();
+		SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
+		factoryBean.setDataSource(dataSource);
+		factoryBean.setVfs(SpringBootVFS.class);
+		// sessionBean.setMapperLocations(InformixMyBatisConfig.BASE_PACKAGE);
+		// sessionBean.setDatabaseIdProvider(DatabaseIdProvider.);
+		return factoryBean.getObject();
 	}
 
 	@Bean(name = TRANSACTION_MANAGER)
 	@Primary
 	public DataSourceTransactionManager informixTransactionManager(
-			@Qualifier(InfraestructureLayerConfig.ORACLE_DATASOURCE) DataSource dataSource) {
+			@Qualifier(InfrastructureLayerConfig.ORACLE_DATASOURCE) DataSource dataSource) {
 		return new DataSourceTransactionManager(dataSource);
 	}
 

@@ -58,16 +58,28 @@ spring:
             
   # Conexion para recuperar agencias en pruebas de componente database
   datasource:
-    informix:  
-      driverClassName: com.informix.jdbc.IfxDriver
-      url: jdbc:informix-sqli://slbdifxd11.servidores.net:20101/siis:INFORMIXSERVER=fun_jdbc
+    informix:
+      driver-class-name: com.informix.jdbc.IfxDriver
+      url: jdbc:informix-sqli://192.168.204.226:20101/siis:INFORMIXSERVER=fun_jdbc
       username: amsdacom
       password: Am5Spr1ngD4c0m
+      configuration:
+        pool-name: InformixCP
+        connection-timeout: 10000
+        idle-timeout: 300000
+        max-lifetime: 600000
+        
     oracle:
-      driverClassName: oracle.jdbc.OracleDriver
+      driver-class-name: oracle.jdbc.OracleDriver
       url: jdbc:oracle:thin:@slbdorad11.servidores.net:1548/DB12UTF8D.DES.SANTALUCIA.ES
       username: LAB_ARQ_SW_DEV
       password: lab_arq_sw_dev
+      configuration:
+        pool-name: OracleCP
+        connection-timeout: 10000
+        idle-timeout: 300000
+        max-lifetime: 600000
+      
 
 opentracing:
   jaeger:
@@ -131,7 +143,7 @@ santalucia:
 ###########################
         
 helloWorld:
-  url: https://apis.santalucia.es/hello-world/v1
+  url: http://localhost:8080/hello-world/v1
       
 ###########################
 #                         #

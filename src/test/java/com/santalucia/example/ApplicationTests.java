@@ -10,8 +10,8 @@ class ApplicationTests {
 
 	@Test
 	void contextLoads() {
-		 Application.main(new String[] {});
-		 assertTrue(true);
+		Application.main(new String[] {});
+		assertTrue(true); // TODO: cambiar a assertNoexception
 	}
 
 }

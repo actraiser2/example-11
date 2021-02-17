@@ -1,4 +1,4 @@
-package com.santalucia.example.infraestructure.mybatisoracle.mappers;
+package com.santalucia.example.infrastructure.mybatisoracle.mappers;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;

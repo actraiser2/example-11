@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.santalucia.example.core.domain.AgenciaDomain;
 import com.santalucia.example.core.service.AgenciaService;
-import com.santalucia.example.infraestructure.dao.repository.AgenciaRepository;
+import com.santalucia.example.infrastructure.dao.repository.AgenciaRepository;
 
 @Service
 public class DefaultAgenciaService implements AgenciaService {
