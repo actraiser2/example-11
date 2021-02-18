@@ -25,24 +25,24 @@ public class InfrastructureLayerConfig {
 	public static final String ORACLE_DATASOURCE = "oracleDS";
 
 	@Bean
-	@ConfigurationProperties(prefix = "spring.datasource.informix")
+	@ConfigurationProperties(prefix = "santalucia.ams.datasources.informix")
 	@Primary
 	public DataSourceProperties dataSourceInformixProperties() {
 		return new DataSourceProperties();
 	}
 
 	@Bean
-	@ConfigurationProperties(prefix = "spring.datasource.oracle")
+	@ConfigurationProperties(prefix = "santalucia.ams.datasources.oracle")
 	public DataSourceProperties dataSourceOracleProperties() {
 		return new DataSourceProperties();
 	}
 
 	@Bean(name = INFORMIX_DATASOURCE)
-	@ConfigurationProperties(prefix = "spring.datasource.informix.configuration")
+	@ConfigurationProperties(prefix = "santalucia.ams.datasources.informix")
 	@Primary
 	public HikariDataSource dataSourceInformix() throws SQLException {
 
-		HikariDataSource ds = dataSourceInformixProperties().initializeDataSourceBuilder().type(HikariDataSource.class)
+		HikariDataSource ds = (HikariDataSource) dataSourceInformixProperties().initializeDataSourceBuilder().type(HikariDataSource.class)
 				.build();
 		// HikariDataSource ds =
 		// dataSourceInformixProperties().initializeDataSourceBuilder().type(HikariDataSource.class)
@@ -55,10 +55,10 @@ public class InfrastructureLayerConfig {
 	}
 
 	@Bean(name = ORACLE_DATASOURCE)
-	@ConfigurationProperties(prefix = "spring.datasource.oracle.configuration")
+	@ConfigurationProperties(prefix = "santalucia.ams.datasources.oracle")
 	public HikariDataSource dataSourceOracle() throws SQLException {
 
-		HikariDataSource ds = dataSourceOracleProperties().initializeDataSourceBuilder().type(HikariDataSource.class)
+		HikariDataSource ds = (HikariDataSource) dataSourceOracleProperties().initializeDataSourceBuilder().type(HikariDataSource.class)
 				.build();
 		// force get connection due to lazy initialization introudced in SB 2.22
 		// https://github.com/spring-projects/spring-boot/issues/19596

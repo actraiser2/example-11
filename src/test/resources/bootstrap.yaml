@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active:
+    - test
+
+---
+spring:
+  profiles: test #Profile para deshabilitar kubernetes
+  cloud:
+    kubernetes:
+        enabled: false
+        
+debug: false # Enable debug logs.
+trace: false # Enable trace logs.

@@ -57,29 +57,7 @@ spring:
 #            issuer-uri: https://sso-sldev.santalucia.es/auth/realms/stl-int/.well-known/openid-configuration
             
   # Conexion para recuperar agencias en pruebas de componente database
-  datasource:
-    informix:
-      driver-class-name: com.informix.jdbc.IfxDriver
-      url: jdbc:informix-sqli://192.168.204.226:20101/siis:INFORMIXSERVER=fun_jdbc
-      username: amsdacom
-      password: Am5Spr1ngD4c0m
-      configuration:
-        pool-name: InformixCP
-        connection-timeout: 10000
-        idle-timeout: 300000
-        max-lifetime: 600000
-        
-    oracle:
-      driver-class-name: oracle.jdbc.OracleDriver
-      url: jdbc:oracle:thin:@slbdorad11.servidores.net:1548/DB12UTF8D.DES.SANTALUCIA.ES
-      username: LAB_ARQ_SW_DEV
-      password: lab_arq_sw_dev
-      configuration:
-        pool-name: OracleCP
-        connection-timeout: 10000
-        idle-timeout: 300000
-        max-lifetime: 600000
-      
+
 
 opentracing:
   jaeger:
@@ -124,6 +102,25 @@ management:
     
 santalucia:
   ams:
+    datasources:
+      informix:
+        hikari:
+          username: amsdacom
+          password: Am5Spr1ngD4c0m
+          pool-name: InformixCP
+          connection-timeout: 88888
+          max-lifetime: 600000
+          jdbc-url: jdbc:informix-sqli://192.168.204.226:20101/siis:INFORMIXSERVER=fun_jdbc
+      oracle:
+        driver-class-name: oracle.jdbc.OracleDriver
+        hikari:
+          username: LAB_ARQ_SW_DEV
+          password: lab_arq_sw_dev
+          pool-name: OracleCP
+          connection-timeout: 99999
+          max-lifetime: 600000
+          jdbc-url: jdbc:oracle:thin:@slbdorad11.servidores.net:1548/DB12UTF8D.DES.SANTALUCIA.ES
+      
     features:
       guardium:
         enabled: true      security:

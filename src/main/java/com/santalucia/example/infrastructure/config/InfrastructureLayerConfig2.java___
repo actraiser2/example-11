@@ -1,0 +1,77 @@
+package com.santalucia.example.infrastructure.config;
+
+import java.sql.SQLException;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Configuration
+@EnableTransactionManagement
+public class InfrastructureLayerConfig {
+
+	// https://docs.spring.io/spring-boot/docs/2.1.18.RELEASE/reference/html/howto-data-access.html#howto-two-datasources
+
+	public static final String INFORMIX_DATASOURCE = "informixDS";
+
+	public static final String ORACLE_DATASOURCE = "oracleDS";
+
+	@Bean(name = INFORMIX_DATASOURCE)
+	@Primary
+	public DataSource dataSourceInformix(@Qualifier("informix-prop") DataSourceProperties properties)
+			throws SQLException {
+
+		HikariDataSource ds = new HikariDataSource(hikariConfiginformix());
+		// ds.getConnection();
+		log.warn("Informix getConnectionTimeout " + ds.getConnectionTimeout());
+		return ds;
+	}
+
+	@Bean
+	@ConfigurationProperties(prefix = "santalucia.ams.datasources.oracle.hikari")
+	public HikariConfig hikariConfigoracle() {
+		return new HikariConfig();
+	}
+
+	@Bean
+	@ConfigurationProperties(prefix = "santalucia.ams.datasources.informix.hikari")
+	public HikariConfig hikariConfiginformix() {
+		return new HikariConfig();
+	}
+
+	@Bean(name = ORACLE_DATASOURCE)
+	public HikariDataSource dataSourceOracle(@Qualifier("oracle-prop") DataSourceProperties properties)
+			throws SQLException {
+
+		HikariDataSource ds = new HikariDataSource(hikariConfigoracle());
+		// ds.getConnection();
+		log.warn("Oracle getConnectionTimeout " + ds.getConnectionTimeout());
+		return ds;
+	}
+
+	@Bean(name = "informix-prop")
+	@ConfigurationProperties(prefix = "santalucia.ams.datasources.informix")
+	@Primary
+	public DataSourceProperties dataSourceInformixProperties() {
+		return new DataSourceProperties();
+	}
+
+	@Bean(name = "oracle-prop")
+	@ConfigurationProperties(prefix = "santalucia.ams.datasources.oracle")
+	public DataSourceProperties dataSourceOracleProperties() {
+		return new DataSourceProperties();
+	}
+
+}
