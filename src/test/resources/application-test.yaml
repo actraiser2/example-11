@@ -1,16 +1,22 @@
-santalucia:      
-  ams:
-    datasources:
-      informix:
-        hikari:          connection-timeout: 100
-          pool-name: InformixCP
-          jdbc-url: jdbc:h2:mem:db-informix;DB_CLOSE_DELAY=-1
-          driver-class-name: org.h2.Driver
-      oracle:
-        hikari:
-          username: sa
-          password: sa
-          connection-timeout: 100
-          pool-name: OracleCP
-          jdbc-url: jdbc:h2:mem:db-oracle;DB_CLOSE_DELAY=-1;MODE=Oracle
-          driver-class-name: org.h2.Driver
+
+spring:
+  datasource:
+    primary:
+      hikari:
+        driver-class-name: org.h2.Driver
+        username: sa
+        password: sa
+        pool-name: h2-primary
+        connection-timeout: 1000
+        jdbc-url: jdbc:h2:mem:db-informix;DB_CLOSE_DELAY=-1
+    secondary:
+      hikari:
+        driver-class-name: org.h2.Driver
+        username: sb
+        password: sb
+        pool-name: h2-secondary
+        connection-timeout: 1000
+        jdbc-url: jdbc:h2:mem:db-oracle;DB_CLOSE_DELAY=-1;MODE=Oracle
+
+##En entornos de test no existe datasource de tipo Informix
+santalucia:  ams:    features:      guardium:        enabled: false

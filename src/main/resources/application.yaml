@@ -58,6 +58,23 @@ spring:
             
   # Conexion para recuperar agencias en pruebas de componente database
 
+  datasource:
+    primary:
+      hikari:
+        driver-class-name: com.informix.jdbc.IfxDriver
+        username: amsdacom
+        password: Am5Spr1ngD4c0m
+        pool-name: InformixCP
+        connection-timeout: 88888
+        jdbc-url: jdbc:informix-sqli://192.168.204.226:20101/siis:INFORMIXSERVER=fun_jdbc
+    secondary:
+      hikari:
+        driver-class-name: oracle.jdbc.OracleDriver
+        username: LAB_ARQ_SW_DEV
+        password: lab_arq_sw_dev
+        pool-name: OracleCP
+        connection-timeout: 99999
+        jdbc-url: jdbc:oracle:thin:@slbdorad15.servidores.net:1548/DB12UTF8D.DES.SANTALUCIA.ES 
 
 opentracing:
   jaeger:
@@ -99,31 +116,23 @@ management:
 # santalucia properties   #
 #                         #
 ###########################
+ 
+
+ 
     
 santalucia:
   ams:
-    datasources:
-      informix:
-        hikari:
-          username: amsdacom
-          password: Am5Spr1ngD4c0m
-          pool-name: InformixCP
-          connection-timeout: 88888
-          max-lifetime: 600000
-          jdbc-url: jdbc:informix-sqli://192.168.204.226:20101/siis:INFORMIXSERVER=fun_jdbc
-      oracle:
-        driver-class-name: oracle.jdbc.OracleDriver
-        hikari:
-          username: LAB_ARQ_SW_DEV
-          password: lab_arq_sw_dev
-          pool-name: OracleCP
-          connection-timeout: 99999
-          max-lifetime: 600000
-          jdbc-url: jdbc:oracle:thin:@slbdorad11.servidores.net:1548/DB12UTF8D.DES.SANTALUCIA.ES
-      
     features:
       guardium:
-        enabled: true      security:
+        enabled: true
+      mybatis:
+        primary:
+          base-packages: 
+            com.santalucia.example.infrastructure.mybatisnformix.mappers
+        secondary:
+          base-packages: 
+            com.santalucia.example.infrastructure.mybatisnformix.mappers
+                security:
         core:          enabled: true        cors:          enabled: false
           #allowed-origins: https://example.com
           #allowed-methods: GET, POST
