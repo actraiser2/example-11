@@ -1,4 +1,4 @@
-package com.santalucia.example.infrastructure.mybatisnformix.mappers;
+package com.santalucia.example.infrastructure.mybatis.primary;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
@@ -13,6 +13,8 @@ import org.springframework.test.context.jdbc.SqlMergeMode;
 import org.springframework.test.context.jdbc.SqlMergeMode.MergeMode;
 
 import com.santalucia.example.core.domain.AgenciaDomain;
+import com.santalucia.example.infrastructure.entity.Cacetrafec;
+import com.santalucia.example.infrastructure.mybatis.primary.CacetrafecMapper;
 
 @Disabled("for demonstration purposes")
 @MybatisTest
@@ -21,12 +23,12 @@ import com.santalucia.example.core.domain.AgenciaDomain;
 class AgenciaDaoMapperTests {
 
 	@Autowired
-	private AgenciaDaoMapper agenciaDaoMapper;
+	private CacetrafecMapper agenciaDaoMapper;
 
 	@Test
 	@Sql(scripts = { "/sql/data/agencia-data.sql" })
 	void getAgenciasTest() {
-		List<AgenciaDomain> city = agenciaDaoMapper.getAgencias();
+		List<Cacetrafec> city = agenciaDaoMapper.selectOne();
 		assertNotNull(city);
 		// assertList(city.getState()).isEqualTo("CA");
 		// assertThat(city.getCountry()).isEqualTo("US");

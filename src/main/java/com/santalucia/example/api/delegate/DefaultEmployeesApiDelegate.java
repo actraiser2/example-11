@@ -8,9 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
-import com.santalucia.example.api.model.Employee;
+import com.santalucia.example.api.model.EmployeeResource;
 import com.santalucia.example.api.server.EmployeesApiDelegate;
-import com.santalucia.example.core.domain.EmployeeDomain;
 import com.santalucia.example.core.mappers.EmployeeDomainMapper;
 import com.santalucia.example.core.service.EmployeeService;
 
@@ -19,20 +18,14 @@ public class DefaultEmployeesApiDelegate implements EmployeesApiDelegate {
 
 	private final EmployeeService employeeService;
 
-	private final EmployeeDomainMapper employeeDomainMapper;
 
 	public DefaultEmployeesApiDelegate(EmployeeService employeeService, EmployeeDomainMapper employeeDomainMapper) {
 		this.employeeService = employeeService;
-		this.employeeDomainMapper = employeeDomainMapper;
 	}
 
 	@Override
-	public ResponseEntity<List<Employee>> getEmployeesList(Optional<UUID> xRequestId) {
-
-		List<EmployeeDomain> listEmployeeDomain = this.employeeService.getEmployees();
-		List<Employee> listEmployee = employeeDomainMapper.toApis(listEmployeeDomain);
-
-		return new ResponseEntity<>(listEmployee, HttpStatus.OK);
+	public ResponseEntity<List<EmployeeResource>> getEmployeesList(Optional<UUID> xRequestId) {
+		return new ResponseEntity<>(this.employeeService.getEmployees(), HttpStatus.OK);
 	}
 
 }

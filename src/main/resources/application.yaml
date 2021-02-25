@@ -31,8 +31,9 @@ spring:
       enabled: detect
   #mandatory-file-encoding: UTF-8 #desactivar en Windows
   jmx:
-    enabled: true
+    enabled: false
     unique-names: true
+    
     
   security:
     oauth2:
@@ -115,11 +116,7 @@ management:
 #                         #
 # santalucia properties   #
 #                         #
-###########################
- 
-
- 
-    
+###########################  
 santalucia:
   ams:
     features:
@@ -127,12 +124,9 @@ santalucia:
         enabled: true
       mybatis:
         primary:
-          base-packages: 
-            com.santalucia.example.infrastructure.mybatisnformix.mappers
+          base-packages: com.santalucia.example.infrastructure.mybatis.primary
         secondary:
-          base-packages: 
-            com.santalucia.example.infrastructure.mybatisnformix.mappers
-                security:
+          base-packages: com.santalucia.example.infrastructure.mybatis.secondary      security:
         core:          enabled: true        cors:          enabled: false
           #allowed-origins: https://example.com
           #allowed-methods: GET, POST

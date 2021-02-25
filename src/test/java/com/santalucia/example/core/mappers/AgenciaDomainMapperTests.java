@@ -2,24 +2,25 @@ package com.santalucia.example.core.mappers;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import org.junit.jupiter.api.DisplayName;
+
 import java.util.Arrays;
 import java.util.List;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import com.santalucia.example.api.model.Agencia;
+import com.santalucia.example.api.model.AgenciaResource;
 import com.santalucia.example.core.domain.AgenciaDomain;
 
-class AgenciaDomainMapperTests {
+class CacetrafecDomainMapperTests {
 
 	@Test
 	@DisplayName("I'm a Test Class") // TODO: EXTENDER
 	void toApi_ok() {
 
-		AgenciaDomainMapper mapper = new AgenciaDomainMapperImpl();
+		CacetrafecDomainMapper mapper = new CacetrafecDomainMapperImpl();
 		AgenciaDomain entity = buildAgenciDomain();
-		Agencia dto = mapper.toApi(entity);
+		AgenciaResource dto = mapper.toResource(entity);
 
 		compare(dto, entity);
 	}
@@ -27,8 +28,8 @@ class AgenciaDomainMapperTests {
 	@Test
 	void toDomain_ok() {
 
-		AgenciaDomainMapper mapper = new AgenciaDomainMapperImpl();
-		Agencia dto = buildAgencia();
+		CacetrafecDomainMapper mapper = new CacetrafecDomainMapperImpl();
+		AgenciaResource dto = buildAgencia();
 		AgenciaDomain entity = mapper.toDomain(dto);
 
 		compare(dto, entity);
@@ -37,10 +38,10 @@ class AgenciaDomainMapperTests {
 	@Test
 	void toApis_ok() {
 
-		AgenciaDomainMapper mapper = new AgenciaDomainMapperImpl();
+		CacetrafecDomainMapper mapper = new CacetrafecDomainMapperImpl();
 		AgenciaDomain entity = buildAgenciDomain();
 		List<AgenciaDomain> entitys = Arrays.asList(entity);
-		List<Agencia> apis = mapper.toApis(entitys);
+		List<AgenciaResource> apis = mapper.toResources(entitys);
 
 		compare(apis, entitys);
 	}
@@ -48,18 +49,18 @@ class AgenciaDomainMapperTests {
 	@Test
 	void toDomains_ok() {
 
-		AgenciaDomainMapper mapper = new AgenciaDomainMapperImpl();
-		Agencia dto = buildAgencia();
+		CacetrafecDomainMapper mapper = new CacetrafecDomainMapperImpl();
+		AgenciaResource dto = buildAgencia();
 
-		List<Agencia> apis = Arrays.asList(dto);
-		List<AgenciaDomain> entitys = mapper.toDomains(apis);
+		List<AgenciaResource> apis = Arrays.asList(dto);
+		List<AgenciaDomain> entitys = mapper.toDomainsfromResources(apis);
 
 		compare(apis, entitys);
 	}
 
-	protected Agencia buildAgencia() {
+	protected AgenciaResource buildAgencia() {
 
-		Agencia dto = new Agencia();
+		AgenciaResource dto = new AgenciaResource();
 		dto.setDagencia("email");
 		dto.setDdomici("firstName");
 		dto.setDpoblaci("lastName");
@@ -79,7 +80,7 @@ class AgenciaDomainMapperTests {
 		return entity;
 	}
 
-	protected void compare(List<Agencia> dtos, List<AgenciaDomain> entitys) {
+	protected void compare(List<AgenciaResource> dtos, List<AgenciaDomain> entitys) {
 
 		assertNotNull(dtos);
 		assertNotNull(entitys);
@@ -89,7 +90,7 @@ class AgenciaDomainMapperTests {
 		}
 	}
 
-	protected void compare(Agencia dto, AgenciaDomain entity) {
+	protected void compare(AgenciaResource dto, AgenciaDomain entity) {
 		assertNotNull(dto);
 		assertNotNull(entity);
 		assertEquals(entity.getDagencia(), dto.getDagencia());

@@ -8,7 +8,7 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import com.santalucia.example.api.model.Employee;
+import com.santalucia.example.api.model.EmployeeResource;
 import com.santalucia.example.core.domain.EmployeeDomain;
 
 class EmployeeDomainMapperTests {
@@ -20,7 +20,7 @@ class EmployeeDomainMapperTests {
 
 		EmployeeDomain entity = buildEmployeeDomain();
 
-		Employee dto = mapper.toApi(entity);
+		EmployeeResource dto = mapper.toResource(entity);
 		compare(dto, entity);
 	}
 
@@ -29,7 +29,7 @@ class EmployeeDomainMapperTests {
 
 		EmployeeDomainMapper mapper = new EmployeeDomainMapperImpl();
 
-		Employee dto = buildEmployee();
+		EmployeeResource dto = buildEmployee();
 
 		EmployeeDomain entity = mapper.toDomain(dto);
 		compare(dto, entity);
@@ -44,7 +44,7 @@ class EmployeeDomainMapperTests {
 
 		List<EmployeeDomain> entitys = Arrays.asList(entity);
 
-		List<Employee> apis = mapper.toApis(entitys);
+		List<EmployeeResource> apis = mapper.toResources(entitys);
 
 		compare(apis, entitys);
 	}
@@ -53,18 +53,18 @@ class EmployeeDomainMapperTests {
 	void toDomains_ok() {
 
 		EmployeeDomainMapper mapper = new EmployeeDomainMapperImpl();
-		Employee dto = buildEmployee();
+		EmployeeResource dto = buildEmployee();
 
-		List<Employee> apis = Arrays.asList(dto);
-		List<EmployeeDomain> entitys = mapper.toDomains(apis);
+		List<EmployeeResource> apis = Arrays.asList(dto);
+		List<EmployeeDomain> entitys = mapper.toDomainsfromResources(apis);
 
 		compare(apis, entitys);
 
 	}
 
-	protected Employee buildEmployee() {
+	protected EmployeeResource buildEmployee() {
 
-		Employee dto = new Employee();
+		EmployeeResource dto = new EmployeeResource();
 		dto.setEmailAddress("email");
 		dto.setFirstName("firstName");
 		dto.setLastName("lastName");
@@ -80,7 +80,7 @@ class EmployeeDomainMapperTests {
 		return entity;
 	}
 
-	protected void compare(List<Employee> dtos, List<EmployeeDomain> entitys) {
+	protected void compare(List<EmployeeResource> dtos, List<EmployeeDomain> entitys) {
 
 		assertNotNull(dtos);
 		assertNotNull(entitys);
@@ -90,7 +90,7 @@ class EmployeeDomainMapperTests {
 		}
 	}
 
-	protected void compare(Employee dto, EmployeeDomain entity) {
+	protected void compare(EmployeeResource dto, EmployeeDomain entity) {
 		assertNotNull(dto);
 		assertNotNull(entity);
 		assertEquals(entity.getEmailAddress(), dto.getEmailAddress());

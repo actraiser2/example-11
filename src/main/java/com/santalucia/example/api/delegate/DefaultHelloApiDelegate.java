@@ -24,7 +24,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
-import com.santalucia.example.api.model.IdentidadDigitalConsulta;
+import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
 import com.santalucia.example.api.server.HelloApiDelegate;
 import com.santalucia.example.core.service.HelloService;
 
@@ -44,15 +44,11 @@ public class DefaultHelloApiDelegate implements HelloApiDelegate {
 	}
 
 	@Override
-	public ResponseEntity<IdentidadDigitalConsulta> getHelloByName(String name, Optional<UUID> xRequestId) {
+	public ResponseEntity<IdentidadDigitalConsultaResource> getHelloByName(String name, Optional<UUID> xRequestId) {
 
 		log.info("Received hello request for {}", name);
 
-		String remoteResponse = helloService.getHello(name);
-
-		IdentidadDigitalConsulta response = new IdentidadDigitalConsulta().nombre(remoteResponse);
-
-		return new ResponseEntity<>(response, HttpStatus.OK);
+		return new ResponseEntity<>(this.helloService.getHello(name), HttpStatus.OK);
 
 	}
 

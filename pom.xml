@@ -15,15 +15,16 @@
 	<description>Demo project for Spring Boot</description>
 	
 	<properties>
-		<swagger-codegen.inputSpec>src/main/resources/definition-yaml/swagger.yaml</swagger-codegen.inputSpec>
-		<swagger-codegen.package>${project.groupId}</swagger-codegen.package>
-		<swagger-codegen.skip.server>false</swagger-codegen.skip.server>
-		<swagger-codegen.skip.client>false</swagger-codegen.skip.client>
-	
+		<swagger.codegen.inputSpec>src/main/resources/api/swagger.yaml</swagger.codegen.inputSpec>
+		<swagger.codegen.package>${project.groupId}</swagger.codegen.package>
+		<swagger.codegen.skip.server>false</swagger.codegen.skip.server>
+		<swagger.codegen.skip.client>false</swagger.codegen.skip.client>
+        <mybatis.codegen.output.dir>src/main/java</mybatis.codegen.output.dir>
 	</properties>
 	
 	<dependencies>
 	
+		
 	    <dependency>
 	      <groupId>org.springframework.boot</groupId>
 	      <artifactId>spring-boot-devtools</artifactId>
@@ -79,10 +80,10 @@
  			<scope>test</scope>
  		</dependency> 
  		
+ 		
 		<dependency>
 		    <groupId>org.mybatis.spring.boot</groupId>
 		    <artifactId>mybatis-spring-boot-starter-test</artifactId>
-		    <version>2.1.4</version>
 		    <scope>test</scope>
 		</dependency>
  		

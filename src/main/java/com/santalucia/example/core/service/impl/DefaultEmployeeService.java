@@ -4,22 +4,30 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.santalucia.example.api.model.EmployeeResource;
 import com.santalucia.example.core.domain.EmployeeDomain;
+import com.santalucia.example.core.mappers.EmployeeDomainMapper;
 import com.santalucia.example.core.service.EmployeeService;
-import com.santalucia.example.infrastructure.dao.repository.EmployeeRepository;
+import com.santalucia.example.infrastructure.entity.Employee;
+import com.santalucia.example.infrastructure.repository.EmployeeRepository;
 
 @Service
 public class DefaultEmployeeService implements EmployeeService {
 
 	private final EmployeeRepository employeeRepository;
+	private final EmployeeDomainMapper employeeMapper;
 
-	public DefaultEmployeeService(EmployeeRepository employeeRepository) {
+	public DefaultEmployeeService(EmployeeRepository employeeRepository, EmployeeDomainMapper employeeMapper) {
 		this.employeeRepository = employeeRepository;
+		this.employeeMapper = employeeMapper;
 	}
 
 	@Override
-	public List<EmployeeDomain> getEmployees() {
-		return this.employeeRepository.getAllEmployees();
+	public List<EmployeeResource> getEmployees() {
+		
+		List<Employee> lstEntity = employeeRepository.getAllEmployees();
+		List<EmployeeDomain> lstDomain = employeeMapper.toDomainsfromEntities(lstEntity);
+		return employeeMapper.toResources(lstDomain);
 	}
 
 }

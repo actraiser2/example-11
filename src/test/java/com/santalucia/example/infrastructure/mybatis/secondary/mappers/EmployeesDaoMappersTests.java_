@@ -1,4 +1,4 @@
-package com.santalucia.example.infrastructure.mybatisoracle.mappers;
+package com.santalucia.example.infrastructure.mybatis.secondary.mappers;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -13,6 +13,7 @@ import org.springframework.test.context.jdbc.SqlMergeMode;
 import org.springframework.test.context.jdbc.SqlMergeMode.MergeMode;
 
 import com.santalucia.example.core.domain.EmployeeDomain;
+import com.santalucia.example.infrastructure.mybatis.secondary.EmployeeMapper;
 
 @MybatisTest
 @SqlMergeMode(MergeMode.MERGE)
@@ -20,12 +21,12 @@ import com.santalucia.example.core.domain.EmployeeDomain;
 class EmployeesDaoMappersTests {
 
 	@Autowired
-	private EmployeesDaoMappers employeesDaoMappers;
+	private EmployeeMapper employeesDaoMappers;
 
 	@Test
 	@Sql(scripts = { "/sql/data/employees-data.sql" })
 	void getEmployeesTest() {
-		List<EmployeeDomain> employees = employeesDaoMappers.getEmployees();
+		List<EmployeeDomain> employees = employeesDaoMappers.selectMany();
 		assertNotNull(employees);
 		assertEquals(1, employees.size());
 		assertEquals("firstname", employees.get(0).getFirstName());
