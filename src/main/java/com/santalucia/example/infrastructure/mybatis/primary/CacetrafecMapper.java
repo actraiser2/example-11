@@ -33,31 +33,31 @@ import org.mybatis.dynamic.sql.util.mybatis3.MyBatis3Utils;
 
 @Mapper
 public interface CacetrafecMapper {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-02-25T09:38:09.5196319+01:00", comments="Source Table: cacetrafec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     BasicColumn[] selectList = BasicColumn.columnList(ccentrab, xcacetra, finvaldt, ffivaldt, fregilog);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-02-25T09:38:09.5136303+01:00", comments="Source Table: cacetrafec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     long count(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-02-25T09:38:09.5146307+01:00", comments="Source Table: cacetrafec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
     int delete(DeleteStatementProvider deleteStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-02-25T09:38:09.5146307+01:00", comments="Source Table: cacetrafec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     @InsertProvider(type=SqlProviderAdapter.class, method="insert")
     int insert(InsertStatementProvider<Cacetrafec> insertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-02-25T09:38:09.5146307+01:00", comments="Source Table: cacetrafec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     @InsertProvider(type=SqlProviderAdapter.class, method="insertMultiple")
     int insertMultiple(MultiRowInsertStatementProvider<Cacetrafec> multipleInsertStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-02-25T09:38:09.5156309+01:00", comments="Source Table: cacetrafec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @ResultMap("CacetrafecResult")
     Optional<Cacetrafec> selectOne(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-02-25T09:38:09.5156309+01:00", comments="Source Table: cacetrafec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
     @Results(id="CacetrafecResult", value = {
         @Result(column="ccentrab", property="ccentrab", jdbcType=JdbcType.SMALLINT),
@@ -68,21 +68,21 @@ public interface CacetrafecMapper {
     })
     List<Cacetrafec> selectMany(SelectStatementProvider selectStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-02-25T09:38:09.5166314+01:00", comments="Source Table: cacetrafec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     @UpdateProvider(type=SqlProviderAdapter.class, method="update")
     int update(UpdateStatementProvider updateStatement);
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-02-25T09:38:09.5166314+01:00", comments="Source Table: cacetrafec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     default long count(CountDSLCompleter completer) {
         return MyBatis3Utils.countFrom(this::count, cacetrafec, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-02-25T09:38:09.5166314+01:00", comments="Source Table: cacetrafec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     default int delete(DeleteDSLCompleter completer) {
         return MyBatis3Utils.deleteFrom(this::delete, cacetrafec, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-02-25T09:38:09.5176309+01:00", comments="Source Table: cacetrafec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     default int insert(Cacetrafec record) {
         return MyBatis3Utils.insert(this::insert, record, cacetrafec, c ->
             c.map(ccentrab).toProperty("ccentrab")
@@ -93,7 +93,7 @@ public interface CacetrafecMapper {
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-02-25T09:38:09.5186315+01:00", comments="Source Table: cacetrafec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     default int insertMultiple(Collection<Cacetrafec> records) {
         return MyBatis3Utils.insertMultiple(this::insertMultiple, records, cacetrafec, c ->
             c.map(ccentrab).toProperty("ccentrab")
@@ -104,7 +104,7 @@ public interface CacetrafecMapper {
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-02-25T09:38:09.5186315+01:00", comments="Source Table: cacetrafec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     default int insertSelective(Cacetrafec record) {
         return MyBatis3Utils.insert(this::insert, record, cacetrafec, c ->
             c.map(ccentrab).toPropertyWhenPresent("ccentrab", record::getCcentrab)
@@ -115,27 +115,27 @@ public interface CacetrafecMapper {
         );
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-02-25T09:38:09.5206314+01:00", comments="Source Table: cacetrafec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     default Optional<Cacetrafec> selectOne(SelectDSLCompleter completer) {
         return MyBatis3Utils.selectOne(this::selectOne, selectList, cacetrafec, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-02-25T09:38:09.5206314+01:00", comments="Source Table: cacetrafec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     default List<Cacetrafec> select(SelectDSLCompleter completer) {
         return MyBatis3Utils.selectList(this::selectMany, selectList, cacetrafec, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-02-25T09:38:09.5216327+01:00", comments="Source Table: cacetrafec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     default List<Cacetrafec> selectDistinct(SelectDSLCompleter completer) {
         return MyBatis3Utils.selectDistinct(this::selectMany, selectList, cacetrafec, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-02-25T09:38:09.5216327+01:00", comments="Source Table: cacetrafec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     default int update(UpdateDSLCompleter completer) {
         return MyBatis3Utils.update(this::update, cacetrafec, completer);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-02-25T09:38:09.5216327+01:00", comments="Source Table: cacetrafec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     static UpdateDSL<UpdateModel> updateAllColumns(Cacetrafec record, UpdateDSL<UpdateModel> dsl) {
         return dsl.set(ccentrab).equalTo(record::getCcentrab)
                 .set(xcacetra).equalTo(record::getXcacetra)
@@ -144,7 +144,7 @@ public interface CacetrafecMapper {
                 .set(fregilog).equalTo(record::getFregilog);
     }
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-02-25T09:38:09.5226324+01:00", comments="Source Table: cacetrafec")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     static UpdateDSL<UpdateModel> updateSelectiveColumns(Cacetrafec record, UpdateDSL<UpdateModel> dsl) {
         return dsl.set(ccentrab).equalToWhenPresent(record::getCcentrab)
                 .set(xcacetra).equalToWhenPresent(record::getXcacetra)

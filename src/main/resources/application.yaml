@@ -81,6 +81,8 @@ opentracing:
   jaeger:
     enabled: true
     log-spans: true
+    expand-exception-logs: true
+    service-name: ${spring.application.name}
     http-sender:
        url: https://jaeger-collector-lab-arquitectura-dev.app-dev.santalucia.net/api/traces
 
@@ -156,6 +158,7 @@ logging:
     root: INFO
     com.santalucia: DEBUG
     org.springframework: INFO
+    com.santalucia.arq.ams.componentes.database.guardium.interceptor.GuardiumMyBatisInterceptor: DEBUG
     #org.springframework.web.servlet: DEBUG
     #org.springframework.security: DEBUG
     #org.springframework.web.client: DEBUG

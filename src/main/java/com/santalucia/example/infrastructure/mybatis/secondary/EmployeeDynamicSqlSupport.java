@@ -6,19 +6,19 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class EmployeeDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-02-25T09:38:09.5256336+01:00", comments="Source Table: EMPLOYEE")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: EMPLOYEE")
     public static final Employee employee = new Employee();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-02-25T09:38:09.5256336+01:00", comments="Source field: EMPLOYEE.FIRST_NAME")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: EMPLOYEE.FIRST_NAME")
     public static final SqlColumn<String> firstName = employee.firstName;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-02-25T09:38:09.5256336+01:00", comments="Source field: EMPLOYEE.LAST_NAME")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: EMPLOYEE.LAST_NAME")
     public static final SqlColumn<String> lastName = employee.lastName;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-02-25T09:38:09.5256336+01:00", comments="Source field: EMPLOYEE.EMAIL_ADDRESS")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: EMPLOYEE.EMAIL_ADDRESS")
     public static final SqlColumn<String> emailAddress = employee.emailAddress;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-02-25T09:38:09.5256336+01:00", comments="Source Table: EMPLOYEE")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: EMPLOYEE")
     public static final class Employee extends SqlTable {
         public final SqlColumn<String> firstName = column("FIRST_NAME", JDBCType.VARCHAR);
 
