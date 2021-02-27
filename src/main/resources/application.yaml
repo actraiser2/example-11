@@ -31,7 +31,7 @@ spring:
       enabled: detect
   #mandatory-file-encoding: UTF-8 #desactivar en Windows
   jmx:
-    enabled: false
+    enabled: true
     unique-names: true
     
     
@@ -77,42 +77,8 @@ spring:
         connection-timeout: 99999
         jdbc-url: jdbc:oracle:thin:@slbdorad15.servidores.net:1548/DB12UTF8D.DES.SANTALUCIA.ES 
 
-opentracing:
-  jaeger:
-    enabled: true
-    log-spans: true
-    expand-exception-logs: true
-    service-name: ${spring.application.name}
-    http-sender:
-       url: https://jaeger-collector-lab-arquitectura-dev.app-dev.santalucia.net/api/traces
 
 
-management:
-  trace:
-    http:
-      enabled: true # Whether to enable HTTP request-response tracing.
-      include: request-headers,response-headers,cookie-headers # Items to be included in the trace.
-  endpoint:
-    metrics: 
-      enabled: true
-  metrics:
-    tags:
-       application: ${spring.application.name} #Needed by micrometer +1.1.0
-    export:
- #     dynatrace:
- #       api-token: YOUR_TOKEN
- #       device-id: YOUR_DEVICE_ID
- #       dynatrace.uri: YOUR_URI
- #       step: 5s
-      prometheus:
-        enabled: true   
-  endpoints:
-    enabled-by-default: true # Whether to enable or disable all endpoints by default.
-    web:
-      exposure:
-       include: "*"
-#      exclude:
-#        include: env,beans
      
 ###########################
 #                         #
@@ -124,6 +90,8 @@ santalucia:
     features:
       guardium:
         enabled: true
+      feign:
+        base-packages: com.santalucia.example.api.client
       mybatis:
         primary:
           base-packages: com.santalucia.example.infrastructure.mybatis.primary
@@ -136,7 +104,6 @@ santalucia:
         oauth2:          token-propagation: true
            
         #actuator:        #  unsecure-end-points:
-
 
 ###########################
 #                         #

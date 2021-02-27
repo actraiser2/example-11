@@ -31,8 +31,6 @@ info:
            
 logging:
   register-shutdown-hook: true
-  file:
-    name: log/${spring.application.name}.log
     
 ---
 spring:

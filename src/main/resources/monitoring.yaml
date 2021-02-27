@@ -1,0 +1,21 @@
+management:
+  trace:
+    http:
+      enabled: true # Whether to enable HTTP request-response tracing.
+      include: request-headers,response-headers,cookie-headers # Items to be included in the trace.
+  endpoint:
+    metrics: 
+      enabled: true
+  metrics:
+    tags:
+       application: ${spring.application.name} #Needed by micrometer +1.1.0
+    export:
+      prometheus:
+        enabled: true   
+  endpoints:
+    enabled-by-default: true # Whether to enable or disable all endpoints by default.
+    web:
+      exposure:
+       include: "*"
+#      exclude:
+#        include: env,beans

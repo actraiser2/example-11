@@ -13,98 +13,67 @@
 	<version>1.0.1-SNAPSHOT</version>
 	<name>example-app</name>
 	<description>Demo project for Spring Boot</description>
-	
+
 	<properties>
 		<swagger.codegen.inputSpec>src/main/resources/api/swagger.yaml</swagger.codegen.inputSpec>
 		<swagger.codegen.package>${project.groupId}</swagger.codegen.package>
 		<swagger.codegen.skip.server>false</swagger.codegen.skip.server>
 		<swagger.codegen.skip.client>false</swagger.codegen.skip.client>
-        <mybatis.codegen.output.dir>src/main/java</mybatis.codegen.output.dir>
+		<mybatis.codegen.output.dir>src/main/java</mybatis.codegen.output.dir>
 	</properties>
-	
+
 	<dependencies>
-	
-		
-	    <dependency>
-	      <groupId>org.springframework.boot</groupId>
-	      <artifactId>spring-boot-devtools</artifactId>
-	      <scope>runtime</scope>
-	      <optional>true</optional>
-	    </dependency>
 
 		<dependency>
 			<groupId>com.santalucia.arq.ams</groupId>
 			<artifactId>ams-componentes-web</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.santalucia.arq.ams</groupId>
 			<artifactId>ams-componentes-web-security</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.santalucia.arq.ams</groupId>
 			<artifactId>ams-starter-observability</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.santalucia.arq.ams</groupId>
 			<artifactId>ams-componentes-exceptions</artifactId>
-		</dependency>	
+		</dependency>
 
 		<dependency>
 			<groupId>com.santalucia.arq.ams</groupId>
 			<artifactId>ams-componentes-database</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<scope>provided</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>org.mapstruct</groupId>
-			<artifactId>mapstruct</artifactId>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-test-autoconfigure</artifactId>
-			<scope>test</scope>
-		</dependency>
 
-		<dependency> 
- 			<groupId>org.springframework.boot</groupId>
- 			<artifactId>spring-boot-starter-test</artifactId>
- 			<scope>test</scope>
- 		</dependency> 
- 		
- 		
-		<dependency>
-		    <groupId>org.mybatis.spring.boot</groupId>
-		    <artifactId>mybatis-spring-boot-starter-test</artifactId>
-		    <scope>test</scope>
-		</dependency>
- 		
-		 <!-- Needed for custom yaml tags -->
+		<!-- Needed for custom yaml tags -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
-				
-		 <!-- IBM Informix JDBC Driver -->
-        <dependency>
+
+		<!-- IBM Informix JDBC Driver -->
+		<dependency>
 			<groupId>com.ibm.informix</groupId>
 			<artifactId>jdbc</artifactId>
 		</dependency>
 
 
-		<!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc8 -->
+		<!-- Oracle JDBC Driver -->
 		<dependency>
-		    <groupId>com.oracle.database.jdbc</groupId>
-		    <artifactId>ojdbc11</artifactId>
+			<groupId>com.oracle.database.jdbc</groupId>
+			<artifactId>ojdbc11</artifactId>
 		</dependency>
 
 		<dependency>
@@ -115,12 +84,20 @@
 			<groupId>com.oracle.database.jdbc</groupId>
 			<artifactId>ucp</artifactId>
 		</dependency>
-		
-		
+
+		<!-- Test Dependencies -->
 		<dependency>
-		    <groupId>com.h2database</groupId>
-		    <artifactId>h2</artifactId>
-		    <scope>test</scope>
+			<groupId>com.santalucia.arq.ams</groupId>
+			<artifactId>ams-componentes-web-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Devtools -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
 		</dependency>
 
 	</dependencies>
@@ -132,7 +109,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-		
+
 	</build>
 
 </project>
