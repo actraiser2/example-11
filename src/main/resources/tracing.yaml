@@ -1,6 +1,6 @@
 opentracing:
   jaeger:
-    enabled: true
+    enabled: false
     log-spans: true
     expand-exception-logs: true
     http-sender:

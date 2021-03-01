@@ -21,6 +21,12 @@ server:
 #    protocol: TLS
 #    enabled-protocols: TLSv1.2
 
+springfox:
+  documentation:
+    swagger:
+      v2:
+        enabled: true
+
 spring:
   main:
     allow-bean-definition-overriding: true
@@ -97,7 +103,7 @@ santalucia:
           base-packages: com.santalucia.example.infrastructure.mybatis.primary
         secondary:
           base-packages: com.santalucia.example.infrastructure.mybatis.secondary      security:
-        core:          enabled: true        cors:          enabled: false
+        core:          enabled: false        cors:          enabled: false
           #allowed-origins: https://example.com
           #allowed-methods: GET, POST
         csrf:          enabled: false
