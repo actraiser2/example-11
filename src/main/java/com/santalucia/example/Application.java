@@ -1,13 +1,11 @@
 package com.santalucia.example;
 
-import org.openapitools.configuration.HomeController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Import;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-//@ComponentScan(basePackages = {"org.openapitools.configuration"})
-@Import({HomeController.class})
+@EnableFeignClients
 public class Application {
 
 	public static void main(String[] args) {

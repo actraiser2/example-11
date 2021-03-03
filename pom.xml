@@ -87,12 +87,13 @@
 			<artifactId>ucp</artifactId>
 		</dependency>
 
-		<!-- Test Dependencies -->
+		<!-- Test Dependencies 
 		<dependency>
 			<groupId>com.santalucia.arq.ams</groupId>
 			<artifactId>ams-componentes-web-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		-->
 
 		<!-- Devtools -->
 		<dependency>
