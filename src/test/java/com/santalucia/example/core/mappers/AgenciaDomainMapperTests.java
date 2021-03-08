@@ -15,7 +15,7 @@ import com.santalucia.example.core.domain.AgenciaDomain;
 class CacetrafecDomainMapperTests {
 
 	@Test
-	@DisplayName("I'm a Test Class") // TODO: EXTENDER
+	@DisplayName("Dado un objeto de dominio retornamos un resource")
 	void toApi_ok() {
 
 		CacetrafecDomainMapper mapper = new CacetrafecDomainMapperImpl();
@@ -26,6 +26,7 @@ class CacetrafecDomainMapperTests {
 	}
 
 	@Test
+	@DisplayName("Dado un objeto resource retornamos un dominio")
 	void toDomain_ok() {
 
 		CacetrafecDomainMapper mapper = new CacetrafecDomainMapperImpl();
@@ -36,6 +37,7 @@ class CacetrafecDomainMapperTests {
 	}
 
 	@Test
+	@DisplayName("Dado una lista de objetos de dominio retornamos una lista de objetos resource")
 	void toApis_ok() {
 
 		CacetrafecDomainMapper mapper = new CacetrafecDomainMapperImpl();
@@ -47,6 +49,7 @@ class CacetrafecDomainMapperTests {
 	}
 
 	@Test
+	@DisplayName("Dado una lista de objetos resource retornamos una lista de objetos de dominio")
 	void toDomains_ok() {
 
 		CacetrafecDomainMapper mapper = new CacetrafecDomainMapperImpl();

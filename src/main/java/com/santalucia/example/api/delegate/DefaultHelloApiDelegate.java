@@ -20,12 +20,12 @@ import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
 import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
 import com.santalucia.example.api.server.HelloApiDelegate;
+import com.santalucia.example.core.mappers.IdentidadDigitalDomainMapper;
 import com.santalucia.example.core.service.HelloService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -35,21 +35,23 @@ import lombok.extern.slf4j.Slf4j;
 public class DefaultHelloApiDelegate implements HelloApiDelegate {
 
 	private HelloService helloService;
+	private IdentidadDigitalDomainMapper identidadDigitalDomainMapper;
 
 	@Autowired
-	public DefaultHelloApiDelegate(HelloService helloService) {
+	public DefaultHelloApiDelegate(HelloService helloService, IdentidadDigitalDomainMapper identidadDigitalDomainMapper) {
 
 		this.helloService = helloService;
+		this.identidadDigitalDomainMapper = identidadDigitalDomainMapper;
 		log.debug("DefaultHelloApiDelegate loaded");
 	}
 
 	@Override
 	public ResponseEntity<IdentidadDigitalConsultaResource> getHelloByName(String name, Optional<UUID> xRequestId) {
 
-		log.info("Received hello request for {}", name);
-
-		return new ResponseEntity<>(this.helloService.getHello(name), HttpStatus.OK);
-
+		return Optional
+				.ofNullable(helloService.getHello(name))
+				.map(idDomain -> ResponseEntity.ok().body(identidadDigitalDomainMapper.toResource(idDomain))) // 200 OK
+				.orElse(ResponseEntity.notFound().build()); // 404 Not found
 	}
 
 }

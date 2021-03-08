@@ -7,7 +7,6 @@ spring:
         username: sa
         password: sa
         pool-name: h2-primary
-        connection-timeout: 1000
         jdbc-url: jdbc:h2:mem:db-informix;DB_CLOSE_DELAY=-1
     secondary:
       hikari:
@@ -15,7 +14,6 @@ spring:
         username: sb
         password: sb
         pool-name: h2-secondary
-        connection-timeout: 1000
         jdbc-url: jdbc:h2:mem:db-oracle;DB_CLOSE_DELAY=-1;MODE=Oracle
 
 ##En entornos de test no existe datasource de tipo Informix

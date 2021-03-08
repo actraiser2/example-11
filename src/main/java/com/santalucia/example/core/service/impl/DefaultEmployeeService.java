@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.santalucia.example.api.model.EmployeeResource;
 import com.santalucia.example.core.domain.EmployeeDomain;
 import com.santalucia.example.core.mappers.EmployeeDomainMapper;
 import com.santalucia.example.core.service.EmployeeService;
@@ -23,11 +22,10 @@ public class DefaultEmployeeService implements EmployeeService {
 	}
 
 	@Override
-	public List<EmployeeResource> getEmployees() {
+	public List<EmployeeDomain> getEmployees() {
 		
 		List<Employee> lstEntity = employeeRepository.getAllEmployees();
-		List<EmployeeDomain> lstDomain = employeeMapper.toDomainsfromEntities(lstEntity);
-		return employeeMapper.toResources(lstDomain);
+		return employeeMapper.toDomainsfromEntities(lstEntity);
 	}
 
 }

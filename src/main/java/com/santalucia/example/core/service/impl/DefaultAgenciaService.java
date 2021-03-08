@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.santalucia.example.api.model.AgenciaResource;
 import com.santalucia.example.core.domain.AgenciaDomain;
 import com.santalucia.example.core.mappers.CacetrafecDomainMapper;
 import com.santalucia.example.core.service.AgenciaService;
@@ -23,11 +22,10 @@ public class DefaultAgenciaService implements AgenciaService {
 	}
 
 	@Override
-	public List<AgenciaResource> getAgencias() {
+	public List<AgenciaDomain> getAgencias() {
 		
 		List<Cacetrafec> lstEntity = cacetrafecRepository.getAgencias();
-		List<AgenciaDomain> lstDomain = cacetrafecMapper.toDomainsfromEntities(lstEntity);
-		return cacetrafecMapper.toResources(lstDomain);
+		return cacetrafecMapper.toDomainsfromEntities(lstEntity);
 	}
 
 }

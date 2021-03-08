@@ -72,7 +72,6 @@ spring:
         username: amsdacom
         password: Am5Spr1ngD4c0m
         pool-name: InformixCP
-        connection-timeout: 88888
         jdbc-url: jdbc:informix-sqli://192.168.204.226:20101/siis:INFORMIXSERVER=fun_jdbc
     secondary:
       hikari:
@@ -80,7 +79,6 @@ spring:
         username: LAB_ARQ_SW_DEV
         password: lab_arq_sw_dev
         pool-name: OracleCP
-        connection-timeout: 99999
         jdbc-url: jdbc:oracle:thin:@slbdorad15.servidores.net:1548/DB12UTF8D.DES.SANTALUCIA.ES 
 
 
@@ -103,12 +101,19 @@ santalucia:
           base-packages: com.santalucia.example.infrastructure.mybatis.primary
         secondary:
           base-packages: com.santalucia.example.infrastructure.mybatis.secondary      security:
-        core:          enabled: true        cors:          enabled: false
-          #allowed-origins: https://example.com
-          #allowed-methods: GET, POST
-        csrf:          enabled: false
+        core:          enabled: true        cors:          enabled: true
+          allowed-origins: 
+            - http://localhost:8080
+          allowed-methods:
+            - GET
+            - POST
+            - PATCH
+            - PUT
+            - DELETE
+          max-age: 600
+        csrf:          enabled: true
         xss:
-          enabled: true        
+          enabled: true
         oauth2:          token-propagation: true
            
         #actuator:        #  unsecure-end-points:

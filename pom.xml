@@ -20,6 +20,7 @@
 		<swagger.codegen.skip.server>false</swagger.codegen.skip.server>
 		<swagger.codegen.skip.client>false</swagger.codegen.skip.client>
 		<mybatis.codegen.output.dir>src/main/java</mybatis.codegen.output.dir>
+		<git.hooks.skip>false</git.hooks.skip>
 	</properties>
 
 	<dependencies>
@@ -87,13 +88,12 @@
 			<artifactId>ucp</artifactId>
 		</dependency>
 
-		<!-- Test Dependencies 
+		<!-- Test Dependencies -->
 		<dependency>
 			<groupId>com.santalucia.arq.ams</groupId>
 			<artifactId>ams-componentes-web-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		-->
 
 		<!-- Devtools -->
 		<dependency>

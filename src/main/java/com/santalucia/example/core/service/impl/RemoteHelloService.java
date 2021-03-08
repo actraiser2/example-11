@@ -3,7 +3,7 @@ package com.santalucia.example.core.service.impl;
 import org.springframework.stereotype.Service;
 
 import com.santalucia.example.api.client.HelloWorldApiClient;
-import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
+import com.santalucia.example.core.domain.IdentidadDigitalDomain;
 import com.santalucia.example.core.service.HelloService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -20,7 +20,7 @@ public class RemoteHelloService implements HelloService {
 	}
 
 	@Override
-	public IdentidadDigitalConsultaResource getHello(String name) {
+	public IdentidadDigitalDomain getHello(String name) {
 
 		/*
 		ResponseEntity<IdentidadDigitalConsulta> response = helloWorldApiClient.getHelloByName(name, null);
@@ -29,7 +29,7 @@ public class RemoteHelloService implements HelloService {
 			return response.getBody().getNombre();
 		}
 		*/
-		IdentidadDigitalConsultaResource response = new IdentidadDigitalConsultaResource();
+		IdentidadDigitalDomain response = new IdentidadDigitalDomain();
 		response.setNombre("Hola "+name+ " !!");
 		return response;
 	}

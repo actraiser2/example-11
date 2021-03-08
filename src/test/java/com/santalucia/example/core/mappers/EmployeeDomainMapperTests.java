@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import java.util.Arrays;
 import java.util.List;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import com.santalucia.example.api.model.EmployeeResource;
@@ -14,6 +15,7 @@ import com.santalucia.example.core.domain.EmployeeDomain;
 class EmployeeDomainMapperTests {
 
 	@Test
+	@DisplayName("Dado un objeto dominio retornamos un objeto resource")
 	void toApi_ok() {
 
 		EmployeeDomainMapper mapper = new EmployeeDomainMapperImpl();
@@ -25,6 +27,7 @@ class EmployeeDomainMapperTests {
 	}
 
 	@Test
+	@DisplayName("Dado un objeto resource retornamos un objeto de dominio")
 	void toDomain_ok() {
 
 		EmployeeDomainMapper mapper = new EmployeeDomainMapperImpl();
@@ -36,6 +39,7 @@ class EmployeeDomainMapperTests {
 	}
 
 	@Test
+	@DisplayName("Dado una lista de objetos de dominio retornamos una lista de objetos de resource")
 	void toApis_ok() {
 
 		EmployeeDomainMapper mapper = new EmployeeDomainMapperImpl();
@@ -50,6 +54,7 @@ class EmployeeDomainMapperTests {
 	}
 
 	@Test
+	@DisplayName("Dado una lista de objetos resource retornamos una lista de objetos de dominio")
 	void toDomains_ok() {
 
 		EmployeeDomainMapper mapper = new EmployeeDomainMapperImpl();
