@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.santalucia.example</groupId>
 	<artifactId>example-app</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.1.0-SNAPSHOT</version>
 	<name>example-app</name>
 	<description>Demo project for Spring Boot</description>
 
