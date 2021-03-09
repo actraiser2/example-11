@@ -1,5 +1,5 @@
 = MAVEN ARCHETYPE
-
+   
 === Añadir nuevo fichero
 Para añadir un nuevo fichero hay que seguir los siguientes pasos:
 
