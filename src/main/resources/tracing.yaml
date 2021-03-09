@@ -1,7 +1,5 @@
 opentracing:
   jaeger:
     enabled: false
-    log-spans: true
-    expand-exception-logs: true
     http-sender:
        url: https://jaeger-collector-lab-arquitectura-dev.app-dev.santalucia.net/api/traces

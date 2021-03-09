@@ -104,19 +104,12 @@ santalucia:
         core:          enabled: true        cors:          enabled: true
           allowed-origins: 
             - http://localhost:8080
-          allowed-methods:
-            - GET
-            - POST
-            - PATCH
-            - PUT
-            - DELETE
-          max-age: 600
         csrf:          enabled: true
         xss:
           enabled: true
         oauth2:          token-propagation: true
            
-        #actuator:        #  unsecure-end-points:
+        #actuator:        #  unsecure-end-points: info,readiness,health,metrics
 
 ###########################
 #                         #

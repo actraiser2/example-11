@@ -14,6 +14,52 @@
 	<name>example-app</name>
 	<description>Demo project for Spring Boot</description>
 
+	<url>https://git.santalucia.net/scm/amssrv/example-app-11.git</url>
+	
+    <scm>  
+	  <url>${project.url}</url>
+	  <connection>scm:git:${project.url}</connection>
+	  <developerConnection>${project.url}</developerConnection>
+	  <tag>HEAD</tag>
+  	</scm>
+
+	<organization>
+		<name>Santalucia Seguros</name>
+		<url>https://https://www.santalucia.es/</url>
+	</organization>
+	
+	<contributors>
+		<contributor>
+			<name>Rafael Salinas Lopez</name>
+			<email>rafael.salinasl@externos.santalucia.es</email>
+		</contributor>
+		<contributor>
+			<name>Santiago Cardin Espinosa</name>
+			<email>santiago.cardine@externos.santalucia.es</email>
+		</contributor>
+	</contributors>
+	<developers>
+		<developer>
+			<name>Ignacio Lopez Visedo</name>
+			<email>ignacio.lopezv@santalucia.es</email>
+		</developer>
+	</developers>
+  	
+	<ciManagement>
+		<notifiers>
+			<notifier>
+				<address>ignacio.lopezv@santalucia.es</address>
+				<type>mail</type>
+				<sendOnError>true</sendOnError>
+				<sendOnFailure>true</sendOnFailure>
+				<sendOnSuccess>false</sendOnSuccess>
+				<sendOnWarning>false</sendOnWarning>
+			</notifier>
+		</notifiers>
+		<system>jenkins</system>
+		<url>https://jenkins-devops.app-dev.santalucia.net/</url>
+	</ciManagement>
+
 	<properties>
 		<swagger.codegen.inputSpec>src/main/resources/api/swagger.yaml</swagger.codegen.inputSpec>
 		<swagger.codegen.package>${project.groupId}</swagger.codegen.package>
