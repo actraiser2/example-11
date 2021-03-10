@@ -35,10 +35,10 @@ spring:
   output:
     ansi:
       enabled: detect
-  #mandatory-file-encoding: UTF-8 #desactivar en Windows
   jmx:
     enabled: true
-    unique-names: true
+    unique-names: true 
+  devtools:    livereload:      enabled: true
     
     
   security:
@@ -108,8 +108,10 @@ santalucia:
         xss:
           enabled: true
         oauth2:          token-propagation: true
-           
-        #actuator:        #  unsecure-end-points: info,readiness,health,metrics
+        actuator:          unsecured-end-points:
+            - info
+            - health
+            - metrics
 
 ###########################
 #                         #
