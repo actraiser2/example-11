@@ -1,0 +1,15 @@
+{
+	"request": {
+		"method": "GET",
+		"urlPattern": "/hello-world/v1/hello/.*"
+	},
+	"response": {
+		"status": 200,
+		"jsonBody": {
+			"nombre": "mundo"
+		},
+		"headers": {
+			"Content-Type": "application/json"
+		}
+	}
+}
