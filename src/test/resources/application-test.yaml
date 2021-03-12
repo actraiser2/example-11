@@ -18,3 +18,6 @@ spring:
 
 ##En entornos de test no existe datasource de tipo Informix
 santalucia:  ams:    features:      guardium:        enabled: false
+        
+helloWorld:
+  url: http://localhost:${wiremock.server.port:8089}/hello-world/v1
