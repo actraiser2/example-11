@@ -2,17 +2,15 @@ package com.santalucia.example.core.service.impl;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.cloud.contract.wiremock.AutoConfigureWireMock;
 
 import com.santalucia.example.core.domain.IdentidadDigitalDomain;
 
-@SpringBootTest(webEnvironment = WebEnvironment.NONE)
+@SpringBootTest
 @AutoConfigureWireMock(port=0)
 class RemoteHelloServiceTest {
 	
@@ -20,7 +18,6 @@ class RemoteHelloServiceTest {
 	private RemoteHelloService remoteHelloService;
 
 	@Test
-	@Disabled("hasta que se arregle se deshabilita")
 	@DisplayName("Recupera un saludo del servicio remoto")
 	void testGetHello() {
 		
