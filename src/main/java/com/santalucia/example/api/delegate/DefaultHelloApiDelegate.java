@@ -34,8 +34,8 @@ import lombok.extern.slf4j.Slf4j;
 @Component
 public class DefaultHelloApiDelegate implements HelloApiDelegate {
 
-	private HelloService helloService;
-	private IdentidadDigitalDomainMapper identidadDigitalDomainMapper;
+	private final HelloService helloService;
+	private final IdentidadDigitalDomainMapper identidadDigitalDomainMapper;
 
 	@Autowired
 	public DefaultHelloApiDelegate(HelloService helloService, IdentidadDigitalDomainMapper identidadDigitalDomainMapper) {
