@@ -78,10 +78,11 @@ class EmployeeDomainMapperTests {
 
 	protected EmployeeDomain buildEmployeeDomain() {
 
-		EmployeeDomain entity = new EmployeeDomain();
-		entity.setEmailAddress("email");
-		entity.setFirstName("firstName");
-		entity.setLastName("lastName");
+		EmployeeDomain entity = EmployeeDomain.builder()
+		.emailAddress("email")
+		.firstName("firstName")
+		.lastName("lastName")
+		.build();
 		return entity;
 	}
 

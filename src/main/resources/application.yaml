@@ -1,8 +1,15 @@
+
+    
+
+
 server:
   port: 8080
   error:
     include-exception: true # Include the "exception" attribute. default false
     include-stacktrace: always # When to include a "stacktrace" attribute. default never
+    include-binding-errors: always
+    include-message: always
+    whitelabel:      enabled: true
   compression:
     enabled: true
 #  forward-headers-strategy: native #default is ncsa 
@@ -32,6 +39,8 @@ spring:
     allow-bean-definition-overriding: true
   mvc: 
     log-request-details: true # Whether logging of (potentially sensitive) request details at DEBUG and TRACE level is allowed.
+    locale-resolver: accept-header
+    locale: fr_FR #default locale used when no Accept-Language is send
   output:
     ansi:
       enabled: detect
@@ -39,7 +48,15 @@ spring:
     enabled: true
     unique-names: true 
   devtools:    livereload:      enabled: true
-    
+ 
+## internacionalizacion
+  messages:
+    basename: i18n/messages
+    #cache-duration: 1s
+    encoding: UTF-8
+    fallback-to-system-locale: false
+    #default-locale: fr_FR #custom
+       
     
   security:
     oauth2:

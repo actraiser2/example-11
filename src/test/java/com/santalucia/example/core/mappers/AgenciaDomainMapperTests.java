@@ -74,12 +74,13 @@ class CacetrafecDomainMapperTests {
 
 	protected AgenciaDomain buildAgenciDomain() {
 
-		AgenciaDomain entity = new AgenciaDomain();
-		entity.setDagencia("email");
-		entity.setDdomici("firstName");
-		entity.setDpoblaci("lastName");
-		entity.setDprov("lastName");
-		entity.setDtvia("lastName");
+		AgenciaDomain entity = AgenciaDomain.builder()
+		.dagencia("email")
+		.ddomici("firstName")
+		.dpoblaci("lastName")
+		.dprov("lastName")
+		.dtvia("lastName")
+		.build();
 		return entity;
 	}
 

@@ -1,4 +1,4 @@
-debug: false # Enable debug logs.
+debug: true # Enable debug logs.
 trace: false # Enable trace logs.
 
 management:
