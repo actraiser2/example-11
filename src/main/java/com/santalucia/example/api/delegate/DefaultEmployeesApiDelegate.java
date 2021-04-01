@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
@@ -12,6 +13,9 @@ import com.santalucia.example.api.server.EmployeesApiDelegate;
 import com.santalucia.example.core.mappers.EmployeeDomainMapper;
 import com.santalucia.example.core.service.EmployeeService;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Component
 public class DefaultEmployeesApiDelegate implements EmployeesApiDelegate {
 
@@ -24,9 +28,10 @@ public class DefaultEmployeesApiDelegate implements EmployeesApiDelegate {
 		this.employeeMapper = employeeMapper;
 	}
 
-
 	@Override
-	public ResponseEntity<List<EmployeeResource>> getEmployeesList(Optional<UUID> xRequestId) {
+	public ResponseEntity<List<EmployeeResource>> getEmployeesList(Optional<UUID> xRequestId, Pageable pageable) {
+		log.info("Pageable pagenumber: {} ", pageable.getPageNumber());
+		log.info("Pageable pageSize: {} ", pageable.getPageSize());
 		
 		return Optional
 				.ofNullable(employeeService.getEmployees())

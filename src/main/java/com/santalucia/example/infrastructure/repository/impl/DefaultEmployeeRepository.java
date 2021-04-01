@@ -31,7 +31,6 @@ public class DefaultEmployeeRepository implements EmployeeRepository {
 	            .render(RenderingStrategies.MYBATIS3);
 		
 		return this.employeeMapper.selectMany(selectStatement);
-		
 	}
 
 }

@@ -78,6 +78,7 @@ paths:
       summary: recovery employees list
       description: recovery employees list
       operationId: getEmployeesList
+      x-spring-paginated: true
       parameters:
       - name: X-Request-Id
         in: header

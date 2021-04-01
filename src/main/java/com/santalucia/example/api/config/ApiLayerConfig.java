@@ -13,6 +13,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver;
 
+import com.santalucia.arq.ams.componentes.utils.messages.ErrorMessageUtils;
 import com.santalucia.arq.ams.componentes.web.errorhandling.RestAPIErrorHandler;
 
 import lombok.extern.slf4j.Slf4j;
@@ -37,7 +38,11 @@ public class ApiLayerConfig {
 	
 	@Bean
 	@Primary
-	public RestAPIErrorHandler han(MessageSourceAccessor errorMessageUtils) {
+//	public RestAPIErrorHandler han(MessageSourceAccessor errorMessageUtils) {
+//		log.error("NACHOOOOOOOOOOOO");
+//		return new RestAPIErrorHandler(errorMessageUtils);
+//	}
+	public RestAPIErrorHandler han(ErrorMessageUtils errorMessageUtils) {
 		log.error("NACHOOOOOOOOOOOO");
 		return new RestAPIErrorHandler(errorMessageUtils);
 	}

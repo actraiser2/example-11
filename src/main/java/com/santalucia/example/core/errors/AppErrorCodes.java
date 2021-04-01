@@ -1,6 +1,8 @@
 package com.santalucia.example.core.errors;
 
-import com.santalucia.arq.ams.componentes.errors.ErrorCode;
+
+
+import com.santalucia.arq.ams.componentes.exceptions.ErrorCode;
 
 import lombok.Getter;
 
