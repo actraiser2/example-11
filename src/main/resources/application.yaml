@@ -1,7 +1,3 @@
-
-    
-
-
 server:
   port: 8080
   error:
@@ -40,7 +36,7 @@ spring:
   mvc: 
     log-request-details: true # Whether logging of (potentially sensitive) request details at DEBUG and TRACE level is allowed.
     locale-resolver: accept-header
-    locale: fr_FR #default locale used when no Accept-Language is send
+    locale: es_ES #default locale used when no Accept-Language is send
   output:
     ansi:
       enabled: detect
@@ -155,3 +151,4 @@ logging:
     #org.springframework.security: DEBUG
     #org.springframework.web.client: DEBUG
     org.springframework.security.oauth2.server.resource: DEBUG #trazas para mostrar los errores de login debido a que salen en modo debug
+    org.springframework.web.servlet.mvc: DEBUG
