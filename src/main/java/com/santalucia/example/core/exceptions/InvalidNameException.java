@@ -9,6 +9,6 @@ public class InvalidNameException extends SantaluciaWebRuntimeException {
 	private static final long serialVersionUID = -4839425922066569485L;
 
 	public InvalidNameException(Throwable cause) {
-		super(AppErrorCodes.INVALID_NAME,HttpErrorCodes.HTTP_440,cause);
+		super(AppErrorCodes.INVALID_NAME,HttpErrorCodes.HTTP_400,cause);
 	}
 }

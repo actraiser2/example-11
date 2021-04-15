@@ -38,7 +38,7 @@ public class RemoteHelloService implements HelloService {
 	public IdentidadDigitalDomain getHello(String name) {
 
 		if ("TEST-USER".equalsIgnoreCase(name)) {
-			throw new SantaluciaWebRuntimeException(AppErrorCodes.INVALID_NAME,HttpErrorCodes.HTTP_440,new RuntimeException("hola"));
+			throw new SantaluciaWebRuntimeException(AppErrorCodes.INVALID_NAME,HttpErrorCodes.HTTP_400,new RuntimeException("hola"));
 		}
 
 		Locale locale = LocaleContextHolder.getLocale();
