@@ -150,8 +150,12 @@ logging:
     root: INFO
     com.santalucia: DEBUG
     org.springframework: INFO
-    com.santalucia.arq.ams.componentes.database.guardium.interceptor.GuardiumMyBatisInterceptor: DEBUG
+    com.santalucia.arq.ams.componentes.database: DEBUG
+    #com.santalucia.arq.ams.componentes.database.guardium.interceptor.GuardiumMyBatisInterceptor: DEBUG
     #org.springframework.web.servlet: DEBUG
     #org.springframework.security: DEBUG
     #org.springframework.web.client: DEBUG
     org.springframework.security.oauth2.server.resource: DEBUG #trazas para mostrar los errores de login debido a que salen en modo debug
+    
+#pagehelper:
+#  helper-dialect: informix  

@@ -56,6 +56,7 @@ paths:
       summary: recovery agencias list
       description: recovery agencias list
       operationId: getAgenciasList
+      x-spring-paginated: true
       parameters:
       - name: X-Request-Id
         in: header

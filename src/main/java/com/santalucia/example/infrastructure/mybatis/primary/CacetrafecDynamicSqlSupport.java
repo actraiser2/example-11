@@ -1,8 +1,7 @@
 package com.santalucia.example.infrastructure.mybatis.primary;
 
 import java.sql.JDBCType;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.util.Date;
 import javax.annotation.Generated;
 import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
@@ -18,13 +17,13 @@ public final class CacetrafecDynamicSqlSupport {
     public static final SqlColumn<String> xcacetra = cacetrafec.xcacetra;
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: cacetrafec.finvaldt")
-    public static final SqlColumn<LocalDate> finvaldt = cacetrafec.finvaldt;
+    public static final SqlColumn<Date> finvaldt = cacetrafec.finvaldt;
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: cacetrafec.ffivaldt")
-    public static final SqlColumn<LocalDate> ffivaldt = cacetrafec.ffivaldt;
+    public static final SqlColumn<Date> ffivaldt = cacetrafec.ffivaldt;
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: cacetrafec.fregilog")
-    public static final SqlColumn<LocalDateTime> fregilog = cacetrafec.fregilog;
+    public static final SqlColumn<Date> fregilog = cacetrafec.fregilog;
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     public static final class Cacetrafec extends SqlTable {
@@ -32,11 +31,11 @@ public final class CacetrafecDynamicSqlSupport {
 
         public final SqlColumn<String> xcacetra = column("xcacetra", JDBCType.CHAR);
 
-        public final SqlColumn<LocalDate> finvaldt = column("finvaldt", JDBCType.DATE);
+        public final SqlColumn<Date> finvaldt = column("finvaldt", JDBCType.DATE);
 
-        public final SqlColumn<LocalDate> ffivaldt = column("ffivaldt", JDBCType.DATE);
+        public final SqlColumn<Date> ffivaldt = column("ffivaldt", JDBCType.DATE);
 
-        public final SqlColumn<LocalDateTime> fregilog = column("fregilog", JDBCType.TIMESTAMP);
+        public final SqlColumn<Date> fregilog = column("fregilog", JDBCType.TIMESTAMP);
 
         public Cacetrafec() {
             super("cacetrafec");

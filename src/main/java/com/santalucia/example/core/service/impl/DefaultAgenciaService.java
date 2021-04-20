@@ -2,6 +2,7 @@ package com.santalucia.example.core.service.impl;
 
 import java.util.List;
 
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.santalucia.example.core.domain.AgenciaDomain;
@@ -25,6 +26,12 @@ public class DefaultAgenciaService implements AgenciaService {
 	public List<AgenciaDomain> getAgencias() {
 		
 		List<Cacetrafec> lstEntity = cacetrafecRepository.getAgencias();
+		return cacetrafecMapper.toDomainsfromEntities(lstEntity);
+	}
+
+	@Override
+	public List<AgenciaDomain> getAgencias(Pageable pageable) {
+		List<Cacetrafec> lstEntity = cacetrafecRepository.getAgencias(pageable);
 		return cacetrafecMapper.toDomainsfromEntities(lstEntity);
 	}
 
