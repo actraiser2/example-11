@@ -8,9 +8,7 @@ import org.mybatis.dynamic.sql.render.RenderingStrategies;
 import org.mybatis.dynamic.sql.select.render.SelectStatementProvider;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
-import com.github.pagehelper.PageHelper;
 import com.santalucia.example.infrastructure.entity.Employee;
 import com.santalucia.example.infrastructure.mybatis.secondary.EmployeeDynamicSqlSupport;
 import com.santalucia.example.infrastructure.mybatis.secondary.EmployeeMapper;
@@ -20,7 +18,6 @@ import lombok.extern.slf4j.Slf4j;
 
 @Repository
 @Slf4j
-@Transactional
 public class DefaultEmployeeRepository implements EmployeeRepository {
 
 	private final EmployeeMapper employeeMapper;
@@ -35,7 +32,7 @@ public class DefaultEmployeeRepository implements EmployeeRepository {
 	    SelectStatementProvider selectStatement = select(EmployeeDynamicSqlSupport.employee.allColumns())
 	            .from(EmployeeDynamicSqlSupport.employee)
 	            .build()
-	            .render(RenderingStrategies.MYBATIS3);
+	            .render(RenderingStrategies.SPRING_NAMED_PARAMETER);
 		
 		return this.employeeMapper.selectMany(selectStatement);
 	}
@@ -47,10 +44,10 @@ public class DefaultEmployeeRepository implements EmployeeRepository {
 		log.info("Pageable pageSize: {} ", pageable.getPageSize());
 		log.info("Pageable offset: {} ", pageable.getOffset());
 		
-		PageHelper.startPage(pageable.getPageNumber(), pageable.getPageSize());
-		
 		SelectStatementProvider selectStatement = select(EmployeeDynamicSqlSupport.employee.allColumns())
 	            .from(EmployeeDynamicSqlSupport.employee)
+	            .offset(pageable.getOffset())
+	            .fetchFirst(pageable.getPageSize()).rowsOnly()
 	            .build()
 	            .render(RenderingStrategies.MYBATIS3);
 		
@@ -61,9 +58,9 @@ public class DefaultEmployeeRepository implements EmployeeRepository {
 	public void insertEmployee() {
 		Employee emp = new Employee();
 		
-		emp.setFirstName("Nick");
-		emp.setLastName("Jones");
-		emp.setEmailAddress("nick@accenture.com");
+		emp.setFirstName("Julie");
+		emp.setLastName("Pearson");
+		emp.setEmailAddress("julie@accenture.com");
 		
 		this.employeeMapper.insert(emp);
 		

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.santalucia.example.core.domain.EmployeeDomain;
 import com.santalucia.example.core.mappers.EmployeeDomainMapper;
@@ -12,6 +13,7 @@ import com.santalucia.example.infrastructure.entity.Employee;
 import com.santalucia.example.infrastructure.repository.EmployeeRepository;
 
 @Service
+@Transactional(value = "secondaryTransactionManager")
 public class DefaultEmployeeService implements EmployeeService {
 
 	private final EmployeeRepository employeeRepository;
