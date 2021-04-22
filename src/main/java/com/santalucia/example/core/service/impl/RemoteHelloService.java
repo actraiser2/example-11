@@ -7,9 +7,11 @@ import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.context.support.MessageSourceAccessor;
 import org.springframework.stereotype.Service;
 
+import com.santalucia.arq.ams.componentes.errors.HttpErrorCodes;
+import com.santalucia.arq.ams.componentes.exceptions.core.SantaluciaWebRuntimeException;
 import com.santalucia.example.api.client.HelloWorldApiClient;
 import com.santalucia.example.core.domain.IdentidadDigitalDomain;
-import com.santalucia.example.core.exceptions.InvalidNameException;
+import com.santalucia.example.core.errors.AppErrorCodes;
 import com.santalucia.example.core.mappers.IdentidadDigitalDomainMapper;
 import com.santalucia.example.core.service.HelloService;
 
@@ -36,7 +38,7 @@ public class RemoteHelloService implements HelloService {
 	public IdentidadDigitalDomain getHello(String name) {
 
 		if ("TEST-USER".equalsIgnoreCase(name)) {
-			throw new InvalidNameException(null);
+			throw new SantaluciaWebRuntimeException(AppErrorCodes.INVALID_NAME,HttpErrorCodes.HTTP_400,new RuntimeException("hola"));
 		}
 
 		Locale locale = LocaleContextHolder.getLocale();
