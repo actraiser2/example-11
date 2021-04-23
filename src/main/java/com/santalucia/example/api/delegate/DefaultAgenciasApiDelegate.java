@@ -4,14 +4,19 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
 import com.santalucia.example.api.model.AgenciaResource;
 import com.santalucia.example.api.server.AgenciasApiDelegate;
+import com.santalucia.example.core.domain.AgenciaDomain;
 import com.santalucia.example.core.mappers.CacetrafecDomainMapper;
 import com.santalucia.example.core.service.AgenciaService;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Component
 public class DefaultAgenciasApiDelegate implements AgenciasApiDelegate {
 
@@ -24,13 +29,27 @@ public class DefaultAgenciasApiDelegate implements AgenciasApiDelegate {
 	}
 
 	@Override
-	public ResponseEntity<List<AgenciaResource>> getAgenciasList(Optional<UUID> xRequestId) {
-
+	public ResponseEntity<List<AgenciaResource>> getAgenciasList(Optional<UUID> xRequestId, Pageable pageable) {
+		
+//		List<AgenciaDomain> listAgen = agenciaService.getAgencias(pageable);
+//		log.info("Numero total de agencias: {}", listAgen.size());
+		
 		return Optional
-				.ofNullable(agenciaService.getAgencias())
+				.ofNullable(agenciaService.getAgencias(pageable))
 				.map(agencias -> ResponseEntity.ok().body(cacetrafecMapper.toResources(agencias))) // 200 OK
 				.orElse(ResponseEntity.notFound().build()); // 404 Not found
-
 	}
+
+//	@Override
+//	public ResponseEntity<List<AgenciaResource>> getAgenciasList(Optional<UUID> xRequestId) {
+//
+//		return Optional
+//				.ofNullable(agenciaService.getAgencias())
+//				.map(agencias -> ResponseEntity.ok().body(cacetrafecMapper.toResources(agencias))) // 200 OK
+//				.orElse(ResponseEntity.notFound().build()); // 404 Not found
+//
+//	}
+	
+	
 
 }

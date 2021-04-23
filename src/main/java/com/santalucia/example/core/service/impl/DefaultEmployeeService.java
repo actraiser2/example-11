@@ -2,7 +2,9 @@ package com.santalucia.example.core.service.impl;
 
 import java.util.List;
 
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.santalucia.example.core.domain.EmployeeDomain;
 import com.santalucia.example.core.mappers.EmployeeDomainMapper;
@@ -11,6 +13,7 @@ import com.santalucia.example.infrastructure.entity.Employee;
 import com.santalucia.example.infrastructure.repository.EmployeeRepository;
 
 @Service
+@Transactional(value = "secondaryTransactionManager")
 public class DefaultEmployeeService implements EmployeeService {
 
 	private final EmployeeRepository employeeRepository;
@@ -26,6 +29,18 @@ public class DefaultEmployeeService implements EmployeeService {
 		
 		List<Employee> lstEntity = employeeRepository.getAllEmployees();
 		return employeeMapper.toDomainsfromEntities(lstEntity);
+	}
+
+	@Override
+	public List<EmployeeDomain> getEmployees(Pageable pageable) {
+		List<Employee> employees = employeeRepository.getEmployees(pageable);
+		return employeeMapper.toDomainsfromEntities(employees);
+	}
+
+	@Override
+	public void insertEmployee() {		
+		
+		this.employeeRepository.insertEmployee();
 	}
 
 }

@@ -5,7 +5,8 @@ server:
     include-stacktrace: always # When to include a "stacktrace" attribute. default never
     include-binding-errors: always
     include-message: always
-    whitelabel:      enabled: true
+    whitelabel:
+      enabled: true
   compression:
     enabled: true
 #  forward-headers-strategy: native #default is ncsa 
@@ -26,7 +27,8 @@ server:
 
 springfox:
   documentation:
-    open-api:      enabled: false #disable openapi3 core, all specs are openapi2 
+    open-api:
+      enabled: false #disable openapi3 core, all specs are openapi2 
     enabled: true
 
 
@@ -43,7 +45,9 @@ spring:
   jmx:
     enabled: true
     unique-names: true 
-  devtools:    livereload:      enabled: true
+  devtools:
+    livereload:
+      enabled: true
  
 ## internacionalizacion
   messages:
@@ -112,15 +116,22 @@ santalucia:
         primary:
           base-packages: com.santalucia.example.infrastructure.mybatis.primary
         secondary:
-          base-packages: com.santalucia.example.infrastructure.mybatis.secondary      security:
-        core:          enabled: true        cors:          enabled: true
+          base-packages: com.santalucia.example.infrastructure.mybatis.secondary
+      security:
+        core:
+          enabled: true
+        cors:
+          enabled: true
           allowed-origins: 
             - http://localhost:8080
-        csrf:          enabled: true
+        csrf:
+          enabled: true
         xss:
           enabled: true
-        oauth2:          token-propagation: true
-        actuator:          unsecured-end-points:
+        oauth2:
+          token-propagation: true
+        actuator:
+          unsecured-end-points:
             - info
             - health
             - metrics
@@ -150,4 +161,3 @@ logging:
     #org.springframework.security: DEBUG
     #org.springframework.web.client: DEBUG
     org.springframework.security.oauth2.server.resource: DEBUG #trazas para mostrar los errores de login debido a que salen en modo debug
-    org.springframework.web.servlet.mvc: DEBUG

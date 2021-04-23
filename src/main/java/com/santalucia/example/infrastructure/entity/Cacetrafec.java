@@ -1,7 +1,6 @@
 package com.santalucia.example.infrastructure.entity;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.util.Date;
 import javax.annotation.Generated;
 
 public class Cacetrafec {
@@ -12,13 +11,13 @@ public class Cacetrafec {
     private String xcacetra;
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: cacetrafec.finvaldt")
-    private LocalDate finvaldt;
+    private Date finvaldt;
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: cacetrafec.ffivaldt")
-    private LocalDate ffivaldt;
+    private Date ffivaldt;
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: cacetrafec.fregilog")
-    private LocalDateTime fregilog;
+    private Date fregilog;
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: cacetrafec.ccentrab")
     public Short getCcentrab() {
@@ -41,32 +40,32 @@ public class Cacetrafec {
     }
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: cacetrafec.finvaldt")
-    public LocalDate getFinvaldt() {
+    public Date getFinvaldt() {
         return finvaldt;
     }
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: cacetrafec.finvaldt")
-    public void setFinvaldt(LocalDate finvaldt) {
+    public void setFinvaldt(Date finvaldt) {
         this.finvaldt = finvaldt;
     }
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: cacetrafec.ffivaldt")
-    public LocalDate getFfivaldt() {
+    public Date getFfivaldt() {
         return ffivaldt;
     }
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: cacetrafec.ffivaldt")
-    public void setFfivaldt(LocalDate ffivaldt) {
+    public void setFfivaldt(Date ffivaldt) {
         this.ffivaldt = ffivaldt;
     }
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: cacetrafec.fregilog")
-    public LocalDateTime getFregilog() {
+    public Date getFregilog() {
         return fregilog;
     }
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: cacetrafec.fregilog")
-    public void setFregilog(LocalDateTime fregilog) {
+    public void setFregilog(Date fregilog) {
         this.fregilog = fregilog;
     }
 }
