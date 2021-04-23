@@ -51,12 +51,11 @@ spring:
  
 ## internacionalizacion
   messages:
-    basename: i18n/messages
+    basename: classpath:i18n/messages
     #cache-duration: 1s
     encoding: UTF-8
     fallback-to-system-locale: false
-    #default-locale: fr_FR #custom
-       
+     
     
   security:
     oauth2:

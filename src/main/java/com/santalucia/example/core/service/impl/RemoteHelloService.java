@@ -7,8 +7,7 @@ import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.context.support.MessageSourceAccessor;
 import org.springframework.stereotype.Service;
 
-import com.santalucia.arq.ams.componentes.errors.HttpErrorCodes;
-import com.santalucia.arq.ams.componentes.exceptions.core.SantaluciaWebRuntimeException;
+import com.santalucia.arq.ams.componentes.web.exceptions.core.SantaluciaWebRuntimeException;
 import com.santalucia.example.api.client.HelloWorldApiClient;
 import com.santalucia.example.core.domain.IdentidadDigitalDomain;
 import com.santalucia.example.core.errors.AppErrorCodes;
@@ -38,8 +37,12 @@ public class RemoteHelloService implements HelloService {
 	public IdentidadDigitalDomain getHello(String name) {
 
 		if ("TEST-USER".equalsIgnoreCase(name)) {
-			throw new SantaluciaWebRuntimeException(AppErrorCodes.INVALID_NAME,HttpErrorCodes.HTTP_400,new RuntimeException("hola"));
+			throw new SantaluciaWebRuntimeException(AppErrorCodes.INVALID_NAME,new RuntimeException("hola"));
+		}else if("TEST-NULL".equalsIgnoreCase(name)) {
+			throw new RuntimeException("hola runtime");
 		}
+		
+		
 
 		Locale locale = LocaleContextHolder.getLocale();
 		// String nombre = languageUtil.getLocalizedMessage("label.error.407", "NACHO");

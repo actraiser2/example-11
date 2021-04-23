@@ -7,10 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * @author 05428576R
  * 
- * Se copia el comportamiento de la clase MessageSourceAutoConfiguration
- * https://github.com/spring-projects/spring-boot/blob/master/spring-boot-project/spring-boot-autoconfigure/src/main/java/org/springframework/boot/autoconfigure/context/MessageSourceAutoConfiguration.java
  */
-
 @Slf4j
 @Configuration
 public class ApiLayerConfig {
@@ -19,6 +16,7 @@ public class ApiLayerConfig {
 		log.debug("PresentationLayerConfig loaded");
 		
 	}
+	
 
 
 }
