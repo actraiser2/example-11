@@ -2,15 +2,12 @@ package com.santalucia.example.core.service.impl;
 
 import java.util.Locale;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.context.support.MessageSourceAccessor;
 import org.springframework.stereotype.Service;
 
-import com.santalucia.arq.ams.componentes.web.exceptions.core.SantaluciaWebRuntimeException;
 import com.santalucia.example.api.client.HelloWorldApiClient;
 import com.santalucia.example.core.domain.IdentidadDigitalDomain;
-import com.santalucia.example.core.errors.AppErrorCodes;
 import com.santalucia.example.core.mappers.IdentidadDigitalDomainMapper;
 import com.santalucia.example.core.service.HelloService;
 
@@ -24,23 +21,23 @@ public class RemoteHelloService implements HelloService {
 	
 	private IdentidadDigitalDomainMapper identidadDigitalMapper;
 	
-    @Autowired
     private MessageSourceAccessor messageSourceAccessor;
 
-	public RemoteHelloService(HelloWorldApiClient helloWorldApiClient, IdentidadDigitalDomainMapper identidadDigitalMapper ) {
+	public RemoteHelloService(HelloWorldApiClient helloWorldApiClient, IdentidadDigitalDomainMapper identidadDigitalMapper, MessageSourceAccessor messageSourceAccessor ) {
 		log.info("Configured endpoint {}", helloWorldApiClient);
 		this.helloWorldApiClient = helloWorldApiClient;
 		this.identidadDigitalMapper = identidadDigitalMapper;
+		this.messageSourceAccessor = messageSourceAccessor;
 	}
 
 	@Override
 	public IdentidadDigitalDomain getHello(String name) {
 
+		/*
 		if ("TEST-USER".equalsIgnoreCase(name)) {
 			throw new SantaluciaWebRuntimeException(AppErrorCodes.INVALID_NAME,new RuntimeException("hola"));
-		}else if("TEST-NULL".equalsIgnoreCase(name)) {
-			throw new RuntimeException("hola runtime");
 		}
+		*/
 		
 		
 
