@@ -8,5 +8,10 @@ import com.santalucia.example.core.domain.IndicadoresCentroDomain;
 
 public interface IndicadorService {
 
+    /**
+     * getIndicadores
+     * @param Pageable pageable
+     * @return List<IndicadoresCentroDomain>
+     */
 	public List<IndicadoresCentroDomain> getIndicadores(Pageable pageable);
 }

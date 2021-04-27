@@ -22,12 +22,21 @@ public class DefaultIndicadoresApiDelegate implements IndicadoresApiDelegate{
 	private final IndicadorService indicadorService;
 	private final CacetrafecDomainMapper cacetrafecMapper;	
 	
+    /**
+     * constructor de clase
+     */
 	public DefaultIndicadoresApiDelegate(IndicadorService indicadorService, CacetrafecDomainMapper cacetrafecMapper) {
 		super();
 		this.indicadorService = indicadorService;
 		this.cacetrafecMapper = cacetrafecMapper;
 	}
 	
+    /**
+     * listado de indicadores
+     * @param Optional<UUID> xRequestID
+     * @param Pageable pageable
+     * @return ResponseEntity<List<IndicadorResource>>
+     */
 	@Override
 	public ResponseEntity<List<IndicadorResource>> getIndicadoresList(Optional<UUID> xRequestID, Pageable pageable) {
 		

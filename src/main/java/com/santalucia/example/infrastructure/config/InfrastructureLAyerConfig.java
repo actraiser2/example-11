@@ -8,6 +8,9 @@ import lombok.extern.slf4j.Slf4j;
 @Configuration
 public class InfrastructureLAyerConfig {
 
+    /**
+     * Constructor de clase
+     */
 	public InfrastructureLAyerConfig() {
 		log.debug("InfrastructureLAyerConfig loaded");
 	}

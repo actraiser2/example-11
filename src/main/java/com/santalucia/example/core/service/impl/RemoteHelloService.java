@@ -23,23 +23,27 @@ public class RemoteHelloService implements HelloService {
 	
     private MessageSourceAccessor messageSourceAccessor;
 
-	public RemoteHelloService(HelloWorldApiClient helloWorldApiClient, IdentidadDigitalDomainMapper identidadDigitalMapper, MessageSourceAccessor messageSourceAccessor ) {
+	/**
+	 * Constructor de clase 
+	 * @param HelloWorldApiClient helloWorldApiClient
+	 * @param IdentidadDigitalDomainMapper identidadDigitalMapper, 
+	 * @param MessageSourceAccessor messageSourceAccessor
+	 */
+	public RemoteHelloService(HelloWorldApiClient helloWorldApiClient, IdentidadDigitalDomainMapper identidadDigitalMapper, MessageSourceAccessor messageSourceAccessor) {
 		log.info("Configured endpoint {}", helloWorldApiClient);
 		this.helloWorldApiClient = helloWorldApiClient;
 		this.identidadDigitalMapper = identidadDigitalMapper;
 		this.messageSourceAccessor = messageSourceAccessor;
 	}
 
+	/**
+	 * servicio getHello
+	 * @param String name
+	 * @return IdentidadDigitalDomain
+	 */
 	@Override
 	public IdentidadDigitalDomain getHello(String name) {
 
-		/*
-		if ("TEST-USER".equalsIgnoreCase(name)) {
-			throw new SantaluciaWebRuntimeException(AppErrorCodes.INVALID_NAME,new RuntimeException("hola"));
-		}
-		*/
-		
-		
 
 		Locale locale = LocaleContextHolder.getLocale();
 		// String nombre = languageUtil.getLocalizedMessage("label.error.407", "NACHO");

@@ -8,7 +8,17 @@ import com.santalucia.example.core.domain.AgenciaDomain;
 
 public interface AgenciaService {
 
+    /**
+     * getAgencias
+     * @return List<AgenciaDomain>
+     */
 	public List<AgenciaDomain> getAgencias();
+	
+    /**
+     * getAgencias
+     * @param Pageable pageable
+     * @return List<AgenciaDomain>
+     */
 	public List<AgenciaDomain> getAgencias(Pageable pageable);
 
 }

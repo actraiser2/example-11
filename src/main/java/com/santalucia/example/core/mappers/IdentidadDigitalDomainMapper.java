@@ -10,22 +10,40 @@ import com.santalucia.example.core.domain.IdentidadDigitalDomain;
 @Mapper
 public interface IdentidadDigitalDomainMapper {
 
-	
+	/***************/
 	/** ONE TO ONE**/
+	/***************/
 	
-	//resource <--> domain
+    /**
+     * toResource
+     * @param IdentidadDigitalDomain domain
+     * @return IdentidadDigitalConsultaResource
+     */
 	IdentidadDigitalConsultaResource toResource(IdentidadDigitalDomain domain);
+	
+    /**
+     * toDomain
+     * @param IdentidadDigitalConsultaResource resource
+     * @return IdentidadDigitalDomain
+     */
 	IdentidadDigitalDomain toDomain(IdentidadDigitalConsultaResource resource);
 
-	
+	/*****************/	
 	/** MANY TO MANY**/
+	/*****************/
 	
-	//resources <--> domains
+    /**
+     * toResources
+     * @param List<IdentidadDigitalDomain> lst
+     * @return List<IdentidadDigitalConsultaResource>
+     */
 	List<IdentidadDigitalConsultaResource> toResources(List<IdentidadDigitalDomain> lst);
-	List<IdentidadDigitalDomain> toDomainsfromResources(List<IdentidadDigitalConsultaResource> lst);
-
-
-
 	
+    /**
+     * toDomainsfromResources
+     * @param List<IdentidadDigitalConsultaResource> lst
+     * @return List<IdentidadDigitalDomain>
+     */
+	List<IdentidadDigitalDomain> toDomainsfromResources(List<IdentidadDigitalConsultaResource> lst);
 
 }

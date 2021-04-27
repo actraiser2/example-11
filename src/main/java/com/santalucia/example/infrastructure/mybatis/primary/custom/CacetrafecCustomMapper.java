@@ -11,6 +11,12 @@ import com.santalucia.example.infrastructure.entity.Cacetrafec;
 @Mapper
 public interface CacetrafecCustomMapper {
 
+    /**
+     * recupera los indicadores paginados
+     * @param Long offset
+     * @param Integer limit
+     * @return List<Cacetrafec>
+     */
 	@Select("select SKIP #{offset} * from cacetrafec where xcacetra = 'I' limit #{limit}")
 	public List<Cacetrafec> getIndicadoreswithPagination(@Param("offset") Long offset, @Param("limit") Integer limit);
 }

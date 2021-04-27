@@ -25,12 +25,21 @@ public class DefaultCacetrafecRepository implements CacetrafecRepository {
 	private final CacetrafecMapper cacetrafecMapper;
 	private final CacetrafecCustomMapper cacetrafecCustomMapper;
 
+	/**
+	 * constructor de clase 
+	 * @param CacetrafecMapper cacetrafecMapper
+	 * @param CacetrafecCustomMapper cacetrafecCustomMapper
+	 */
 	public DefaultCacetrafecRepository(CacetrafecMapper cacetrafecMapper,
 			CacetrafecCustomMapper cacetrafecCustomMapper) {
 		this.cacetrafecMapper = cacetrafecMapper;
 		this.cacetrafecCustomMapper = cacetrafecCustomMapper;
 	}
 
+	/**
+	 * recupera los indicadores
+	 * @return List<Cacetrafec>
+	 */
 	@Override
 	public List<Cacetrafec> getIndicadores() {
 		
@@ -43,6 +52,10 @@ public class DefaultCacetrafecRepository implements CacetrafecRepository {
 		return this.cacetrafecMapper.selectMany(selectStatement);
 	}
 
+	/**
+	 * recupera los indicadores paginados
+	 * @return List<Cacetrafec>
+	 */
 	@Override
 	public List<Cacetrafec> getIndicadores(Pageable pageable) {
 		

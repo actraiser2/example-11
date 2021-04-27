@@ -8,6 +8,10 @@ import lombok.extern.slf4j.Slf4j;
 @Configuration
 public class CoreLayerConfig {
 
+    /**
+     * constructor de clase
+     * 
+     */
 	public CoreLayerConfig() {
 		log.debug("CoreLayerConfig loaded");
 	}

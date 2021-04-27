@@ -37,6 +37,12 @@ public class DefaultHelloApiDelegate implements HelloApiDelegate {
 	private final HelloService helloService;
 	private final IdentidadDigitalDomainMapper identidadDigitalDomainMapper;
 
+    /**
+     * constructor de clase
+     * 
+     * @param HelloService helloService
+     * @param IdentidadDigitalDomainMapper identidadDigitalDomainMapper
+     */
 	@Autowired
 	public DefaultHelloApiDelegate(HelloService helloService, IdentidadDigitalDomainMapper identidadDigitalDomainMapper) {
 
@@ -45,6 +51,12 @@ public class DefaultHelloApiDelegate implements HelloApiDelegate {
 		log.debug("DefaultHelloApiDelegate loaded");
 	}
 
+    /**
+     * dice hola por nombre
+     * 
+     * @param String name
+     * @param Optional<UUID> xRequestId
+     */
 	@Override
 	public ResponseEntity<IdentidadDigitalConsultaResource> getHelloByName(String name, Optional<UUID> xRequestId) {
 

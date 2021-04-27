@@ -22,10 +22,18 @@ public class DefaultEmployeeRepository implements EmployeeRepository {
 
 	private final EmployeeMapper employeeMapper;
 
+    /**
+     * constructor de clase
+     * @param EmployeeMapper employeeMapper
+     */
 	public DefaultEmployeeRepository(EmployeeMapper employeeMapper) {
 		this.employeeMapper = employeeMapper;
 	}
 
+    /**
+     * recupera todos los empleados
+     * @return List<Employee>
+     */
 	@Override
 	public List<Employee> getAllEmployees() {
 
@@ -37,6 +45,11 @@ public class DefaultEmployeeRepository implements EmployeeRepository {
 		return this.employeeMapper.selectMany(selectStatement);
 	}
 
+    /**
+     * recupera todos los empleados paginados
+     * @param Pageable pageable
+     * @return List<Employee>
+     */
 	@Override
 	public List<Employee> getEmployees(Pageable pageable) {
 		
@@ -54,6 +67,9 @@ public class DefaultEmployeeRepository implements EmployeeRepository {
 		return this.employeeMapper.selectMany(selectStatement);
 	}
 
+    /**
+     * insterta un empleado
+     */
 	@Override
 	public void insertEmployee() {
 		Employee emp = new Employee();
