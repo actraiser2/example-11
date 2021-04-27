@@ -9,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
 import com.santalucia.example.api.model.EmployeeResource;
-import com.santalucia.example.api.server.EmployeesApi;
 import com.santalucia.example.api.server.EmployeesApiDelegate;
 import com.santalucia.example.core.mappers.EmployeeDomainMapper;
 import com.santalucia.example.core.service.EmployeeService;
