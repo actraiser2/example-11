@@ -22,7 +22,12 @@ public class DefaultEmployeesApiDelegate implements EmployeesApiDelegate {
 	private final EmployeeService employeeService;
 	private final EmployeeDomainMapper employeeMapper;
 
-
+    /**
+     * constructor de clase
+     * 
+     * @param EmployeeService employeeService
+     * @param EmployeeDomainMapper employeeMapper
+     */
 	public DefaultEmployeesApiDelegate(EmployeeService employeeService, EmployeeDomainMapper employeeMapper) {
 		this.employeeService = employeeService;
 		this.employeeMapper = employeeMapper;
