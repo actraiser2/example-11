@@ -17,6 +17,7 @@ import org.springframework.test.context.jdbc.SqlMergeMode;
 import org.springframework.test.context.jdbc.SqlMergeMode.MergeMode;
 
 import com.santalucia.example.infrastructure.entity.Cacetrafec;
+import com.santalucia.example.infrastructure.mybatis.primary.custom.CacetrafecCustomMapper;
 
 //@Disabled("for demonstration purposes")
 @MybatisTest
@@ -25,7 +26,7 @@ import com.santalucia.example.infrastructure.entity.Cacetrafec;
 class AgenciaDaoMapperTests {
 
 	@Autowired
-	private CacetrafecMapper agenciaDaoMapper;
+	private CacetrafecCustomMapper agenciaDaoMapper;
 
 	@Test
 	@Sql(scripts = { "/sql/data/agencia-data.sql" })
