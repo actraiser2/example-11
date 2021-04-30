@@ -1,6 +1,6 @@
 package com.santalucia.example;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -10,7 +10,8 @@ class ApplicationTests {
 
 	@Test
 	void contextLoads() {
-		assertTrue(true); // TODO: cambiar a assertNoexception
+		
+		assertDoesNotThrow( () -> Application.main(new String[] {}));
 	}
 
 }

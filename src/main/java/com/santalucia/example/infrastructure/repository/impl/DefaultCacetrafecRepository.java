@@ -12,7 +12,6 @@ import org.springframework.stereotype.Repository;
 
 import com.santalucia.example.infrastructure.entity.Cacetrafec;
 import com.santalucia.example.infrastructure.mybatis.primary.CacetrafecDynamicSqlSupport;
-import com.santalucia.example.infrastructure.mybatis.primary.CacetrafecMapper;
 import com.santalucia.example.infrastructure.mybatis.primary.custom.CacetrafecCustomMapper;
 import com.santalucia.example.infrastructure.repository.CacetrafecRepository;
 
@@ -21,8 +20,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Repository
 public class DefaultCacetrafecRepository implements CacetrafecRepository {
-
-	private final CacetrafecMapper cacetrafecMapper;
 	private final CacetrafecCustomMapper cacetrafecCustomMapper;
 
 	/**
@@ -30,9 +27,7 @@ public class DefaultCacetrafecRepository implements CacetrafecRepository {
 	 * @param CacetrafecMapper cacetrafecMapper
 	 * @param CacetrafecCustomMapper cacetrafecCustomMapper
 	 */
-	public DefaultCacetrafecRepository(CacetrafecMapper cacetrafecMapper,
-			CacetrafecCustomMapper cacetrafecCustomMapper) {
-		this.cacetrafecMapper = cacetrafecMapper;
+	public DefaultCacetrafecRepository(CacetrafecCustomMapper cacetrafecCustomMapper) {
 		this.cacetrafecCustomMapper = cacetrafecCustomMapper;
 	}
 
@@ -49,7 +44,7 @@ public class DefaultCacetrafecRepository implements CacetrafecRepository {
 	            .build()
 	            .render(RenderingStrategies.SPRING_NAMED_PARAMETER);
 		
-		return this.cacetrafecMapper.selectMany(selectStatement);
+		return this.cacetrafecCustomMapper.selectMany(selectStatement);
 	}
 
 	/**
