@@ -7,6 +7,8 @@ management:
        application: ${spring.application.name} #Needed by micrometer +1.1.0
 
 spring:
+  main:
+    allow-bean-definition-overriding: true
   application:
     name: example-app-11
   banner:
@@ -14,20 +16,10 @@ spring:
   cloud:
     kubernetes:
       enabled: false
-      reload:
-        enabled: true
-        #refresh: only @ConfigurationProperties or @RefreshScope
-        #restart_context: all context are reloaded
-        #shutdown: full restart; not recomended
-        strategy: refresh
-        monitoring-config-maps: true
-        monitoring-secrets: false
-      config:
-        name: ${spring.application.name}
 
 info:
   app:
-    name: @project.artifactId@
+    name: ${spring.application.name}
     encoding: @project.build.sourceEncoding@
     java:
       source: @java.version@
@@ -42,9 +34,18 @@ spring:
 #  mandatory-file-encoding: UTF-8
   cloud:
     kubernetes:
+      enabled: true
+      reload:
         enabled: true
+        #refresh: only @ConfigurationProperties or @RefreshScope
+        #restart_context: all context are reloaded
+        #shutdown: full restart; not recomended
+        strategy: refresh
+        monitoring-config-maps: true
+        monitoring-secrets: false
+      config:
+        name: ${spring.application.name}
 
-        
 debug: false # Enable debug logs.
 trace: false # Enable trace logs.
 ---
