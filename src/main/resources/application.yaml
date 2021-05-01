@@ -39,6 +39,8 @@ springfox:
 
 
 spring:
+  main:
+    allow-bean-definition-overriding: true
   mvc: 
     log-request-details: true # Whether logging of (potentially sensitive) request details at DEBUG and TRACE level is allowed.
     locale-resolver: accept-header
