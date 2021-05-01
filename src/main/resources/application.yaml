@@ -1,3 +1,9 @@
+#Reference de propiedades
+#https://docs.spring.io/spring-boot/docs/2.3.9.RELEASE/reference/html/appendix-application-properties.html#common-application-properties
+#Multitenant https://docs.spring.io/spring-security/site/docs/current/reference/html5/#resolving-the-tenant-by-claim
+#https://docs.spring.io/spring-security/site/docs/current/reference/html5/#oauth2resourceserver-opaque-minimalconfiguration
+#https://docs.spring.io/spring-security/site/docs/current/reference/html5/#bearer-token-propagation
+
 server:
   port: 8080
   error:
@@ -52,7 +58,7 @@ spring:
 ## internacionalizacion
   messages:
     basename: classpath:i18n/messages
-    #cache-duration: 1s
+    #cache-duration: 1s si no se especifica se cachean para siempre. Al estar en el jar no es correcto
     encoding: UTF-8
     fallback-to-system-locale: false
      
@@ -60,14 +66,14 @@ spring:
   security:
     oauth2:
       resourceserver:
-        jwt: #para habilitar la validacion 
+        jwt: #para habilitar la validacion local del token 
           jws-algorithm: RS256 #posibles valores RS256,RS512 depende del realm
           jwk-set-uri: https://sso-sldev.santalucia.es/auth/realms/3scale/protocol/openid-connect/certs
           issuer-uri: https://sso-sldev.santalucia.es/auth/realms/3scale # URI that an OpenID Connect Provider asserts as its Issuer Identifier.
 #        opaquetoken: #si se quiere validar cada request contra rhsso y el end-point instrospect
 #          introspection-uri: https://sso-sldev.santalucia.es/auth/realms/stl-int/protocol/openid-connect/token/introspect
-#          client-id: nacho-test-sb2-oauth2
-#          client-secret: 397afcf0-9d30-4b19-bf9f-f8b57d7620bc
+#          client-id: santalucia-test-sb2-oauth2
+#          client-secret: ejemplo-9d30-4b19-bf9f-f8b57d7620bc
           
           
 #      client: en caso que se quiera configurar el flujo code, no soportado por el back
