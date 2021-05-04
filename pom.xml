@@ -6,20 +6,20 @@
 	<parent>
 		<groupId>com.santalucia.arq.ams</groupId>
 		<artifactId>ams-parent-sl-sw</artifactId>
-		<version>0.0.5-SNAPSHOT</version>
+		<version>2.0.0-RELEASE</version>
 	</parent>
 	<groupId>com.santalucia.example</groupId>
-	<artifactId>example-app</artifactId>
+	<artifactId>example-app-11</artifactId>
 	<version>1.2.0-SNAPSHOT</version>
-	<name>example-app</name>
+	<name>example-app-11</name>
 	<description>Demo project for Spring Boot</description>
 
 	<url>https://git.santalucia.net/scm/amssrv/example-app-11.git</url>
 	
-    <scm>  
+	<scm>  
 	  <url>${project.url}</url>
-	  <connection>scm:git:${project.url}</connection>
-	  <developerConnection>scm:${project.url}</developerConnection>
+	  <connection>${project.url}</connection>
+	  <developerConnection>${git.santalucia.url}</developerConnection>
 	  <tag>HEAD</tag>
   	</scm>
 
