@@ -6,13 +6,13 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Configuration
-public class InfrastructureLAyerConfig {
+public class InfrastructureLayerConfig {
 
     /**
      * Constructor de clase
      */
-	public InfrastructureLAyerConfig() {
-		log.debug("InfrastructureLAyerConfig loaded");
+	public InfrastructureLayerConfig() {
+		log.debug("InfrastructureLayerConfig loaded");
 	}
 
 }

@@ -4,9 +4,7 @@ import java.util.List;
 
 import org.mapstruct.Mapper;
 
-import com.santalucia.example.api.model.AgenciaResource;
 import com.santalucia.example.api.model.IndicadorResource;
-import com.santalucia.example.core.domain.AgenciaDomain;
 import com.santalucia.example.core.domain.IndicadoresCentroDomain;
 import com.santalucia.example.infrastructure.entity.Cacetrafec;
 
@@ -17,20 +15,6 @@ public interface CacetrafecDomainMapper {
 	/** ONE TO ONE**/
 	/***************/
 	
-	
-    /**
-     * toResource
-     * @param AgenciaDomain domain
-     * @return AgenciaResource
-     */
-	AgenciaResource toResource(AgenciaDomain domain);
-	
-    /**
-     * toDomain
-     * @param AgenciaResource resource
-     * @return AgenciaDomain
-     */
-	AgenciaDomain toDomain(AgenciaResource resource);
 	
     /**
      * indicadorDomainToResource
@@ -46,19 +30,6 @@ public interface CacetrafecDomainMapper {
      */
 	IndicadoresCentroDomain indicadorResourceToDomain(IndicadorResource resource);
 
-    /**
-     * toDomain
-     * @param Cacetrafec entity
-     * @return AgenciaDomain
-     */
-	AgenciaDomain toDomain(Cacetrafec entity);
-	
-    /**
-     * toEntity
-     * @param AgenciaDomain domain
-     * @return Cacetrafec
-     */
-	Cacetrafec toEntity(AgenciaDomain domain);
 	
     /**
      * cacetrafecToDomain
@@ -79,20 +50,6 @@ public interface CacetrafecDomainMapper {
 	/*****************/
 	
     /**
-     * toResources
-     * @param List<AgenciaDomain> lst
-     * @return List<AgenciaResource>
-     */
-	List<AgenciaResource> toResources(List<AgenciaDomain> lst);
-	
-    /**
-     * List<AgenciaResource> lst
-     * @param toDomainsfromResources
-     * @return List<AgenciaDomain>
-     */
-	List<AgenciaDomain> toDomainsfromResources(List<AgenciaResource> lst);
-	
-    /**
      * indicadoresDomainToResources
      * @param List<IndicadoresCentroDomain> lst
      * @return List<IndicadorResource>
@@ -105,20 +62,7 @@ public interface CacetrafecDomainMapper {
      * @return List<IndicadoresCentroDomain>
      */
 	List<IndicadoresCentroDomain> indicadoresResourceToDomains(List<IndicadorResource> lst);
-
-    /**
-     * toDomainsfromEntities
-     * @param List<Cacetrafec> lst
-     * @return List<AgenciaDomain>
-     */
-	List<AgenciaDomain> toDomainsfromEntities(List<Cacetrafec> lst);
 	
-    /**
-     * toEntitys
-     * @param List<AgenciaDomain> lst
-     * @return List<Cacetrafec>
-     */
-	List<Cacetrafec> toEntitys(List<AgenciaDomain> lst);
 	
     /**
      * cacetrafecEntitiestoDomains
