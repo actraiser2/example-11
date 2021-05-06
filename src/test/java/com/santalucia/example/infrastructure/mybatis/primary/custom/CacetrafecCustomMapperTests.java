@@ -1,4 +1,4 @@
-package com.santalucia.example.infrastructure.mybatis.primary;
+package com.santalucia.example.infrastructure.mybatis.primary.custom;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mybatis.dynamic.sql.SqlBuilder.isEqualTo;
@@ -17,19 +17,19 @@ import org.springframework.test.context.jdbc.SqlMergeMode;
 import org.springframework.test.context.jdbc.SqlMergeMode.MergeMode;
 
 import com.santalucia.example.infrastructure.entity.Cacetrafec;
-import com.santalucia.example.infrastructure.mybatis.primary.custom.CacetrafecCustomMapper;
+import com.santalucia.example.infrastructure.mybatis.primary.CacetrafecDynamicSqlSupport;
 
 //@Disabled("for demonstration purposes")
 @MybatisTest
 @SqlMergeMode(MergeMode.MERGE)
-@Sql(scripts = { "/sql/schemas/agencia-schema.sql" })
-class AgenciaDaoMapperTests {
+@Sql(scripts = { "/sql/schemas/cacetrafec-schema.sql" })
+class CacetrafecCustomMapperTests {
 
 	@Autowired
-	private CacetrafecCustomMapper agenciaDaoMapper;
+	private CacetrafecCustomMapper cacetrafecCustomMapper;
 
 	@Test
-	@Sql(scripts = { "/sql/data/agencia-data.sql" })
+	@Sql(scripts = { "/sql/data/cacetrafec-data.sql" })
 	@DisplayName("Dada una query a cacetrafec por xcacetra = 1 se retorna un resultado")
 	void getAgenciasTest() {
 		
@@ -39,7 +39,7 @@ class AgenciaDaoMapperTests {
 	            .build()
 	            .render(RenderingStrategies.MYBATIS3);
 		
-		List<Cacetrafec> city = agenciaDaoMapper.selectMany(selectStatement);
+		List<Cacetrafec> city = cacetrafecCustomMapper.selectMany(selectStatement);
 		assertNotNull(city);
 	}
 
