@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.when;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -21,7 +20,7 @@ import com.santalucia.example.infrastructure.entity.Employee;
 import com.santalucia.example.infrastructure.repository.EmployeeRepository;
 
 @ExtendWith(SpringExtension.class)
-class DefaultEmployeeServiceTest {
+class DefaultEmployeeServiceTests {
 	
 	private static final String FIRST_NAME = "John";
 	private static final String LAST_NAME = "Doe";

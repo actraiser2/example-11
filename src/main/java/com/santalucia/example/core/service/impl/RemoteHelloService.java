@@ -1,13 +1,13 @@
 package com.santalucia.example.core.service.impl;
 
-import java.util.Locale;
-
-import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.context.support.MessageSourceAccessor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.santalucia.example.api.client.HelloWorldApiClient;
+import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
 import com.santalucia.example.core.domain.IdentidadDigitalDomain;
+import com.santalucia.example.core.exceptions.InvalidNameException;
 import com.santalucia.example.core.mappers.IdentidadDigitalDomainMapper;
 import com.santalucia.example.core.service.HelloService;
 
@@ -44,18 +44,24 @@ public class RemoteHelloService implements HelloService {
 	@Override
 	public IdentidadDigitalDomain getHello(String name) {
 
+		//Test de ejemplo para demostrar el uso de named exception strategy
+		if ("test".equals(name)) {
+			throw new InvalidNameException();
+		}
+	
+		
 
-		Locale locale = LocaleContextHolder.getLocale();
-		// String nombre = languageUtil.getLocalizedMessage("label.error.407", "NACHO");
-
-		String nombre = String.format("Request received. Language: %s, Country: %s %n", locale.getLanguage(),
-				locale.getDisplayCountry());
-
-		return IdentidadDigitalDomain.builder().nombre(nombre).build();
-
-		// ResponseEntity<IdentidadDigitalConsultaResource> response =
-		// helloWorldApiClient.getHelloByName(name, null);
-		// return identidadDigitalMapper.toDomain(response.getBody());
+		 ResponseEntity<IdentidadDigitalConsultaResource> response =
+		 helloWorldApiClient.getHelloByName(name, null);
+		 return identidadDigitalMapper.toDomain(response.getBody());
+		
+		//return IdentidadDigitalDomain.builder().nombre(nombre).build();
 	}
+	
+	//TODO: RAFA METER EN EL INTERFACE 
+	public string getHelloByName(String name) {
+		return "hello "+name;
+	}
+	
 
 }
