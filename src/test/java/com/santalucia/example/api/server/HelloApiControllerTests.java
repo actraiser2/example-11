@@ -37,7 +37,7 @@ class HelloApiControllerTests {
     @WithMockUser(value = "user-test")
     @DisplayName("dado un nombre se espera una respuesta correcta del api securizado GET /hello/{name}")
     void getHello_ok() throws Exception  {
-    	
+    	 	    	  	 			
     	String nombre = "mock-response";
     	IdentidadDigitalConsultaResource response = buildIdentidadDigitalConsultaResource(nombre);
     	

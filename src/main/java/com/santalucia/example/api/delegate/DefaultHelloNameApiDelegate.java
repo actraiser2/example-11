@@ -19,7 +19,6 @@ package com.santalucia.example.api.delegate;
 import java.util.Optional;
 import java.util.UUID;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
@@ -32,7 +31,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Component
-public class DefaultHelloApiDelegate implements HelloApiDelegate {
+public class DefaultHelloNameApiDelegate implements HelloApiDelegate {
 
 	private final HelloService helloService;
 	private final IdentidadDigitalDomainMapper identidadDigitalDomainMapper;
@@ -43,27 +42,32 @@ public class DefaultHelloApiDelegate implements HelloApiDelegate {
      * @param HelloService helloService
      * @param IdentidadDigitalDomainMapper identidadDigitalDomainMapper
      */
-	@Autowired
-	public DefaultHelloApiDelegate(HelloService helloService, IdentidadDigitalDomainMapper identidadDigitalDomainMapper) {
-
+	public DefaultHelloNameApiDelegate(HelloService helloService, IdentidadDigitalDomainMapper identidadDigitalDomainMapper) {
 		this.helloService = helloService;
 		this.identidadDigitalDomainMapper = identidadDigitalDomainMapper;
-		log.debug("DefaultHelloApiDelegate loaded");
 	}
+	
 
-    /**
-     * dice hola por nombre
-     * 
-     * @param String name
-     * @param Optional<UUID> xRequestId
-     */
+
 	@Override
-	public ResponseEntity<IdentidadDigitalConsultaResource> getHelloByName(String name, Optional<UUID> xRequestId) {
-
+	public ResponseEntity<IdentidadDigitalConsultaResource> getHelloByName(String name, Optional<UUID> xRequestID) {
 		return Optional
-				.ofNullable(helloService.getHello(name))
+				.ofNullable(helloService.getHelloByName(name))
 				.map(idDomain -> ResponseEntity.ok().body(identidadDigitalDomainMapper.toResource(idDomain))) // 200 OK
 				.orElse(ResponseEntity.notFound().build()); // 404 Not found
 	}
 
+
+
+
+	@Override
+	public ResponseEntity<IdentidadDigitalConsultaResource> getHelloByNameRemote(String name,
+			Optional<UUID> xRequestID) {
+		return Optional
+				.ofNullable(helloService.getHelloRemoteByName(name))
+				.map(idDomain -> ResponseEntity.ok().body(identidadDigitalDomainMapper.toResource(idDomain))) // 200 OK
+				.orElse(ResponseEntity.notFound().build()); // 404 Not found
+	}
+	
+	
 }

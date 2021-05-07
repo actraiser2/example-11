@@ -8,4 +8,5 @@ import lombok.Data;
 public class IdentidadDigitalDomain {
 
 	private String nombre;
+	private String saludo;
 }

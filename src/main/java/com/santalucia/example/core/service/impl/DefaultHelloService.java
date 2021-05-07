@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.santalucia.example.api.client.HelloWorldApiClient;
 import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
 import com.santalucia.example.core.domain.IdentidadDigitalDomain;
+import com.santalucia.example.core.domain.IdentidadDigitalDomain.IdentidadDigitalDomainBuilder;
 import com.santalucia.example.core.exceptions.InvalidNameException;
 import com.santalucia.example.core.mappers.IdentidadDigitalDomainMapper;
 import com.santalucia.example.core.service.HelloService;
@@ -15,7 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Service
 @Slf4j
-public class RemoteHelloService implements HelloService {
+public class DefaultHelloService implements HelloService {
 
 	private HelloWorldApiClient helloWorldApiClient;
 	
@@ -29,7 +30,7 @@ public class RemoteHelloService implements HelloService {
 	 * @param IdentidadDigitalDomainMapper identidadDigitalMapper, 
 	 * @param MessageSourceAccessor messageSourceAccessor
 	 */
-	public RemoteHelloService(HelloWorldApiClient helloWorldApiClient, IdentidadDigitalDomainMapper identidadDigitalMapper, MessageSourceAccessor messageSourceAccessor) {
+	public DefaultHelloService(HelloWorldApiClient helloWorldApiClient, IdentidadDigitalDomainMapper identidadDigitalMapper, MessageSourceAccessor messageSourceAccessor) {
 		log.info("Configured endpoint {}", helloWorldApiClient);
 		this.helloWorldApiClient = helloWorldApiClient;
 		this.identidadDigitalMapper = identidadDigitalMapper;
@@ -42,26 +43,27 @@ public class RemoteHelloService implements HelloService {
 	 * @return IdentidadDigitalDomain
 	 */
 	@Override
-	public IdentidadDigitalDomain getHello(String name) {
-
+	public IdentidadDigitalDomain getHelloRemoteByName(String name) {
 		//Test de ejemplo para demostrar el uso de named exception strategy
 		if ("test".equals(name)) {
 			throw new InvalidNameException();
-		}
-	
-		
+		}		
 
-		 ResponseEntity<IdentidadDigitalConsultaResource> response =
-		 helloWorldApiClient.getHelloByName(name, null);
-		 return identidadDigitalMapper.toDomain(response.getBody());
-		
-		//return IdentidadDigitalDomain.builder().nombre(nombre).build();
+		// Ejemplo de llamada a remota
+		ResponseEntity<IdentidadDigitalConsultaResource> response = helloWorldApiClient.getHelloByName(name, null);
+		return this.identidadDigitalMapper.toDomain(response.getBody());
 	}
-	
-	//TODO: RAFA METER EN EL INTERFACE 
-	public string getHelloByName(String name) {
-		return "hello "+name;
-	}
-	
 
+	/**
+	 * getHelloByName
+	 * @param name
+	 * @return String
+	 */
+	@Override
+	public IdentidadDigitalDomain getHelloByName(String name) {
+		IdentidadDigitalDomainBuilder identidad = IdentidadDigitalDomain.builder();
+		identidad.nombre(name);
+		identidad.saludo(String.format("Hello %s", name));
+		return identidad.build();
+	}
 }
