@@ -3,3 +3,6 @@ opentracing:
     enabled: false
     http-sender:
        url: https://jaeger-collector-lab-arquitectura-dev.app-dev.santalucia.net/api/traces
+  spring:
+    web:
+      enabled: false
