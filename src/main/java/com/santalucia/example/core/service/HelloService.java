@@ -9,6 +9,13 @@ public interface HelloService {
      * @param String name
      * @return IdentidadDigitalDomain
      */
-	public IdentidadDigitalDomain getHello(String name);
+	public IdentidadDigitalDomain getHelloRemoteByName(String name);
+	
+	/**
+	 * getHelloByName
+	 * @param name
+	 * @return String
+	 */
+	public IdentidadDigitalDomain getHelloByName(String name);
 
 }
