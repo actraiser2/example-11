@@ -71,8 +71,8 @@ class EmployeeDomainMapperTests {
 
 		EmployeeResource dto = new EmployeeResource();
 		dto.setEmailAddress("email");
-		dto.setFirstName("firstName");
-		dto.setLastName("lastName");
+		dto.setNombre("firstName");
+		dto.setApellido("lastName");
 		return dto;
 	}
 
@@ -100,8 +100,8 @@ class EmployeeDomainMapperTests {
 		assertNotNull(dto);
 		assertNotNull(entity);
 		assertEquals(entity.getEmailAddress(), dto.getEmailAddress());
-		assertEquals(entity.getFirstName(), dto.getFirstName());
-		assertEquals(entity.getLastName(), dto.getLastName());
+		assertEquals(entity.getFirstName(), dto.getNombre());
+		assertEquals(entity.getLastName(), dto.getApellido());
 	}
 
 }

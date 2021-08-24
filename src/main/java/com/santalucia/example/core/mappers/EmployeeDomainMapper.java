@@ -2,13 +2,16 @@ package com.santalucia.example.core.mappers;
 
 import java.util.List;
 
+import org.mapstruct.InheritInverseConfiguration;
+import org.mapstruct.InjectionStrategy;
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 
 import com.santalucia.example.api.model.EmployeeResource;
 import com.santalucia.example.core.domain.EmployeeDomain;
 import com.santalucia.example.infrastructure.entity.Employee;
 
-@Mapper
+@Mapper(injectionStrategy = InjectionStrategy.CONSTRUCTOR)
 public interface EmployeeDomainMapper {
 
     /**
@@ -16,6 +19,8 @@ public interface EmployeeDomainMapper {
      * @param EmployeeDomain domain
      * @return EmployeeResource
      */
+	@Mapping(source = "firstName", target = "nombre")
+	@Mapping(source = "lastName", target = "apellido")
 	EmployeeResource toResource(EmployeeDomain domain);
 	
     /**
@@ -23,6 +28,7 @@ public interface EmployeeDomainMapper {
      * @param EmployeeResource resource
      * @return EmployeeDomain
      */
+	@InheritInverseConfiguration
 	EmployeeDomain toDomain(EmployeeResource resource);
 
     /**
