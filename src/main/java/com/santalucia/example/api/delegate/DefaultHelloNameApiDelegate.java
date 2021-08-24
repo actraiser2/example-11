@@ -48,7 +48,9 @@ public class DefaultHelloNameApiDelegate implements HelloApiDelegate {
 	}
 	
 
-
+	/**
+	 * DefaultHelloNameApiDelegate getHelloByName
+	 */
 	@Override
 	public ResponseEntity<IdentidadDigitalConsultaResource> getHelloByName(String name, Optional<UUID> xRequestID) {
 		return Optional
@@ -59,7 +61,9 @@ public class DefaultHelloNameApiDelegate implements HelloApiDelegate {
 
 
 
-
+	/**
+	 * DefaultHelloNameApiDelegate getHelloByNameRemote
+	 */
 	@Override
 	public ResponseEntity<IdentidadDigitalConsultaResource> getHelloByNameRemote(String name,
 			Optional<UUID> xRequestID) {
