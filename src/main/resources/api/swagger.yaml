@@ -195,12 +195,12 @@ definitions:
   employee:
     type: object
     properties:
-      firstName:
+      nombre:
         type: string
         example: "Juan"
         description: First name
         maxLength: 255
-      lastName:
+      apellido:
         type: string
         example: "Smith"
         description: Last name

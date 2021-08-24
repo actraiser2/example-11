@@ -2,12 +2,13 @@ package com.santalucia.example.core.mappers;
 
 import java.util.List;
 
+import org.mapstruct.InjectionStrategy;
 import org.mapstruct.Mapper;
 
 import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
 import com.santalucia.example.core.domain.IdentidadDigitalDomain;
 
-@Mapper
+@Mapper(injectionStrategy = InjectionStrategy.CONSTRUCTOR)
 public interface IdentidadDigitalDomainMapper {
 
 	/***************/
