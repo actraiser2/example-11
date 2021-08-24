@@ -21,8 +21,6 @@ public class DefaultHelloService implements HelloService {
 	private HelloWorldApiClient helloWorldApiClient;
 	
 	private IdentidadDigitalDomainMapper identidadDigitalMapper;
-	
-    private MessageSourceAccessor messageSourceAccessor;
 
 	/**
 	 * Constructor de clase 
@@ -30,11 +28,10 @@ public class DefaultHelloService implements HelloService {
 	 * @param IdentidadDigitalDomainMapper identidadDigitalMapper, 
 	 * @param MessageSourceAccessor messageSourceAccessor
 	 */
-	public DefaultHelloService(HelloWorldApiClient helloWorldApiClient, IdentidadDigitalDomainMapper identidadDigitalMapper, MessageSourceAccessor messageSourceAccessor) {
+	public DefaultHelloService(HelloWorldApiClient helloWorldApiClient, IdentidadDigitalDomainMapper identidadDigitalMapper) {
 		log.info("Configured endpoint {}", helloWorldApiClient);
 		this.helloWorldApiClient = helloWorldApiClient;
 		this.identidadDigitalMapper = identidadDigitalMapper;
-		this.messageSourceAccessor = messageSourceAccessor;
 	}
 
 	/**
