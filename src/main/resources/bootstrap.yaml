@@ -27,7 +27,7 @@ info:
            
 logging:
   register-shutdown-hook: true
-    
+
 ---
 spring:
   profiles: kubernetes #Profile habilitado de forma automatica cuando se despliega en OCP
@@ -54,7 +54,7 @@ spring:
   mandatory-file-encoding: UTF-8
   cloud:
     kubernetes:
-        enabled: false
-        
+      enabled: false
+
 debug: false # Enable debug logs.
 trace: false # Enable trace logs.

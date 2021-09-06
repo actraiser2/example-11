@@ -1,10 +1,24 @@
+##################################################################################
+# Santalucia
+# Template distribuido a modo de ejemplo para evidenciar el uso de configuracion
+# local de proyecto
+# En este directorio deberan incluirse todos los usuarios y passwords que no 
+# deban versionarse en git.
+# Para su uso basta renombrar application.yaml.template a application.yaml.
+# Spring de forma interna concatenara resources/config/application.yaml y 
+# resources/application.yaml
+#
+# Descripcion y uso:
+# * src/main/resources/config/application.yaml : Configuracion NO PERSISTIDA en git
+# * src/main/resources/application.yaml        : Configuracion PERSISTIDA en git
+###################################################################################
 spring:
   datasource:
     primary:
       hikari:
-        username: amsdacom
-        password: Am5Spr1ngD4c0m
+        username: usernameA
+        password: passwordA
     secondary:
       hikari:
-        username: LAB_ARQ_SW_DEV
-        password: lab_arq_sw_dev  
+        username: usernameB
+        password: passwordB  

@@ -1,23 +1,18 @@
-
 spring:
   datasource:
     primary:
       hikari:
         driver-class-name: org.h2.Driver
-        username: sa
-        password: sa
         pool-name: h2-primary
         jdbc-url: jdbc:h2:mem:db-informix;DB_CLOSE_DELAY=-1
     secondary:
       hikari:
         driver-class-name: org.h2.Driver
-        username: sb
-        password: sb
         pool-name: h2-secondary
         jdbc-url: jdbc:h2:mem:db-oracle;DB_CLOSE_DELAY=-1;MODE=Oracle
 
 ##En entornos de test no existe datasource de tipo Informix
 santalucia:  ams:    features:      guardium:        enabled: false
-        
+
 helloWorld:
   url: http://localhost:${wiremock.server.port:8089}/hello-world/v1

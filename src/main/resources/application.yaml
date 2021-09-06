@@ -1,14 +1,11 @@
 #Reference de propiedades
-#https://docs.spring.io/spring-boot/docs/2.3.9.RELEASE/reference/html/appendix-application-properties.html#common-application-properties
-#Multitenant https://docs.spring.io/spring-security/site/docs/current/reference/html5/#resolving-the-tenant-by-claim
-#https://docs.spring.io/spring-security/site/docs/current/reference/html5/#oauth2resourceserver-opaque-minimalconfiguration
-#https://docs.spring.io/spring-security/site/docs/current/reference/html5/#bearer-token-propagation
-
 server:
   port: 8080
   error:
-    include-exception: true # Include the "exception" attribute. default false
-    include-stacktrace: always # When to include a "stacktrace" attribute. default never
+    # Include the "exception" attribute. default false
+    include-exception: true
+    # When to include a "stacktrace" attribute. default never
+    include-stacktrace: always
     include-binding-errors: always
     include-message: always
     whitelabel:
@@ -27,30 +24,29 @@ server:
         secure: true
   ssl:
     enabled: false
-#    ciphers: TLS_RSA_WITH_AES_128_CBC_SHA256, INCLUDE_ANY_OTHER_ONES_YOU_NEED_TO_SUPPORT
-#    protocol: TLS
-#    enabled-protocols: TLSv1.2
 
 springfox:
   documentation:
     open-api:
-      enabled: false #disable openapi3 core, all specs are openapi2 
+      # disable openapi3 core, all specs are openapi2 
+      enabled: false
     enabled: true
-
 
 spring:
   main:
     allow-bean-definition-overriding: true
   mvc: 
-    log-request-details: true # Whether logging of (potentially sensitive) request details at DEBUG and TRACE level is allowed.
+# Whether logging of (potentially sensitive) request details at DEBUG and TRACE
+    log-request-details: true
     locale-resolver: accept-header
-    locale: es_ES #default locale used when no Accept-Language is send
+# default locale used when no Accept-Language is send
+    locale: es_ES
   output:
     ansi:
       enabled: detect
   jmx:
     enabled: true
-    unique-names: true 
+    unique-names: true
   devtools:
     livereload:
       enabled: true
@@ -58,35 +54,22 @@ spring:
 ## internacionalizacion
   messages:
     basename: classpath:i18n/messages
-    #cache-duration: 1s si no se especifica se cachean para siempre. Al estar en el jar no es correcto
+    # si no se especifica se cachean para siempre. Al estar en el jar no es correcto
+    #cache-duration: 1s
     encoding: UTF-8
     fallback-to-system-locale: false
-     
-    
+
   security:
     oauth2:
       resourceserver:
-        jwt: #para habilitar la validacion local del token 
-          jws-algorithm: RS256 #posibles valores RS256,RS512 depende del realm
+        jwt: #para habilitar la validacion local del token
+          # posibles valores RS256,RS512 depende del realm
+          jws-algorithm: RS256
           jwk-set-uri: https://sso-sldev.santalucia.es/auth/realms/3scale/protocol/openid-connect/certs
-          issuer-uri: https://sso-sldev.santalucia.es/auth/realms/3scale # URI that an OpenID Connect Provider asserts as its Issuer Identifier.
-#        opaquetoken: #si se quiere validar cada request contra rhsso y el end-point instrospect
-#          introspection-uri: https://sso-sldev.santalucia.es/auth/realms/stl-int/protocol/openid-connect/token/introspect
-#          client-id: santalucia-test-sb2-oauth2
-#          client-secret: ejemplo-9d30-4b19-bf9f-f8b57d7620bc
-          
-          
-#      client: en caso que se quiera configurar el flujo code, no soportado por el back
-#        registration: 
-#          keycloak:   
-#            client-id: nacho-test-sb2-oauth2
-#            client-secret: 397afcf0-9d30-4b19-bf9f-f8b57d7620bc
-#        provider: 
-#          keycloak:
-#            issuer-uri: https://sso-sldev.santalucia.es/auth/realms/stl-int/.well-known/openid-configuration
-            
-  # Conexion para recuperar agencias en pruebas de componente database
+          # URI that an OpenID Connect Provider asserts as its Issuer Identifier.
+          issuer-uri: https://sso-sldev.santalucia.es/auth/realms/3scale
 
+  # Conexion para recuperar agencias en pruebas de componente database
   datasource:
     primary:
       hikari:
@@ -140,23 +123,23 @@ santalucia:
 # feign client properties #
 #                         #
 ###########################
-        
+
 helloWorld:
   url: http://localhost:8080/hello-world/v1
-      
+
 ###########################
 #                         #
 # logging properties      #
 #                         #
 ###########################
-      
+
 logging:
   level:
     root: INFO
     com.santalucia: DEBUG
     org.springframework: INFO
-    com.santalucia.arq.ams.componentes.database.guardium.interceptor.GuardiumMyBatisInterceptor: DEBUG
     #org.springframework.web.servlet: DEBUG
     #org.springframework.security: DEBUG
     #org.springframework.web.client: DEBUG
-    org.springframework.security.oauth2.server.resource: DEBUG #trazas para mostrar los errores de login debido a que salen en modo debug
+    #trazas para mostrar los errores de login debido a que salen en modo debug
+    org.springframework.security.oauth2.server.resource: DEBUG
