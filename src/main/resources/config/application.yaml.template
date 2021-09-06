@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    primary:
+      hikari:
+        username: amsdacom
+        password: Am5Spr1ngD4c0m
+    secondary:
+      hikari:
+        username: LAB_ARQ_SW_DEV
+        password: lab_arq_sw_dev  

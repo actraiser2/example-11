@@ -1,10 +1,11 @@
 ### Santalucia Local Config ###
 # https://docs.spring.io/spring-boot/docs/1.0.1.RELEASE/reference/html/boot-features-external-config.html#boot-features-external-config-application-property-files
 # repositorio para la configuracion local de proyecto. No sera versionada en Git o exportado en el jar
-!src/main/resources/config/application.yaml.template
-src/main/resources/config
-config
 
+!src/main/resources/config/*.template
+src/main/resources/config/*.yaml
+src/main/resources/config/*.yml
+src/main/resources/config/*.properties
 ### STS ###
 .temp*.txt
 
@@ -173,3 +174,5 @@ $RECYCLE.BIN/
 log/
 
 .vscode/
+
+
