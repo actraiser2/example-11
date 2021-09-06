@@ -1,6 +1,9 @@
-/target/
-!.mvn/wrapper/maven-wrapper.jar
-
+### Santalucia Local Config ###
+# https://docs.spring.io/spring-boot/docs/1.0.1.RELEASE/reference/html/boot-features-external-config.html#boot-features-external-config-application-property-files
+# repositorio para la configuracion local de proyecto. No sera versionada en Git o exportado en el jar
+!src/main/resources/config/application.yaml.template
+src/main/resources/config
+config
 
 ### STS ###
 .temp*.txt
@@ -13,7 +16,6 @@
 .settings
 .springBeans
 .sts4-cache
-
 
 # Created by https://www.gitignore.io/api/git,java,maven,eclipse,windows
 
