@@ -8,5 +8,5 @@ management:
   endpoints:
     web:
       exposure:
-       include: "*"
+        include: "*"
       base-path: /management

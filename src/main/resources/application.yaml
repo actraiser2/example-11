@@ -54,7 +54,8 @@ spring:
 ## internacionalizacion
   messages:
     basename: classpath:i18n/messages
-    # si no se especifica se cachean para siempre. Al estar en el jar no es correcto
+    # si no se especifica se cachean para siempre. Al
+    # estar en el jar no es correcto
     #cache-duration: 1s
     encoding: UTF-8
     fallback-to-system-locale: false
@@ -66,7 +67,7 @@ spring:
           # posibles valores RS256,RS512 depende del realm
           jws-algorithm: RS256
           jwk-set-uri: https://sso-sldev.santalucia.es/auth/realms/3scale/protocol/openid-connect/certs
-          # URI that an OpenID Connect Provider asserts as its Issuer Identifier.
+          # OpenID Connect Provider URI asserts as its Issuer Identifier
           issuer-uri: https://sso-sldev.santalucia.es/auth/realms/3scale
 
   # Conexion para recuperar agencias en pruebas de componente database

@@ -4,7 +4,7 @@ trace: false # Enable trace logs.
 management:
   metrics:
     tags:
-       application: ${spring.application.name} #Needed by micrometer +1.1.0
+      application: ${spring.application.name} #Needed by micrometer +1.1.0
 
 spring:
   main:
@@ -20,17 +20,18 @@ spring:
 info:
   app:
     name: ${spring.application.name}
-    encoding: @project.build.sourceEncoding@
+    encoding: UTF-8
     java:
-      source: @java.version@
-      target: @java.version@
+      source: 11
+      target: 11
 
 logging:
   register-shutdown-hook: true
 
 ---
 spring:
-  profiles: kubernetes #Profile habilitado de forma automatica cuando se despliega en OCP
+  #Profile habilitado de forma automatica cuando se despliega en OCP
+  profiles: kubernetes
 #  mandatory-file-encoding: UTF-8
   cloud:
     kubernetes:
