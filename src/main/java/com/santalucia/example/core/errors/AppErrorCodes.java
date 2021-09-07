@@ -6,10 +6,10 @@ import lombok.Getter;
 
 @Getter
 public enum AppErrorCodes implements ErrorCode {
-	
+
 	INVALID_NAME("app.error.invalid.name");
-	
-	
+
+
 	private final String code;
 
 	private AppErrorCodes(String code) {

@@ -9,16 +9,16 @@ public class InvalidNameException extends SantaluciaWebRuntimeException {
 
     /**
      * constructor de clase
-     * 
+     *
      * @param Throwable cause
      */
 	public InvalidNameException(Throwable cause) {
 		super(AppErrorCodes.INVALID_NAME,cause);
 	}
-	
+
     /**
      * constructor de clase
-     * 
+     *
      */
 	public InvalidNameException() {
 		this(null);

@@ -18,13 +18,13 @@ import lombok.extern.slf4j.Slf4j;
 public class DefaultHelloService implements HelloService {
 
 	private HelloWorldApiClient helloWorldApiClient;
-	
+
 	private IdentidadDigitalDomainMapper identidadDigitalMapper;
 
 	/**
-	 * Constructor de clase 
+	 * Constructor de clase
 	 * @param HelloWorldApiClient helloWorldApiClient
-	 * @param IdentidadDigitalDomainMapper identidadDigitalMapper, 
+	 * @param IdentidadDigitalDomainMapper identidadDigitalMapper,
 	 * @param MessageSourceAccessor messageSourceAccessor
 	 */
 	public DefaultHelloService(HelloWorldApiClient helloWorldApiClient, IdentidadDigitalDomainMapper identidadDigitalMapper) {
@@ -43,7 +43,7 @@ public class DefaultHelloService implements HelloService {
 		//Test de ejemplo para demostrar el uso de named exception strategy
 		if ("test".equals(name)) {
 			throw new InvalidNameException();
-		}		
+		}
 
 		// Ejemplo de llamada a remota
 		ResponseEntity<IdentidadDigitalConsultaResource> response = helloWorldApiClient.getHelloByName(name, null);

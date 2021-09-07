@@ -13,13 +13,13 @@ public interface EmployeeService {
      * @return List<EmployeeDomain>
      */
 	public List<EmployeeDomain> getEmployees();
-	
+
     /**
      * getEmployees
      * @return List<EmployeeDomain>
      */
 	public List<EmployeeDomain> getEmployees(Pageable pageable);
-	
+
     /**
      * insertEmployee
      */

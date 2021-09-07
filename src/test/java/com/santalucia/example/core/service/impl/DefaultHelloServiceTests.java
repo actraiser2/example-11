@@ -25,58 +25,58 @@ import com.santalucia.example.core.service.HelloService;
 
 @SpringBootTest
 class DefaultHelloServiceTests {
-	
+
 	@Mock
 	HelloWorldApiClient helloWorldApiClient;
-	
+
 	@Mock
 	IdentidadDigitalDomainMapper identidadDigitalMapper;
-	
+
 	@InjectMocks
 	private DefaultHelloService helloService;
 
 	@Test
 	@DisplayName("Recupera un saludo del servicio")
 	void testGetHelloByname() {
-		
+
 		//given
 		final String name = "mundo";
-		
+
 		//when
 		IdentidadDigitalDomain greeting = helloService.getHelloByName(name);
-		
+
 		//then
 		assertEquals(name, greeting.getNombre());
 	}
-	
+
 	@Test
 	@DisplayName("Recupera un saludo del servicio remoto")
 	void testGetHelloRemoteByname() {
-		
+
 		//given
 		final String name = "mundo";
 		IdentidadDigitalConsultaResource response = buildIdentidadDigitalConsultaResource(name);
 		IdentidadDigitalDomain identidadDomain = buildIdentidadDigitalDomain(name);
-		
+
 		//when
 		when(helloWorldApiClient.getHelloByName(Mockito.anyString(), Mockito.any()))
 			.thenReturn(new ResponseEntity<>(response, HttpStatus.OK));
 		when(identidadDigitalMapper.toDomain(Mockito.any())).thenReturn(identidadDomain);
-		
+
 		IdentidadDigitalDomain greeting = helloService.getHelloRemoteByName(name);
-		
+
 		//then
 		assertEquals(name, greeting.getNombre());
-		
+
 	}
-	
+
 	private IdentidadDigitalConsultaResource buildIdentidadDigitalConsultaResource(String nombre) {
     	IdentidadDigitalConsultaResource response = new IdentidadDigitalConsultaResource();
     	response.setNombre(nombre);
     	response.setSaludo(String.format("Hello %s", nombre));
     	return response;
     }
-	
+
 	private IdentidadDigitalDomain buildIdentidadDigitalDomain(String nombre) {
     	IdentidadDigitalDomainBuilder identidad = IdentidadDigitalDomain.builder();
 		identidad.nombre(nombre);

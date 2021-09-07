@@ -2,10 +2,10 @@
 # Santalucia
 # Template distribuido a modo de ejemplo para evidenciar el uso de configuracion
 # local de proyecto
-# En este directorio deberan incluirse todos los usuarios y passwords que no 
+# En este directorio deberan incluirse todos los usuarios y passwords que no
 # deban versionarse en git.
 # Para su uso basta renombrar application.yaml.template a application.yaml.
-# Spring de forma interna concatenara resources/config/application.yaml y 
+# Spring de forma interna concatenara resources/config/application.yaml y
 # resources/application.yaml
 #
 # Descripcion y uso:
@@ -21,4 +21,4 @@ spring:
     secondary:
       hikari:
         username: usernameB
-        password: passwordB  
+        password: passwordB

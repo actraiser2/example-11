@@ -23,7 +23,7 @@ public class DefaultCacetrafecRepository implements CacetrafecRepository {
 	private final CacetrafecCustomMapper cacetrafecCustomMapper;
 
 	/**
-	 * constructor de clase 
+	 * constructor de clase
 	 * @param CacetrafecMapper cacetrafecMapper
 	 * @param CacetrafecCustomMapper cacetrafecCustomMapper
 	 */
@@ -37,13 +37,13 @@ public class DefaultCacetrafecRepository implements CacetrafecRepository {
 	 */
 	@Override
 	public List<Cacetrafec> getIndicadores() {
-		
+
 	    SelectStatementProvider selectStatement = select(CacetrafecDynamicSqlSupport.cacetrafec.allColumns())
 	            .from(CacetrafecDynamicSqlSupport.cacetrafec)
 	            .where(CacetrafecDynamicSqlSupport.cacetrafec.xcacetra, isEqualTo("I"))
 	            .build()
 	            .render(RenderingStrategies.SPRING_NAMED_PARAMETER);
-		
+
 		return this.cacetrafecCustomMapper.selectMany(selectStatement);
 	}
 
@@ -53,7 +53,7 @@ public class DefaultCacetrafecRepository implements CacetrafecRepository {
 	 */
 	@Override
 	public List<Cacetrafec> getIndicadores(Pageable pageable) {
-		
+
 		log.debug("Inicio consulta Indicadores centros con paginacion");
 		return this.cacetrafecCustomMapper.getIndicadoreswithPagination(pageable.getOffset(), pageable.getPageSize());
 	}

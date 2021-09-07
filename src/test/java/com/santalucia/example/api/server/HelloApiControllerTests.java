@@ -29,22 +29,22 @@ class HelloApiControllerTests {
 
 	@Autowired
 	private MockMvc mvc;
-	
+
 	@MockBean
 	private HelloApiDelegate helloApiDelegate;
-	
+
     @Test
     @WithMockUser(value = "user-test")
     @DisplayName("dado un nombre se espera una respuesta correcta del api securizado GET /hello/{name}")
     void getHello_ok() throws Exception  {
-    	 	    	  	 			
+
     	String nombre = "mock-response";
     	IdentidadDigitalConsultaResource response = buildIdentidadDigitalConsultaResource(nombre);
-    	
+
     	when(helloApiDelegate.getHelloByName(Mockito.anyString(),Mockito.any()))
     	.thenReturn(new ResponseEntity<>(response, HttpStatus.OK));
-    	
-        
+
+
         mvc.perform(get("/hello-world/v1/hello/{name}",nombre)
         		.header("X-Request-ID", UUID.randomUUID().toString())
                 .contentType(MediaType.APPLICATION_JSON)
@@ -53,25 +53,25 @@ class HelloApiControllerTests {
 		        .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON_VALUE))
 		        .andExpect(jsonPath("$.nombre", is(nombre)));
     }
-    
+
     @Test
     @DisplayName("dado un nombre se espera un error al no haber seguridad")
     void getHello_no_security_ko() throws Exception  {
-    	
+
     	String nombre = "mock-response";
     	IdentidadDigitalConsultaResource response = buildIdentidadDigitalConsultaResource(nombre);
-    	
+
     	when(helloApiDelegate.getHelloByName(Mockito.anyString(),Mockito.any()))
     	.thenReturn(new ResponseEntity<>(response, HttpStatus.OK));
-    	
-        
+
+
         mvc.perform(get("/hello-world/v1/hello/{name}",nombre)
         		.header("X-Request-ID", UUID.randomUUID().toString())
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))
 		        .andExpect(status().is4xxClientError());
     }
-    
+
     private IdentidadDigitalConsultaResource buildIdentidadDigitalConsultaResource(String nombre) {
     	IdentidadDigitalConsultaResource response = new IdentidadDigitalConsultaResource();
     	response.setNombre(nombre);

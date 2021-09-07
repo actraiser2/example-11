@@ -30,12 +30,12 @@ class EmployeesDaoMappersTests {
 	@Sql(scripts = { "/sql/data/employees-data.sql" })
 	@DisplayName("Dada una query a employees se retorna un resultado")
 	void getEmployeesTest() {
-		
+
 	    SelectStatementProvider selectStatement = select(EmployeeDynamicSqlSupport.employee.allColumns())
 	            .from(EmployeeDynamicSqlSupport.employee)
 	            .build()
 	            .render(RenderingStrategies.MYBATIS3);
-		
+
 		List<Employee> employees = employeesDaoMappers.selectMany(selectStatement);
 		assertNotNull(employees);
 		assertEquals(1, employees.size());

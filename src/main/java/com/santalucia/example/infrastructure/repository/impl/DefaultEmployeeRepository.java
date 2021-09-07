@@ -41,7 +41,7 @@ public class DefaultEmployeeRepository implements EmployeeRepository {
 	            .from(EmployeeDynamicSqlSupport.employee)
 	            .build()
 	            .render(RenderingStrategies.SPRING_NAMED_PARAMETER);
-		
+
 		return this.employeeMapper.selectMany(selectStatement);
 	}
 
@@ -52,18 +52,18 @@ public class DefaultEmployeeRepository implements EmployeeRepository {
      */
 	@Override
 	public List<Employee> getEmployees(Pageable pageable) {
-		
+
 		log.info("Pageable pagenumber: {} ", pageable.getPageNumber());
 		log.info("Pageable pageSize: {} ", pageable.getPageSize());
 		log.info("Pageable offset: {} ", pageable.getOffset());
-		
+
 		SelectStatementProvider selectStatement = select(EmployeeDynamicSqlSupport.employee.allColumns())
 	            .from(EmployeeDynamicSqlSupport.employee)
 	            .offset(pageable.getOffset())
 	            .fetchFirst(pageable.getPageSize()).rowsOnly()
 	            .build()
 	            .render(RenderingStrategies.MYBATIS3);
-		
+
 		return this.employeeMapper.selectMany(selectStatement);
 	}
 
@@ -73,21 +73,21 @@ public class DefaultEmployeeRepository implements EmployeeRepository {
 	@Override
 	public void insertEmployee() {
 		Employee emp = new Employee();
-		
+
 		emp.setFirstName("Julie");
 		emp.setLastName("Pearson");
 		emp.setEmailAddress("julie@accenture.com");
-		
+
 		this.employeeMapper.insert(emp);
-		
+
 		Employee empDos = new Employee();
-		
+
 		empDos.setFirstName("Juan");
 		empDos.setLastName("Lopez");
 		empDos.setEmailAddress(null);
-		
+
 		this.employeeMapper.insert(empDos);
-		
+
 	}
 
 }

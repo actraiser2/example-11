@@ -10,7 +10,7 @@ class ApplicationTests {
 
 	@Test
 	void contextLoads() {
-		
+
 		assertDoesNotThrow( () -> Application.main(new String[] {}));
 	}
 

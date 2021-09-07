@@ -32,13 +32,13 @@ class CacetrafecCustomMapperTests {
 	@Sql(scripts = { "/sql/data/cacetrafec-data.sql" })
 	@DisplayName("Dada una query a cacetrafec por xcacetra = 1 se retorna un resultado")
 	void getAgenciasTest() {
-		
+
 	    SelectStatementProvider selectStatement = select(CacetrafecDynamicSqlSupport.cacetrafec.allColumns())
 	            .from(CacetrafecDynamicSqlSupport.cacetrafec)
 	            .where(CacetrafecDynamicSqlSupport.cacetrafec.xcacetra, isEqualTo("1"))
 	            .build()
 	            .render(RenderingStrategies.MYBATIS3);
-		
+
 		List<Cacetrafec> city = cacetrafecCustomMapper.selectMany(selectStatement);
 		assertNotNull(city);
 	}

@@ -21,7 +21,7 @@ public class DefaultEmployeeService implements EmployeeService {
 	private final EmployeeDomainMapper employeeMapper;
 
 	/**
-	 * Constructor de clase 
+	 * Constructor de clase
 	 * @param EmployeeRepository employeeRepository
 	 * @param EmployeeDomainMapper employeeMapper
 	 */
@@ -32,11 +32,11 @@ public class DefaultEmployeeService implements EmployeeService {
 
 	/**
 	 * recupera los empleados
-	 * @return List<EmployeeDomain> 
+	 * @return List<EmployeeDomain>
 	 */
 	@Override
 	public List<EmployeeDomain> getEmployees() {
-		
+
 		List<Employee> lstEntity = employeeRepository.getAllEmployees();
 		return employeeMapper.toDomainsfromEntities(lstEntity);
 	}
@@ -56,7 +56,7 @@ public class DefaultEmployeeService implements EmployeeService {
 	 * inserta un empleado
 	 */
 	@Override
-	public void insertEmployee() {		
+	public void insertEmployee() {
 		this.employeeRepository.insertEmployee();
 	}
 

@@ -18,8 +18,8 @@ import com.santalucia.example.infrastructure.repository.CacetrafecRepository;
 public class DefaultIndicadorService implements IndicadorService{
 
 	private final CacetrafecRepository cacetrafecRepository;
-	private final CacetrafecDomainMapper cacetrafecMapper;	
-	
+	private final CacetrafecDomainMapper cacetrafecMapper;
+
     /**
      * constructor de clase
      * @param CacetrafecRepository cacetrafecRepository
@@ -29,7 +29,7 @@ public class DefaultIndicadorService implements IndicadorService{
 		this.cacetrafecRepository = cacetrafecRepository;
 		this.cacetrafecMapper = cacetrafecMapper;
 	}
-	
+
     /**
      * recupera los indicadores paginados
      * @param Pageable pageable

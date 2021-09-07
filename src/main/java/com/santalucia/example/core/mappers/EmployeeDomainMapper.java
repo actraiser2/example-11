@@ -22,7 +22,7 @@ public interface EmployeeDomainMapper {
 	@Mapping(source = "firstName", target = "nombre")
 	@Mapping(source = "lastName", target = "apellido")
 	EmployeeResource toResource(EmployeeDomain domain);
-	
+
     /**
      * resource <--> domain
      * @param EmployeeResource resource
@@ -37,20 +37,20 @@ public interface EmployeeDomainMapper {
      * @return EmployeeDomain
      */
 	EmployeeDomain toDomain(Employee entity);
-	
+
     /**
      * domain <--> employee
      * @param EmployeeDomain domain
      * @return Employee
      */
 	Employee toEntity(EmployeeDomain domain);
-	
+
     /**
      * @param List<EmployeeDomain> lst
      * @return List<EmployeeResource>
      */
 	List<EmployeeResource> toResources(List<EmployeeDomain> lst);
-	
+
     /**
      * @param List<EmployeeResource> lst
      * @return List<EmployeeDomain>
@@ -62,12 +62,12 @@ public interface EmployeeDomainMapper {
      * @return List<EmployeeDomain>
      */
 	List<EmployeeDomain> toDomainsfromEntities(List<Employee> lst);
-	
+
     /**
      * @param List<EmployeeDomain> lst
      * @return List<Employee>
      */
-	List<Employee> toEntitys(List<EmployeeDomain> lst);	
-	
+	List<Employee> toEntitys(List<EmployeeDomain> lst);
+
 
 }

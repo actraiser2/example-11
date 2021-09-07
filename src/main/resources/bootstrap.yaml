@@ -24,7 +24,7 @@ info:
     java:
       source: @java.version@
       target: @java.version@
-           
+
 logging:
   register-shutdown-hook: true
 

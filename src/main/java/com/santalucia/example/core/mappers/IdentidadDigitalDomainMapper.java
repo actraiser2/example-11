@@ -14,14 +14,14 @@ public interface IdentidadDigitalDomainMapper {
 	/***************/
 	/** ONE TO ONE**/
 	/***************/
-	
+
     /**
      * toResource
      * @param IdentidadDigitalDomain domain
      * @return IdentidadDigitalConsultaResource
      */
 	IdentidadDigitalConsultaResource toResource(IdentidadDigitalDomain domain);
-	
+
     /**
      * toDomain
      * @param IdentidadDigitalConsultaResource resource
@@ -29,17 +29,17 @@ public interface IdentidadDigitalDomainMapper {
      */
 	IdentidadDigitalDomain toDomain(IdentidadDigitalConsultaResource resource);
 
-	/*****************/	
+	/*****************/
 	/** MANY TO MANY**/
 	/*****************/
-	
+
     /**
      * toResources
      * @param List<IdentidadDigitalDomain> lst
      * @return List<IdentidadDigitalConsultaResource>
      */
 	List<IdentidadDigitalConsultaResource> toResources(List<IdentidadDigitalDomain> lst);
-	
+
     /**
      * toDomainsfromResources
      * @param List<IdentidadDigitalConsultaResource> lst

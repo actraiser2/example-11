@@ -13,7 +13,7 @@ public interface CacetrafecRepository {
      * @return List<Cacetrafec>
      */
 	public List<Cacetrafec> getIndicadores();
-	
+
     /**
      * getIndicadores
      * @param Pageable pageable

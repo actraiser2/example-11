@@ -15,15 +15,15 @@ public interface CacetrafecDomainMapper {
 	/***************/
 	/** ONE TO ONE**/
 	/***************/
-	
-	
+
+
     /**
      * indicadorDomainToResource
      * @param IndicadoresCentroDomain domain
      * @return IndicadorResource
      */
 	IndicadorResource indicadorDomainToResource(IndicadoresCentroDomain domain);
-	
+
     /**
      * indicadorResourceToDomain
      * @param IndicadorResource resource
@@ -31,47 +31,47 @@ public interface CacetrafecDomainMapper {
      */
 	IndicadoresCentroDomain indicadorResourceToDomain(IndicadorResource resource);
 
-	
+
     /**
      * cacetrafecToDomain
      * @param Cacetrafec entity
      * @return IndicadoresCentroDomain
      */
 	IndicadoresCentroDomain cacetrafecToDomain(Cacetrafec entity);
-	
+
     /**
      * indicadorDomainToEntity
      * @param IndicadoresCentroDomain domain
      * @return Cacetrafec
      */
 	Cacetrafec indicadorDomainToEntity(IndicadoresCentroDomain domain);
-	
+
 	/*****************/
 	/** MANY TO MANY**/
 	/*****************/
-	
+
     /**
      * indicadoresDomainToResources
      * @param List<IndicadoresCentroDomain> lst
      * @return List<IndicadorResource>
      */
 	List<IndicadorResource> indicadoresDomainToResources(List<IndicadoresCentroDomain> lst);
-	
+
     /**
      * indicadoresResourceToDomains
      * @param List<IndicadorResource> lst
      * @return List<IndicadoresCentroDomain>
      */
 	List<IndicadoresCentroDomain> indicadoresResourceToDomains(List<IndicadorResource> lst);
-	
-	
+
+
     /**
      * cacetrafecEntitiestoDomains
      * @param List<Cacetrafec> lst
      * @return List<IndicadoresCentroDomain>
      */
 	List<IndicadoresCentroDomain> cacetrafecEntitiestoDomains(List<Cacetrafec> lst);
-	
+
     /**
      * indicadoresDomainToEntitys
      * @param List<IndicadoresCentroDomain> lst

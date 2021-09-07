@@ -38,7 +38,7 @@ public class DefaultHelloNameApiDelegate implements HelloApiDelegate {
 
     /**
      * constructor de clase
-     * 
+     *
      * @param HelloService helloService
      * @param IdentidadDigitalDomainMapper identidadDigitalDomainMapper
      */
@@ -46,7 +46,7 @@ public class DefaultHelloNameApiDelegate implements HelloApiDelegate {
 		this.helloService = helloService;
 		this.identidadDigitalDomainMapper = identidadDigitalDomainMapper;
 	}
-	
+
 
 	/**
 	 * DefaultHelloNameApiDelegate getHelloByName
@@ -72,6 +72,6 @@ public class DefaultHelloNameApiDelegate implements HelloApiDelegate {
 				.map(idDomain -> ResponseEntity.ok().body(identidadDigitalDomainMapper.toResource(idDomain))) // 200 OK
 				.orElse(ResponseEntity.notFound().build()); // 404 Not found
 	}
-	
-	
+
+
 }

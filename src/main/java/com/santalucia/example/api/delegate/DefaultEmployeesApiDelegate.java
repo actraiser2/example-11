@@ -24,7 +24,7 @@ public class DefaultEmployeesApiDelegate implements EmployeesApiDelegate {
 
     /**
      * constructor de clase
-     * 
+     *
      * @param EmployeeService employeeService
      * @param EmployeeDomainMapper employeeMapper
      */
@@ -35,7 +35,7 @@ public class DefaultEmployeesApiDelegate implements EmployeesApiDelegate {
 
     /**
      * recupera la lista de empleados
-     * 
+     *
      * @param Optional<UUID> xRequestId
      * @param Pageable pageable
      * @return ResponseEntity<List<EmployeeResource>>

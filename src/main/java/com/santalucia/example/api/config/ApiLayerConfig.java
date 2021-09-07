@@ -6,7 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author 05428576R
- * 
+ *
  */
 @Slf4j
 @Configuration
@@ -16,7 +16,7 @@ public class ApiLayerConfig {
      * constructor de clase
      */
 	public ApiLayerConfig() {
-		log.debug("PresentationLayerConfig loaded");	
+		log.debug("PresentationLayerConfig loaded");
 	}
-	
+
 }

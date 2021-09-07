@@ -10,7 +10,7 @@ public class CoreLayerConfig {
 
     /**
      * constructor de clase
-     * 
+     *
      */
 	public CoreLayerConfig() {
 		log.debug("CoreLayerConfig loaded");

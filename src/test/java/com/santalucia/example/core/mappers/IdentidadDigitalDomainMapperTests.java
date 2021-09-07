@@ -15,8 +15,8 @@ import com.santalucia.example.core.domain.IdentidadDigitalDomain.IdentidadDigita
 
 class IdentidadDigitalDomainMapperTests {
 
-	private static final String NOMBRE = "john"; 
-	
+	private static final String NOMBRE = "john";
+
 	@Test
 	@DisplayName("Dado un objeto dominio retornamos un objeto resource")
 	void toApi_ok() {
@@ -28,7 +28,7 @@ class IdentidadDigitalDomainMapperTests {
 		IdentidadDigitalConsultaResource dto = mapper.toResource(entity);
 		compare(dto, entity);
 	}
-	
+
 	@Test
 	@DisplayName("Dado un objeto resource retornamos un objeto de dominio")
 	void toDomain_ok() {
@@ -69,21 +69,21 @@ class IdentidadDigitalDomainMapperTests {
 		compare(apis, entitys);
 
 	}
-	
+
 	private IdentidadDigitalConsultaResource buildIdentidadDigitalConsultaResource(String nombre) {
     	IdentidadDigitalConsultaResource response = new IdentidadDigitalConsultaResource();
     	response.setNombre(nombre);
     	response.setSaludo(String.format("Hello %s", nombre));
     	return response;
     }
-	
+
 	private IdentidadDigitalDomain buildIdentidadDigitalDomain(String nombre) {
     	IdentidadDigitalDomainBuilder identidad = IdentidadDigitalDomain.builder();
 		identidad.nombre(nombre);
 		identidad.saludo(String.format("Hello %s", nombre));
 		return identidad.build();
     }
-	
+
 	protected void compare(List<IdentidadDigitalConsultaResource> dtos, List<IdentidadDigitalDomain> entitys) {
 
 		assertNotNull(dtos);

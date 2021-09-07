@@ -12,7 +12,7 @@ server:
       enabled: true
   compression:
     enabled: true
-#  forward-headers-strategy: native #default is ncsa 
+#  forward-headers-strategy: native #default is ncsa
   http2:
     enabled: false
   servlet:
@@ -28,14 +28,14 @@ server:
 springfox:
   documentation:
     open-api:
-      # disable openapi3 core, all specs are openapi2 
+      # disable openapi3 core, all specs are openapi2
       enabled: false
     enabled: true
 
 spring:
   main:
     allow-bean-definition-overriding: true
-  mvc: 
+  mvc:
 # Whether logging of (potentially sensitive) request details at DEBUG and TRACE
     log-request-details: true
     locale-resolver: accept-header
@@ -50,7 +50,7 @@ spring:
   devtools:
     livereload:
       enabled: true
- 
+
 ## internacionalizacion
   messages:
     basename: classpath:i18n/messages
@@ -80,13 +80,13 @@ spring:
       hikari:
         driver-class-name: oracle.jdbc.OracleDriver
         pool-name: OracleCP
-        jdbc-url: jdbc:oracle:thin:@slbdorad15.servidores.net:1548/DB12UTF8D.DES.SANTALUCIA.ES 
+        jdbc-url: jdbc:oracle:thin:@slbdorad15.servidores.net:1548/DB12UTF8D.DES.SANTALUCIA.ES
 
 ###########################
 #                         #
 # santalucia properties   #
 #                         #
-###########################  
+###########################
 santalucia:
   ams:
     features:
@@ -104,7 +104,7 @@ santalucia:
           enabled: true
         cors:
           enabled: true
-          allowed-origins: 
+          allowed-origins:
             - http://localhost:8080
         csrf:
           enabled: true

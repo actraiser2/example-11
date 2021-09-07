@@ -20,8 +20,8 @@ import lombok.extern.slf4j.Slf4j;
 public class DefaultIndicadoresApiDelegate implements IndicadoresApiDelegate{
 
 	private final IndicadorService indicadorService;
-	private final CacetrafecDomainMapper cacetrafecMapper;	
-	
+	private final CacetrafecDomainMapper cacetrafecMapper;
+
     /**
      * constructor de clase
      */
@@ -30,7 +30,7 @@ public class DefaultIndicadoresApiDelegate implements IndicadoresApiDelegate{
 		this.indicadorService = indicadorService;
 		this.cacetrafecMapper = cacetrafecMapper;
 	}
-	
+
     /**
      * listado de indicadores
      * @param Optional<UUID> xRequestID
@@ -39,16 +39,16 @@ public class DefaultIndicadoresApiDelegate implements IndicadoresApiDelegate{
      */
 	@Override
 	public ResponseEntity<List<IndicadorResource>> getIndicadoresList(Optional<UUID> xRequestID, Pageable pageable) {
-		
+
 		log.info("Pageable pagenumber: {} ", pageable.getPageNumber());
 		log.info("Pageable pageSize: {} ", pageable.getPageSize());
 		log.info("Pageable offset: {} ", pageable.getOffset());
-		
+
 		return Optional
 			.ofNullable(this.indicadorService.getIndicadores(pageable))
 			.map(indicadores -> ResponseEntity.ok().body(this.cacetrafecMapper.indicadoresDomainToResources(indicadores)))
 			.orElse(ResponseEntity.notFound().build());
 	}
 
-	
+
 }

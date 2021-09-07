@@ -10,7 +10,7 @@ public interface HelloService {
      * @return IdentidadDigitalDomain
      */
 	public IdentidadDigitalDomain getHelloRemoteByName(String name);
-	
+
 	/**
 	 * getHelloByName
 	 * @param name

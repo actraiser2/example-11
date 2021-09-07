@@ -13,14 +13,14 @@ public interface EmployeeRepository {
      * @return List<Employee>
      */
 	public List<Employee> getAllEmployees();
-	
+
     /**
      * getEmployees
      * @param Pageable pageable
      * @return List<Employee>
      */
 	public List<Employee> getEmployees(Pageable pageable);
-	
+
     /**
      * insertEmployee
      */
