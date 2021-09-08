@@ -3,7 +3,7 @@
  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
   <!-- **************************************************************************
-  	** INFO: Para ejecutar en maven usar el comando:  
+  	** INFO: Para ejecutar en maven usar el comando:
     **    - Informix: mvn mybatis-generator:generate -DINFORMIX_USU=valor -DINFORMIX_PWD=valor
     **    - Oracle:   mvn mybatis-generator:generate -DORACLE_USU=valor -DORACLE_PWD=valor
   	** el reference se encuentra en https://mybatis.org/generator/configreference/xmlconfig.html

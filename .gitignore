@@ -3,9 +3,14 @@
 # repositorio para la configuracion local de proyecto. No sera versionada en Git o exportado en el jar
 
 !src/main/resources/config/*.template
+!config/*.template
 src/main/resources/config/*.yaml
 src/main/resources/config/*.yml
 src/main/resources/config/*.properties
+config/*.yaml
+config/*.yml
+config/*.properties
+
 ### STS ###
 .temp*.txt
 
