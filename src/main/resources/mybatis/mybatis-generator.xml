@@ -3,7 +3,9 @@
  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
   <!-- **************************************************************************
-  	** INFO: Para ejecutar en maven usar el comando:  mvn mybatis-generator:generate
+  	** INFO: Para ejecutar en maven usar el comando:  
+    **    - Informix: mvn mybatis-generator:generate -DINFORMIX_USU=valor -DINFORMIX_PWD=valor
+    **    - Oracle:   mvn mybatis-generator:generate -DORACLE_USU=valor -DORACLE_PWD=valor
   	** el reference se encuentra en https://mybatis.org/generator/configreference/xmlconfig.html
   	************************************************************************** -->
   <!-- !!!! Configuracion del contexto INFORMIX !!!! -->
@@ -13,9 +15,8 @@
     <commentGenerator>
       <property name="suppressDate" value="true" />
     </commentGenerator>
-
-    <jdbcConnection driverClass="com.informix.jdbc.IfxDriver" connectionURL="jdbc:informix-sqli://192.168.204.226:20101/siis:INFORMIXSERVER=fun_jdbc" userId="amsdacom" password="Am5Spr1ngD4c0m"/>
-    <!-- <jdbcConnection driverClass="oracle.jdbc.OracleDriver" connectionURL="jdbc:oracle:thin:@slbdorad15.servidores.net:1548/DB12UTF8D.DES.SANTALUCIA.ES" userId="LAB_ARQ_SW_DEV" password="lab_arq_sw_dev"/>-->
+    <!-- El usuario y password debe pasan-->
+    <jdbcConnection driverClass="com.informix.jdbc.IfxDriver" connectionURL="jdbc:informix-sqli://192.168.204.226:20101/siis:INFORMIXSERVER=fun_jdbc" userId="${INFORMIX_USU}" password="${INFORMIX_PWD}"/>
 
 
     <!--  <javaTypeResolver>
@@ -55,7 +56,7 @@
       <property name="suppressDate" value="true" />
     </commentGenerator>
 
-    <jdbcConnection driverClass="oracle.jdbc.OracleDriver" connectionURL="jdbc:oracle:thin:@slbdorad15.servidores.net:1548/DB12UTF8D.DES.SANTALUCIA.ES" userId="LAB_ARQ_SW_DEV" password="lab_arq_sw_dev"/>
+    <jdbcConnection driverClass="oracle.jdbc.OracleDriver" connectionURL="jdbc:oracle:thin:@slbdorad15.servidores.net:1548/DB12UTF8D.DES.SANTALUCIA.ES" userId="${ORACLE_USU}" password="${ORACLE_PWD}"/>
 
     <javaTypeResolver>
       <property name="useJSR310Types" value="true" />
