@@ -39,7 +39,7 @@ public class DefaultIndicadoresApiDelegate implements IndicadoresApiDelegate{
      */
 	@Override
 	public ResponseEntity<List<IndicadorResource>> getIndicadoresList(Optional<UUID> xRequestID, Pageable pageable) {
-		
+
 		log.info("Pageable pagenumber: {} ", pageable.getPageNumber());
 		log.info("Pageable pageSize: {} ", pageable.getPageSize());
 		log.info("Pageable offset: {} ", pageable.getOffset());
