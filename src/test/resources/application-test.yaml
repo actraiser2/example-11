@@ -4,7 +4,7 @@ spring:
       hikari:
         driver-class-name: org.h2.Driver
         pool-name: h2-primary
-        jdbc-url: jdbc:h2:mem:db-informix;DB_CLOSE_DELAY=-1
+        jdbc-url: jdbc:h2:mem:db-informix;DB_CLOSE_DELAY=-1;MODE=DB2
     secondary:
       hikari:
         driver-class-name: org.h2.Driver
