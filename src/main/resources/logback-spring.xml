@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE configuration>
 <configuration debug="false" scan="true">
-  <include resource="org/springframework/boot/logging/logback/defaults.xml" />
-  <include resource="com/santalucia/arq/ams/componentes/logging/logback-appenders-std.xml" />
-  <include resource="com/santalucia/arq/ams/componentes/logging/logback-appenders-security-std.xml" />
+	<include resource="org/springframework/boot/logging/logback/defaults.xml" />
+	<include resource="com/santalucia/arq/ams/componentes/logging/logback-appenders-std.xml" />
+	<include resource="com/santalucia/arq/ams/componentes/logging/logback-appenders-security-std.xml" />
 
-  <root>
-    <appender-ref ref="ASYNC_CONSOLE" />
-    <appender-ref ref="ASYNC_SECURITY_ALERT" />
-  </root>
+	<root>
+		<appender-ref ref="ASYNC_CONSOLE" />
+		<appender-ref ref="ASYNC_SECURITY_ALERT" />
+	</root>
 
 	<!-- traslada las trazas JUL a logback y trasmite los cambios de log en caliente -->
-  <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
-    <resetJUL>true</resetJUL>
-  </contextListener>
-
+	<contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+		<resetJUL>true</resetJUL>
+	</contextListener>
 </configuration>
