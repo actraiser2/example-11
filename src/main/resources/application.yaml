@@ -77,11 +77,15 @@ spring:
         driver-class-name: com.informix.jdbc.IfxDriver
         pool-name: InformixCP
         jdbc-url: jdbc:informix-sqli://192.168.204.226:20101/siis:INFORMIXSERVER=fun_jdbc
+        username: amssms
+        password: Am5Spr1ng5M5
     secondary:
       hikari:
         driver-class-name: oracle.jdbc.OracleDriver
         pool-name: OracleCP
         jdbc-url: jdbc:oracle:thin:@slbdorad15.servidores.net:1548/DB12UTF8D.DES.SANTALUCIA.ES
+        username: LAB_ARQ_SW_DEV
+        password: lab_arq_sw_dev
 
 ###########################
 #                         #
