@@ -6,7 +6,7 @@
     <into layer="spring-boot-loader">
       <include>org/springframework/boot/loader/**</include>
     </into>
-      <into layer="application" />
+    <into layer="application" />
   </application>
   <dependencies>
     <into layer="snapshot-dependencies">
