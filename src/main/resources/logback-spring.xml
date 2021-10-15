@@ -4,43 +4,13 @@
   <include resource="org/springframework/boot/logging/logback/defaults.xml" />
   <include resource="com/santalucia/arq/ams/componentes/logging/logback-appenders-std.xml" />
 
-  <appender name="STDOUT_JSON" class="ch.qos.logback.core.ConsoleAppender">
-
-    <filter class="ch.qos.logback.more.appenders.filter.AppendersMarkerFilter">
-      <marker>SECURITY_ALERT</marker>
-      <OnMatch>DENY</OnMatch>
-      <onMismatch>ACCEPT</onMismatch>
-    </filter>
-
-    <encoder class="net.logstash.logback.encoder.LogstashEncoder">
-      <includeCallerData>true</includeCallerData>
-      <provider class="net.logstash.logback.composite.loggingevent.UuidProvider"/>
-      <providers>
-        <timestamp>
-          <timeZone>EST</timeZone>
-        </timestamp>
-        <stackTrace>
-          <throwableConverter class="net.logstash.logback.stacktrace.ShortenedThrowableConverter">
-            <maxDepthPerThrowable>30</maxDepthPerThrowable>
-            <maxLength>2048</maxLength>
-            <shortenedClassNameLength>20</shortenedClassNameLength>
-            <rootCauseFirst>true</rootCauseFirst>
-          </throwableConverter>
-        </stackTrace>
-      </providers>
-    </encoder>
-  </appender>
-
-  <appender name="ASYNC_CONSOLE" class="net.logstash.logback.appender.LoggingEventAsyncDisruptorAppender">
-    <includeCallerData>true</includeCallerData>
-    <appender-ref ref="STDOUT_JSON" />
-  </appender>
   <root>
     <appender-ref ref="ASYNC_CONSOLE" />
   </root>
 
-	<!-- traslada las trazas JUL a logback y trasmite los cambios de log en caliente -->
+  <!-- traslada las trazas JUL a logback y trasmite los cambios de log en caliente -->
   <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
     <resetJUL>true</resetJUL>
   </contextListener>
+
 </configuration>
