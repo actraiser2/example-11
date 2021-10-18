@@ -2,24 +2,10 @@
 <!DOCTYPE configuration>
 <configuration debug="false" scan="true">
 	<include resource="org/springframework/boot/logging/logback/defaults.xml" />
-	<include resource="com/santalucia/arq/ams/componentes/logging/logback-appenders-fluentd.xml" />
 	<include resource="com/santalucia/arq/ams/componentes/logging/logback-appenders-std.xml" />
-	<include resource="com/santalucia/arq/ams/componentes/logging/logback-appenders-file.xml" />
-
-	<!-- <springProperty scope="context" name="applicationName" source="spring.application.name"/> 
-
-	<logger name="ch.qos.logback.more.appenders.LogbackAppenderTest" level="TRACE" additivity="true">
-		<appender-ref ref="FLUENCY" />
-		<appender-ref ref="SECURITY_ALERT" />
-	</logger>
-	-->
 
 	<root>
 		<appender-ref ref="ASYNC_CONSOLE" />
-		<appender-ref ref="ASYNC_FILE" />
-		<appender-ref ref="ASYNC_SECURITY_ALERT" />
-		<!-- <appender-ref ref="ASYNC_JSON_ENCODING" />	 -->
-		<!-- <appender-ref ref="ASYNC_FLUENCY" /> -->
 	</root>
 
 	<!-- traslada las trazas JUL a logback y trasmite los cambios de log en caliente -->
