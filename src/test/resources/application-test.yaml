@@ -10,7 +10,7 @@ spring:
         driver-class-name: org.h2.Driver
         pool-name: h2-secondary
         jdbc-url: jdbc:h2:mem:db-oracle;DB_CLOSE_DELAY=-1;MODE=Oracle
-        
+
 ##En entornos de test no se levanta informix
 ## Se deshabilita la autoconfiguracion de sprint gest jdbc
   test:
