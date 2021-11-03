@@ -20,7 +20,7 @@ import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 public class ProgressController {
 
 	/**
-	 * @return
+	 * @return ResponseEntity<SseEmitter>
 	 * @throws IOException
 	 */
 	@GetMapping("/getData")
