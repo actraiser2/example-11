@@ -1,3 +1,5 @@
+spring:  profiles:    active:    - kubernetes
+---
 debug: true # Enable debug logs.
 trace: false # Enable trace logs.
 
@@ -32,6 +34,8 @@ logging:
 spring:
   #Profile habilitado de forma automatica cuando se despliega en OCP
   profiles: kubernetes
+  banner:
+    location: classpath:santalucia-banner.json
 #  mandatory-file-encoding: UTF-8
   cloud:
     kubernetes:
