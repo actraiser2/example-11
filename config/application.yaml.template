@@ -12,13 +12,3 @@
 # * src/main/resources/config/application.yaml : Configuracion NO PERSISTIDA en git
 # * src/main/resources/application.yaml        : Configuracion PERSISTIDA en git
 ###################################################################################
-spring:
-  datasource:
-    primary:
-      hikari:
-        username: usernameA
-        password: passwordA
-    secondary:
-      hikari:
-        username: usernameB
-        password: passwordB
