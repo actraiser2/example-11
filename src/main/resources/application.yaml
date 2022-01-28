@@ -38,6 +38,7 @@ spring:
   mvc:
 # Whether logging of (potentially sensitive) request details at DEBUG and TRACE
     log-request-details: true
+  web:
     locale-resolver: accept-header
 # default locale used when no Accept-Language is send
     locale: es_ES

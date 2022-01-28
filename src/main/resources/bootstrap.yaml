@@ -28,10 +28,18 @@ info:
 logging:
   register-shutdown-hook: true
 
+# Desactivado en el profile default
+kubernetes:
+  manifests:
+    enabled: false
+  informer:
+    enabled: false
 ---
 spring:
   #Profile habilitado de forma automatica cuando se despliega en OCP
-  profiles: kubernetes
+  config:
+    activate:
+      on-profile: "kubernetes"
   banner:
     location: classpath:santalucia-banner.json
 #  mandatory-file-encoding: UTF-8
@@ -48,12 +56,18 @@ spring:
         monitoring-secrets: false
       config:
         name: ${spring.application.name}
-
+kubernetes:
+  manifests:
+    enabled: true
+  informer:
+    enabled: true
 debug: false # Enable debug logs.
 trace: false # Enable trace logs.
 ---
 spring:
-  profiles: devops #Profile para deshabilitar kubernetes
+  config:
+    activate:
+      on-profile: "devops"
   mandatory-file-encoding: UTF-8
   cloud:
     kubernetes:

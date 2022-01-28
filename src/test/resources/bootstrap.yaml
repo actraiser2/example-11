@@ -2,13 +2,25 @@ spring:
   profiles:
     active:
     - test
-
 ---
 spring:
-  profiles: test #Profile para deshabilitar kubernetes
+  config:
+    activate:
+      on-profile: "test"
   cloud:
     kubernetes:
       enabled: false
 
 debug: true # Enable debug logs.
 trace: false # Enable trace logs.
+
+kubernetes:
+  manifests:
+    enabled: false
+  informer:
+    enabled: false
+opentracing:
+  spring:
+    cloud:
+      feign:
+        enabled: false
