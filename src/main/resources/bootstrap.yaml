@@ -34,12 +34,6 @@ kubernetes:
     enabled: false
   informer:
     enabled: false
-opentracing:
-  spring:
-    cloud:
-      feign:
-        enabled: false
-
 ---
 spring:
   #Profile habilitado de forma automatica cuando se despliega en OCP
@@ -62,6 +56,11 @@ spring:
         monitoring-secrets: false
       config:
         name: ${spring.application.name}
+kubernetes:
+  manifests:
+    enabled: true
+  informer:
+    enabled: true
 debug: false # Enable debug logs.
 trace: false # Enable trace logs.
 ---

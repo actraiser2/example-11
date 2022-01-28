@@ -6,3 +6,6 @@ opentracing:
   spring:
     web:
       enabled: false
+    cloud:
+      feign:
+        enabled: false
