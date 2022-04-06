@@ -25,11 +25,8 @@ server:
   ssl:
     enabled: false
 
-springfox:
-  documentation:
-    open-api:
-      # disable openapi3 core, all specs are openapi2
-      enabled: false
+springdoc:
+  api-docs:
     enabled: true
 
 spring:
