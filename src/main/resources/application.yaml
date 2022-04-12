@@ -86,7 +86,7 @@ spring:
         driver-class-name: oracle.jdbc.OracleDriver
         pool-name: oracle-pool
         jdbc-url: jdbc:oracle:thin:@slbdorad15.servidores.net:1548/DB12UTF8D.DES.SANTALUCIA.ES
-        
+
 ###########################
 #                         #
 # security properties     #
