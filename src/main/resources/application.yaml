@@ -86,8 +86,26 @@ spring:
         driver-class-name: oracle.jdbc.OracleDriver
         pool-name: oracle-pool
         jdbc-url: jdbc:oracle:thin:@slbdorad15.servidores.net:1548/DB12UTF8D.DES.SANTALUCIA.ES
+        
+###########################
+#                         #
+# security properties     #
+#                         #
+###########################
   security:
     oauth2:
+      client:
+        registration:
+          recibosodl:
+            authorization-grant-type: client_credentials
+            client-authentication-method: post
+            scope:
+              - read:recibos-odl
+              - write:recibos-odl
+        provider:
+          recibosodl:
+            issuer-uri: https://sso-sldev.santalucia.es/auth/realms/stl-int-odl
+            jwk-set-uri: https://sso-sldev.santalucia.es/auth/realms/stl-int-odl/protocol/openid-connect/certs
       resourceserver:
         jwt: #para habilitar la validacion local del token
           # posibles valores RS256,RS512 depende del realm
@@ -95,8 +113,6 @@ spring:
           jwk-set-uri: https://sso-sldev.santalucia.es/auth/realms/3scale/protocol/openid-connect/certs
           # OpenID Connect Provider URI asserts as its Issuer Identifier
           issuer-uri: https://sso-sldev.santalucia.es/auth/realms/3scale
-
-  # Conexion para recuperar agencias en pruebas de componente database
 
 ###########################
 #                         #
@@ -109,7 +125,7 @@ santalucia:
       guardium:
         enabled: true
       feign:
-        base-packages: com.santalucia.example.api.client
+        base-packages: com.santalucia
       mybatis:
         primary:
           base-packages: com.santalucia.example.infrastructure.mybatis.primary
@@ -142,7 +158,8 @@ santalucia:
 
 helloWorld:
   url: http://localhost:8080/hello-world/v1
-
+recibos:
+  url: https://apicast-3scale-dev.app-dev.santalucia.net/odl/recibos/v1
 ###########################
 #                         #
 # logging properties      #

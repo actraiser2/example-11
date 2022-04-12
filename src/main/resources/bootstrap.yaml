@@ -41,7 +41,7 @@ spring:
   #Profile habilitado de forma automatica cuando se despliega en OCP
   config:
     activate:
-      on-profile: 
+      on-profile:
       - kubernetes
   banner:
     location: classpath:santalucia-banner.json
@@ -70,7 +70,7 @@ trace: false # Enable trace logs.
 spring:
   config:
     activate:
-      on-profile: 
+      on-profile:
       - devops
   mandatory-file-encoding: UTF-8
   cloud:

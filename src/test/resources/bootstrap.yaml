@@ -11,7 +11,7 @@ spring:
   cloud:
     kubernetes:
       enabled: false
-      
+
 debug: false # Enable debug logs.
 trace: false # Enable trace logs.
 
@@ -21,8 +21,8 @@ opentracing:
     cloud:
       feign:
         enabled: false
-        
-#mejora de rendimiento: No necesitamos prometheus en los test     
+
+#mejora de rendimiento: No necesitamos prometheus en los test
 management:
   metrics:
     export:
