@@ -94,18 +94,6 @@ spring:
 ###########################
   security:
     oauth2:
-      client:
-        registration:
-          recibosodl:
-            authorization-grant-type: client_credentials
-            client-authentication-method: post
-            scope:
-              - read:recibos-odl
-              - write:recibos-odl
-        provider:
-          recibosodl:
-            issuer-uri: https://sso-sldev.santalucia.es/auth/realms/stl-int-odl
-            jwk-set-uri: https://sso-sldev.santalucia.es/auth/realms/stl-int-odl/protocol/openid-connect/certs
       resourceserver:
         jwt: #para habilitar la validacion local del token
           # posibles valores RS256,RS512 depende del realm
@@ -155,11 +143,8 @@ santalucia:
 # feign client properties #
 #                         #
 ###########################
-
 helloWorld:
   url: http://localhost:8080/hello-world/v1
-recibos:
-  url: https://apicast-3scale-dev.app-dev.santalucia.net/odl/recibos/v1
 ###########################
 #                         #
 # logging properties      #
