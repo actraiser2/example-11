@@ -11,7 +11,7 @@
   </parent>
   <groupId>com.santalucia.example</groupId>
   <artifactId>example-app-11</artifactId>
-  <version>2.2.0-SNAPSHOT</version>
+  <version>2.3.0-SNAPSHOT</version>
   <name>example-app-11</name>
   <description>Demo project for Spring Boot</description>
 
@@ -90,6 +90,11 @@
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>ams-starter-observability</artifactId>
+    </dependency>
+    
+    <dependency>
+      <groupId>com.santalucia.arq.ams</groupId>
+      <artifactId>ams-componentes-springdoc</artifactId>
     </dependency>
 
     <dependency>

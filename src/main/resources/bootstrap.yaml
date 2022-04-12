@@ -1,10 +1,11 @@
-debug: true # Enable debug logs.
+debug: false # Enable debug logs.
 trace: false # Enable trace logs.
 
 management:
   metrics:
     tags:
-      application: ${spring.application.name} #Needed by micrometer +1.1.0
+      #Needed by micrometer +1.1.0
+      application: ${spring.application.name}
 
 spring:
   main:
@@ -29,17 +30,19 @@ logging:
   register-shutdown-hook: true
 
 # Desactivado en el profile default
-kubernetes:
-  manifests:
-    enabled: false
-  informer:
-    enabled: false
+
+# kubernetes:
+#   manifests:
+#     enabled: false
+#   informer:
+#     enabled: false
 ---
 spring:
   #Profile habilitado de forma automatica cuando se despliega en OCP
   config:
     activate:
-      on-profile: "kubernetes"
+      on-profile: 
+      - kubernetes
   banner:
     location: classpath:santalucia-banner.json
 #  mandatory-file-encoding: UTF-8
@@ -56,18 +59,19 @@ spring:
         monitoring-secrets: false
       config:
         name: ${spring.application.name}
-kubernetes:
-  manifests:
-    enabled: true
-  informer:
-    enabled: true
+# kubernetes:
+#   manifests:
+#     enabled: true
+#   informer:
+#     enabled: true
 debug: false # Enable debug logs.
 trace: false # Enable trace logs.
 ---
 spring:
   config:
     activate:
-      on-profile: "devops"
+      on-profile: 
+      - devops
   mandatory-file-encoding: UTF-8
   cloud:
     kubernetes:
