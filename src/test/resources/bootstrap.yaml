@@ -6,21 +6,25 @@ spring:
 spring:
   config:
     activate:
-      on-profile: "test"
+      on-profile:
+      - test
   cloud:
     kubernetes:
       enabled: false
 
-debug: true # Enable debug logs.
+debug: false # Enable debug logs.
 trace: false # Enable trace logs.
 
-kubernetes:
-  manifests:
-    enabled: false
-  informer:
-    enabled: false
+#Debido a error de version de opentracing
 opentracing:
   spring:
     cloud:
       feign:
+        enabled: false
+
+#mejora de rendimiento: No necesitamos prometheus en los test
+management:
+  metrics:
+    export:
+      prometheus:
         enabled: false

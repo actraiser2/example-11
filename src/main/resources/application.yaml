@@ -1,6 +1,28 @@
 #Reference de propiedades
 server:
   port: 8080
+  #[[##############################################################################
+  # Propiedades a revisar por los desarrolladores del proyecto                 #
+  # undertow.threads.io: Numero de hilos de I/O.                               #
+  #   Debe establecerse el valor segun la formula: numero.cpus.logicas * 2     #
+  #   En openshift el valor numero.cpus.logicas viene dado por el parametro    #
+  #   request.cpu del deploymentConfig del aplicativo.                         #
+  #   Es necesario establecer este valor POR ENTORNO OPENSHIFT ya que el       #
+  #   parametro request.cpu es diferente en cada entorno                       #
+  #                                                                            #
+  # undertow.threads.worker: Numero de hilos de servicio                       #
+  #   Debe establecerse el valor segun la formula: undertow.threads.io * 8     #
+  #   Es necesario establecer este valor POR ENTORNO OPENSHIFT ya que el       #
+  #   parametro undertow.threads.io es diferente en cada entorno               #
+  ##############################################################################]]#
+  undertow:
+    threads:
+      # numero.cpus.logicas * 2
+      # !!! reviar por entorno !!!
+      io: 4
+      # undertow.threads.io * 8
+      # !!! reviar por entorno !!!
+      worker: 32
   error:
     # Include the "exception" attribute. default false
     include-exception: true
@@ -57,7 +79,23 @@ spring:
     #cache-duration: 1s
     encoding: UTF-8
     fallback-to-system-locale: false
+  datasource:
+    primary:
+      hikari:
+        driver-class-name: com.informix.jdbc.IfxDriver
+        pool-name: informix-pool
+        jdbc-url: jdbc:informix-sqli://slbdifxd15.servidores.net:20101/siis:INFORMIXSERVER=fun_jdbc
+    secondary:
+      hikari:
+        driver-class-name: oracle.jdbc.OracleDriver
+        pool-name: oracle-pool
+        jdbc-url: jdbc:oracle:thin:@slbdorad15.servidores.net:1548/DB12UTF8D.DES.SANTALUCIA.ES
 
+###########################
+#                         #
+# security properties     #
+#                         #
+###########################
   security:
     oauth2:
       resourceserver:
@@ -67,8 +105,6 @@ spring:
           jwk-set-uri: https://sso-sldev.santalucia.es/auth/realms/3scale/protocol/openid-connect/certs
           # OpenID Connect Provider URI asserts as its Issuer Identifier
           issuer-uri: https://sso-sldev.santalucia.es/auth/realms/3scale
-
-  # Conexion para recuperar agencias en pruebas de componente database
 
 ###########################
 #                         #
@@ -81,7 +117,7 @@ santalucia:
       guardium:
         enabled: true
       feign:
-        base-packages: com.santalucia.example.api.client
+        base-packages: com.santalucia
       mybatis:
         primary:
           base-packages: com.santalucia.example.infrastructure.mybatis.primary
@@ -111,10 +147,8 @@ santalucia:
 # feign client properties #
 #                         #
 ###########################
-
 helloWorld:
   url: http://localhost:8080/hello-world/v1
-
 ###########################
 #                         #
 # logging properties      #
@@ -124,10 +158,12 @@ helloWorld:
 logging:
   level:
     root: INFO
-    com.santalucia: DEBUG
-    org.springframework: INFO
+    "[com.santalucia]": DEBUG
+    "[org.springframework]": INFO
+    #Paquete que indica cuando SB esta disponible
+    "[org.springframework.boot.availability]": DEBUG
     #org.springframework.web.servlet: DEBUG
     #org.springframework.security: DEBUG
     #org.springframework.web.client: DEBUG
     #trazas para mostrar los errores de login debido a que salen en modo debug
-    org.springframework.security.oauth2.server.resource: DEBUG
+    "[org.springframework.security.oauth2.server.resource]": DEBUG
