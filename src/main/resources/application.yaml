@@ -47,6 +47,18 @@ server:
   ssl:
     enabled: false
 
+###########################################################
+#                                                         #
+# springdoc properties                                    #
+#                                                         #
+# WARNING! springdoc solo soporta OpenAPI Specification 3 #
+# deshabilitar en caso de que se utilice otra versión     #
+#                                                         #
+###########################################################
+springdoc:
+  api-docs:
+    enabled: true
+
 spring:
   main:
     allow-bean-definition-overriding: true

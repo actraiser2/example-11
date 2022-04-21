@@ -79,6 +79,11 @@
 
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
+      <artifactId>ams-componentes-springdoc</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>ams-componentes-feign-security</artifactId>
     </dependency>
 
