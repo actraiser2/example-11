@@ -68,6 +68,8 @@
     <swagger.codegen.skip.client>false</swagger.codegen.skip.client>
     <mybatis.codegen.output.dir>src/main/java</mybatis.codegen.output.dir>
     <git.hooks.skip>false</git.hooks.skip>
+    <!--TODO: Solo para probar indicidencia ASW1279. Eliminar -->
+    <archunit.skip>true</archunit.skip>
   </properties>
 
   <dependencies>
@@ -172,14 +174,6 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-      </plugin>
-      <!--TODO: Solo para probar indicidencia ASW1279. Eliminar -->
-      <plugin>
-        <groupId>com.societegenerale.commons</groupId>
-        <artifactId>arch-unit-maven-plugin</artifactId>
-        <configuration>
-          <skip>true</skip>
-        </configuration>
       </plugin>
     </plugins>
 
