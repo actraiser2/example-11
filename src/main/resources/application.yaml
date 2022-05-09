@@ -121,7 +121,7 @@ santalucia:
           base-packages: com.santalucia.example.infrastructure.mybatis.secondary
       security:
         core:
-          enabled: false
+          enabled: true
         cors:
           enabled: true
           allowed-origins:

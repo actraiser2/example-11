@@ -5,6 +5,8 @@
 
 #### Features
 
+ -  fixes for ams 2.2 ([4901aec596d5015](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/4901aec596d50159b66767d01aa129b826809c58))
+   Fecha: 12-04-2022 08:55:39
  -  integracion wiremock ([2a905b2ef596f9d](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/2a905b2ef596f9d52961585132a4bdf34a47faa7))
    Fecha: 12-03-2021 07:27:50
  -  prueba hook ([11e73067e442ba4](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/11e73067e442ba4391f14dfbcb7c20fef3c25499))
@@ -14,6 +16,8 @@
 
 #### Bug Fixes
 
+ -  fix lint ([1e77c9748fc82b2](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/1e77c9748fc82b216db4961b27338ba3d1eb5a84))
+    Fecha: 12-04-2022 10:13:05
  -  remove user pass application.yaml ([68462e3ce0d7fbe](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/68462e3ce0d7fbe63ea57234fd9ce1f5fb3c54c6))
     Fecha: 15-12-2021 17:02:44
  -  add comment to redeploy ([6f37ace8c786db1](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/6f37ace8c786db14e027b4b2fe7c574fb760c319))
@@ -60,6 +64,10 @@
 
 #### Chore commits
 
+ -  test ([0397e25d321e974](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/0397e25d321e9741627ef7f63e01edc126ff57f7))
+ 		Fecha: 12-04-2022 11:08:17
+ -  fix lint ([7a37fd8a52bf8b6](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/7a37fd8a52bf8b6520a6ddb5494d7f0b0f5b4a47))
+ 		Fecha: 12-04-2022 10:45:52
  -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([6f610b57628392e](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/6f610b57628392eacd74e330a473edfa31bbfb35))
  		Fecha: 28-01-2022 13:01:43
  -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([15fab8e0a84f2bd](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/15fab8e0a84f2bd053b4ec94df18f2b416a18834))

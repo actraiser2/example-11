@@ -1,8 +1,12 @@
 package com.santalucia.example.core.service.impl;
 
+import java.util.UUID;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import com.santalucia.arq.ams.odl.recibos.api.client.RecibosApiClient;
+import com.santalucia.arq.ams.odl.recibos.api.model.ReciboDetailResource;
 import com.santalucia.example.api.client.HelloWorldApiClient;
 import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
 import com.santalucia.example.core.domain.IdentidadDigitalDomain;
@@ -11,6 +15,7 @@ import com.santalucia.example.core.exceptions.InvalidNameException;
 import com.santalucia.example.core.mappers.IdentidadDigitalDomainMapper;
 import com.santalucia.example.core.service.HelloService;
 
+import feign.Feign;
 import lombok.extern.slf4j.Slf4j;
 
 @Service
@@ -18,6 +23,7 @@ import lombok.extern.slf4j.Slf4j;
 public class DefaultHelloService implements HelloService {
 
 	private HelloWorldApiClient helloWorldApiClient;
+	private RecibosApiClient recibosApiClient;
 
 	private IdentidadDigitalDomainMapper identidadDigitalMapper;
 
@@ -27,8 +33,9 @@ public class DefaultHelloService implements HelloService {
 	 * @param IdentidadDigitalDomainMapper identidadDigitalMapper,
 	 * @param MessageSourceAccessor messageSourceAccessor
 	 */
-	public DefaultHelloService(HelloWorldApiClient helloWorldApiClient, IdentidadDigitalDomainMapper identidadDigitalMapper) {
+	public DefaultHelloService(RecibosApiClient recibosApiClient, HelloWorldApiClient helloWorldApiClient, IdentidadDigitalDomainMapper identidadDigitalMapper) {
 		log.info("Configured endpoint {}", helloWorldApiClient);
+		this.recibosApiClient = recibosApiClient;
 		this.helloWorldApiClient = helloWorldApiClient;
 		this.identidadDigitalMapper = identidadDigitalMapper;
 	}
@@ -57,9 +64,22 @@ public class DefaultHelloService implements HelloService {
 	 */
 	@Override
 	public IdentidadDigitalDomain getHelloByName(String name) {
-		IdentidadDigitalDomainBuilder identidad = IdentidadDigitalDomain.builder();
-		identidad.nombre(name);
-		identidad.saludo(String.format("Hello %s", name));
-		return identidad.build();
+		
+		
+		//Feign.builder().decode404()
+		//"6255476e4e79ad10b078f220"
+		
+		/*
+		ResponseEntity<ReciboDetailResource> recibo = 
+				recibosApiClient.findByIdRecibosEntityUsingGET(
+				"9995476e4e79ad10b078f220", 
+				UUID.randomUUID());
+		*/
+		
+		
+		return IdentidadDigitalDomain.builder()
+		.nombre(name)
+		.saludo(String.format("Hello %s", name))
+		.build();
 	}
 }
