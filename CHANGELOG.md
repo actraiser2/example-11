@@ -5,6 +5,14 @@
 
 #### Features
 
+ -  modify to check AMS 2.1.0-RELEASE ([3936b83d9ccbf13](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/3936b83d9ccbf13fbd6aca0990a8beb3751cf4bf))
+   Fecha: 27-04-2022 10:35:32
+ -  refactor test ASW1279 ([59ee0e66316461d](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/59ee0e66316461d62649d631320ba6fa68b01b8b))
+   Fecha: 26-04-2022 12:49:51
+ -  skip archunit ([567571eebf85740](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/567571eebf85740b9e7cb67bb0f6ec085af5cc51))
+   Fecha: 25-04-2022 09:46:22
+ -  skip archunit ([236b951a2bfdbc5](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/236b951a2bfdbc53055c26401d4f8c5e988c8a23))
+   Fecha: 25-04-2022 09:15:31
  -  fixes for ams 2.2 ([4901aec596d5015](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/4901aec596d50159b66767d01aa129b826809c58))
    Fecha: 12-04-2022 08:55:39
  -  integracion wiremock ([2a905b2ef596f9d](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/2a905b2ef596f9d52961585132a4bdf34a47faa7))
@@ -35,6 +43,8 @@
 
 #### Refactor code
 
+ -  change springfox to springdoc using the ams component ([65aa1021d4a34af](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/65aa1021d4a34af9ff6ae0512a7f0e9568ce76a1))
+ 		Fecha: 06-04-2022 15:04:01
  -  Incluir test para aplicaciones sin bbdd ([afa8b941e5e0802](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/afa8b941e5e0802060e55acbb0400d85c09f26ae))
  		Fecha: 07-05-2021 07:29:40
  -  Extender customMapper de agencias y ejemplo de test de servicio ([baf1ba8f0183464](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/baf1ba8f01834641a5006340171d9bd3703a484c))
@@ -64,6 +74,18 @@
 
 #### Chore commits
 
+ -  Merge remote-tracking branch 'origin/develop' into develop ([8b9126b2e4cb8ea](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/8b9126b2e4cb8eaa95ce8d4007a634b71894be89))
+ 		Fecha: 09-05-2022 12:48:09
+ -  test ([9e2a1eec5dc90a7](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/9e2a1eec5dc90a79156316ff42662e6c49ad9c4a))
+ 		Fecha: 09-05-2022 12:47:32
+ -  SpringApplicationBuilder and unsecure startup property ([3d378a0d9218761](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/3d378a0d921876142da23d86699d06d0066176ba))
+ 		Fecha: 04-05-2022 11:05:31
+ -  remove duplicated dependency springdoc ([41039da0a5a7b74](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/41039da0a5a7b74d15641174a50f3008a8e1f405))
+ 		Fecha: 21-04-2022 10:06:06
+ -  added comment for OAS version support ([8335bcb9e691f6b](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/8335bcb9e691f6be20e56ff9b6a6bec079c1c246))
+ 		Fecha: 20-04-2022 15:09:02
+ -  resolve merge conflicts with develop ([2fc405ec8065a32](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/2fc405ec8065a327a924ff58995e2f928e15d634))
+ 		Fecha: 20-04-2022 15:00:52
  -  test ([0397e25d321e974](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/0397e25d321e9741627ef7f63e01edc126ff57f7))
  		Fecha: 12-04-2022 11:08:17
  -  fix lint ([7a37fd8a52bf8b6](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/7a37fd8a52bf8b6520a6ddb5494d7f0b0f5b4a47))

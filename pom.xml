@@ -7,12 +7,12 @@
     <!--TODO: Solo para probar indicidencia ASW1279. Restaurar a la 2.2.0-SNAPSHOT -->
     <groupId>com.santalucia.arq.ams</groupId>
     <artifactId>ams-parent-sl-sw</artifactId>
-    <version>2.1.0-RELEASE</version>
+    <version>2.2.0-SNAPSHOT</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>com.santalucia.example</groupId>
   <artifactId>example-app-11</artifactId>
-  <version>2.3.2-SNAPSHOT</version>
+  <version>2.3.3-SNAPSHOT</version>
   <name>example-app-11</name>
   <description>Demo project for Spring Boot</description>
 
@@ -83,7 +83,6 @@
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>ams-componentes-feign-security</artifactId>
-      <version>2.1.1-RELEASE</version>
     </dependency>
 
     <dependency>
@@ -96,13 +95,11 @@
       <artifactId>ams-starter-observability</artifactId>
     </dependency>
 
-    <!--TODO: Solo para probar indicidencia ASW1279. Restaurar componente -->
-<!--
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>ams-componentes-springdoc</artifactId>
     </dependency>
--->
+
 
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
