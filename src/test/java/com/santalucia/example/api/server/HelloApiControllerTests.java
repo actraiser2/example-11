@@ -19,11 +19,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.test.context.support.WithMockUser;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 
+import com.santalucia.arq.ams.componentes.web.security.config.SecurityAutoConfig;
 import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
 
-
+@ContextConfiguration(classes = SecurityAutoConfig.class)
 @WebMvcTest(HelloApiController.class)
 class HelloApiControllerTests {
 

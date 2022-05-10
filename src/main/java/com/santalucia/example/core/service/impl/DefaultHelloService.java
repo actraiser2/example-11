@@ -1,21 +1,17 @@
 package com.santalucia.example.core.service.impl;
 
-import java.util.UUID;
-
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.oauth2.core.AuthorizationGrantType;
+import org.springframework.security.oauth2.core.ClientAuthenticationMethod;
 import org.springframework.stereotype.Service;
 
-import com.santalucia.arq.ams.odl.recibos.api.client.RecibosApiClient;
-import com.santalucia.arq.ams.odl.recibos.api.model.ReciboDetailResource;
 import com.santalucia.example.api.client.HelloWorldApiClient;
 import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
 import com.santalucia.example.core.domain.IdentidadDigitalDomain;
-import com.santalucia.example.core.domain.IdentidadDigitalDomain.IdentidadDigitalDomainBuilder;
 import com.santalucia.example.core.exceptions.InvalidNameException;
 import com.santalucia.example.core.mappers.IdentidadDigitalDomainMapper;
 import com.santalucia.example.core.service.HelloService;
 
-import feign.Feign;
 import lombok.extern.slf4j.Slf4j;
 
 @Service
@@ -23,7 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 public class DefaultHelloService implements HelloService {
 
 	private HelloWorldApiClient helloWorldApiClient;
-	private RecibosApiClient recibosApiClient;
+	//private RecibosApiClient recibosApiClient;
 
 	private IdentidadDigitalDomainMapper identidadDigitalMapper;
 
@@ -33,9 +29,9 @@ public class DefaultHelloService implements HelloService {
 	 * @param IdentidadDigitalDomainMapper identidadDigitalMapper,
 	 * @param MessageSourceAccessor messageSourceAccessor
 	 */
-	public DefaultHelloService(RecibosApiClient recibosApiClient, HelloWorldApiClient helloWorldApiClient, IdentidadDigitalDomainMapper identidadDigitalMapper) {
+	public DefaultHelloService(/**RecibosApiClient recibosApiClient,**/ HelloWorldApiClient helloWorldApiClient, IdentidadDigitalDomainMapper identidadDigitalMapper) {
 		log.info("Configured endpoint {}", helloWorldApiClient);
-		this.recibosApiClient = recibosApiClient;
+		//this.recibosApiClient = recibosApiClient;
 		this.helloWorldApiClient = helloWorldApiClient;
 		this.identidadDigitalMapper = identidadDigitalMapper;
 	}
