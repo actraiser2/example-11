@@ -18,6 +18,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.test.context.support.WithAnonymousUser;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
@@ -25,7 +26,9 @@ import org.springframework.test.web.servlet.MockMvc;
 import com.santalucia.arq.ams.componentes.web.security.config.SecurityAutoConfig;
 import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
 
-@ContextConfiguration(classes = SecurityAutoConfig.class)
+
+//FIXME: Resolver como evitar cargar el bean SecurityFilterChain de OAuth2WebSecurityConfiguration en ausencia de security
+@ContextConfiguration(classes = {HelloApiController.class, SecurityAutoConfig.class})
 @WebMvcTest(HelloApiController.class)
 class HelloApiControllerTests {
 
@@ -34,6 +37,7 @@ class HelloApiControllerTests {
 
 	@MockBean
 	private HelloApiDelegate helloApiDelegate;
+
 
     @Test
     @WithMockUser(value = "user-test")
@@ -57,7 +61,8 @@ class HelloApiControllerTests {
     }
 
     @Test
-    @DisplayName("dado un nombre se espera un error al no haber seguridad")
+    @WithAnonymousUser
+    @DisplayName("dado un usuario no logado se espera un error al no haber seguridad")
     void getHello_no_security_ko() throws Exception  {
 
     	String nombre = "mock-response";
@@ -71,7 +76,7 @@ class HelloApiControllerTests {
         		.header("X-Request-ID", UUID.randomUUID().toString())
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))
-		        .andExpect(status().is4xxClientError());
+		        .andExpect(status().isUnauthorized());
     }
 
     private IdentidadDigitalConsultaResource buildIdentidadDigitalConsultaResource(String nombre) {

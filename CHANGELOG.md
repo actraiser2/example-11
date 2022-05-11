@@ -5,6 +5,8 @@
 
 #### Features
 
+ -  fix imports ([275a3aefca8a615](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/275a3aefca8a615a5b5d682c27a76ec378e9863b))
+   Fecha: 10-05-2022 12:45:29
  -  modify to check AMS 2.1.0-RELEASE ([3936b83d9ccbf13](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/3936b83d9ccbf13fbd6aca0990a8beb3751cf4bf))
    Fecha: 27-04-2022 10:35:32
  -  refactor test ASW1279 ([59ee0e66316461d](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/59ee0e66316461d62649d631320ba6fa68b01b8b))
@@ -74,6 +76,8 @@
 
 #### Chore commits
 
+ -  fix yamlint ([9f72633bbdbb28c](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/9f72633bbdbb28c2a9b3a3eecc0571f31a8e7436))
+ 		Fecha: 11-05-2022 07:34:38
  -  test ([beadb33449536cf](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/beadb33449536cf977419c02ab8bd0ee8d3fb47d))
  		Fecha: 09-05-2022 13:02:32
  -  test ([efe18507e9c17f7](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/efe18507e9c17f79d59403c96696c738c5f25931))
