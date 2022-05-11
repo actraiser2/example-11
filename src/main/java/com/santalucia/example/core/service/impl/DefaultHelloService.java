@@ -1,8 +1,6 @@
 package com.santalucia.example.core.service.impl;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.oauth2.core.AuthorizationGrantType;
-import org.springframework.security.oauth2.core.ClientAuthenticationMethod;
 import org.springframework.stereotype.Service;
 
 import com.santalucia.example.api.client.HelloWorldApiClient;
