@@ -1,7 +1,6 @@
 package com.santalucia.example.infrastructure.mybatis.secondary;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.mybatis.dynamic.sql.SqlBuilder.select;
 
 import java.util.List;
@@ -37,11 +36,11 @@ class EmployeesDaoMappersTests {
 	            .render(RenderingStrategies.MYBATIS3);
 
 		List<Employee> employees = employeesDaoMappers.selectMany(selectStatement);
-		assertNotNull(employees);
-		assertEquals(1, employees.size());
-		assertEquals("firstname", employees.get(0).getFirstName());
-		assertEquals("lastname", employees.get(0).getLastName());
-		assertEquals("a@a.com", employees.get(0).getEmailAddress());
+		assertThat(employees).isNotNull();
+		assertThat(employees).hasSize(1);
+		assertThat(employees.get(0).getFirstName()).isEqualTo("firstname");
+		assertThat(employees.get(0).getLastName()).isEqualTo("lastname");
+		assertThat(employees.get(0).getEmailAddress()).isEqualTo("a@a.com");
 	}
 
 }

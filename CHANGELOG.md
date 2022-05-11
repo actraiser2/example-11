@@ -76,6 +76,10 @@
 
 #### Chore commits
 
+ -  fix kiuwan ([ec0fb443d82a5f9](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/ec0fb443d82a5f96cfc5ac44f3f9d7259a7e7b06))
+ 		Fecha: 11-05-2022 12:41:53
+ -  fix tests ([c48f7b855e2db83](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/c48f7b855e2db830f38b46adc6731646e577cde1))
+ 		Fecha: 11-05-2022 12:15:06
  -  fix yamlint ([9f72633bbdbb28c](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/9f72633bbdbb28c2a9b3a3eecc0571f31a8e7436))
  		Fecha: 11-05-2022 07:34:38
  -  test ([beadb33449536cf](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/beadb33449536cf977419c02ab8bd0ee8d3fb47d))

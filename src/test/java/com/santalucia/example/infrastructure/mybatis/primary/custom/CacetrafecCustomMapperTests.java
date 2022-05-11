@@ -1,6 +1,6 @@
 package com.santalucia.example.infrastructure.mybatis.primary.custom;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.mybatis.dynamic.sql.SqlBuilder.isEqualTo;
 import static org.mybatis.dynamic.sql.SqlBuilder.select;
 
@@ -40,7 +40,7 @@ class CacetrafecCustomMapperTests {
 	            .render(RenderingStrategies.MYBATIS3);
 
 		List<Cacetrafec> city = cacetrafecCustomMapper.selectMany(selectStatement);
-		assertNotNull(city);
+		assertThat(city).isNotNull();
 	}
 
 }

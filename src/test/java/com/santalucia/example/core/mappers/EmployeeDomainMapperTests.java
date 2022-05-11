@@ -1,7 +1,6 @@
 package com.santalucia.example.core.mappers;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Arrays;
 import java.util.List;
@@ -88,8 +87,8 @@ class EmployeeDomainMapperTests {
 
 	protected void compare(List<EmployeeResource> dtos, List<EmployeeDomain> entitys) {
 
-		assertNotNull(dtos);
-		assertNotNull(entitys);
+		assertThat(dtos).isNotNull();
+		assertThat(entitys).isNotNull();
 
 		for (int i = 0; i < dtos.size(); i++) {
 			compare(dtos.get(i), entitys.get(i));
@@ -97,11 +96,11 @@ class EmployeeDomainMapperTests {
 	}
 
 	protected void compare(EmployeeResource dto, EmployeeDomain entity) {
-		assertNotNull(dto);
-		assertNotNull(entity);
-		assertEquals(entity.getEmailAddress(), dto.getEmailAddress());
-		assertEquals(entity.getFirstName(), dto.getNombre());
-		assertEquals(entity.getLastName(), dto.getApellido());
+		assertThat(dto).isNotNull();
+		assertThat(entity).isNotNull();
+		assertThat(dto.getEmailAddress()).isEqualTo(entity.getEmailAddress());
+		assertThat(dto.getNombre()).isEqualTo(entity.getFirstName());
+		assertThat(dto.getApellido()).isEqualTo(entity.getLastName());
 	}
 
 }

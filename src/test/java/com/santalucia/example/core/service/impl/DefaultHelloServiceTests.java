@@ -1,6 +1,6 @@
 package com.santalucia.example.core.service.impl;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
 import org.junit.jupiter.api.DisplayName;
@@ -41,7 +41,7 @@ class DefaultHelloServiceTests {
 		IdentidadDigitalDomain greeting = helloService.getHelloByName(name);
 
 		//then
-		assertEquals(name, greeting.getNombre());
+		assertThat(greeting.getNombre()).isEqualTo(name);
 	}
 
 	@Test
@@ -61,7 +61,7 @@ class DefaultHelloServiceTests {
 		IdentidadDigitalDomain greeting = helloService.getHelloRemoteByName(name);
 
 		//then
-		assertEquals(name, greeting.getNombre());
+		assertThat(greeting.getNombre()).isEqualTo(name);
 
 	}
 

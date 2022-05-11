@@ -1,7 +1,6 @@
 package com.santalucia.example.core.mappers;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Arrays;
 import java.util.List;
@@ -86,8 +85,8 @@ class IdentidadDigitalDomainMapperTests {
 
 	protected void compare(List<IdentidadDigitalConsultaResource> dtos, List<IdentidadDigitalDomain> entitys) {
 
-		assertNotNull(dtos);
-		assertNotNull(entitys);
+		assertThat(dtos).isNotNull();
+		assertThat(entitys).isNotNull();
 
 		for (int i = 0; i < dtos.size(); i++) {
 			compare(dtos.get(i), entitys.get(i));
@@ -95,9 +94,9 @@ class IdentidadDigitalDomainMapperTests {
 	}
 
 	protected void compare(IdentidadDigitalConsultaResource dto, IdentidadDigitalDomain entity) {
-		assertNotNull(dto);
-		assertNotNull(entity);
-		assertEquals(entity.getNombre(), dto.getNombre());
-		assertEquals(entity.getSaludo(), dto.getSaludo());
+		assertThat(dto).isNotNull();
+		assertThat(entity).isNotNull();
+		assertThat(dto.getNombre()).isEqualTo(entity.getNombre());
+		assertThat(dto.getSaludo()).isEqualTo(entity.getSaludo());
 	}
 }

@@ -1,7 +1,6 @@
 package com.santalucia.example.core.service.impl;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
 import java.util.Arrays;
@@ -42,12 +41,12 @@ class DefaultEmployeeServiceTests {
 
 		List<EmployeeDomain> listResult = employeeService.getEmployees();
 
-		assertNotNull(listResult);
+		assertThat(listResult).isNotNull();
 
 		EmployeeDomain employeeDomain = listResult.get(0);
-		assertEquals(FIRST_NAME, employeeDomain.getFirstName());
-		assertEquals(LAST_NAME, employeeDomain.getLastName());
-		assertEquals("john@domain.com", employeeDomain.getEmailAddress());
+		assertThat(employeeDomain.getFirstName()).isEqualTo(FIRST_NAME);
+		assertThat(employeeDomain.getLastName()).isEqualTo(LAST_NAME);
+		assertThat(employeeDomain.getEmailAddress()).isEqualTo("john@domain.com");
 	}
 
 	private List<Employee> getListEmployeeEntity() {
