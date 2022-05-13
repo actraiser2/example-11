@@ -5,6 +5,8 @@
 
 #### Features
 
+ -  migrate test to assertJ ([af8c17fecf1c59f](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/af8c17fecf1c59f63e7288fd4679454eff7358d7))
+   Fecha: 11-05-2022 18:13:16
  -  fix imports ([275a3aefca8a615](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/275a3aefca8a615a5b5d682c27a76ec378e9863b))
    Fecha: 10-05-2022 12:45:29
  -  modify to check AMS 2.1.0-RELEASE ([3936b83d9ccbf13](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/3936b83d9ccbf13fbd6aca0990a8beb3751cf4bf))
