@@ -72,15 +72,16 @@
   </properties>
 
   <dependencies>
-  
-<!-- <dependency> -->
-<!--     <groupId>org.springframework.cloud</groupId> -->
-<!--     <artifactId>spring-cloud-starter-bootstrap</artifactId> -->
-<!-- </dependency> -->
 
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>ams-componentes-web</artifactId>
+      <exclusions>
+      	<exclusion>
+      		<groupId>org.springframework.cloud</groupId>
+      		<artifactId>spring-cloud-starter-bootstrap</artifactId>
+      	</exclusion>
+      </exclusions>
     </dependency>
  
     <dependency>

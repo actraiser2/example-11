@@ -78,6 +78,8 @@
 
 #### Chore commits
 
+ -  fix new arch-rules ([7b92947546edc1f](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/7b92947546edc1f95edffb633fbff5a18d76de98))
+ 		Fecha: 13-05-2022 12:54:44
  -  fix kiuwan ([ec0fb443d82a5f9](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/ec0fb443d82a5f96cfc5ac44f3f9d7259a7e7b06))
  		Fecha: 11-05-2022 12:41:53
  -  fix tests ([c48f7b855e2db83](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/c48f7b855e2db830f38b46adc6731646e577cde1))

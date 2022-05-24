@@ -1,7 +1,17 @@
-#Reference de propiedades
+############################
+#                          #
+# undertow properties      #
+#                          #
+############################
 server:
   port: 8080
-  #[[##############################################################################
+  forward-headers-strategy: framework
+  ############################
+  #                          #
+  # undertow properties      #
+  #                          #
+  ############################
+  ##############################################################################
   # Propiedades a revisar por los desarrolladores del proyecto                 #
   # undertow.threads.io: Numero de hilos de I/O.                               #
   #   Debe establecerse el valor segun la formula: numero.cpus.logicas * 2     #
@@ -14,7 +24,7 @@ server:
   #   Debe establecerse el valor segun la formula: undertow.threads.io * 8     #
   #   Es necesario establecer este valor POR ENTORNO OPENSHIFT ya que el       #
   #   parametro undertow.threads.io es diferente en cada entorno               #
-  ##############################################################################]]#
+  ##############################################################################
   undertow:
     threads:
       # numero.cpus.logicas * 2
@@ -23,6 +33,13 @@ server:
       # undertow.threads.io * 8
       # !!! reviar por entorno !!!
       worker: 32
+      
+    max-cookies: 20
+    max-headers: 20
+    max-parameters: 50
+    max-http-post-size: 64MB
+    
+     
   error:
     # Include the "exception" attribute. default false
     include-exception: true
@@ -31,19 +48,23 @@ server:
     include-binding-errors: always
     include-message: always
     whitelabel:
-      enabled: true
+      enabled: false
   compression:
     enabled: true
 #  forward-headers-strategy: native #default is ncsa
   http2:
     enabled: false
+  
   servlet:
     encoding:
       charset: UTF-8
+      
     session:
       cookie:
         http-only: true
         secure: true
+        same-site: strict
+        
   ssl:
     enabled: false
 
@@ -59,12 +80,21 @@ springdoc:
   api-docs:
     enabled: true
 
+#############################
+#                           #
+# spring general properties #
+#                           #
+#############################
 spring:
   main:
     allow-bean-definition-overriding: true
+  application:
+    name: example-app-11
+  banner:
+    location: classpath:santalucia-banner.txt
   mvc:
 # Whether logging of (potentially sensitive) request details at DEBUG and TRACE
-    log-request-details: true
+    log-request-details: false
   web:
     locale-resolver: accept-header
 # default locale used when no Accept-Language is send
@@ -73,13 +103,30 @@ spring:
     ansi:
       enabled: detect
   jmx:
-    enabled: true
+    enabled: false
     unique-names: true
   devtools:
     livereload:
       enabled: true
+      
+######################################
+#                                    #
+# cloud properties                   #
+#                                    #
+######################################
+  cloud:
+    kubernetes:
+      enabled: false
+      reload:
+        enabled: false
+      config:
+        name: ${spring.application.name}
+######################################
+#                                    #
+# internationalization properties    #
+#                                    #
+######################################
 
-## internacionalizacion
   messages:
     basename: classpath:i18n/messages
     # si no se especifica se cachean para siempre. Al
@@ -87,6 +134,12 @@ spring:
     #cache-duration: 1s
     encoding: UTF-8
     fallback-to-system-locale: false
+    
+######################################
+#                                    #
+# datasource properties              #
+#                                    #
+######################################
   datasource:
     primary:
       hikari:
@@ -99,11 +152,11 @@ spring:
         pool-name: oracle-pool
         jdbc-url: jdbc:oracle:thin:@slbdorad15.servidores.net:1548/DB12UTF8D.DES.SANTALUCIA.ES
 
-###########################
-#                         #
-# security properties     #
-#                         #
-###########################
+######################################
+#                                    #
+# security properties                #
+#                                    #
+######################################
   security:
     oauth2:
       resourceserver:
@@ -125,12 +178,21 @@ santalucia:
       guardium:
         enabled: true
       feign:
-        base-packages: com.santalucia
+        base-packages:
+        - com.santalucia
       mybatis:
         primary:
-          base-packages: com.santalucia.example.infrastructure.mybatis.primary
+          lazy-initialization: true
+          configuration:
+            lazy-loading-enabled: true
+          base-packages:
+          - com.santalucia.example.infrastructure.mybatis.primary
         secondary:
-          base-packages: com.santalucia.example.infrastructure.mybatis.secondary
+          lazy-initialization: true
+          configuration:
+            lazy-loading-enabled: true
+          base-packages: 
+          - com.santalucia.example.infrastructure.mybatis.secondary
       security:
         core:
           enabled: true
@@ -158,6 +220,7 @@ santalucia:
 ###########################
 helloWorld:
   url: http://localhost:8080/hello-world/v1
+  
 ###########################
 #                         #
 # logging properties      #
@@ -176,3 +239,52 @@ logging:
     #org.springframework.web.client: DEBUG
     #trazas para mostrar los errores de login debido a que salen en modo debug
     "[org.springframework.security.oauth2.server.resource]": DEBUG
+
+###########################
+#                         #
+# micrometer properties   #
+#                         #
+###########################
+management:
+  metrics:
+    tags:
+      #Needed by micrometer +1.1.0
+      application: ${spring.application.name}
+      
+###########################
+#                         #
+# info properties         #
+#                         #
+###########################
+info:
+  app:
+    name: ${spring.application.name}
+    encoding: UTF-8
+    java:
+      source: 11
+      target: 11
+---
+#Profile habilitado de forma automatica cuando se despliega en OCP
+spring:
+  config:
+    activate:
+      on-profile:
+      - kubernetes
+  banner:
+    location: classpath:santalucia-banner.json
+  mandatory-file-encoding: UTF-8
+  cloud:
+    kubernetes:
+      enabled: true
+
+---
+#Profile habilitado de forma automatica cuando se compila en jenkins
+spring:
+  config:
+    activate:
+      on-profile:
+      - devops
+  mandatory-file-encoding: UTF-8
+  cloud:
+    kubernetes:
+      enabled: false

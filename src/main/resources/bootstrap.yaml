@@ -50,13 +50,7 @@ spring:
     kubernetes:
       enabled: true
       reload:
-        enabled: true
-        #refresh: only @ConfigurationProperties or @RefreshScope
-        #restart_context: all context are reloaded
-        #shutdown: full restart; not recomended
-        strategy: refresh
-        monitoring-config-maps: true
-        monitoring-secrets: false
+        enabled: false
       config:
         name: ${spring.application.name}
 # kubernetes:
