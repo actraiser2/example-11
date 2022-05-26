@@ -178,8 +178,7 @@ santalucia:
       guardium:
         enabled: true
       feign:
-        base-packages:
-        - com.santalucia
+        base-packages: com.santalucia
       mybatis:
         primary:
           lazy-initialization: true

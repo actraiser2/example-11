@@ -4,7 +4,11 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+import org.springframework.core.io.Resource;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.ContentDisposition;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
@@ -46,9 +50,19 @@ public class DefaultEmployeesApiDelegate implements EmployeesApiDelegate {
 		log.info("Pageable pageSize: {} ", pageable.getPageSize());
 		log.info("Pageable offset: {} ", pageable.getOffset());
 
+		Resource resource = null;
+		ContentDisposition.builder("attachment")
+        .filename(resource.getFilename())
+        .build().toString();
+        
 		return Optional
 				.ofNullable(employeeService.getEmployees(pageable))
-				.map(employees -> ResponseEntity.ok().body(employeeMapper.toResources(employees))) // 200 OK
+				.map(employees -> ResponseEntity.ok()
+						.header(HttpHeaders.CONTENT_DISPOSITION, ContentDisposition.builder("attachment")
+						        .filename(resource.getFilename())
+						        .build().toString())
+						.contentType(MediaType.parseMediaType("text/csv"))
+						.body(employeeMapper.toResources(employees))) // 200 OK
 				.orElse(ResponseEntity.notFound().build()); // 404 Not found
 	}
 }

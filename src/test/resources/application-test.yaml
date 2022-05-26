@@ -1,4 +1,11 @@
 spring:
+  config:
+    activate:
+      on-profile:
+      - test
+  cloud:
+    kubernetes:
+      enabled: false
   datasource:
     primary:
       hikari:
@@ -25,3 +32,11 @@ santalucia:
 
 helloWorld:
   url: http://localhost:${wiremock.server.port:8089}/hello-world/v1
+
+#Debido a error de version de opentracing
+opentracing:
+  spring:
+    cloud:
+      feign:
+        enabled: false
+        
