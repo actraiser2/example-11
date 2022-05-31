@@ -71,22 +71,8 @@ public class DefaultEmployeeRepository implements EmployeeRepository {
      * insterta un empleado
      */
 	@Override
-	public void insertEmployee() {
-		Employee emp = new Employee();
-
-		emp.setFirstName("Julie");
-		emp.setLastName("Pearson");
-		emp.setEmailAddress("julie@accenture.com");
-
-		this.employeeMapper.insert(emp);
-
-		Employee empDos = new Employee();
-
-		empDos.setFirstName("Juan");
-		empDos.setLastName("Lopez");
-		empDos.setEmailAddress(null);
-
-		this.employeeMapper.insert(empDos);
+	public void insertEmployee(Employee employee) {
+		this.employeeMapper.insert(employee);
 
 	}
 
