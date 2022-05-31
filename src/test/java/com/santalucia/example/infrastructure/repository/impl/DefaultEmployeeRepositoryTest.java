@@ -3,6 +3,7 @@ package com.santalucia.example.infrastructure.repository.impl;
 import com.santalucia.example.infrastructure.entity.Employee;
 import com.santalucia.example.infrastructure.mybatis.secondary.EmployeeMapper;
 import java.util.Map;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -25,6 +26,7 @@ class DefaultEmployeeRepositoryTest {
   private EmployeeMapper employeeMapper;
 
   @Test
+  @DisplayName("Obtiene todos los empleados")
   void getAllEmployees_ok() {
     repository.getAllEmployees();
     verify(employeeMapper).selectMany(argThat(selectStatment -> {
@@ -36,6 +38,7 @@ class DefaultEmployeeRepositoryTest {
   }
 
   @Test
+  @DisplayName("Obtiene los empleados paginados")
   void getEmployees_ok() {
     repository.getEmployees(PageRequest.of(0, 10));
     verify(employeeMapper).selectMany(argThat(selectStatment -> {
@@ -48,6 +51,7 @@ class DefaultEmployeeRepositoryTest {
   }
 
   @Test
+  @DisplayName("Inserta un empleado")
   void insertEmployee_ok() {
     Employee employee = new Employee();
     employee.setFirstName("John");

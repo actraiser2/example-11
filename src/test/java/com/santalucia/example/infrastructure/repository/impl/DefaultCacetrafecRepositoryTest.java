@@ -2,6 +2,7 @@ package com.santalucia.example.infrastructure.repository.impl;
 
 import com.santalucia.example.infrastructure.mybatis.primary.custom.CacetrafecCustomMapper;
 import java.util.Map;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -24,6 +25,7 @@ class DefaultCacetrafecRepositoryTest {
   CacetrafecCustomMapper cacetrafecCustomMapper;
 
   @Test
+  @DisplayName("Obtiene todos los indicadores con el campo xcacetra=I ")
   void getIndicadores_ok() {
     defaultCacetrafecRepository.getIndicadores();
     verify(cacetrafecCustomMapper).selectMany(argThat(selectStatment -> {
@@ -35,6 +37,7 @@ class DefaultCacetrafecRepositoryTest {
   }
 
   @Test
+  @DisplayName("Obtiene los indicadores paginados")
   void testGetIndicadores_ok() {
     defaultCacetrafecRepository.getIndicadores(PageRequest.of(0, 10));
     verify(cacetrafecCustomMapper).getIndicadoreswithPagination(eq(0L), eq(10));
