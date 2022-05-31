@@ -184,7 +184,7 @@ santalucia:
           lazy-initialization: true
           configuration:
             lazy-loading-enabled: true
-          base-packages: 
+          base-packages:
           - com.santalucia.example.infrastructure.mybatis.secondary
       security:
         core:
@@ -192,7 +192,7 @@ santalucia:
         cors:
           enabled: true
           allowed-origins:
-            - http://localhost:8080
+          - http://localhost:8080
         csrf:
           enabled: true
         xss:
@@ -201,10 +201,10 @@ santalucia:
           token-propagation: true
         actuator:
           unsecured-end-points:
-            - info
-            - health
-            - metrics
-            - startup
+          - info
+          - health
+          - metrics
+          - startup
 
 ###########################
 #                         #
