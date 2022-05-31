@@ -33,13 +33,10 @@ server:
       # undertow.threads.io * 8
       # !!! reviar por entorno !!!
       worker: 32
-      
     max-cookies: 20
     max-headers: 20
     max-parameters: 50
     max-http-post-size: 64MB
-    
-     
   error:
     # Include the "exception" attribute. default false
     include-exception: true
@@ -54,17 +51,14 @@ server:
 #  forward-headers-strategy: native #default is ncsa
   http2:
     enabled: false
-  
   servlet:
     encoding:
       charset: UTF-8
-      
     session:
       cookie:
         http-only: true
         secure: true
         same-site: strict
-        
   ssl:
     enabled: false
 
@@ -87,7 +81,7 @@ springdoc:
 #############################
 spring:
   main:
-    allow-bean-definition-overriding: true
+    allow-bean-definition-overriding: false
   application:
     name: example-app-11
   banner:
@@ -108,7 +102,7 @@ spring:
   devtools:
     livereload:
       enabled: true
-      
+
 ######################################
 #                                    #
 # cloud properties                   #
@@ -134,7 +128,7 @@ spring:
     #cache-duration: 1s
     encoding: UTF-8
     fallback-to-system-locale: false
-    
+
 ######################################
 #                                    #
 # datasource properties              #
@@ -219,7 +213,6 @@ santalucia:
 ###########################
 helloWorld:
   url: http://localhost:8080/hello-world/v1
-  
 ###########################
 #                         #
 # logging properties      #
@@ -249,7 +242,7 @@ management:
     tags:
       #Needed by micrometer +1.1.0
       application: ${spring.application.name}
-      
+
 ###########################
 #                         #
 # info properties         #
