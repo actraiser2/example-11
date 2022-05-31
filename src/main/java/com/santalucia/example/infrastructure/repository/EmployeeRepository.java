@@ -24,5 +24,5 @@ public interface EmployeeRepository {
     /**
      * insertEmployee
      */
-	public void insertEmployee();
+	public void insertEmployee(Employee employee);
 }
