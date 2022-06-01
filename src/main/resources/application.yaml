@@ -169,6 +169,12 @@ spring:
 santalucia:
   ams:
     features:
+      micrometer:
+        jvm-extras:
+          process-memory-metrics:
+            enabled: false
+          process-thread-metrics:
+            enabled: false
       guardium:
         enabled: true
       feign:
@@ -259,6 +265,9 @@ info:
 #Profile habilitado de forma automatica cuando se despliega en OCP
 spring:
   config:
+    import:
+    - optional:classpath:monitoring.yaml
+    - optional:classpath:tracing.yaml
     activate:
       on-profile:
       - kubernetes
@@ -268,6 +277,8 @@ spring:
   cloud:
     kubernetes:
       enabled: true
+      reload:
+        enabled: false
 
 ---
 #Profile habilitado de forma automatica cuando se compila en jenkins
