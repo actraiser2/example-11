@@ -46,9 +46,7 @@ class DefaultCacetrafecRepositoryTest {
     //given
     defaultCacetrafecRepository.getIndicadores(PageRequest.of(0, 10));
     //when
-    verify(cacetrafecCustomMapper).getIndicadoreswithPagination(
-      // then
-      eq(0L), eq(10));
+    verify(cacetrafecCustomMapper).getIndicadoreswithPagination(0L, 10);
   }
 
 }
