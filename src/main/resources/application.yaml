@@ -48,7 +48,6 @@ server:
       enabled: false
   compression:
     enabled: true
-#  forward-headers-strategy: native #default is ncsa
   http2:
     enabled: false
   servlet:
@@ -81,6 +80,7 @@ springdoc:
 #############################
 spring:
   main:
+    lazy-initialization: true
     allow-bean-definition-overriding: false
   application:
     name: example-app-11

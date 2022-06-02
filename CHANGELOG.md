@@ -80,6 +80,10 @@
 
 #### Chore commits
 
+ -  fix deprecated ([fb83efb0fa75dc0](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/fb83efb0fa75dc089ab08cb55c9cae9d53a1035b))
+ 		Fecha: 02-06-2022 08:59:37
+ -  test ([257f3920cbe5f08](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/257f3920cbe5f08990707395ed9630ed8bf9905c))
+ 		Fecha: 02-06-2022 08:44:20
  -  test ([cc92979fe6aec15](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/cc92979fe6aec15ee22e881bb04e7f8cb2b8d3ae))
  		Fecha: 31-05-2022 13:11:45
  -  test ([a7c3a754b029ce0](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/a7c3a754b029ce04f36d0b40a4e96688de10b3d8))
