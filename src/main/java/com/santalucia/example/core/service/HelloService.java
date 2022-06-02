@@ -1,5 +1,7 @@
 package com.santalucia.example.core.service;
 
+import org.springframework.lang.Nullable;
+
 import com.santalucia.example.core.domain.IdentidadDigitalDomain;
 
 public interface HelloService {
@@ -9,6 +11,7 @@ public interface HelloService {
      * @param String name
      * @return IdentidadDigitalDomain
      */
+	@Nullable
 	public IdentidadDigitalDomain getHelloRemoteByName(String name);
 
 	/**

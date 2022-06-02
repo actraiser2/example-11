@@ -1,12 +1,18 @@
 package com.santalucia.example.infrastructure.mybatis.primary;
 
-import static com.santalucia.example.infrastructure.mybatis.primary.CacetrafecDynamicSqlSupport.*;
+import static com.santalucia.example.infrastructure.mybatis.primary.CacetrafecDynamicSqlSupport.cacetrafec;
+import static com.santalucia.example.infrastructure.mybatis.primary.CacetrafecDynamicSqlSupport.ccentrab;
+import static com.santalucia.example.infrastructure.mybatis.primary.CacetrafecDynamicSqlSupport.ffivaldt;
+import static com.santalucia.example.infrastructure.mybatis.primary.CacetrafecDynamicSqlSupport.finvaldt;
+import static com.santalucia.example.infrastructure.mybatis.primary.CacetrafecDynamicSqlSupport.fregilog;
+import static com.santalucia.example.infrastructure.mybatis.primary.CacetrafecDynamicSqlSupport.xcacetra;
 
-import com.santalucia.example.infrastructure.entity.Cacetrafec;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+
 import javax.annotation.Generated;
+
 import org.apache.ibatis.annotations.DeleteProvider;
 import org.apache.ibatis.annotations.InsertProvider;
 import org.apache.ibatis.annotations.Mapper;
@@ -31,7 +37,10 @@ import org.mybatis.dynamic.sql.update.render.UpdateStatementProvider;
 import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 import org.mybatis.dynamic.sql.util.mybatis3.MyBatis3Utils;
 
+import com.santalucia.example.infrastructure.entity.Cacetrafec;
+
 @Mapper
+@Generated(value = { "" })
 public interface CacetrafecMapper {
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     BasicColumn[] selectList = BasicColumn.columnList(ccentrab, xcacetra, finvaldt, ffivaldt, fregilog);

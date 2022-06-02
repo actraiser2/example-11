@@ -1,6 +1,9 @@
 package com.santalucia.example.core.service.impl;
 
+import java.util.Optional;
+
 import org.springframework.http.ResponseEntity;
+import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Service;
 
 import com.santalucia.example.api.client.HelloWorldApiClient;
@@ -17,7 +20,6 @@ import lombok.extern.slf4j.Slf4j;
 public class DefaultHelloService implements HelloService {
 
 	private HelloWorldApiClient helloWorldApiClient;
-	//private RecibosApiClient recibosApiClient;
 
 	private IdentidadDigitalDomainMapper identidadDigitalMapper;
 
@@ -29,7 +31,6 @@ public class DefaultHelloService implements HelloService {
 	 */
 	public DefaultHelloService(/**RecibosApiClient recibosApiClient,**/ HelloWorldApiClient helloWorldApiClient, IdentidadDigitalDomainMapper identidadDigitalMapper) {
 		log.info("Configured endpoint {}", helloWorldApiClient);
-		//this.recibosApiClient = recibosApiClient;
 		this.helloWorldApiClient = helloWorldApiClient;
 		this.identidadDigitalMapper = identidadDigitalMapper;
 	}
@@ -40,6 +41,7 @@ public class DefaultHelloService implements HelloService {
 	 * @return IdentidadDigitalDomain
 	 */
 	@Override
+	@Nullable
 	public IdentidadDigitalDomain getHelloRemoteByName(String name) {
 		//Test de ejemplo para demostrar el uso de named exception strategy
 		if ("test".equals(name)) {
@@ -47,8 +49,9 @@ public class DefaultHelloService implements HelloService {
 		}
 
 		// Ejemplo de llamada a remota
-		ResponseEntity<IdentidadDigitalConsultaResource> response = helloWorldApiClient.getHelloByName(name, null);
-		return this.identidadDigitalMapper.toDomain(response.getBody());
+		return Optional.ofNullable(helloWorldApiClient.getHelloByName(name, null).getBody())
+		.map(v -> this.identidadDigitalMapper.toDomain(v))
+		.orElse(null);
 	}
 
 	/**
@@ -58,17 +61,6 @@ public class DefaultHelloService implements HelloService {
 	 */
 	@Override
 	public IdentidadDigitalDomain getHelloByName(String name) {
-		
-		
-		//Feign.builder().decode404()
-		//"6255476e4e79ad10b078f220"
-		
-		/*
-		ResponseEntity<ReciboDetailResource> recibo = 
-				recibosApiClient.findByIdRecibosEntityUsingGET(
-				"9995476e4e79ad10b078f220", 
-				UUID.randomUUID());
-		*/
 		
 		
 		return IdentidadDigitalDomain.builder()

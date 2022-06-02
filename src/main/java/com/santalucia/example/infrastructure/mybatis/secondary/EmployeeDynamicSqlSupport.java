@@ -5,6 +5,7 @@ import javax.annotation.Generated;
 import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
+@Generated(value = { "" })
 public final class EmployeeDynamicSqlSupport {
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: EMPLOYEE")
     public static final Employee employee = new Employee();

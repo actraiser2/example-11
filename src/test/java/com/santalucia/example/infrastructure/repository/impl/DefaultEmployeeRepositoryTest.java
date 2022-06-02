@@ -32,7 +32,7 @@ class DefaultEmployeeRepositoryTest {
     // when
     verify(employeeMapper).selectMany(argThat(selectStatment -> {
       // then
-      assertThat("select * from employee").isEqualTo(selectStatment.getSelectStatement().toUpperCase().toLowerCase());
+      assertThat(selectStatment.getSelectStatement().toUpperCase().toLowerCase()).isEqualTo("select * from employee");
       Map<String, Object> parameters = selectStatment.getParameters();
       assertThat(parameters).isEmpty();
       return true;
@@ -47,10 +47,11 @@ class DefaultEmployeeRepositoryTest {
     // when
     verify(employeeMapper).selectMany(argThat(selectStatment -> {
       // then
-      assertThat("select * from employee offset #{parameters.p1} rows fetch first #{parameters.p2} rows only").isEqualTo( selectStatment.getSelectStatement().toLowerCase());
+      assertThat(selectStatment.getSelectStatement().toLowerCase()).isEqualTo("select * from employee offset #{parameters.p1} rows fetch first #{parameters.p2} rows only");
       Map<String, Object> parameters = selectStatment.getParameters();
-      assertThat(0L).isEqualTo( parameters.get("p1"));
-      assertThat(10L).isEqualTo( parameters.get("p2"));
+      assertThat(parameters)
+        .containsEntry("p1",0L)
+        .containsEntry("p2",10L);
       return true;
     }));
   }

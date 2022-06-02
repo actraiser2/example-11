@@ -6,6 +6,7 @@ import javax.annotation.Generated;
 import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
+@Generated(value = { "" })
 public final class CacetrafecDynamicSqlSupport {
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     public static final Cacetrafec cacetrafec = new Cacetrafec();

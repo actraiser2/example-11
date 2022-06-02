@@ -1,5 +1,7 @@
 package com.santalucia.example.core.exceptions;
 
+import org.springframework.lang.Nullable;
+
 import com.santalucia.arq.ams.componentes.web.exceptions.core.SantaluciaWebRuntimeException;
 import com.santalucia.example.core.errors.AppErrorCodes;
 
@@ -12,7 +14,7 @@ public class InvalidNameException extends SantaluciaWebRuntimeException {
      *
      * @param Throwable cause
      */
-	public InvalidNameException(Throwable cause) {
+	public InvalidNameException(@Nullable Throwable cause) {
 		super(AppErrorCodes.INVALID_NAME,cause);
 	}
 

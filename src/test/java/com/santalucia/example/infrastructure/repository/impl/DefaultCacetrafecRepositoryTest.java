@@ -31,12 +31,13 @@ class DefaultCacetrafecRepositoryTest {
     defaultCacetrafecRepository.getIndicadores();
     //when
     verify(cacetrafecCustomMapper).selectMany(argThat(selectStatment -> {
-      //then
-      assertThat("select * from cacetrafec where xcacetra = :p1").isEqualTo( selectStatment.getSelectStatement().toLowerCase());
-      Map<String, Object> parameters = selectStatment.getParameters();
-      assertThat("I").isEqualTo( parameters.get("p1"));
-      return true;
-    }));
+	    //then
+	    assertThat(selectStatment.getSelectStatement().toLowerCase()).isEqualTo("select * from cacetrafec where xcacetra = :p1");
+	    Map<String, Object> parameters = selectStatment.getParameters();
+	    assertThat(parameters).containsEntry("p1","I");
+	    return true;
+	    })
+    );
   }
 
   @Test

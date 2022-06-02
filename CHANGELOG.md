@@ -28,6 +28,8 @@
 
 #### Bug Fixes
 
+ -  adapt properties ([54ece75969aff69](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/54ece75969aff6975f08d598cbb2f01c9efa5628))
+    Fecha: 01-06-2022 13:14:29
  -  fix lint ([1e77c9748fc82b2](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/1e77c9748fc82b216db4961b27338ba3d1eb5a84))
     Fecha: 12-04-2022 10:13:05
  -  remove user pass application.yaml ([68462e3ce0d7fbe](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/68462e3ce0d7fbe63ea57234fd9ce1f5fb3c54c6))
@@ -78,6 +80,16 @@
 
 #### Chore commits
 
+ -  test ([cc92979fe6aec15](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/cc92979fe6aec15ee22e881bb04e7f8cb2b8d3ae))
+ 		Fecha: 31-05-2022 13:11:45
+ -  test ([a7c3a754b029ce0](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/a7c3a754b029ce04f36d0b40a4e96688de10b3d8))
+ 		Fecha: 31-05-2022 13:07:37
+ -  test refactor given, when, then ([11ec7c47c670064](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/11ec7c47c67006477b6b5f692128e6c9c6e83b3e))
+ 		Fecha: 31-05-2022 12:40:05
+ -  display name en los test ([5196a3b7ea2d2f4](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/5196a3b7ea2d2f40bdae1cc8f3f3e08921cfb3b3))
+ 		Fecha: 31-05-2022 09:00:17
+ -  tests for the repository layer ([067076a68209184](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/067076a68209184da7e13d25a9db7840e8072034))
+ 		Fecha: 31-05-2022 08:55:00
  -  test ([b99aeb4c3368030](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/b99aeb4c33680301e7f99f49256b9d8baa465119))
  		Fecha: 26-05-2022 10:05:18
  -  test ([98e369cb6ee7b45](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/98e369cb6ee7b45a3418c38de35d5ca8b4c7a21e))

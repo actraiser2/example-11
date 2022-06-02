@@ -1,12 +1,16 @@
 package com.santalucia.example.infrastructure.mybatis.secondary;
 
-import static com.santalucia.example.infrastructure.mybatis.secondary.EmployeeDynamicSqlSupport.*;
+import static com.santalucia.example.infrastructure.mybatis.secondary.EmployeeDynamicSqlSupport.emailAddress;
+import static com.santalucia.example.infrastructure.mybatis.secondary.EmployeeDynamicSqlSupport.employee;
+import static com.santalucia.example.infrastructure.mybatis.secondary.EmployeeDynamicSqlSupport.firstName;
+import static com.santalucia.example.infrastructure.mybatis.secondary.EmployeeDynamicSqlSupport.lastName;
 
-import com.santalucia.example.infrastructure.entity.Employee;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+
 import javax.annotation.Generated;
+
 import org.apache.ibatis.annotations.DeleteProvider;
 import org.apache.ibatis.annotations.InsertProvider;
 import org.apache.ibatis.annotations.Mapper;
@@ -31,7 +35,10 @@ import org.mybatis.dynamic.sql.update.render.UpdateStatementProvider;
 import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
 import org.mybatis.dynamic.sql.util.mybatis3.MyBatis3Utils;
 
+import com.santalucia.example.infrastructure.entity.Employee;
+
 @Mapper
+@Generated(value = { "" })
 public interface EmployeeMapper {
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: EMPLOYEE")
     BasicColumn[] selectList = BasicColumn.columnList(firstName, lastName, emailAddress);

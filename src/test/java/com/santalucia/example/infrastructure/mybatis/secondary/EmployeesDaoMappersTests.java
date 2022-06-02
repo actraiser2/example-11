@@ -36,8 +36,7 @@ class EmployeesDaoMappersTests {
 	            .render(RenderingStrategies.MYBATIS3);
 
 		List<Employee> employees = employeesDaoMappers.selectMany(selectStatement);
-		assertThat(employees).isNotNull();
-		assertThat(employees).hasSize(1);
+		assertThat(employees).isNotNull().hasSize(1);
 		assertThat(employees.get(0).getFirstName()).isEqualTo("firstname");
 		assertThat(employees.get(0).getLastName()).isEqualTo("lastname");
 		assertThat(employees.get(0).getEmailAddress()).isEqualTo("a@a.com");

@@ -53,6 +53,7 @@ public class DefaultHelloNameApiDelegate implements HelloApiDelegate {
 	 */
 	@Override
 	public ResponseEntity<IdentidadDigitalConsultaResource> getHelloByName(String name, Optional<UUID> xRequestID) {
+		log.debug("processing getHelloByName");
 		return Optional
 				.ofNullable(helloService.getHelloByName(name))
 				.map(idDomain -> ResponseEntity.ok().body(identidadDigitalDomainMapper.toResource(idDomain))) // 200 OK
@@ -67,6 +68,7 @@ public class DefaultHelloNameApiDelegate implements HelloApiDelegate {
 	@Override
 	public ResponseEntity<IdentidadDigitalConsultaResource> getHelloByNameRemote(String name,
 			Optional<UUID> xRequestID) {
+		log.debug("processing getHelloByNameRemote");
 		return Optional
 				.ofNullable(helloService.getHelloRemoteByName(name))
 				.map(idDomain -> ResponseEntity.ok().body(identidadDigitalDomainMapper.toResource(idDomain))) // 200 OK
