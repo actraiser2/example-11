@@ -80,6 +80,20 @@
 
 #### Chore commits
 
+ -  addapt lombok.config ([157bb120f1e5522](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/157bb120f1e5522ac035fee74035b1451cf1b90d))
+ 		Fecha: 10-06-2022 06:26:37
+ -  changes ([10d3885e16050a5](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/10d3885e16050a5d1371cf6816f6c3bcca3ec06e))
+ 		Fecha: 06-06-2022 12:41:39
+ -  add archunit ([f50b22e18f7e9b5](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/f50b22e18f7e9b50b42baffbcb468c587014c47b))
+ 		Fecha: 06-06-2022 10:18:12
+ -  ASW-1153 @Generated in Application ([94c524ca4d470b3](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/94c524ca4d470b3cd11e05cb6de3d659bac37f60))
+ 		Fecha: 06-06-2022 08:04:49
+ -  fix eq ([00f08c2957aa97d](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/00f08c2957aa97d67a5f1c8037e40e7c17b32972))
+ 		Fecha: 02-06-2022 12:36:52
+ -  test ([71c70753c884526](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/71c70753c8845263a5e5a61598f0fa0c0a9d971b))
+ 		Fecha: 02-06-2022 12:22:21
+ -  test ([91f6e6f80919f47](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/91f6e6f80919f4774aa6cdbf4ea5d9c8e15a4df6))
+ 		Fecha: 02-06-2022 12:08:26
  -  fix deprecated ([fb83efb0fa75dc0](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/fb83efb0fa75dc089ab08cb55c9cae9d53a1035b))
  		Fecha: 02-06-2022 08:59:37
  -  test ([257f3920cbe5f08](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/257f3920cbe5f08990707395ed9630ed8bf9905c))
