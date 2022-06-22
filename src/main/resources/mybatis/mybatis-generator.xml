@@ -4,8 +4,8 @@
 <generatorConfiguration>
   <!-- **************************************************************************
   	** INFO: Para ejecutar en maven usar el comando:
-    **    - Informix:  mvn -Dmybatis.generator.contexts=informix mybatis-generator:generate -Dmybatis.generator.jdbcUserId='' -Dmybatis.generator.jdbcPassword=''
-    **    - Oracle:    mvn -Dmybatis.generator.contexts=oracle mybatis-generator:generate -Dmybatis.generator.jdbcUserId='' -Dmybatis.generator.jdbcPassword=''
+    **    - Informix: mvn -Dmybatis.generator.contexts=informix mybatis-generator:generate -Dmybatis.generator.jdbcUserId='' -Dmybatis.generator.jdbcPassword='' -Dmybatis.generator.jdbcURL=''
+    **    - Oracle:   mvn -Dmybatis.generator.contexts=oracle mybatis-generator:generate -Dmybatis.generator.jdbcUserId='' -Dmybatis.generator.jdbcPassword='' -Dmybatis.generator.jdbcURL=''
   	** el reference se encuentra en https://mybatis.org/generator/configreference/xmlconfig.html
   	
   	************************************************************************** -->
@@ -27,15 +27,15 @@
     
     <!-- El usuario y password debe pasan-->
     <jdbcConnection driverClass="com.informix.jdbc.IfxDriver" 
-      connectionURL="jdbc:informix-sqli://192.168.204.226:20101/siis:INFORMIXSERVER=fun_jdbc"
+      connectionURL="${mybatis.generator.jdbcURL}"
       userId="${mybatis.generator.jdbcUserId}" 
       password="${mybatis.generator.jdbcPassword}"
       />
 
 
-    <!--  <javaTypeResolver>
-	  <property name="useJSR310Types" value="true" />
-	</javaTypeResolver>-->
+    <javaTypeResolver>
+      <property name="useJSR310Types" value="true" />
+    </javaTypeResolver>
 
     <!-- !!!! Configuracion del modelo !!!! -->
     <javaModelGenerator targetPackage="com.santalucia.example.infrastructure.entity" targetProject="src/main/java">
@@ -57,8 +57,6 @@
     	<columnOverride column="LONG_VARCHAR_FIELD" jdbcType="VARCHAR" javaType="java.lang.String" />
     	<columnOverride column="finvaldt" jdbcType="DATE" javaType="java.time.LocalDate" />
     	<columnOverride column="finvaldt" jdbcType="DATE" javaType="java.time.LocalDate" />-->
-
-
     </table>
 
   </context>
@@ -80,7 +78,7 @@
     </commentGenerator>
 
     <jdbcConnection driverClass="oracle.jdbc.OracleDriver" 
-      connectionURL="jdbc:oracle:thin:@slbdorad15.servidores.net:1548/DB12UTF8D.DES.SANTALUCIA.ES" 
+      connectionURL="${mybatis.generator.jdbcURL}" 
       userId="${mybatis.generator.jdbcUserId}" 
       password="${mybatis.generator.jdbcPassword}" />
 
