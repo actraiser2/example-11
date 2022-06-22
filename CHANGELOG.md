@@ -80,6 +80,10 @@
 
 #### Chore commits
 
+ -  test ([672ecf73f6200fb](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/672ecf73f6200fbbf3d1097b858cfe2a65dd2bed))
+ 		Fecha: 20-06-2022 16:24:28
+ -  test ([5b20917c653473c](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/5b20917c653473cee5c9a93eb54fadab6093df17))
+ 		Fecha: 20-06-2022 16:07:53
  -  addapt lombok.config ([157bb120f1e5522](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/157bb120f1e5522ac035fee74035b1451cf1b90d))
  		Fecha: 10-06-2022 06:26:37
  -  changes ([10d3885e16050a5](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/10d3885e16050a5d1371cf6816f6c3bcca3ec06e))

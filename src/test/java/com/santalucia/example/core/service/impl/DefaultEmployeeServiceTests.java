@@ -63,10 +63,11 @@ class DefaultEmployeeServiceTests {
 
 	private Employee buildEmployeeTest(String firstName, String lastName) {
 
-		Employee employee = new Employee();
-		employee.setFirstName(firstName);
-		employee.setLastName(lastName);
-		employee.setEmailAddress(buildEmailAdressTest(firstName));
+		Employee employee = Employee.builder()
+		.firstName(firstName)
+		.lastName(lastName)
+		.emailAddress(buildEmailAdressTest(firstName))
+		.build();
 		return employee;
 	}
 

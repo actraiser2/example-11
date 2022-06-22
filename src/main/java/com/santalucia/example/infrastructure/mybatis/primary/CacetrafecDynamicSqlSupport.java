@@ -3,10 +3,9 @@ package com.santalucia.example.infrastructure.mybatis.primary;
 import java.sql.JDBCType;
 import java.util.Date;
 import javax.annotation.Generated;
+import org.mybatis.dynamic.sql.AliasableSqlTable;
 import org.mybatis.dynamic.sql.SqlColumn;
-import org.mybatis.dynamic.sql.SqlTable;
 
-@Generated(value = { "" })
 public final class CacetrafecDynamicSqlSupport {
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     public static final Cacetrafec cacetrafec = new Cacetrafec();
@@ -27,7 +26,7 @@ public final class CacetrafecDynamicSqlSupport {
     public static final SqlColumn<Date> fregilog = cacetrafec.fregilog;
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
-    public static final class Cacetrafec extends SqlTable {
+    public static final class Cacetrafec extends AliasableSqlTable<Cacetrafec> {
         public final SqlColumn<Short> ccentrab = column("ccentrab", JDBCType.SMALLINT);
 
         public final SqlColumn<String> xcacetra = column("xcacetra", JDBCType.CHAR);
@@ -39,7 +38,7 @@ public final class CacetrafecDynamicSqlSupport {
         public final SqlColumn<Date> fregilog = column("fregilog", JDBCType.TIMESTAMP);
 
         public Cacetrafec() {
-            super("cacetrafec");
+            super("cacetrafec", Cacetrafec::new);
         }
     }
 }

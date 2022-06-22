@@ -68,9 +68,9 @@
     <swagger.codegen.skip.server>false</swagger.codegen.skip.server>
     <swagger.codegen.skip.client>false</swagger.codegen.skip.client>
     <mybatis.codegen.output.dir>src/main/java</mybatis.codegen.output.dir>
+    <mybatis.generator.configurationFile>src/main/resources/mybatis/mybatis-generator.xml</mybatis.generator.configurationFile>
     <git.hooks.skip>false</git.hooks.skip>
     <archunit.skip>true</archunit.skip> <!-- FIXME: Temporal hasta que RAFA arregle la regla -->
-    <nullaway.severity>OFF</nullaway.severity> <!-- FIXME: temporal -->
   </properties>
 
   <dependencies>

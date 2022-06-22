@@ -3,6 +3,8 @@ package com.santalucia.example.core.service.impl;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
+import java.util.Optional;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -58,10 +60,10 @@ class DefaultHelloServiceTests {
 			.thenReturn(new ResponseEntity<>(response, HttpStatus.OK));
 		when(identidadDigitalMapper.toDomain(Mockito.any())).thenReturn(identidadDomain);
 
-		IdentidadDigitalDomain greeting = helloService.getHelloRemoteByName(name);
+		Optional<IdentidadDigitalDomain> greeting = helloService.getHelloRemoteByName(name);
 
 		//then
-		assertThat(greeting.getNombre()).isEqualTo(name);
+		assertThat(greeting).map(v -> v.getNombre()).hasValue(name);
 
 	}
 

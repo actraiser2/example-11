@@ -1,70 +1,37 @@
 package com.santalucia.example.infrastructure.mybatis.primary;
 
-import static com.santalucia.example.infrastructure.mybatis.primary.CacetrafecDynamicSqlSupport.cacetrafec;
-import static com.santalucia.example.infrastructure.mybatis.primary.CacetrafecDynamicSqlSupport.ccentrab;
-import static com.santalucia.example.infrastructure.mybatis.primary.CacetrafecDynamicSqlSupport.ffivaldt;
-import static com.santalucia.example.infrastructure.mybatis.primary.CacetrafecDynamicSqlSupport.finvaldt;
-import static com.santalucia.example.infrastructure.mybatis.primary.CacetrafecDynamicSqlSupport.fregilog;
-import static com.santalucia.example.infrastructure.mybatis.primary.CacetrafecDynamicSqlSupport.xcacetra;
+import static com.santalucia.example.infrastructure.mybatis.primary.CacetrafecDynamicSqlSupport.*;
 
+import com.santalucia.example.infrastructure.entity.Cacetrafec;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
-
 import javax.annotation.Generated;
-
-import org.apache.ibatis.annotations.DeleteProvider;
-import org.apache.ibatis.annotations.InsertProvider;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.SelectProvider;
-import org.apache.ibatis.annotations.UpdateProvider;
 import org.apache.ibatis.type.JdbcType;
 import org.mybatis.dynamic.sql.BasicColumn;
 import org.mybatis.dynamic.sql.delete.DeleteDSLCompleter;
-import org.mybatis.dynamic.sql.delete.render.DeleteStatementProvider;
-import org.mybatis.dynamic.sql.insert.render.InsertStatementProvider;
-import org.mybatis.dynamic.sql.insert.render.MultiRowInsertStatementProvider;
 import org.mybatis.dynamic.sql.select.CountDSLCompleter;
 import org.mybatis.dynamic.sql.select.SelectDSLCompleter;
 import org.mybatis.dynamic.sql.select.render.SelectStatementProvider;
 import org.mybatis.dynamic.sql.update.UpdateDSL;
 import org.mybatis.dynamic.sql.update.UpdateDSLCompleter;
 import org.mybatis.dynamic.sql.update.UpdateModel;
-import org.mybatis.dynamic.sql.update.render.UpdateStatementProvider;
 import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
+import org.mybatis.dynamic.sql.util.mybatis3.CommonCountMapper;
+import org.mybatis.dynamic.sql.util.mybatis3.CommonDeleteMapper;
+import org.mybatis.dynamic.sql.util.mybatis3.CommonInsertMapper;
+import org.mybatis.dynamic.sql.util.mybatis3.CommonUpdateMapper;
 import org.mybatis.dynamic.sql.util.mybatis3.MyBatis3Utils;
 
-import com.santalucia.example.infrastructure.entity.Cacetrafec;
-
 @Mapper
-@Generated(value = { "" })
-public interface CacetrafecMapper {
+public interface CacetrafecMapper extends CommonCountMapper, CommonDeleteMapper, CommonInsertMapper<Cacetrafec>, CommonUpdateMapper {
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     BasicColumn[] selectList = BasicColumn.columnList(ccentrab, xcacetra, finvaldt, ffivaldt, fregilog);
-
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
-    @SelectProvider(type=SqlProviderAdapter.class, method="select")
-    long count(SelectStatementProvider selectStatement);
-
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
-    @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
-    int delete(DeleteStatementProvider deleteStatement);
-
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
-    @InsertProvider(type=SqlProviderAdapter.class, method="insert")
-    int insert(InsertStatementProvider<Cacetrafec> insertStatement);
-
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
-    @InsertProvider(type=SqlProviderAdapter.class, method="insertMultiple")
-    int insertMultiple(MultiRowInsertStatementProvider<Cacetrafec> multipleInsertStatement);
-
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
-    @SelectProvider(type=SqlProviderAdapter.class, method="select")
-    @ResultMap("CacetrafecResult")
-    Optional<Cacetrafec> selectOne(SelectStatementProvider selectStatement);
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
@@ -78,8 +45,9 @@ public interface CacetrafecMapper {
     List<Cacetrafec> selectMany(SelectStatementProvider selectStatement);
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
-    @UpdateProvider(type=SqlProviderAdapter.class, method="update")
-    int update(UpdateStatementProvider updateStatement);
+    @SelectProvider(type=SqlProviderAdapter.class, method="select")
+    @ResultMap("CacetrafecResult")
+    Optional<Cacetrafec> selectOne(SelectStatementProvider selectStatement);
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     default long count(CountDSLCompleter completer) {
@@ -92,8 +60,8 @@ public interface CacetrafecMapper {
     }
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
-    default int insert(Cacetrafec record) {
-        return MyBatis3Utils.insert(this::insert, record, cacetrafec, c ->
+    default int insert(Cacetrafec row) {
+        return MyBatis3Utils.insert(this::insert, row, cacetrafec, c ->
             c.map(ccentrab).toProperty("ccentrab")
             .map(xcacetra).toProperty("xcacetra")
             .map(finvaldt).toProperty("finvaldt")
@@ -114,13 +82,13 @@ public interface CacetrafecMapper {
     }
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
-    default int insertSelective(Cacetrafec record) {
-        return MyBatis3Utils.insert(this::insert, record, cacetrafec, c ->
-            c.map(ccentrab).toPropertyWhenPresent("ccentrab", record::getCcentrab)
-            .map(xcacetra).toPropertyWhenPresent("xcacetra", record::getXcacetra)
-            .map(finvaldt).toPropertyWhenPresent("finvaldt", record::getFinvaldt)
-            .map(ffivaldt).toPropertyWhenPresent("ffivaldt", record::getFfivaldt)
-            .map(fregilog).toPropertyWhenPresent("fregilog", record::getFregilog)
+    default int insertSelective(Cacetrafec row) {
+        return MyBatis3Utils.insert(this::insert, row, cacetrafec, c ->
+            c.map(ccentrab).toPropertyWhenPresent("ccentrab", row::getCcentrab)
+            .map(xcacetra).toPropertyWhenPresent("xcacetra", row::getXcacetra)
+            .map(finvaldt).toPropertyWhenPresent("finvaldt", row::getFinvaldt)
+            .map(ffivaldt).toPropertyWhenPresent("ffivaldt", row::getFfivaldt)
+            .map(fregilog).toPropertyWhenPresent("fregilog", row::getFregilog)
         );
     }
 
@@ -145,20 +113,20 @@ public interface CacetrafecMapper {
     }
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
-    static UpdateDSL<UpdateModel> updateAllColumns(Cacetrafec record, UpdateDSL<UpdateModel> dsl) {
-        return dsl.set(ccentrab).equalTo(record::getCcentrab)
-                .set(xcacetra).equalTo(record::getXcacetra)
-                .set(finvaldt).equalTo(record::getFinvaldt)
-                .set(ffivaldt).equalTo(record::getFfivaldt)
-                .set(fregilog).equalTo(record::getFregilog);
+    static UpdateDSL<UpdateModel> updateAllColumns(Cacetrafec row, UpdateDSL<UpdateModel> dsl) {
+        return dsl.set(ccentrab).equalTo(row::getCcentrab)
+                .set(xcacetra).equalTo(row::getXcacetra)
+                .set(finvaldt).equalTo(row::getFinvaldt)
+                .set(ffivaldt).equalTo(row::getFfivaldt)
+                .set(fregilog).equalTo(row::getFregilog);
     }
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
-    static UpdateDSL<UpdateModel> updateSelectiveColumns(Cacetrafec record, UpdateDSL<UpdateModel> dsl) {
-        return dsl.set(ccentrab).equalToWhenPresent(record::getCcentrab)
-                .set(xcacetra).equalToWhenPresent(record::getXcacetra)
-                .set(finvaldt).equalToWhenPresent(record::getFinvaldt)
-                .set(ffivaldt).equalToWhenPresent(record::getFfivaldt)
-                .set(fregilog).equalToWhenPresent(record::getFregilog);
+    static UpdateDSL<UpdateModel> updateSelectiveColumns(Cacetrafec row, UpdateDSL<UpdateModel> dsl) {
+        return dsl.set(ccentrab).equalToWhenPresent(row::getCcentrab)
+                .set(xcacetra).equalToWhenPresent(row::getXcacetra)
+                .set(finvaldt).equalToWhenPresent(row::getFinvaldt)
+                .set(ffivaldt).equalToWhenPresent(row::getFfivaldt)
+                .set(fregilog).equalToWhenPresent(row::getFregilog);
     }
 }

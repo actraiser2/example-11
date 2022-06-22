@@ -32,7 +32,7 @@ public class DefaultEmployeeRepository implements EmployeeRepository {
 
     /**
      * recupera todos los empleados
-     * @return List<Employee>
+     * @return {@code List<Employee>}
      */
 	@Override
 	public List<Employee> getAllEmployees() {
@@ -48,7 +48,7 @@ public class DefaultEmployeeRepository implements EmployeeRepository {
     /**
      * recupera todos los empleados paginados
      * @param Pageable pageable
-     * @return List<Employee>
+     * @return {@code List<Employee>}
      */
 	@Override
 	public List<Employee> getEmployees(Pageable pageable) {

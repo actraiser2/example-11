@@ -2,10 +2,9 @@ package com.santalucia.example.infrastructure.mybatis.secondary;
 
 import java.sql.JDBCType;
 import javax.annotation.Generated;
+import org.mybatis.dynamic.sql.AliasableSqlTable;
 import org.mybatis.dynamic.sql.SqlColumn;
-import org.mybatis.dynamic.sql.SqlTable;
 
-@Generated(value = { "" })
 public final class EmployeeDynamicSqlSupport {
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: EMPLOYEE")
     public static final Employee employee = new Employee();
@@ -20,7 +19,7 @@ public final class EmployeeDynamicSqlSupport {
     public static final SqlColumn<String> emailAddress = employee.emailAddress;
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: EMPLOYEE")
-    public static final class Employee extends SqlTable {
+    public static final class Employee extends AliasableSqlTable<Employee> {
         public final SqlColumn<String> firstName = column("FIRST_NAME", JDBCType.VARCHAR);
 
         public final SqlColumn<String> lastName = column("LAST_NAME", JDBCType.VARCHAR);
@@ -28,7 +27,7 @@ public final class EmployeeDynamicSqlSupport {
         public final SqlColumn<String> emailAddress = column("EMAIL_ADDRESS", JDBCType.VARCHAR);
 
         public Employee() {
-            super("EMPLOYEE");
+            super("EMPLOYEE", Employee::new);
         }
     }
 }

@@ -60,10 +60,11 @@ class DefaultEmployeeRepositoryTest {
   @DisplayName("Probamos que si se llama a InsertEmployee inserta un empleado")
   void givenANewEmployee_whenInsertAnEmployee_thenInsertsThatEmployee() {
     // given
-    Employee employee = new Employee();
-    employee.setFirstName("John");
-    employee.setLastName("Doe");
-    employee.setEmailAddress("john.doe@domain.com");
+    Employee employee = Employee.builder()
+	    .firstName("John")
+	    .lastName("Doe")
+	    .emailAddress("john.doe@domain.com")
+	    .build();
     // when
     repository.insertEmployee(employee);
     verify(employeeMapper).insert((Employee) argThat(insertEmployee -> {

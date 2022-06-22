@@ -57,19 +57,20 @@ public class DefaultEmployeeService implements EmployeeService {
 	 */
 	@Override
 	public void insertEmployee() {
-    Employee emp = new Employee();
-
-    emp.setFirstName("Julie");
-    emp.setLastName("Pearson");
-    emp.setEmailAddress("julie@accenture.com");
+    Employee emp = Employee.builder()
+    		.firstName("Julie")
+    		.lastName("Pearson")
+    		.emailAddress("julie@accenture.com")
+    		.build();
 
     this.employeeRepository.insertEmployee(emp);
 
-    Employee empDos = new Employee();
+    Employee empDos = Employee.builder()
+    		.firstName("Juan")
+    		.lastName("Lopez")
+    		.emailAddress("")
+    		.build();
 
-    empDos.setFirstName("Juan");
-    empDos.setLastName("Lopez");
-    empDos.setEmailAddress(null);
 
     this.employeeRepository.insertEmployee(empDos);
 	}

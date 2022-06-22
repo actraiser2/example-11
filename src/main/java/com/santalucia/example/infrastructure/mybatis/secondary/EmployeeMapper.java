@@ -1,68 +1,37 @@
 package com.santalucia.example.infrastructure.mybatis.secondary;
 
-import static com.santalucia.example.infrastructure.mybatis.secondary.EmployeeDynamicSqlSupport.emailAddress;
-import static com.santalucia.example.infrastructure.mybatis.secondary.EmployeeDynamicSqlSupport.employee;
-import static com.santalucia.example.infrastructure.mybatis.secondary.EmployeeDynamicSqlSupport.firstName;
-import static com.santalucia.example.infrastructure.mybatis.secondary.EmployeeDynamicSqlSupport.lastName;
+import static com.santalucia.example.infrastructure.mybatis.secondary.EmployeeDynamicSqlSupport.*;
 
+import com.santalucia.example.infrastructure.entity.Employee;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
-
 import javax.annotation.Generated;
-
-import org.apache.ibatis.annotations.DeleteProvider;
-import org.apache.ibatis.annotations.InsertProvider;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.SelectProvider;
-import org.apache.ibatis.annotations.UpdateProvider;
 import org.apache.ibatis.type.JdbcType;
 import org.mybatis.dynamic.sql.BasicColumn;
 import org.mybatis.dynamic.sql.delete.DeleteDSLCompleter;
-import org.mybatis.dynamic.sql.delete.render.DeleteStatementProvider;
-import org.mybatis.dynamic.sql.insert.render.InsertStatementProvider;
-import org.mybatis.dynamic.sql.insert.render.MultiRowInsertStatementProvider;
 import org.mybatis.dynamic.sql.select.CountDSLCompleter;
 import org.mybatis.dynamic.sql.select.SelectDSLCompleter;
 import org.mybatis.dynamic.sql.select.render.SelectStatementProvider;
 import org.mybatis.dynamic.sql.update.UpdateDSL;
 import org.mybatis.dynamic.sql.update.UpdateDSLCompleter;
 import org.mybatis.dynamic.sql.update.UpdateModel;
-import org.mybatis.dynamic.sql.update.render.UpdateStatementProvider;
 import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
+import org.mybatis.dynamic.sql.util.mybatis3.CommonCountMapper;
+import org.mybatis.dynamic.sql.util.mybatis3.CommonDeleteMapper;
+import org.mybatis.dynamic.sql.util.mybatis3.CommonInsertMapper;
+import org.mybatis.dynamic.sql.util.mybatis3.CommonUpdateMapper;
 import org.mybatis.dynamic.sql.util.mybatis3.MyBatis3Utils;
 
-import com.santalucia.example.infrastructure.entity.Employee;
-
 @Mapper
-@Generated(value = { "" })
-public interface EmployeeMapper {
+public interface EmployeeMapper extends CommonCountMapper, CommonDeleteMapper, CommonInsertMapper<Employee>, CommonUpdateMapper {
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: EMPLOYEE")
     BasicColumn[] selectList = BasicColumn.columnList(firstName, lastName, emailAddress);
-
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: EMPLOYEE")
-    @SelectProvider(type=SqlProviderAdapter.class, method="select")
-    long count(SelectStatementProvider selectStatement);
-
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: EMPLOYEE")
-    @DeleteProvider(type=SqlProviderAdapter.class, method="delete")
-    int delete(DeleteStatementProvider deleteStatement);
-
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: EMPLOYEE")
-    @InsertProvider(type=SqlProviderAdapter.class, method="insert")
-    int insert(InsertStatementProvider<Employee> insertStatement);
-
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: EMPLOYEE")
-    @InsertProvider(type=SqlProviderAdapter.class, method="insertMultiple")
-    int insertMultiple(MultiRowInsertStatementProvider<Employee> multipleInsertStatement);
-
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: EMPLOYEE")
-    @SelectProvider(type=SqlProviderAdapter.class, method="select")
-    @ResultMap("EmployeeResult")
-    Optional<Employee> selectOne(SelectStatementProvider selectStatement);
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: EMPLOYEE")
     @SelectProvider(type=SqlProviderAdapter.class, method="select")
@@ -74,8 +43,9 @@ public interface EmployeeMapper {
     List<Employee> selectMany(SelectStatementProvider selectStatement);
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: EMPLOYEE")
-    @UpdateProvider(type=SqlProviderAdapter.class, method="update")
-    int update(UpdateStatementProvider updateStatement);
+    @SelectProvider(type=SqlProviderAdapter.class, method="select")
+    @ResultMap("EmployeeResult")
+    Optional<Employee> selectOne(SelectStatementProvider selectStatement);
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: EMPLOYEE")
     default long count(CountDSLCompleter completer) {
@@ -88,8 +58,8 @@ public interface EmployeeMapper {
     }
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: EMPLOYEE")
-    default int insert(Employee record) {
-        return MyBatis3Utils.insert(this::insert, record, employee, c ->
+    default int insert(Employee row) {
+        return MyBatis3Utils.insert(this::insert, row, employee, c ->
             c.map(firstName).toProperty("firstName")
             .map(lastName).toProperty("lastName")
             .map(emailAddress).toProperty("emailAddress")
@@ -106,11 +76,11 @@ public interface EmployeeMapper {
     }
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: EMPLOYEE")
-    default int insertSelective(Employee record) {
-        return MyBatis3Utils.insert(this::insert, record, employee, c ->
-            c.map(firstName).toPropertyWhenPresent("firstName", record::getFirstName)
-            .map(lastName).toPropertyWhenPresent("lastName", record::getLastName)
-            .map(emailAddress).toPropertyWhenPresent("emailAddress", record::getEmailAddress)
+    default int insertSelective(Employee row) {
+        return MyBatis3Utils.insert(this::insert, row, employee, c ->
+            c.map(firstName).toPropertyWhenPresent("firstName", row::getFirstName)
+            .map(lastName).toPropertyWhenPresent("lastName", row::getLastName)
+            .map(emailAddress).toPropertyWhenPresent("emailAddress", row::getEmailAddress)
         );
     }
 
@@ -135,16 +105,16 @@ public interface EmployeeMapper {
     }
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: EMPLOYEE")
-    static UpdateDSL<UpdateModel> updateAllColumns(Employee record, UpdateDSL<UpdateModel> dsl) {
-        return dsl.set(firstName).equalTo(record::getFirstName)
-                .set(lastName).equalTo(record::getLastName)
-                .set(emailAddress).equalTo(record::getEmailAddress);
+    static UpdateDSL<UpdateModel> updateAllColumns(Employee row, UpdateDSL<UpdateModel> dsl) {
+        return dsl.set(firstName).equalTo(row::getFirstName)
+                .set(lastName).equalTo(row::getLastName)
+                .set(emailAddress).equalTo(row::getEmailAddress);
     }
 
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: EMPLOYEE")
-    static UpdateDSL<UpdateModel> updateSelectiveColumns(Employee record, UpdateDSL<UpdateModel> dsl) {
-        return dsl.set(firstName).equalToWhenPresent(record::getFirstName)
-                .set(lastName).equalToWhenPresent(record::getLastName)
-                .set(emailAddress).equalToWhenPresent(record::getEmailAddress);
+    static UpdateDSL<UpdateModel> updateSelectiveColumns(Employee row, UpdateDSL<UpdateModel> dsl) {
+        return dsl.set(firstName).equalToWhenPresent(row::getFirstName)
+                .set(lastName).equalToWhenPresent(row::getLastName)
+                .set(emailAddress).equalToWhenPresent(row::getEmailAddress);
     }
 }

@@ -69,8 +69,7 @@ public class DefaultHelloNameApiDelegate implements HelloApiDelegate {
 	public ResponseEntity<IdentidadDigitalConsultaResource> getHelloByNameRemote(String name,
 			Optional<UUID> xRequestID) {
 		log.debug("processing getHelloByNameRemote");
-		return Optional
-				.ofNullable(helloService.getHelloRemoteByName(name))
+		return helloService.getHelloRemoteByName(name)
 				.map(idDomain -> ResponseEntity.ok().body(identidadDigitalDomainMapper.toResource(idDomain))) // 200 OK
 				.orElse(ResponseEntity.notFound().build()); // 404 Not found
 	}

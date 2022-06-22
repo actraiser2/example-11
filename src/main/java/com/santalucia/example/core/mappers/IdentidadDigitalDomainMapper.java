@@ -35,15 +35,15 @@ public interface IdentidadDigitalDomainMapper {
 
     /**
      * toResources
-     * @param List<IdentidadDigitalDomain> lst
-     * @return List<IdentidadDigitalConsultaResource>
+     * @param {@code List<IdentidadDigitalDomain>}
+     * @return {@code List<IdentidadDigitalConsultaResource>}
      */
 	List<IdentidadDigitalConsultaResource> toResources(List<IdentidadDigitalDomain> lst);
 
     /**
      * toDomainsfromResources
-     * @param List<IdentidadDigitalConsultaResource> lst
-     * @return List<IdentidadDigitalDomain>
+     * @param {@code List<IdentidadDigitalConsultaResource>}
+     * @return {@code List<IdentidadDigitalDomain>}
      */
 	List<IdentidadDigitalDomain> toDomainsfromResources(List<IdentidadDigitalConsultaResource> lst);
 

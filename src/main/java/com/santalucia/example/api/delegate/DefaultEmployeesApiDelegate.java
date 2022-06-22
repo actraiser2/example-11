@@ -36,9 +36,9 @@ public class DefaultEmployeesApiDelegate implements EmployeesApiDelegate {
     /**
      * recupera la lista de empleados
      *
-     * @param Optional<UUID> xRequestId
+     * @param {@code Optional<UUID>} xRequestId
      * @param Pageable pageable
-     * @return ResponseEntity<List<EmployeeResource>>
+     * @return {@code ResponseEntity<List<EmployeeResource>>}
      */
 	@Override
 	public ResponseEntity<List<EmployeeResource>> getEmployeesList(Optional<UUID> xRequestId, Pageable pageable) {

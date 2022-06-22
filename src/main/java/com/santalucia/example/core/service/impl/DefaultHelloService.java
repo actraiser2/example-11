@@ -2,7 +2,6 @@ package com.santalucia.example.core.service.impl;
 
 import java.util.Optional;
 
-import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Service;
 
 import com.santalucia.example.api.client.HelloWorldApiClient;
@@ -39,17 +38,16 @@ public class DefaultHelloService implements HelloService {
 	 * @return IdentidadDigitalDomain
 	 */
 	@Override
-	@Nullable
-	public IdentidadDigitalDomain getHelloRemoteByName(String name) {
+	public Optional<IdentidadDigitalDomain> getHelloRemoteByName(String name) {
 		//Test de ejemplo para demostrar el uso de named exception strategy
 		if ("test".equals(name)) {
 			throw new InvalidNameException();
 		}
 
 		// Ejemplo de llamada a remota
-		return Optional.ofNullable(helloWorldApiClient.getHelloByName(name, null).getBody())
+		return Optional.ofNullable(helloWorldApiClient.getHelloByName(name, Optional.empty()).getBody())
 		.map(v -> this.identidadDigitalMapper.toDomain(v))
-		.orElse(null);
+		;
 	}
 
 	/**

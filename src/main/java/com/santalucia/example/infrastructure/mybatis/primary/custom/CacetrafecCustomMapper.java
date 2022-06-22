@@ -16,7 +16,7 @@ public interface CacetrafecCustomMapper extends CacetrafecMapper{
      * recupera los indicadores paginados
      * @param Long offset
      * @param Integer limit
-     * @return List<Cacetrafec>
+     * @return {@code List<Cacetrafec>}
      */
 	@Select("select SKIP #{offset} * from cacetrafec where xcacetra = 'I' limit #{limit}")
 	public List<Cacetrafec> getIndicadoreswithPagination(@Param("offset") Long offset, @Param("limit") Integer limit);
