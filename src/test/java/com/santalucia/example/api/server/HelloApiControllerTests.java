@@ -2,6 +2,7 @@ package com.santalucia.example.api.server;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.asyncDispatch;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -10,6 +11,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import java.util.UUID;
 
 import java.util.concurrent.CompletableFuture;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -27,6 +29,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import com.santalucia.arq.ams.componentes.web.security.config.SecurityAutoConfig;
 import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
+import org.springframework.test.web.servlet.MvcResult;
 
 
 //FIXME: Resolver como evitar cargar el bean SecurityFilterChain de OAuth2WebSecurityConfiguration en ausencia de security
@@ -52,13 +55,13 @@ class HelloApiControllerTests {
     HttpHeaders responseHeaders = new HttpHeaders();
     responseHeaders.set(HttpHeaders.CONTENT_TYPE, "application/json");
     when(helloApiDelegate.getHelloByName(Mockito.anyString(), Mockito.any()))
-      .thenReturn(CompletableFuture.completedFuture(new ResponseEntity<>(response,responseHeaders, HttpStatus.OK)));
+      .thenReturn(CompletableFuture.completedFuture(new ResponseEntity<>(response, responseHeaders, HttpStatus.OK)));
 
 
-    mvc.perform(get("/hello-world/v1/hello/{name}", nombre)
+    mvc.perform(asyncDispatch(mvc.perform(get("/hello-world/v1/hello/{name}", nombre)
         .header("X-Request-ID", UUID.randomUUID().toString())
         .contentType(MediaType.APPLICATION_JSON)
-        .accept(MediaType.APPLICATION_JSON))
+        .accept(MediaType.APPLICATION_JSON)).andReturn()))
       .andExpect(status().isOk())
       .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON_VALUE))
       .andExpect(jsonPath("$.nombre", is(nombre)));
