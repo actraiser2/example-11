@@ -1,10 +1,14 @@
 package com.santalucia.example.api.delegate;
 
+import com.santalucia.example.api.server.ApiUtil;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+import java.util.concurrent.CompletableFuture;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
@@ -19,38 +23,40 @@ import lombok.extern.slf4j.Slf4j;
 @Component
 public class DefaultEmployeesApiDelegate implements EmployeesApiDelegate {
 
-	private final EmployeeService employeeService;
-	private final EmployeeDomainMapper employeeMapper;
+  private final EmployeeService employeeService;
+  private final EmployeeDomainMapper employeeMapper;
 
-    /**
-     * constructor de clase
-     *
-     * @param EmployeeService employeeService
-     * @param EmployeeDomainMapper employeeMapper
-     */
-	public DefaultEmployeesApiDelegate(EmployeeService employeeService, EmployeeDomainMapper employeeMapper) {
-		this.employeeService = employeeService;
-		this.employeeMapper = employeeMapper;
-	}
+  /**
+   * constructor de clase
+   *
+   * @param EmployeeService      employeeService
+   * @param EmployeeDomainMapper employeeMapper
+   */
+  public DefaultEmployeesApiDelegate(EmployeeService employeeService, EmployeeDomainMapper employeeMapper) {
+    this.employeeService = employeeService;
+    this.employeeMapper = employeeMapper;
+  }
 
-    /**
-     * recupera la lista de empleados
-     *
-     * @param {@code Optional<UUID>} xRequestId
-     * @param Pageable pageable
-     * @return {@code ResponseEntity<List<EmployeeResource>>}
-     */
-	@Override
-	public ResponseEntity<List<EmployeeResource>> getEmployeesList(Optional<UUID> xRequestId, Pageable pageable) {
-		log.info("Pageable pagenumber: {} ", pageable.getPageNumber());
-		log.info("Pageable pageSize: {} ", pageable.getPageSize());
-		log.info("Pageable offset: {} ", pageable.getOffset());
+  /**
+   * recupera la lista de empleados
+   *
+   * @param Optional<UUID> xRequestId
+   * @param Pageable       pageable
+   * @return ResponseEntity<List < EmployeeResource>>
+   */
+  @Override
+  public CompletableFuture<ResponseEntity<List<EmployeeResource>>> getEmployeesList(Optional<UUID> xRequestId, Pageable pageable) {
+    log.info("Pageable pagenumber: {} ", pageable.getPageNumber());
+    log.info("Pageable pageSize: {} ", pageable.getPageSize());
+    log.info("Pageable offset: {} ", pageable.getOffset());
 
-        
-		return Optional
-				.ofNullable(employeeService.getEmployees(pageable))
-				.map(employees -> ResponseEntity.ok()
-						.body(employeeMapper.toResources(employees))) // 200 OK
-				.orElse(ResponseEntity.notFound().build()); // 404 Not found
-	}
+    return CompletableFuture.supplyAsync(() ->
+        Optional
+          .of(employeeService.getEmployees(pageable))
+          .map(employees -> ResponseEntity.ok()
+          .body(employeeMapper.toResources(employees))) // 200 OK
+          .orElse(ResponseEntity.notFound().build()) // 404 Not found
+      , Runnable::run);
+
+  }
 }

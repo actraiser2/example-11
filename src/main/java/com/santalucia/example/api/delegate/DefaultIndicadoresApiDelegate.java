@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+import java.util.concurrent.CompletableFuture;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
@@ -33,21 +34,23 @@ public class DefaultIndicadoresApiDelegate implements IndicadoresApiDelegate{
 
     /**
      * listado de indicadores
+     *
      * @param Optional<UUID> xRequestID
-     * @param Pageable pageable
-     * @return ResponseEntity<List<IndicadorResource>>
+     * @param Pageable       pageable
+     * @return ResponseEntity<List < IndicadorResource>>
      */
 	@Override
-	public ResponseEntity<List<IndicadorResource>> getIndicadoresList(Optional<UUID> xRequestID, Pageable pageable) {
+	public CompletableFuture<ResponseEntity<List<IndicadorResource>>> getIndicadoresList(Optional<UUID> xRequestID, Pageable pageable) {
 
 		log.info("Pageable pagenumber: {} ", pageable.getPageNumber());
 		log.info("Pageable pageSize: {} ", pageable.getPageSize());
 		log.info("Pageable offset: {} ", pageable.getOffset());
 
-		return Optional
-			.ofNullable(this.indicadorService.getIndicadores(pageable))
-			.map(indicadores -> ResponseEntity.ok().body(this.cacetrafecMapper.indicadoresDomainToResources(indicadores)))
-			.orElse(ResponseEntity.notFound().build());
+    return CompletableFuture.supplyAsync(() -> Optional
+      .of(this.indicadorService.getIndicadores(pageable))
+      .map(indicadores -> ResponseEntity.ok().body(this.cacetrafecMapper.indicadoresDomainToResources(indicadores)))
+      .orElse(ResponseEntity.notFound().build()), Runnable::run);
+
 	}
 
 

@@ -16,9 +16,12 @@
 
 package com.santalucia.example.api.delegate;
 
+import java.util.Objects;
 import java.util.Optional;
 import java.util.UUID;
 
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
@@ -33,46 +36,60 @@ import lombok.extern.slf4j.Slf4j;
 @Component
 public class DefaultHelloNameApiDelegate implements HelloApiDelegate {
 
-	private final HelloService helloService;
-	private final IdentidadDigitalDomainMapper identidadDigitalDomainMapper;
+  private final HelloService helloService;
+  private final IdentidadDigitalDomainMapper identidadDigitalDomainMapper;
 
-    /**
-     * constructor de clase
-     *
-     * @param HelloService helloService
-     * @param IdentidadDigitalDomainMapper identidadDigitalDomainMapper
-     */
-	public DefaultHelloNameApiDelegate(HelloService helloService, IdentidadDigitalDomainMapper identidadDigitalDomainMapper) {
-		this.helloService = helloService;
-		this.identidadDigitalDomainMapper = identidadDigitalDomainMapper;
-	}
-
-
-	/**
-	 * DefaultHelloNameApiDelegate getHelloByName
-	 */
-	@Override
-	public ResponseEntity<IdentidadDigitalConsultaResource> getHelloByName(String name, Optional<UUID> xRequestID) {
-		log.debug("processing getHelloByName");
-		return Optional
-				.ofNullable(helloService.getHelloByName(name))
-				.map(idDomain -> ResponseEntity.ok().body(identidadDigitalDomainMapper.toResource(idDomain))) // 200 OK
-				.orElse(ResponseEntity.notFound().build()); // 404 Not found
-	}
+  /**
+   * constructor de clase
+   *
+   * @param HelloService                 helloService
+   * @param IdentidadDigitalDomainMapper identidadDigitalDomainMapper
+   */
+  public DefaultHelloNameApiDelegate(HelloService helloService, IdentidadDigitalDomainMapper identidadDigitalDomainMapper) {
+    this.helloService = helloService;
+    this.identidadDigitalDomainMapper = identidadDigitalDomainMapper;
+  }
 
 
+  /**
+   * DefaultHelloNameApiDelegate getHelloByName
+   */
+  @Override
+  public CompletableFuture<ResponseEntity<IdentidadDigitalConsultaResource>> getHelloByName(String name, Optional<UUID> xRequestID) {
+    log.debug("processing getHelloByName");
 
-	/**
-	 * DefaultHelloNameApiDelegate getHelloByNameRemote
-	 */
-	@Override
-	public ResponseEntity<IdentidadDigitalConsultaResource> getHelloByNameRemote(String name,
-			Optional<UUID> xRequestID) {
-		log.debug("processing getHelloByNameRemote");
-		return helloService.getHelloRemoteByName(name)
-				.map(idDomain -> ResponseEntity.ok().body(identidadDigitalDomainMapper.toResource(idDomain))) // 200 OK
-				.orElse(ResponseEntity.notFound().build()); // 404 Not found
-	}
+    return CompletableFuture.supplyAsync(() ->
+        Optional
+          .ofNullable(helloService.getHelloByName(name))
+          .map(idDomain -> ResponseEntity.ok().body(identidadDigitalDomainMapper.toResource(idDomain))) // 200 OK
+          .orElse(ResponseEntity.notFound().build()) // 404 Not found
+      , Runnable::run);
+
+  }
+
+
+  /**
+   * DefaultHelloNameApiDelegate getHelloByNameRemote
+   */
+  @Override
+  public CompletableFuture<ResponseEntity<IdentidadDigitalConsultaResource>> getHelloByNameRemote(String name,
+                                                                                                  Optional<UUID> xRequestID) {
+    log.debug("processing getHelloByNameRemote");
+    return CompletableFuture.supplyAsync(() ->
+      {
+        try {
+          return Optional
+            .of(helloService.getHelloRemoteByName(name))
+            .flatMap(optional -> optional)
+            .map(idDomain -> ResponseEntity.ok().body(identidadDigitalDomainMapper.toResource(idDomain))) // 200 OK
+            .orElse(ResponseEntity.notFound().build());
+        } catch (ExecutionException | InterruptedException e) {
+          throw new RuntimeException(e);
+        }
+      } // 404 Not found
+      , Runnable::run);
+
+  }
 
 
 }

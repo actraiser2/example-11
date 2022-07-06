@@ -3,6 +3,7 @@ package com.santalucia.example.core.service;
 import java.util.Optional;
 
 import com.santalucia.example.core.domain.IdentidadDigitalDomain;
+import java.util.concurrent.ExecutionException;
 
 public interface HelloService {
 
@@ -11,7 +12,7 @@ public interface HelloService {
      * @param String name
      * @return IdentidadDigitalDomain
      */
-	public Optional<IdentidadDigitalDomain> getHelloRemoteByName(String name);
+	public Optional<IdentidadDigitalDomain> getHelloRemoteByName(String name) throws ExecutionException, InterruptedException;
 
 	/**
 	 * getHelloByName

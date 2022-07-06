@@ -1,7 +1,11 @@
 package com.santalucia.example.core.service.impl;
 
+import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
 import java.util.Optional;
 
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.santalucia.example.api.client.HelloWorldApiClient;
@@ -38,16 +42,17 @@ public class DefaultHelloService implements HelloService {
 	 * @return IdentidadDigitalDomain
 	 */
 	@Override
-	public Optional<IdentidadDigitalDomain> getHelloRemoteByName(String name) {
+	public Optional<IdentidadDigitalDomain> getHelloRemoteByName(String name) throws ExecutionException, InterruptedException {
 		//Test de ejemplo para demostrar el uso de named exception strategy
 		if ("test".equals(name)) {
 			throw new InvalidNameException();
 		}
 
 		// Ejemplo de llamada a remota
-		return Optional.ofNullable(helloWorldApiClient.getHelloByName(name, Optional.empty()).getBody())
-		.map(v -> this.identidadDigitalMapper.toDomain(v))
-		;
+    CompletableFuture<ResponseEntity<IdentidadDigitalConsultaResource>> completableFuture = helloWorldApiClient.getHelloByName(name, Optional.empty());
+    ResponseEntity<IdentidadDigitalConsultaResource> identidadDigitalConsultaResourceResponseEntity = completableFuture.get();
+    return Optional.ofNullable(identidadDigitalConsultaResourceResponseEntity.getBody())
+      .map(v -> this.identidadDigitalMapper.toDomain(v));
 	}
 
 	/**
@@ -57,8 +62,8 @@ public class DefaultHelloService implements HelloService {
 	 */
 	@Override
 	public IdentidadDigitalDomain getHelloByName(String name) {
-		
-		
+
+
 		return IdentidadDigitalDomain.builder()
 		.nombre(name)
 		.saludo(String.format("Hello %s", name))
