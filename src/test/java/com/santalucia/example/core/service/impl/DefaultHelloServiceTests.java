@@ -21,6 +21,7 @@ import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
 import com.santalucia.example.core.domain.IdentidadDigitalDomain;
 import com.santalucia.example.core.domain.IdentidadDigitalDomain.IdentidadDigitalDomainBuilder;
 import com.santalucia.example.core.mappers.IdentidadDigitalDomainMapper;
+import org.springframework.scheduling.annotation.Async;
 
 @SpringBootTest
 class DefaultHelloServiceTests {
@@ -49,6 +50,7 @@ class DefaultHelloServiceTests {
 	}
 
 	@Test
+  @Async
 	@DisplayName("Recupera un saludo del servicio remoto")
 	void testGetHelloRemoteByname() throws ExecutionException, InterruptedException {
 
@@ -59,13 +61,13 @@ class DefaultHelloServiceTests {
 
 		//when
 		when(helloWorldApiClient.getHelloByName(Mockito.anyString(), Mockito.any()))
-			.thenReturn(CompletableFuture.supplyAsync(() -> new ResponseEntity<>(response, HttpStatus.OK), Runnable::run));
+			.thenReturn(CompletableFuture.completedFuture(new ResponseEntity<>(response, HttpStatus.OK)));
 		when(identidadDigitalMapper.toDomain(Mockito.any())).thenReturn(identidadDomain);
 
 		Optional<IdentidadDigitalDomain> greeting = helloService.getHelloRemoteByName(name);
 
 		//then
-		assertThat(greeting).map(v -> v.getNombre()).hasValue(name);
+		assertThat(greeting).map(IdentidadDigitalDomain::getNombre).hasValue(name);
 
 	}
 

@@ -7,9 +7,9 @@ import java.util.UUID;
 
 import java.util.concurrent.CompletableFuture;
 import org.springframework.data.domain.Pageable;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
+
 import org.springframework.http.ResponseEntity;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 import com.santalucia.example.api.model.EmployeeResource;
@@ -45,18 +45,18 @@ public class DefaultEmployeesApiDelegate implements EmployeesApiDelegate {
    * @return ResponseEntity<List < EmployeeResource>>
    */
   @Override
+  @Async
   public CompletableFuture<ResponseEntity<List<EmployeeResource>>> getEmployeesList(Optional<UUID> xRequestId, Pageable pageable) {
     log.info("Pageable pagenumber: {} ", pageable.getPageNumber());
     log.info("Pageable pageSize: {} ", pageable.getPageSize());
     log.info("Pageable offset: {} ", pageable.getOffset());
 
-    return CompletableFuture.supplyAsync(() ->
+    return CompletableFuture.completedFuture(
         Optional
           .of(employeeService.getEmployees(pageable))
           .map(employees -> ResponseEntity.ok()
           .body(employeeMapper.toResources(employees))) // 200 OK
-          .orElse(ResponseEntity.notFound().build()) // 404 Not found
-      , Runnable::run);
+          .orElse(ResponseEntity.notFound().build())); // 404 Not found);
 
   }
 }

@@ -22,7 +22,10 @@ import java.util.UUID;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
+
+import com.santalucia.example.core.exceptions.InvalidNameException;
 import org.springframework.http.ResponseEntity;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
@@ -54,16 +57,16 @@ public class DefaultHelloNameApiDelegate implements HelloApiDelegate {
   /**
    * DefaultHelloNameApiDelegate getHelloByName
    */
+  @Async
   @Override
   public CompletableFuture<ResponseEntity<IdentidadDigitalConsultaResource>> getHelloByName(String name, Optional<UUID> xRequestID) {
     log.debug("processing getHelloByName");
 
-    return CompletableFuture.supplyAsync(() ->
-        Optional
-          .ofNullable(helloService.getHelloByName(name))
-          .map(idDomain -> ResponseEntity.ok().body(identidadDigitalDomainMapper.toResource(idDomain))) // 200 OK
-          .orElse(ResponseEntity.notFound().build()) // 404 Not found
-      , Runnable::run);
+    return CompletableFuture.completedFuture(
+      Optional
+        .ofNullable(helloService.getHelloByName(name))
+        .map(idDomain -> ResponseEntity.ok().body(identidadDigitalDomainMapper.toResource(idDomain))) // 200 OK
+        .orElse(ResponseEntity.notFound().build()));// 404 Not found
 
   }
 
@@ -71,23 +74,21 @@ public class DefaultHelloNameApiDelegate implements HelloApiDelegate {
   /**
    * DefaultHelloNameApiDelegate getHelloByNameRemote
    */
+  @Async
   @Override
   public CompletableFuture<ResponseEntity<IdentidadDigitalConsultaResource>> getHelloByNameRemote(String name,
                                                                                                   Optional<UUID> xRequestID) {
     log.debug("processing getHelloByNameRemote");
-    return CompletableFuture.supplyAsync(() ->
-      {
-        try {
-          return Optional
-            .of(helloService.getHelloRemoteByName(name))
-            .flatMap(optional -> optional)
-            .map(idDomain -> ResponseEntity.ok().body(identidadDigitalDomainMapper.toResource(idDomain))) // 200 OK
-            .orElse(ResponseEntity.notFound().build());
-        } catch (ExecutionException | InterruptedException e) {
-          throw new RuntimeException(e);
-        }
-      } // 404 Not found
-      , Runnable::run);
+    try {
+      return CompletableFuture.completedFuture(
+        Optional
+          .of(helloService.getHelloRemoteByName(name))
+          .flatMap(optional -> optional)
+          .map(idDomain -> ResponseEntity.ok().body(identidadDigitalDomainMapper.toResource(idDomain))) // 200 OK
+          .orElse(ResponseEntity.notFound().build()));
+    } catch (ExecutionException | InterruptedException e) {
+      throw new InvalidNameException(e);
+    }
 
   }
 
