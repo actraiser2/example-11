@@ -5,6 +5,8 @@ import static org.mockito.Mockito.when;
 
 import java.util.Optional;
 
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -48,7 +50,7 @@ class DefaultHelloServiceTests {
 
 	@Test
 	@DisplayName("Recupera un saludo del servicio remoto")
-	void testGetHelloRemoteByname() {
+	void testGetHelloRemoteByname() throws ExecutionException, InterruptedException {
 
 		//given
 		final String name = "mundo";
@@ -57,13 +59,13 @@ class DefaultHelloServiceTests {
 
 		//when
 		when(helloWorldApiClient.getHelloByName(Mockito.anyString(), Mockito.any()))
-			.thenReturn(new ResponseEntity<>(response, HttpStatus.OK));
+			.thenReturn(CompletableFuture.completedFuture(new ResponseEntity<>(response, HttpStatus.OK)));
 		when(identidadDigitalMapper.toDomain(Mockito.any())).thenReturn(identidadDomain);
 
 		Optional<IdentidadDigitalDomain> greeting = helloService.getHelloRemoteByName(name);
 
 		//then
-		assertThat(greeting).map(v -> v.getNombre()).hasValue(name);
+		assertThat(greeting).map(IdentidadDigitalDomain::getNombre).hasValue(name);
 
 	}
 
