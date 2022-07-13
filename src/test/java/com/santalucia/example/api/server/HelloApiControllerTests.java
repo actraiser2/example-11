@@ -22,7 +22,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.security.test.context.support.WithAnonymousUser;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.ContextConfiguration;
@@ -30,7 +29,6 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import com.santalucia.arq.ams.componentes.web.security.config.SecurityAutoConfig;
 import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
-import org.springframework.test.web.servlet.MvcResult;
 
 
 //FIXME: Resolver como evitar cargar el bean SecurityFilterChain de OAuth2WebSecurityConfiguration en ausencia de security

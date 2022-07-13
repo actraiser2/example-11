@@ -21,7 +21,6 @@ import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
 import com.santalucia.example.core.domain.IdentidadDigitalDomain;
 import com.santalucia.example.core.domain.IdentidadDigitalDomain.IdentidadDigitalDomainBuilder;
 import com.santalucia.example.core.mappers.IdentidadDigitalDomainMapper;
-import org.springframework.scheduling.annotation.Async;
 
 @SpringBootTest
 class DefaultHelloServiceTests {
@@ -50,7 +49,6 @@ class DefaultHelloServiceTests {
 	}
 
 	@Test
-  @Async
 	@DisplayName("Recupera un saludo del servicio remoto")
 	void testGetHelloRemoteByname() throws ExecutionException, InterruptedException {
 
