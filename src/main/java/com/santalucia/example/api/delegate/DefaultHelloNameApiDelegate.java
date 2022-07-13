@@ -21,9 +21,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
 
-import com.santalucia.example.core.exceptions.InvalidNameException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
@@ -79,17 +77,12 @@ public class DefaultHelloNameApiDelegate implements HelloApiDelegate {
   public CompletableFuture<ResponseEntity<IdentidadDigitalConsultaResource>> getHelloByNameRemote(String name,
                                                                                                   Optional<UUID> xRequestID) {
     log.debug("processing getHelloByNameRemote");
-    try {
       return CompletableFuture.completedFuture(
         Optional
           .of(helloService.getHelloRemoteByName(name))
           .flatMap(optional -> optional)
           .map(idDomain -> ResponseEntity.ok().body(identidadDigitalDomainMapper.toResource(idDomain))) // 200 OK
           .orElse(ResponseEntity.notFound().build()));
-    } catch (ExecutionException | InterruptedException e) {
-      throw new InvalidNameException(e);
-    }
-
   }
 
 
