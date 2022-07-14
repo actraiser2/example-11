@@ -4,8 +4,9 @@
 <generatorConfiguration>
   <!-- **************************************************************************
   	** INFO: Para ejecutar en maven usar el comando:
-    **    - Informix: mvn -Dmybatis.generator.contexts=informix mybatis-generator:generate -Dmybatis.generator.jdbcUserId='' -Dmybatis.generator.jdbcPassword='' -Dmybatis.generator.jdbcURL=''
-    **    - Oracle:   mvn -Dmybatis.generator.contexts=oracle mybatis-generator:generate -Dmybatis.generator.jdbcUserId='' -Dmybatis.generator.jdbcPassword='' -Dmybatis.generator.jdbcURL=''
+  	** WARN: Es necesario poner comillas para escapar caracteres 
+    **    - Informix: mvn -Dmybatis.generator.contexts=informix mybatis-generator:generate -Dmybatis.generator.jdbcUserId= -Dmybatis.generator.jdbcPassword= -Dmybatis.generator.jdbcURL=''
+    **    - Oracle:   mvn -Dmybatis.generator.contexts=oracle mybatis-generator:generate -Dmybatis.generator.jdbcUserId= -Dmybatis.generator.jdbcPassword= -Dmybatis.generator.jdbcURL=''
   	** el reference se encuentra en https://mybatis.org/generator/configreference/xmlconfig.html
   	
   	************************************************************************** -->
