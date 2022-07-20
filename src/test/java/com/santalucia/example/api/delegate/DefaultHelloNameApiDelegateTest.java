@@ -20,6 +20,7 @@ import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)
+@SuppressWarnings("NullAway")
 class DefaultHelloNameApiDelegateTest {
   @Mock
   HelloService helloService;
@@ -38,13 +39,13 @@ class DefaultHelloNameApiDelegateTest {
 
 
     CompletableFuture<ResponseEntity<IdentidadDigitalConsultaResource>> completableFuture =
-      delegate.getHelloByName("Pepe", null);
+      delegate.getHelloByName("Pepe", Optional.empty());
     assertThat(completableFuture).isNotNull();
     assertThat(completableFuture.join().getStatusCodeValue()).isEqualTo(200);
     assertThat(completableFuture.join().getBody()).isEqualTo(new IdentidadDigitalConsultaResource("Pepe", "Hola"));
 
     CompletableFuture<ResponseEntity<IdentidadDigitalConsultaResource>> completableFuture2 =
-      delegate.getHelloByName(null, null);
+      delegate.getHelloByName(null, Optional.empty());
     assertThat(completableFuture2).isNotNull();
     assertThat(completableFuture2.join().getStatusCodeValue()).isEqualTo(404);
     assertThat(completableFuture2.join().getBody()).isNull();
@@ -54,6 +55,7 @@ class DefaultHelloNameApiDelegateTest {
 
   @Test
   @DisplayName("Dado un contexto de prueba, probamos respuesta de la llamada a get hello by name remote")
+  @SuppressWarnings("NullAway")
   void test_hello_by_name_remote_delegate() {
     DefaultHelloNameApiDelegate delegate = new DefaultHelloNameApiDelegate(helloService, identidadDigitalDomainMapper);
 
@@ -63,13 +65,13 @@ class DefaultHelloNameApiDelegateTest {
     when(identidadDigitalDomainMapper.toResource(any(IdentidadDigitalDomain.class))).thenReturn(new IdentidadDigitalConsultaResource("Juan", "Hola"));
 
     CompletableFuture<ResponseEntity<IdentidadDigitalConsultaResource>> completableFuture =
-      delegate.getHelloByNameRemote("Juan", null);
+      delegate.getHelloByNameRemote("Juan", Optional.empty());
     assertThat(completableFuture).isNotNull();
     assertThat(completableFuture.join().getStatusCodeValue()).isEqualTo(200);
     assertThat(completableFuture.join().getBody()).isEqualTo(new IdentidadDigitalConsultaResource("Juan", "Hola"));
 
     CompletableFuture<ResponseEntity<IdentidadDigitalConsultaResource>> completableFuture2 =
-      delegate.getHelloByNameRemote(null, null);
+      delegate.getHelloByNameRemote(null, Optional.empty());
     assertThat(completableFuture2).isNotNull();
     assertThat(completableFuture2.join().getStatusCodeValue()).isEqualTo(404);
     assertThat(completableFuture2.join().getBody()).isNull();

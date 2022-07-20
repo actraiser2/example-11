@@ -29,6 +29,7 @@ class DefaultIndicadoresApiDelegateTest {
 
   @Test
   @DisplayName("Dado un contexto de prueba, probamos respuesta de la llamada a get indicadores list")
+  @SuppressWarnings("NullAway")
   void test_indicadores_api_delegate() {
     DefaultIndicadoresApiDelegate delegate = new DefaultIndicadoresApiDelegate(indicadorService, cacetrafecMapper);
 
