@@ -45,12 +45,8 @@ public class DefaultIndicadoresApiDelegate implements IndicadoresApiDelegate {
   @Override
   public CompletableFuture<ResponseEntity<List<IndicadorResource>>> getIndicadoresList(Optional<UUID> xRequestID, Pageable pageable) {
 
-    log.info("Pageable pagenumber: {} ", pageable.getPageNumber());
-    log.info("Pageable pageSize: {} ", pageable.getPageSize());
-    log.info("Pageable offset: {} ", pageable.getOffset());
-
     return CompletableFuture.completedFuture( Optional
-      .of(this.indicadorService.getIndicadores(pageable))
+      .ofNullable(this.indicadorService.getIndicadores(pageable))
       .map(indicadores -> ResponseEntity.ok().body(this.cacetrafecMapper.indicadoresDomainToResources(indicadores)))
       .orElse(ResponseEntity.notFound().build()));
   }
