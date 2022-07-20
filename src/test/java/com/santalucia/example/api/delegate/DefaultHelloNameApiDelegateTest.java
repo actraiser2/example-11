@@ -28,17 +28,14 @@ class DefaultHelloNameApiDelegateTest {
   @Test
   @DisplayName("Dado un contexto de prueba, probamos que respuesta hello by name es  correcta")
   void getHelloByName() {
-    //given
     DefaultHelloNameApiDelegate delegate = new DefaultHelloNameApiDelegate(helloService, identidadDigitalDomainMapper);
 
-    //when
     when(helloService.getHelloByName(anyString())).thenReturn(IdentidadDigitalDomain.builder().nombre("Pepe").saludo("Hola").build());
     when(helloService.getHelloByName(isNull())).thenReturn(null);
 
     when(identidadDigitalDomainMapper.toResource(any(IdentidadDigitalDomain.class))).thenReturn(new IdentidadDigitalConsultaResource("Pepe", "Hola"));
 
 
-    //then
     CompletableFuture<ResponseEntity<IdentidadDigitalConsultaResource>> completableFuture =
       delegate.getHelloByName("Pepe", null);
     assertNotNull(completableFuture);
@@ -56,16 +53,13 @@ class DefaultHelloNameApiDelegateTest {
 
   @Test
   void getHelloByNameRemote() {
-    //given
     DefaultHelloNameApiDelegate delegate = new DefaultHelloNameApiDelegate(helloService, identidadDigitalDomainMapper);
 
-    //when
     when(helloService.getHelloRemoteByName(anyString())).thenReturn(Optional.of(IdentidadDigitalDomain.builder().nombre("Juan").saludo("Hola").build()));
     when(helloService.getHelloRemoteByName(isNull())).thenReturn(null);
 
     when(identidadDigitalDomainMapper.toResource(any(IdentidadDigitalDomain.class))).thenReturn(new IdentidadDigitalConsultaResource("Juan", "Hola"));
 
-    //then
     CompletableFuture<ResponseEntity<IdentidadDigitalConsultaResource>> completableFuture =
       delegate.getHelloByNameRemote("Juan", null);
     assertNotNull(completableFuture);

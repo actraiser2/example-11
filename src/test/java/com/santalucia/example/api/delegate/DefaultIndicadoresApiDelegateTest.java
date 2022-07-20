@@ -34,12 +34,11 @@ class DefaultIndicadoresApiDelegateTest {
   @Test
   @DisplayName("Dado un contexto de prueba, probamos que respuesta de la llamada a get indicadores list")
   void getIndicadoresList() {
-    //given
     DefaultIndicadoresApiDelegate delegate = new DefaultIndicadoresApiDelegate(indicadorService, cacetrafecMapper);
-    //when
+
     when(indicadorService.getIndicadores(any(Pageable.class))).thenReturn(ApiDelegateTestUtils.getIndicadoresList());
     when(cacetrafecMapper.indicadoresDomainToResources(anyList())).thenReturn(ApiDelegateTestUtils.getIndicadoresListResource());
-    //then
+
     CompletableFuture<ResponseEntity<List<IndicadorResource>>> completableFuture =
       delegate.getIndicadoresList(java.util.Optional.empty(), Pageable.ofSize(10));
     assertNotNull(completableFuture);
