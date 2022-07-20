@@ -20,7 +20,6 @@ import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)
-@SuppressWarnings("NullAway")
 class DefaultHelloNameApiDelegateTest {
   @Mock
   HelloService helloService;
@@ -44,12 +43,6 @@ class DefaultHelloNameApiDelegateTest {
     assertThat(completableFuture.join().getStatusCodeValue()).isEqualTo(200);
     assertThat(completableFuture.join().getBody()).isEqualTo(new IdentidadDigitalConsultaResource("Pepe", "Hola"));
 
-    CompletableFuture<ResponseEntity<IdentidadDigitalConsultaResource>> completableFuture2 =
-      delegate.getHelloByName(null, Optional.empty());
-    assertThat(completableFuture2).isNotNull();
-    assertThat(completableFuture2.join().getStatusCodeValue()).isEqualTo(404);
-    assertThat(completableFuture2.join().getBody()).isNull();
-
 
   }
 
@@ -70,10 +63,5 @@ class DefaultHelloNameApiDelegateTest {
     assertThat(completableFuture.join().getStatusCodeValue()).isEqualTo(200);
     assertThat(completableFuture.join().getBody()).isEqualTo(new IdentidadDigitalConsultaResource("Juan", "Hola"));
 
-    CompletableFuture<ResponseEntity<IdentidadDigitalConsultaResource>> completableFuture2 =
-      delegate.getHelloByNameRemote(null, Optional.empty());
-    assertThat(completableFuture2).isNotNull();
-    assertThat(completableFuture2.join().getStatusCodeValue()).isEqualTo(404);
-    assertThat(completableFuture2.join().getBody()).isNull();
   }
 }

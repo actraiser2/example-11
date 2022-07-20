@@ -29,7 +29,6 @@ class DefaultIndicadoresApiDelegateTest {
 
   @Test
   @DisplayName("Dado un contexto de prueba, probamos respuesta de la llamada a get indicadores list")
-  @SuppressWarnings("NullAway")
   void test_indicadores_api_delegate() {
     DefaultIndicadoresApiDelegate delegate = new DefaultIndicadoresApiDelegate(indicadorService, cacetrafecMapper);
 
@@ -43,11 +42,7 @@ class DefaultIndicadoresApiDelegateTest {
     assertThat(completableFuture.join().getStatusCodeValue()).isEqualTo(200);
     assertThat(completableFuture.join().getBody()).isEqualTo(ApiDelegateTestDataFactory.buildIndicadoresListResource());
 
-    CompletableFuture<ResponseEntity<List<IndicadorResource>>> completableFutureNull =
-      delegate.getIndicadoresList(java.util.Optional.empty(),null);
-    assertThat(completableFutureNull).isNotNull();
-    assertThat(completableFutureNull.join().getStatusCodeValue()).isEqualTo(404);
-    assertThat(completableFutureNull.join().getBody()).isNull();
+
 
   }
 }
