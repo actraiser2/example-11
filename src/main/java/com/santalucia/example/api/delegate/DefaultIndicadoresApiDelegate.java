@@ -50,7 +50,7 @@ public class DefaultIndicadoresApiDelegate implements IndicadoresApiDelegate {
     log.info("Pageable offset: {} ", pageable.getOffset());
 
     return CompletableFuture.completedFuture( Optional
-      .of(this.indicadorService.getIndicadores(pageable))
+      .ofNullable(this.indicadorService.getIndicadores(pageable))
       .map(indicadores -> ResponseEntity.ok().body(this.cacetrafecMapper.indicadoresDomainToResources(indicadores)))
       .orElse(ResponseEntity.notFound().build()));
   }

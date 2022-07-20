@@ -16,7 +16,6 @@
 
 package com.santalucia.example.api.delegate;
 
-import java.util.Objects;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -79,7 +78,7 @@ public class DefaultHelloNameApiDelegate implements HelloApiDelegate {
     log.debug("processing getHelloByNameRemote");
       return CompletableFuture.completedFuture(
         Optional
-          .of(helloService.getHelloRemoteByName(name))
+          .ofNullable(helloService.getHelloRemoteByName(name))
           .flatMap(optional -> optional)
           .map(idDomain -> ResponseEntity.ok().body(identidadDigitalDomainMapper.toResource(idDomain))) // 200 OK
           .orElse(ResponseEntity.notFound().build()));
