@@ -32,15 +32,15 @@ class DefaultIndicadoresApiDelegateTest {
   void test_indicadores_api_delegate() {
     DefaultIndicadoresApiDelegate delegate = new DefaultIndicadoresApiDelegate(indicadorService, cacetrafecMapper);
 
-    when(indicadorService.getIndicadores(any(Pageable.class))).thenReturn(ApiDelegateTestData.buildIndicadoresList());
+    when(indicadorService.getIndicadores(any(Pageable.class))).thenReturn(ApiDelegateTestDataFactory.buildIndicadoresList());
     when(indicadorService.getIndicadores(isNull())).thenReturn(null);
-    when(cacetrafecMapper.indicadoresDomainToResources(anyList())).thenReturn(ApiDelegateTestData.buildIndicadoresListResource());
+    when(cacetrafecMapper.indicadoresDomainToResources(anyList())).thenReturn(ApiDelegateTestDataFactory.buildIndicadoresListResource());
 
     CompletableFuture<ResponseEntity<List<IndicadorResource>>> completableFuture =
       delegate.getIndicadoresList(java.util.Optional.empty(), Pageable.ofSize(10));
     assertThat(completableFuture).isNotNull();
     assertThat(completableFuture.join().getStatusCodeValue()).isEqualTo(200);
-    assertThat(completableFuture.join().getBody()).isEqualTo(ApiDelegateTestData.buildIndicadoresListResource());
+    assertThat(completableFuture.join().getBody()).isEqualTo(ApiDelegateTestDataFactory.buildIndicadoresListResource());
 
     CompletableFuture<ResponseEntity<List<IndicadorResource>>> completableFutureNull =
       delegate.getIndicadoresList(java.util.Optional.empty(),null);

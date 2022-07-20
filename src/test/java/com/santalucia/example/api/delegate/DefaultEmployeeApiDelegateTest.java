@@ -35,14 +35,14 @@ class DefaultEmployeeApiDelegateTest {
   void test_employes_delegate() {
     DefaultEmployeesApiDelegate delegate = new DefaultEmployeesApiDelegate(employeeService, employeeMapper);
 
-    when(employeeService.getEmployees(any(Pageable.class))).thenReturn(ApiDelegateTestData.buildListEmployeeDomain());
-    when(employeeMapper.toResources(anyList())).thenReturn(ApiDelegateTestData.buildListEmployeeResource());
+    when(employeeService.getEmployees(any(Pageable.class))).thenReturn(ApiDelegateTestDataFactory.buildListEmployeeDomain());
+    when(employeeMapper.toResources(anyList())).thenReturn(ApiDelegateTestDataFactory.buildListEmployeeResource());
 
     CompletableFuture<ResponseEntity<List<EmployeeResource>>> completableFuture =
       delegate.getEmployeesList(Optional.empty(), Pageable.ofSize(10));
     assertThat(completableFuture).isNotNull();
     assertThat(completableFuture.join().getStatusCodeValue()).isEqualTo(200);
-    assertThat(completableFuture.join().getBody()).isEqualTo(ApiDelegateTestData.buildListEmployeeResource());
+    assertThat(completableFuture.join().getBody()).isEqualTo(ApiDelegateTestDataFactory.buildListEmployeeResource());
 
 
   }

@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-public class ApiDelegateTestData {
+public class ApiDelegateTestDataFactory {
 
   protected static List<EmployeeDomain> buildListEmployeeDomain() {
     return Arrays.asList(EmployeeDomain.builder().firstName("John").lastName("Doe").emailAddress("jhon@email.com").build(),
