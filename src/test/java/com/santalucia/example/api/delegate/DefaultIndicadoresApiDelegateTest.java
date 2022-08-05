@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
@@ -31,16 +32,17 @@ class DefaultIndicadoresApiDelegateTest {
   @DisplayName("Dado un contexto de prueba, probamos respuesta de la llamada a get indicadores list")
   void test_indicadores_api_delegate() {
     DefaultIndicadoresApiDelegate delegate = new DefaultIndicadoresApiDelegate(indicadorService, cacetrafecMapper);
+    List<IndicadorResource> response = ApiDelegateTestDataFactory.buildIndicadoresListResource();
 
     when(indicadorService.getIndicadores(any(Pageable.class))).thenReturn(ApiDelegateTestDataFactory.buildIndicadoresList());
     when(indicadorService.getIndicadores(isNull())).thenReturn(null);
-    when(cacetrafecMapper.indicadoresDomainToResources(anyList())).thenReturn(ApiDelegateTestDataFactory.buildIndicadoresListResource());
+    when(cacetrafecMapper.indicadoresDomainToResources(anyList())).thenReturn(response);
 
     CompletableFuture<ResponseEntity<List<IndicadorResource>>> completableFuture =
       delegate.getIndicadoresList(java.util.Optional.empty(), Pageable.ofSize(10));
     assertThat(completableFuture).isNotNull();
-    assertThat(completableFuture.join().getStatusCodeValue()).isEqualTo(200);
-    assertThat(completableFuture.join().getBody()).isEqualTo(ApiDelegateTestDataFactory.buildIndicadoresListResource());
+    assertThat(completableFuture.join().getStatusCode()).isEqualTo(HttpStatus.OK);
+    assertThat(completableFuture.join().getBody()).isEqualTo(response);
 
 
 

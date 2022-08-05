@@ -24,11 +24,12 @@ import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)
 class DefaultEmployeeApiDelegateTest {
+	
   @Mock
-  EmployeeService employeeService;
+  private EmployeeService employeeService;
+  
   @Mock
-  EmployeeDomainMapper employeeMapper;
-
+  private EmployeeDomainMapper employeeMapper;
 
   @Test
   @DisplayName("Dado un contexto de prueba,  probamos respuesta de la llamada a get employees list")
@@ -43,7 +44,6 @@ class DefaultEmployeeApiDelegateTest {
     assertThat(completableFuture).isNotNull();
     assertThat(completableFuture.join().getStatusCodeValue()).isEqualTo(200);
     assertThat(completableFuture.join().getBody()).isEqualTo(ApiDelegateTestDataFactory.buildListEmployeeResource());
-
 
   }
 }

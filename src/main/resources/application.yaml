@@ -5,7 +5,7 @@
 ############################
 server:
   port: 8080
-  forward-headers-strategy: framework
+  forward-headers-strategy: native
   ############################
   #                          #
   # undertow properties      #
@@ -79,6 +79,7 @@ springdoc:
 #                           #
 #############################
 spring:
+  mandatory-file-encoding: UTF-8
   main:
     lazy-initialization: true
     allow-bean-definition-overriding: false
@@ -156,7 +157,7 @@ spring:
       resourceserver:
         jwt: #para habilitar la validacion local del token
           # posibles valores RS256,RS512 depende del realm
-          jws-algorithm: RS256
+          jws-algorithms: RS256
           jwk-set-uri: https://sso-sldev.santalucia.es/auth/realms/3scale/protocol/openid-connect/certs
           # OpenID Connect Provider URI asserts as its Issuer Identifier
           issuer-uri: https://sso-sldev.santalucia.es/auth/realms/3scale
@@ -273,7 +274,6 @@ spring:
       - kubernetes
   banner:
     location: classpath:santalucia-banner.json
-  mandatory-file-encoding: UTF-8
   cloud:
     kubernetes:
       enabled: true
@@ -287,7 +287,6 @@ spring:
     activate:
       on-profile:
       - devops
-  mandatory-file-encoding: UTF-8
   cloud:
     kubernetes:
       enabled: false

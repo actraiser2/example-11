@@ -3,7 +3,6 @@ package com.santalucia.example.api.delegate;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
-
 import java.util.concurrent.CompletableFuture;
 
 import org.springframework.data.domain.Pageable;
@@ -16,9 +15,6 @@ import com.santalucia.example.api.server.IndicadoresApiDelegate;
 import com.santalucia.example.core.mappers.CacetrafecDomainMapper;
 import com.santalucia.example.core.service.IndicadorService;
 
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
 @Component
 public class DefaultIndicadoresApiDelegate implements IndicadoresApiDelegate {
 

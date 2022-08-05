@@ -80,6 +80,40 @@
 
 #### Chore commits
 
+ -  change null  UUID to empty optional, suppress null away alerts in test classes ([7cca088dbf3152c](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/7cca088dbf3152c9c1649b0095f133d85ae60ea7))
+ 		Fecha: 20-07-2022 13:02:34
+ -  change null  UUID to empty optional, suppress null away alerts in test classes ([e32e2499c08d152](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/e32e2499c08d15257822d0ea0627d50111b9e940))
+ 		Fecha: 20-07-2022 12:50:10
+ -  change null  UUID to empty optional, suppress null away alerts in test classes ([37216541355c18c](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/37216541355c18c476edea1cede9443065ab5a4c))
+ 		Fecha: 20-07-2022 12:32:53
+ -  change ApiDelegateTestUtils name to ApiDelegateTestDataFactory ([057663d951286b4](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/057663d951286b43e86bbff7302536337b7ab2e5))
+ 		Fecha: 20-07-2022 07:31:32
+ -  change ApiDelegateTestUtils name to ApiDelegateTestData ([2f0d890cd22cff0](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/2f0d890cd22cff0d6356db501da132d817203b81))
+ 		Fecha: 20-07-2022 07:30:38
+ -  change change ApiDelegateTestUtils name to ApiDelegateTestData ([485a5abcaa0f013](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/485a5abcaa0f0139701b1b48c10d9b2aee99280a))
+ 		Fecha: 20-07-2022 07:30:00
+ -  change junit assertions to assertj, give descrptive names to test methods, refactor ApiDelegateTestUtils methods names ([f165d22bff65084](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/f165d22bff650841fc537f5c5f2f9fce7ba9e9ee))
+ 		Fecha: 20-07-2022 07:27:39
+ -  deleted comments ([0b019c09a4348c3](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/0b019c09a4348c3fc8cbdcc38783b70d68411784))
+ 		Fecha: 20-07-2022 06:29:50
+ -  created tests for api delegate layer ([720eec130481b2a](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/720eec130481b2a17a784aba8047382d979745e5))
+ 		Fecha: 20-07-2022 06:21:49
+ -  fix gitleaks ([63bbdb12d039429](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/63bbdb12d039429df2771742478935395f821072))
+ 		Fecha: 14-07-2022 07:36:25
+ -  ASW-1456 removed try catch ([494c4ebd49da182](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/494c4ebd49da182a9ca8de31740bee18314bef32))
+ 		Fecha: 13-07-2022 07:43:17
+ -  ASW-1456 removed unused imports ([991faddeefbe4e1](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/991faddeefbe4e1083367216211a80ea2f57df5d))
+ 		Fecha: 13-07-2022 07:05:50
+ -  ASW-1456 @async annotation for asynchronous functions ([efa4b9cae173cce](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/efa4b9cae173cce892297f5c66a501ccdf0bbeb7))
+ 		Fecha: 12-07-2022 07:53:00
+ -  ASW-1456 test issue solved ([f8b2661c233b9a0](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/f8b2661c233b9a0973c4626d5f35610d28859764))
+ 		Fecha: 06-07-2022 11:57:23
+ -  ASW-1456 first changes, tests not passing ([1711c207d07f00b](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/1711c207d07f00b5be658f43bd15282bd036a437))
+ 		Fecha: 06-07-2022 09:08:35
+ -  add new param db url ([be43cf1f7200985](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/be43cf1f7200985d00c76dd307488d4890229de5))
+ 		Fecha: 22-06-2022 08:12:52
+ -  acomplish nullaway & errorProne ([5d3d50458e3912c](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/5d3d50458e3912cf4c11fc1cd4002128308fd017))
+ 		Fecha: 22-06-2022 07:41:17
  -  test ([672ecf73f6200fb](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/672ecf73f6200fbbf3d1097b858cfe2a65dd2bed))
  		Fecha: 20-06-2022 16:24:28
  -  test ([5b20917c653473c](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/5b20917c653473cee5c9a93eb54fadab6093df17))

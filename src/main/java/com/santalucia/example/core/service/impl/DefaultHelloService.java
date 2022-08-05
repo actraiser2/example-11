@@ -1,16 +1,13 @@
 package com.santalucia.example.core.service.impl;
 
-import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
-
 import java.util.Optional;
-
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.santalucia.example.api.client.HelloWorldApiClient;
+import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
 import com.santalucia.example.core.domain.IdentidadDigitalDomain;
 import com.santalucia.example.core.exceptions.InvalidNameException;
 import com.santalucia.example.core.mappers.IdentidadDigitalDomainMapper;

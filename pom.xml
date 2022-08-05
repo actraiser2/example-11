@@ -4,7 +4,6 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <!--TODO: Solo para probar indicidencia ASW1279. Restaurar a la 2.2.0-SNAPSHOT -->
     <groupId>com.santalucia.arq.ams</groupId>
     <artifactId>ams-parent-sl-sw</artifactId>
     <version>2.2.0-SNAPSHOT</version>
@@ -70,7 +69,7 @@
     <mybatis.codegen.output.dir>src/main/java</mybatis.codegen.output.dir>
     <mybatis.generator.configurationFile>src/main/resources/mybatis/mybatis-generator.xml</mybatis.generator.configurationFile>
     <git.hooks.skip>false</git.hooks.skip>
-    <archunit.skip>true</archunit.skip> <!-- FIXME: Temporal hasta que RAFA arregle la regla -->
+    <skip.it>true</skip.it>
   </properties>
 
   <dependencies>
@@ -85,7 +84,6 @@
       <artifactId>ams-componentes-feign-security</artifactId>
     </dependency>
      
-
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>ams-componentes-web-security</artifactId>
@@ -100,7 +98,6 @@
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>ams-componentes-springdoc</artifactId>
     </dependency>
-
 
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
@@ -125,14 +122,13 @@
       <optional>true</optional>
     </dependency>
 
-		<!-- IBM Informix JDBC Driver -->
+	<!-- IBM Informix JDBC Driver -->
     <dependency>
       <groupId>com.ibm.informix</groupId>
       <artifactId>jdbc</artifactId>
     </dependency>
 
-
-		<!-- Oracle JDBC Driver -->
+	<!-- Oracle JDBC Driver -->
     <dependency>
       <groupId>com.oracle.database.jdbc</groupId>
       <artifactId>ojdbc11</artifactId>
@@ -142,34 +138,26 @@
       <groupId>com.oracle.database.nls</groupId>
       <artifactId>orai18n</artifactId>
     </dependency>
+    
     <dependency>
       <groupId>com.oracle.database.jdbc</groupId>
       <artifactId>ucp</artifactId>
     </dependency>
 
-		<!-- Test Dependencies -->
+	<!-- Test Dependencies -->
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>ams-componentes-web-test</artifactId>
       <scope>test</scope>
     </dependency>
 
-		<!-- Devtools -->
+	<!-- Devtools -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-devtools</artifactId>
       <scope>runtime</scope>
       <optional>true</optional>
     </dependency>
-    
-    <!-- Clientes APIs 
-    <dependency>
-      <groupId>com.santalucia.arq.ams.odl.recibos</groupId>
-      <artifactId>recibos-odl-api-client</artifactId>
-      <version>2.0.2-RELEASE</version>
-    </dependency>
-    -->
-
     
   </dependencies>
 
