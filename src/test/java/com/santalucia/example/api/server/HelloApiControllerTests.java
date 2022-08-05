@@ -27,12 +27,13 @@ import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 
+import com.santalucia.arq.ams.componentes.tracing.config.TracerAutoConfiguration;
 import com.santalucia.arq.ams.componentes.tracing.util.XRequestIDUtils;
 import com.santalucia.arq.ams.componentes.web.config.WebAutoConfiguration;
 import com.santalucia.arq.ams.componentes.web.security.config.SecurityAutoConfig;
 import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
 
-@ContextConfiguration(classes = {HelloApiController.class, WebAutoConfiguration.class, SecurityAutoConfig.class})
+@ContextConfiguration(classes = {HelloApiController.class, WebAutoConfiguration.class, SecurityAutoConfig.class, TracerAutoConfiguration.class})
 @WebMvcTest(HelloApiController.class)
 class HelloApiControllerTests {
 
