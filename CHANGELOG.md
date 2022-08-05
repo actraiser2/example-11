@@ -80,6 +80,8 @@
 
 #### Chore commits
 
+ -  fix test ([3df131e7b575c09](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/3df131e7b575c090e6872d48d550b5b83e2b4c81))
+ 		Fecha: 05-08-2022 12:26:40
  -  update changes ([c245e8e79ced277](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/c245e8e79ced2779710ebfcf2edb3f9041ead4e2))
  		Fecha: 05-08-2022 11:31:38
  -  test commit ([b521d69f8e12e4f](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/b521d69f8e12e4fc7f9e4b998b9a546c8d456c2c))

@@ -1,4 +1,4 @@
-package com.santalucia.example.core.service.impl;
+package com.santalucia.example.core.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;

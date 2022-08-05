@@ -1,12 +1,12 @@
-package com.santalucia.example.core.service.impl;
+package com.santalucia.example.core.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
 import java.util.Optional;
-
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

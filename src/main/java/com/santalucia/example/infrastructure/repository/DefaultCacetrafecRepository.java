@@ -1,4 +1,4 @@
-package com.santalucia.example.infrastructure.repository.impl;
+package com.santalucia.example.infrastructure.repository;
 
 import static org.mybatis.dynamic.sql.SqlBuilder.isEqualTo;
 import static org.mybatis.dynamic.sql.SqlBuilder.select;
@@ -13,7 +13,6 @@ import org.springframework.stereotype.Repository;
 import com.santalucia.example.infrastructure.entity.Cacetrafec;
 import com.santalucia.example.infrastructure.mybatis.primary.CacetrafecDynamicSqlSupport;
 import com.santalucia.example.infrastructure.mybatis.primary.custom.CacetrafecCustomMapper;
-import com.santalucia.example.infrastructure.repository.CacetrafecRepository;
 
 import lombok.extern.slf4j.Slf4j;
 

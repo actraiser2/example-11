@@ -1,4 +1,4 @@
-package com.santalucia.example.core.service.impl;
+package com.santalucia.example.core.service;
 
 import java.util.List;
 
@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 import com.santalucia.arq.ams.componentes.database.properties.DatasourceProperties;
 import com.santalucia.example.core.domain.IndicadoresCentroDomain;
 import com.santalucia.example.core.mappers.CacetrafecDomainMapper;
-import com.santalucia.example.core.service.IndicadorService;
 import com.santalucia.example.infrastructure.entity.Cacetrafec;
 import com.santalucia.example.infrastructure.repository.CacetrafecRepository;
 

@@ -1,4 +1,4 @@
-package com.santalucia.example.infrastructure.repository.impl;
+package com.santalucia.example.infrastructure.repository;
 
 import static org.mybatis.dynamic.sql.SqlBuilder.select;
 
@@ -12,7 +12,6 @@ import org.springframework.stereotype.Repository;
 import com.santalucia.example.infrastructure.entity.Employee;
 import com.santalucia.example.infrastructure.mybatis.secondary.EmployeeDynamicSqlSupport;
 import com.santalucia.example.infrastructure.mybatis.secondary.EmployeeMapper;
-import com.santalucia.example.infrastructure.repository.EmployeeRepository;
 
 import lombok.extern.slf4j.Slf4j;
 

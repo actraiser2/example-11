@@ -1,4 +1,4 @@
-package com.santalucia.example.infrastructure.repository.impl;
+package com.santalucia.example.infrastructure.repository;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.argThat;
@@ -20,10 +20,10 @@ import com.santalucia.example.infrastructure.mybatis.primary.custom.CacetrafecCu
 class DefaultCacetrafecRepositoryTest {
 
   @InjectMocks
-  DefaultCacetrafecRepository defaultCacetrafecRepository;
+  private DefaultCacetrafecRepository defaultCacetrafecRepository;
 
   @Mock
-  CacetrafecCustomMapper cacetrafecCustomMapper;
+  private CacetrafecCustomMapper cacetrafecCustomMapper;
 
   @Test
   @DisplayName("Probamos que se cargan todos los indicadores cuando no se aplican filtros")

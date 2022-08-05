@@ -1,4 +1,4 @@
-package com.santalucia.example.core.service.impl;
+package com.santalucia.example.core.service;
 
 import java.util.List;
 
@@ -8,7 +8,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.santalucia.example.core.domain.EmployeeDomain;
 import com.santalucia.example.core.mappers.EmployeeDomainMapper;
-import com.santalucia.example.core.service.EmployeeService;
 import com.santalucia.example.infrastructure.entity.Employee;
 import com.santalucia.example.infrastructure.repository.EmployeeRepository;
 import com.santalucia.arq.ams.componentes.database.properties.DatasourceProperties;

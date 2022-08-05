@@ -1,4 +1,4 @@
-package com.santalucia.example.core.service.impl;
+package com.santalucia.example.core.service;
 
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
@@ -11,7 +11,6 @@ import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
 import com.santalucia.example.core.domain.IdentidadDigitalDomain;
 import com.santalucia.example.core.exceptions.InvalidNameException;
 import com.santalucia.example.core.mappers.IdentidadDigitalDomainMapper;
-import com.santalucia.example.core.service.HelloService;
 
 import lombok.extern.slf4j.Slf4j;
 
