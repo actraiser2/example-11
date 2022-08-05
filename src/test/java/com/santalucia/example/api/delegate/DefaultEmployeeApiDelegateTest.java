@@ -41,9 +41,9 @@ class DefaultEmployeeApiDelegateTest {
 
     CompletableFuture<ResponseEntity<List<EmployeeResource>>> completableFuture =
       delegate.getEmployeesList(Optional.empty(), Pageable.ofSize(10));
+    
     assertThat(completableFuture).isNotNull();
     assertThat(completableFuture.join().getStatusCodeValue()).isEqualTo(200);
     assertThat(completableFuture.join().getBody()).isEqualTo(ApiDelegateTestDataFactory.buildListEmployeeResource());
-
   }
 }

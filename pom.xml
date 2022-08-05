@@ -69,7 +69,6 @@
     <mybatis.codegen.output.dir>src/main/java</mybatis.codegen.output.dir>
     <mybatis.generator.configurationFile>src/main/resources/mybatis/mybatis-generator.xml</mybatis.generator.configurationFile>
     <git.hooks.skip>false</git.hooks.skip>
-    <skip.it>true</skip.it>
   </properties>
 
   <dependencies>

@@ -35,34 +35,35 @@ class DefaultHelloNameApiDelegateTest {
   @DisplayName("Dado un contexto de prueba, probamos respuesta de la llamada a get hello name")
   void test_hello_by_name_delegate() {
     DefaultHelloNameApiDelegate delegate = new DefaultHelloNameApiDelegate(helloService, identidadDigitalDomainMapper);
-    IdentidadDigitalConsultaResource response = new IdentidadDigitalConsultaResource("User", "Hola");
+    IdentidadDigitalConsultaResource resource = new IdentidadDigitalConsultaResource("User", "Hola");
+    IdentidadDigitalDomain domain = IdentidadDigitalDomain.builder().nombre("User").saludo("Hola").build();
     
-    when(helloService.getHelloByName(anyString())).thenReturn(IdentidadDigitalDomain.builder().nombre("User").saludo("Hola").build());
+    when(helloService.getHelloByName(anyString())).thenReturn(domain);
     when(helloService.getHelloByName(isNull())).thenReturn(null);
-    when(identidadDigitalDomainMapper.toResource(any(IdentidadDigitalDomain.class))).thenReturn(response);
+    when(identidadDigitalDomainMapper.toResource(any(IdentidadDigitalDomain.class))).thenReturn(resource);
 
 
     CompletableFuture<ResponseEntity<IdentidadDigitalConsultaResource>> completableFuture = delegate.getHelloByName("User", Optional.empty());
     assertThat(completableFuture).isNotNull();
     assertThat(completableFuture.join().getStatusCode()).isEqualTo(HttpStatus.OK);
-    assertThat(completableFuture.join().getBody()).isEqualTo(response);
+    assertThat(completableFuture.join().getBody()).isEqualTo(resource);
   }
 
   @Test
   @DisplayName("Dado un contexto de prueba, probamos respuesta de la llamada a get hello by name remote")
   void test_hello_by_name_remote_delegate() {
     DefaultHelloNameApiDelegate delegate = new DefaultHelloNameApiDelegate(helloService, identidadDigitalDomainMapper);
-    IdentidadDigitalConsultaResource response = new IdentidadDigitalConsultaResource("User", "Hola");
+    IdentidadDigitalConsultaResource resource = new IdentidadDigitalConsultaResource("User", "Hola");
+    IdentidadDigitalDomain domain = IdentidadDigitalDomain.builder().nombre("User").saludo("Hola").build();
 
-    when(helloService.getHelloRemoteByName(anyString())).thenReturn(Optional.of(IdentidadDigitalDomain.builder().nombre("User").saludo("Hola").build()));
+    when(helloService.getHelloRemoteByName(anyString())).thenReturn(Optional.of(domain));
     when(helloService.getHelloRemoteByName(isNull())).thenReturn(null);
-
-    when(identidadDigitalDomainMapper.toResource(any(IdentidadDigitalDomain.class))).thenReturn(response);
+    when(identidadDigitalDomainMapper.toResource(any(IdentidadDigitalDomain.class))).thenReturn(resource);
 
     CompletableFuture<ResponseEntity<IdentidadDigitalConsultaResource>> completableFuture = delegate.getHelloByNameRemote("User", Optional.empty());
     
     assertThat(completableFuture).isNotNull();
     assertThat(completableFuture.join().getStatusCode()).isEqualTo(HttpStatus.OK);
-    assertThat(completableFuture.join().getBody()).isEqualTo(response);
+    assertThat(completableFuture.join().getBody()).isEqualTo(resource);
   }
 }
