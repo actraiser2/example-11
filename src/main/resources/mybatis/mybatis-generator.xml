@@ -33,11 +33,6 @@
       password="${mybatis.generator.jdbcPassword}"
       />
 
-
-    <javaTypeResolver>
-      <property name="useJSR310Types" value="true" />
-    </javaTypeResolver>
-
     <!-- !!!! Configuracion del modelo !!!! -->
     <javaModelGenerator targetPackage="com.santalucia.example.infrastructure.entity" targetProject="src/main/java">
     	<!-- util para informix ya que los campos son CHAR; retirar para oracle ya que son varchar -->
