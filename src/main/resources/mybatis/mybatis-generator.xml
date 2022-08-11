@@ -14,12 +14,7 @@
   <context id="informix" targetRuntime="MyBatis3DynamicSql" >
   
     <plugin type="com.softwareloop.mybatis.generator.plugins.LombokPlugin">
-         
-         <!-- enable annotations -->
          <property name="builder" value="true"/>
-         <!--<property name="allArgsConstructor" value="false"/>-->
-         <!--<property name="noArgsConstructor" value="false"/>-->
-         <!--<property name="toString" value="false"/>-->
     </plugin>
         
     <commentGenerator>
@@ -34,16 +29,9 @@
       />
 
     <!-- !!!! Configuracion del modelo !!!! -->
-    <javaModelGenerator targetPackage="com.santalucia.example.infrastructure.entity" targetProject="src/main/java">
-    	<!-- util para informix ya que los campos son CHAR; retirar para oracle ya que son varchar -->
-    	<!-- si se quiere de forma especifica se puede habilitar a nivel de tabla, no de modelo -->
-      <property name="trimStrings" value="true" />
-    	<!-- si se quiere o no generar un subpaquete por schema
-    	<property name="enableSubPackages" value="false"/>
-    	-->
-    </javaModelGenerator>
+    <javaModelGenerator targetPackage="com.santalucia.example.infrastructure.entity" targetProject="src/main/java" />
 
-    <!-- !!!! Configuracion del modelo !!!! -->
+    <!-- !!!! Configuracion del cliente !!!! -->
     <!-- WARNING: Cambiar el package a primary o secondary dependiendo de si es informix o oracle; depende de cada app -->
     <javaClientGenerator targetPackage="com.santalucia.example.infrastructure.mybatis.primary" targetProject="src/main/java"/>
 
@@ -61,12 +49,7 @@
   <context id="oracle" targetRuntime="MyBatis3DynamicSql">
   
     <plugin type="com.softwareloop.mybatis.generator.plugins.LombokPlugin">
-         
-         <!-- enable annotations -->
          <property name="builder" value="true"/>
-         <!--<property name="allArgsConstructor" value="false"/>-->
-         <!--<property name="noArgsConstructor" value="false"/>-->
-         <!--<property name="toString" value="false"/>-->
     </plugin>
 
     <commentGenerator>
@@ -83,16 +66,9 @@
     </javaTypeResolver>
 
     <!-- !!!! Configuracion del modelo !!!! -->
-    <javaModelGenerator targetPackage="com.santalucia.example.infrastructure.entity" targetProject="src/main/java">
-    	<!-- util para informix ya que los campos son CHAR; retirar para oracle ya que son varchar -->
-    	<!-- si se quiere de forma especifica se puede habilitar a nivel de tabla, no de modelo -->
-      <property name="trimStrings" value="true" />
-    	<!-- si se quiere o no generar un subpaquete por schema
-    	<property name="enableSubPackages" value="false"/>
-    	-->
-    </javaModelGenerator>
+    <javaModelGenerator targetPackage="com.santalucia.example.infrastructure.entity" targetProject="src/main/java" />
 
-    <!-- !!!! Configuracion del modelo !!!! -->
+    <!-- !!!! Configuracion del cliente !!!! -->
     <!-- WARNING: Cambiar el package a primary o secondary dependiendo de si es informix o oracle; depende de cada app -->
     <javaClientGenerator targetPackage="com.santalucia.example.infrastructure.mybatis.secondary" targetProject="src/main/java"/>
 
