@@ -4,8 +4,13 @@ import org.springframework.context.annotation.Configuration;
 
 import lombok.extern.slf4j.Slf4j;
 
+
+/**
+ * CoreLayerConfig
+ *
+ */
 @Slf4j
-@Configuration
+@Configuration(proxyBeanMethods = false)
 public class CoreLayerConfig {
 
     /**

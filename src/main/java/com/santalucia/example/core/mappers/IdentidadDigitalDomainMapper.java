@@ -8,6 +8,11 @@ import org.mapstruct.Mapper;
 import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
 import com.santalucia.example.core.domain.IdentidadDigitalDomain;
 
+
+/**
+ * IdentidadDigitalDomainMapper
+ *
+ */
 @Mapper(injectionStrategy = InjectionStrategy.CONSTRUCTOR)
 public interface IdentidadDigitalDomainMapper {
 

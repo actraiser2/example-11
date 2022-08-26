@@ -80,6 +80,12 @@
 
 #### Chore commits
 
+ -  update h2 string ([d28400e9a9da4b4](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/d28400e9a9da4b4e0e50f129829b2a82cc7ff350))
+ 		Fecha: 22-08-2022 08:06:52
+ -  add skip.it ([7d8e237a1e06433](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/7d8e237a1e06433735fb40b12e6a5b6330b82137))
+ 		Fecha: 05-08-2022 13:21:33
+ -  fix archunit ([ff9c2860e12758f](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/ff9c2860e12758fd0abfa69e5c07dbc85f33d7a7))
+ 		Fecha: 05-08-2022 12:52:12
  -  fix test ([3df131e7b575c09](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/3df131e7b575c090e6872d48d550b5b83e2b4c81))
  		Fecha: 05-08-2022 12:26:40
  -  update changes ([c245e8e79ced277](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/c245e8e79ced2779710ebfcf2edb3f9041ead4e2))

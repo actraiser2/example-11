@@ -15,20 +15,19 @@ import com.santalucia.example.api.server.IndicadoresApiDelegate;
 import com.santalucia.example.core.mappers.CacetrafecDomainMapper;
 import com.santalucia.example.core.service.IndicadorService;
 
+import lombok.AllArgsConstructor;
+
+
+/**
+ * DefaultIndicadoresApiDelegate
+ *
+ */
 @Component
+@AllArgsConstructor
 public class DefaultIndicadoresApiDelegate implements IndicadoresApiDelegate {
 
   private final IndicadorService indicadorService;
   private final CacetrafecDomainMapper cacetrafecMapper;
-
-  /**
-   * constructor de clase
-   */
-  public DefaultIndicadoresApiDelegate(IndicadorService indicadorService, CacetrafecDomainMapper cacetrafecMapper) {
-    super();
-    this.indicadorService = indicadorService;
-    this.cacetrafecMapper = cacetrafecMapper;
-  }
 
   /**
    * listado de indicadores

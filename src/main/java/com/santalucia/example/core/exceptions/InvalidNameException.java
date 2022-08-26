@@ -5,6 +5,11 @@ import org.springframework.lang.Nullable;
 import com.santalucia.arq.ams.componentes.web.exceptions.core.SantaluciaWebRuntimeException;
 import com.santalucia.example.core.errors.AppErrorCodes;
 
+
+/**
+ * InvalidNameException
+ *
+ */
 public class InvalidNameException extends SantaluciaWebRuntimeException {
 
 	private static final long serialVersionUID = -4839425922066569485L;

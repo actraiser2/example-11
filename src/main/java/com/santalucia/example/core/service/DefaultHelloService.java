@@ -12,27 +12,15 @@ import com.santalucia.example.core.domain.IdentidadDigitalDomain;
 import com.santalucia.example.core.exceptions.InvalidNameException;
 import com.santalucia.example.core.mappers.IdentidadDigitalDomainMapper;
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.AllArgsConstructor;
+
 
 @Service
-@Slf4j
+@AllArgsConstructor
 public class DefaultHelloService implements HelloService {
 
 	private HelloWorldApiClient helloWorldApiClient;
-
 	private IdentidadDigitalDomainMapper identidadDigitalMapper;
-
-	/**
-	 * Constructor de clase
-	 * @param HelloWorldApiClient helloWorldApiClient
-	 * @param IdentidadDigitalDomainMapper identidadDigitalMapper,
-	 * @param MessageSourceAccessor messageSourceAccessor
-	 */
-	public DefaultHelloService(/**RecibosApiClient recibosApiClient,**/ HelloWorldApiClient helloWorldApiClient, IdentidadDigitalDomainMapper identidadDigitalMapper) {
-		log.info("Configured endpoint {}", helloWorldApiClient);
-		this.helloWorldApiClient = helloWorldApiClient;
-		this.identidadDigitalMapper = identidadDigitalMapper;
-	}
 
 	/**
 	 * servicio getHello
@@ -41,16 +29,19 @@ public class DefaultHelloService implements HelloService {
 	 */
 	@Override
 	public Optional<IdentidadDigitalDomain> getHelloRemoteByName(String name) {
-		//Test de ejemplo para demostrar el uso de named exception strategy
+		// Test de ejemplo para demostrar el uso de named exception strategy
 		if ("test".equals(name)) {
 			throw new InvalidNameException();
 		}
 
-    // Ejemplo de llamada a remota
-    CompletableFuture<ResponseEntity<IdentidadDigitalConsultaResource>> completableFuture = helloWorldApiClient.getHelloByName(name, Optional.empty());
-    ResponseEntity<IdentidadDigitalConsultaResource> identidadDigitalConsultaResourceResponseEntity = completableFuture.join();
-    return Optional.ofNullable(identidadDigitalConsultaResourceResponseEntity.getBody())
-      .map(v -> this.identidadDigitalMapper.toDomain(v));
+		// Ejemplo de llamada a remota
+		CompletableFuture<ResponseEntity<IdentidadDigitalConsultaResource>> completableFuture = helloWorldApiClient
+				.getHelloByName(name, Optional.empty());
+		
+		ResponseEntity<IdentidadDigitalConsultaResource> identidadDigitalConsultaResource = completableFuture.join();
+		
+		return Optional.ofNullable(identidadDigitalConsultaResource.getBody())
+				.map(v -> this.identidadDigitalMapper.toDomain(v));
 	}
 
 	/**
@@ -60,8 +51,6 @@ public class DefaultHelloService implements HelloService {
 	 */
 	@Override
 	public IdentidadDigitalDomain getHelloByName(String name) {
-
-
 		return IdentidadDigitalDomain.builder()
 		.nombre(name)
 		.saludo(String.format("Hello %s", name))

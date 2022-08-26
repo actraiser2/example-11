@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.santalucia.arq.ams</groupId>
     <artifactId>ams-parent-sl-sw</artifactId>
     <version>2.2.0-SNAPSHOT</version>
-    <relativePath/> <!-- lookup parent from repository -->
+    <relativePath />
+    <!-- lookup parent from repository -->
   </parent>
   <groupId>com.santalucia.example</groupId>
   <artifactId>example-app-11</artifactId>
@@ -17,17 +17,16 @@
 
   <url>https://git.santalucia.net/scm/amssrv/example-app-11.git</url>
 
-  <scm>
-    <url>${project.url}</url>
-    <connection>scm:git:${project.url}</connection>
-    <developerConnection>${git.santalucia.url}</developerConnection>
-    <tag>HEAD</tag>
-  </scm>
-
   <organization>
     <name>Santalucia Seguros</name>
     <url>https://www.santalucia.es/</url>
   </organization>
+  <developers>
+    <developer>
+      <name>Ignacio Lopez Visedo</name>
+      <email>ignacio.lopezv@santalucia.es</email>
+    </developer>
+  </developers>
 
   <contributors>
     <contributor>
@@ -39,37 +38,38 @@
       <email>santiago.cardine@externos.santalucia.es</email>
     </contributor>
   </contributors>
-  <developers>
-    <developer>
-      <name>Ignacio Lopez Visedo</name>
-      <email>ignacio.lopezv@santalucia.es</email>
-    </developer>
-  </developers>
+
+  <scm>
+    <connection>scm:git:${project.url}</connection>
+    <developerConnection>${git.santalucia.url}</developerConnection>
+    <tag>HEAD</tag>
+    <url>${project.url}</url>
+  </scm>
 
   <ciManagement>
+    <system>jenkins</system>
+    <url>https://jenkins-devops.app-dev.santalucia.net/</url>
     <notifiers>
       <notifier>
-        <address>ignacio.lopezv@santalucia.es</address>
         <type>mail</type>
+        <address>ignacio.lopezv@santalucia.es</address>
         <sendOnError>true</sendOnError>
         <sendOnFailure>true</sendOnFailure>
         <sendOnSuccess>false</sendOnSuccess>
         <sendOnWarning>false</sendOnWarning>
       </notifier>
     </notifiers>
-    <system>jenkins</system>
-    <url>https://jenkins-devops.app-dev.santalucia.net/</url>
   </ciManagement>
 
   <properties>
-    <swagger.codegen.inputSpec>src/main/resources/api/swagger.yaml</swagger.codegen.inputSpec>
-    <swagger.codegen.package>${project.groupId}</swagger.codegen.package>
-    <swagger.codegen.skip.server>false</swagger.codegen.skip.server>
-    <swagger.codegen.skip.client>false</swagger.codegen.skip.client>
+    <git.hooks.skip>false</git.hooks.skip>
     <mybatis.codegen.output.dir>src/main/java</mybatis.codegen.output.dir>
     <mybatis.generator.configurationFile>src/main/resources/mybatis/mybatis-generator.xml</mybatis.generator.configurationFile>
-    <git.hooks.skip>false</git.hooks.skip>
     <skip.it>true</skip.it>
+    <swagger.codegen.inputSpec>src/main/resources/api/swagger.yaml</swagger.codegen.inputSpec>
+    <swagger.codegen.package>${project.groupId}</swagger.codegen.package>
+    <swagger.codegen.skip.client>false</swagger.codegen.skip.client>
+    <swagger.codegen.skip.server>false</swagger.codegen.skip.server>
   </properties>
 
   <dependencies>
@@ -78,12 +78,12 @@
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>ams-componentes-web</artifactId>
     </dependency>
- 
+
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>ams-componentes-feign-security</artifactId>
     </dependency>
-     
+
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>ams-componentes-web-security</artifactId>
@@ -115,20 +115,20 @@
       <scope>provided</scope>
     </dependency>
 
-		<!-- Needed for custom yaml tags -->
+    <!-- Needed for custom yaml tags -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-configuration-processor</artifactId>
       <optional>true</optional>
     </dependency>
 
-	<!-- IBM Informix JDBC Driver -->
+    <!-- IBM Informix JDBC Driver -->
     <dependency>
       <groupId>com.ibm.informix</groupId>
       <artifactId>jdbc</artifactId>
     </dependency>
 
-	<!-- Oracle JDBC Driver -->
+    <!-- Oracle JDBC Driver -->
     <dependency>
       <groupId>com.oracle.database.jdbc</groupId>
       <artifactId>ojdbc11</artifactId>
@@ -138,27 +138,27 @@
       <groupId>com.oracle.database.nls</groupId>
       <artifactId>orai18n</artifactId>
     </dependency>
-    
+
     <dependency>
       <groupId>com.oracle.database.jdbc</groupId>
       <artifactId>ucp</artifactId>
     </dependency>
 
-	<!-- Test Dependencies -->
+    <!-- Test Dependencies -->
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>ams-componentes-web-test</artifactId>
       <scope>test</scope>
     </dependency>
 
-	<!-- Devtools -->
+    <!-- Devtools -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-devtools</artifactId>
       <scope>runtime</scope>
       <optional>true</optional>
     </dependency>
-    
+
   </dependencies>
 
   <build>

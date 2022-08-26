@@ -12,22 +12,15 @@ import com.santalucia.example.core.mappers.CacetrafecDomainMapper;
 import com.santalucia.example.infrastructure.entity.Cacetrafec;
 import com.santalucia.example.infrastructure.repository.CacetrafecRepository;
 
+import lombok.AllArgsConstructor;
+
 @Service
+@AllArgsConstructor
 @Transactional(value = DatasourceProperties.PRIMARY_TRANSACTION_MANAGER)
 public class DefaultIndicadorService implements IndicadorService{
 
 	private final CacetrafecRepository cacetrafecRepository;
 	private final CacetrafecDomainMapper cacetrafecMapper;
-
-    /**
-     * constructor de clase
-     * @param CacetrafecRepository cacetrafecRepository
-     * @param CacetrafecDomainMapper cacetrafecMapper
-     */
-	public DefaultIndicadorService(CacetrafecRepository cacetrafecRepository, CacetrafecDomainMapper cacetrafecMapper) {
-		this.cacetrafecRepository = cacetrafecRepository;
-		this.cacetrafecMapper = cacetrafecMapper;
-	}
 
     /**
      * recupera los indicadores paginados
@@ -39,5 +32,4 @@ public class DefaultIndicadorService implements IndicadorService{
 		List<Cacetrafec> lstEntity = cacetrafecRepository.getIndicadores(pageable);
 		return cacetrafecMapper.cacetrafecEntitiestoDomains(lstEntity);
 	}
-
 }

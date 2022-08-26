@@ -11,13 +11,13 @@ public interface HelloService {
      * @param String name
      * @return IdentidadDigitalDomain
      */
-	public Optional<IdentidadDigitalDomain> getHelloRemoteByName(String name);
+	Optional<IdentidadDigitalDomain> getHelloRemoteByName(String name);
 
 	/**
 	 * getHelloByName
 	 * @param name
 	 * @return String
 	 */
-	public IdentidadDigitalDomain getHelloByName(String name);
+	IdentidadDigitalDomain getHelloByName(String name);
 
 }

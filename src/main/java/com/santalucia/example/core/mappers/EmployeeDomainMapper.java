@@ -58,7 +58,7 @@ public interface EmployeeDomainMapper {
 	List<EmployeeDomain> toDomainsfromResources(List<EmployeeResource> lst);
 
     /**
-     * @param List<Employee>
+     * @param List<Employee> lst
      * @return List<EmployeeDomain>
      */
 	List<EmployeeDomain> toDomainsfromEntities(List<Employee> lst);

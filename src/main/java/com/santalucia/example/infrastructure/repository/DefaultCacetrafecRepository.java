@@ -14,21 +14,15 @@ import com.santalucia.example.infrastructure.entity.Cacetrafec;
 import com.santalucia.example.infrastructure.mybatis.primary.CacetrafecDynamicSqlSupport;
 import com.santalucia.example.infrastructure.mybatis.primary.custom.CacetrafecCustomMapper;
 
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Repository
+@AllArgsConstructor
 public class DefaultCacetrafecRepository implements CacetrafecRepository {
+	
 	private final CacetrafecCustomMapper cacetrafecCustomMapper;
-
-	/**
-	 * constructor de clase
-	 * @param CacetrafecMapper cacetrafecMapper
-	 * @param CacetrafecCustomMapper cacetrafecCustomMapper
-	 */
-	public DefaultCacetrafecRepository(CacetrafecCustomMapper cacetrafecCustomMapper) {
-		this.cacetrafecCustomMapper = cacetrafecCustomMapper;
-	}
 
 	/**
 	 * recupera los indicadores
@@ -48,6 +42,7 @@ public class DefaultCacetrafecRepository implements CacetrafecRepository {
 
 	/**
 	 * recupera los indicadores paginados
+	 * @param Pageable pageable
 	 * @return List<Cacetrafec>
 	 */
 	@Override

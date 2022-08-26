@@ -10,9 +10,13 @@ import com.santalucia.example.core.domain.EmployeeDomain;
 import com.santalucia.example.core.mappers.EmployeeDomainMapper;
 import com.santalucia.example.infrastructure.entity.Employee;
 import com.santalucia.example.infrastructure.repository.EmployeeRepository;
+
+import lombok.AllArgsConstructor;
+
 import com.santalucia.arq.ams.componentes.database.properties.DatasourceProperties;
 
 @Service
+@AllArgsConstructor
 @Transactional(value = DatasourceProperties.SECONDARY_TRANSACTION_MANAGER)
 public class DefaultEmployeeService implements EmployeeService {
 
@@ -20,22 +24,11 @@ public class DefaultEmployeeService implements EmployeeService {
 	private final EmployeeDomainMapper employeeMapper;
 
 	/**
-	 * Constructor de clase
-	 * @param EmployeeRepository employeeRepository
-	 * @param EmployeeDomainMapper employeeMapper
-	 */
-	public DefaultEmployeeService(EmployeeRepository employeeRepository, EmployeeDomainMapper employeeMapper) {
-		this.employeeRepository = employeeRepository;
-		this.employeeMapper = employeeMapper;
-	}
-
-	/**
 	 * recupera los empleados
 	 * @return List<EmployeeDomain>
 	 */
 	@Override
 	public List<EmployeeDomain> getEmployees() {
-
 		List<Employee> lstEntity = employeeRepository.getAllEmployees();
 		return employeeMapper.toDomainsfromEntities(lstEntity);
 	}

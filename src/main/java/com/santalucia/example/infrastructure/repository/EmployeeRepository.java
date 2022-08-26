@@ -6,23 +6,28 @@ import org.springframework.data.domain.Pageable;
 
 import com.santalucia.example.infrastructure.entity.Employee;
 
+
+/**
+ * EmployeeRepository
+ *
+ */
 public interface EmployeeRepository {
 
     /**
      * getAllEmployees
      * @return List<Employee>
      */
-	public List<Employee> getAllEmployees();
+	List<Employee> getAllEmployees();
 
     /**
      * getEmployees
      * @param Pageable pageable
      * @return List<Employee>
      */
-	public List<Employee> getEmployees(Pageable pageable);
+	List<Employee> getEmployees(Pageable pageable);
 
     /**
      * insertEmployee
      */
-	public void insertEmployee(Employee employee);
+	void insertEmployee(Employee employee);
 }

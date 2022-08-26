@@ -13,5 +13,5 @@ public interface IndicadorService {
      * @param Pageable pageable
      * @return {@code List<IndicadoresCentroDomain>}
      */
-	public List<IndicadoresCentroDomain> getIndicadores(Pageable pageable);
+	List<IndicadoresCentroDomain> getIndicadores(Pageable pageable);
 }

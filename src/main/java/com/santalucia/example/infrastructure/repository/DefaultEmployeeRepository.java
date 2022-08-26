@@ -13,21 +13,16 @@ import com.santalucia.example.infrastructure.entity.Employee;
 import com.santalucia.example.infrastructure.mybatis.secondary.EmployeeDynamicSqlSupport;
 import com.santalucia.example.infrastructure.mybatis.secondary.EmployeeMapper;
 
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-@Repository
+
 @Slf4j
+@Repository
+@AllArgsConstructor
 public class DefaultEmployeeRepository implements EmployeeRepository {
 
 	private final EmployeeMapper employeeMapper;
-
-    /**
-     * constructor de clase
-     * @param EmployeeMapper employeeMapper
-     */
-	public DefaultEmployeeRepository(EmployeeMapper employeeMapper) {
-		this.employeeMapper = employeeMapper;
-	}
 
     /**
      * recupera todos los empleados
@@ -72,7 +67,6 @@ public class DefaultEmployeeRepository implements EmployeeRepository {
 	@Override
 	public void insertEmployee(Employee employee) {
 		this.employeeMapper.insert(employee);
-
 	}
 
 }

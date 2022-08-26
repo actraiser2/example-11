@@ -12,17 +12,17 @@ public interface EmployeeService {
      * getEmployees
      * @return List<EmployeeDomain>
      */
-	public List<EmployeeDomain> getEmployees();
+	List<EmployeeDomain> getEmployees();
 
     /**
      * getEmployees
      * @return List<EmployeeDomain>
      */
-	public List<EmployeeDomain> getEmployees(Pageable pageable);
+	List<EmployeeDomain> getEmployees(Pageable pageable);
 
     /**
      * insertEmployee
      */
-	public void insertEmployee();
+	void insertEmployee();
 
 }

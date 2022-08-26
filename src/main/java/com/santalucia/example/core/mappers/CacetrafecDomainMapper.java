@@ -9,6 +9,11 @@ import com.santalucia.example.api.model.IndicadorResource;
 import com.santalucia.example.core.domain.IndicadoresCentroDomain;
 import com.santalucia.example.infrastructure.entity.Cacetrafec;
 
+
+/**
+ *  CacetrafecDomainMapper
+ *
+ */
 @Mapper(injectionStrategy = InjectionStrategy.CONSTRUCTOR)
 public interface CacetrafecDomainMapper {
 

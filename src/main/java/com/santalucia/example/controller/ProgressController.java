@@ -5,13 +5,14 @@ import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.time.LocalDate;
 import java.util.Random;
+import java.util.Set;
 
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter.DataWithMediaType;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
 import com.santalucia.arq.ams.componentes.core.properties.reload.AmsCoreProperties;
@@ -20,7 +21,6 @@ import com.santalucia.arq.ams.componentes.core.properties.reload.AmsCoreProperti
  * Controler para ServerSentEvents
  *
  */
-@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @EnableConfigurationProperties(AmsCoreProperties.class)
 public class ProgressController {
@@ -30,6 +30,7 @@ public class ProgressController {
 	
 	/**
 	 * ProgressController
+	 * @param AmsCoreProperties properties
 	 * @throws NoSuchAlgorithmException 
 	 */
     public ProgressController(AmsCoreProperties properties) throws NoSuchAlgorithmException {
@@ -44,8 +45,13 @@ public class ProgressController {
 	@GetMapping("/getData")
 	public ResponseEntity<SseEmitter> getData() throws IOException {
 		SseEmitter sseEmitter = new SseEmitter(Long.MAX_VALUE);
-		sseEmitter.send(SseEmitter.event().name("timestamp")
-				.data(LocalDate.now(properties.getDefaultZoneId()) + " Nº del 1-100: " + rand.nextInt(100)));
+		
+		Set<DataWithMediaType> event = SseEmitter.event()
+			.name("timestamp")
+			.data(LocalDate.now(properties.getDefaultZoneId()) + " Nº del 1-100: " + rand.nextInt(100))
+			.build();
+		
+		sseEmitter.send(event);
 		return new ResponseEntity<>(sseEmitter, HttpStatus.OK);
 	}
 
