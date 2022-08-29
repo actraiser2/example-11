@@ -3,7 +3,6 @@ package com.santalucia.example.core.mappers;
 import java.util.List;
 
 import org.mapstruct.InheritInverseConfiguration;
-import org.mapstruct.InjectionStrategy;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
@@ -11,7 +10,12 @@ import com.santalucia.example.api.model.EmployeeResource;
 import com.santalucia.example.core.domain.EmployeeDomain;
 import com.santalucia.example.infrastructure.entity.Employee;
 
-@Mapper(injectionStrategy = InjectionStrategy.CONSTRUCTOR)
+
+/**
+ * EmployeeDomainMapper
+ *
+ */
+@Mapper
 public interface EmployeeDomainMapper {
 
     /**
@@ -68,6 +72,5 @@ public interface EmployeeDomainMapper {
      * @return List<Employee>
      */
 	List<Employee> toEntitys(List<EmployeeDomain> lst);
-
 
 }

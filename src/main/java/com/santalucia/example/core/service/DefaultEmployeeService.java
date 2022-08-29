@@ -15,6 +15,11 @@ import lombok.AllArgsConstructor;
 
 import com.santalucia.arq.ams.componentes.database.properties.DatasourceProperties;
 
+
+/**
+ * DefaultEmployeeService
+ *
+ */
 @Service
 @AllArgsConstructor
 @Transactional(value = DatasourceProperties.SECONDARY_TRANSACTION_MANAGER)

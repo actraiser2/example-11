@@ -4,6 +4,11 @@ import java.util.Optional;
 
 import com.santalucia.example.core.domain.IdentidadDigitalDomain;
 
+
+/**
+ * HelloService
+ *
+ */
 public interface HelloService {
 
     /**

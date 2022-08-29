@@ -9,6 +9,11 @@ import org.apache.ibatis.annotations.Select;
 import com.santalucia.example.infrastructure.entity.Cacetrafec;
 import com.santalucia.example.infrastructure.mybatis.primary.CacetrafecMapper;
 
+
+/**
+ * CacetrafecCustomMapper
+ *
+ */
 @Mapper
 public interface CacetrafecCustomMapper extends CacetrafecMapper{
 

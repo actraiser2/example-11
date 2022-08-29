@@ -14,6 +14,10 @@ import com.santalucia.example.infrastructure.repository.CacetrafecRepository;
 
 import lombok.AllArgsConstructor;
 
+/**
+ * DefaultIndicadorService
+ *
+ */
 @Service
 @AllArgsConstructor
 @Transactional(value = DatasourceProperties.PRIMARY_TRANSACTION_MANAGER)

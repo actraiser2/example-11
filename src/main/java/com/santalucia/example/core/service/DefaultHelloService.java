@@ -15,6 +15,10 @@ import com.santalucia.example.core.mappers.IdentidadDigitalDomainMapper;
 import lombok.AllArgsConstructor;
 
 
+/**
+ * DefaultHelloService
+ *
+ */
 @Service
 @AllArgsConstructor
 public class DefaultHelloService implements HelloService {

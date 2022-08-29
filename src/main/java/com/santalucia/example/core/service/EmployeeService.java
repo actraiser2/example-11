@@ -6,6 +6,11 @@ import org.springframework.data.domain.Pageable;
 
 import com.santalucia.example.core.domain.EmployeeDomain;
 
+
+/**
+ * EmployeeService
+ *
+ */
 public interface EmployeeService {
 
     /**

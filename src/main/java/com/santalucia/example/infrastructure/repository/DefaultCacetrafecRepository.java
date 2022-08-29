@@ -17,6 +17,11 @@ import com.santalucia.example.infrastructure.mybatis.primary.custom.CacetrafecCu
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+
+/**
+ * DefaultCacetrafecRepository
+ *
+ */
 @Slf4j
 @Repository
 @AllArgsConstructor

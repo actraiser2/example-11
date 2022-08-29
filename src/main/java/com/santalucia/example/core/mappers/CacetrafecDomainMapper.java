@@ -2,7 +2,6 @@ package com.santalucia.example.core.mappers;
 
 import java.util.List;
 
-import org.mapstruct.InjectionStrategy;
 import org.mapstruct.Mapper;
 
 import com.santalucia.example.api.model.IndicadorResource;
@@ -14,7 +13,7 @@ import com.santalucia.example.infrastructure.entity.Cacetrafec;
  *  CacetrafecDomainMapper
  *
  */
-@Mapper(injectionStrategy = InjectionStrategy.CONSTRUCTOR)
+@Mapper
 public interface CacetrafecDomainMapper {
 
 	/***************/
