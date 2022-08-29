@@ -28,6 +28,7 @@ public interface EmployeeRepository {
 
     /**
      * insertEmployee
+     * @param Employee employee
      */
 	void insertEmployee(Employee employee);
 }

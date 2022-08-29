@@ -17,6 +17,10 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 
+/**
+ * DefaultEmployeeRepository
+ *
+ */
 @Slf4j
 @Repository
 @AllArgsConstructor
@@ -63,6 +67,7 @@ public class DefaultEmployeeRepository implements EmployeeRepository {
 
     /**
      * insterta un empleado
+     * @param Employee employee
      */
 	@Override
 	public void insertEmployee(Employee employee) {
