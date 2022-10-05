@@ -80,6 +80,12 @@
 
 #### Chore commits
 
+ -  fix kiuwan defects ([cf56166b9e8d7d6](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/cf56166b9e8d7d6cb7e7055f66aae633bbd43d6d))
+ 		Fecha: 29-08-2022 10:15:09
+ -  fix kiuwan ([7f4b664be7762c8](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/7f4b664be7762c8c70ca3193e55958f9b26890cb))
+ 		Fecha: 29-08-2022 07:59:00
+ -  fix kiuwan rules ([cf0f3b21aaf9382](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/cf0f3b21aaf93824a8f38219f2fde787f5254aa0))
+ 		Fecha: 26-08-2022 12:30:12
  -  update h2 string ([d28400e9a9da4b4](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/d28400e9a9da4b4e0e50f129829b2a82cc7ff350))
  		Fecha: 22-08-2022 08:06:52
  -  add skip.it ([7d8e237a1e06433](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/7d8e237a1e06433735fb40b12e6a5b6330b82137))
