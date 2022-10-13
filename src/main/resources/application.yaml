@@ -168,6 +168,7 @@ spring:
 #                         #
 ###########################
 santalucia:
+  default-zone-id: ${TZ:Europe/Madrid}
   ams:
     features:
       micrometer:

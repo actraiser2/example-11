@@ -6,8 +6,8 @@ import com.santalucia.example.core.domain.EmployeeDomain;
 import com.santalucia.example.core.domain.IndicadoresCentroDomain;
 
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 
 public class ApiDelegateTestDataFactory {
@@ -25,14 +25,14 @@ public class ApiDelegateTestDataFactory {
   }
 
   public static List<IndicadoresCentroDomain> buildIndicadoresList() {
-    return Arrays.asList(IndicadoresCentroDomain.builder().ccentrab((short) 1).xcacetra("CACETRA").finvaldt(new Date()).ffivaldt(new Date()).fregilog(new Date()).build(),
-      IndicadoresCentroDomain.builder().ccentrab((short) 2).xcacetra("CACETRA").finvaldt(new Date()).ffivaldt(new Date()).fregilog(new Date()).build(),
-      IndicadoresCentroDomain.builder().ccentrab((short) 3).xcacetra("CACETRA").finvaldt(new Date()).ffivaldt(new Date()).fregilog(new Date()).build());
+    return Arrays.asList(IndicadoresCentroDomain.builder().ccentrab((short) 1).xcacetra("CACETRA").finvaldt(LocalDate.now(ZoneId.systemDefault())).ffivaldt(LocalDate.now(ZoneId.systemDefault())).fregilog(LocalDate.now(ZoneId.systemDefault())).build(),
+      IndicadoresCentroDomain.builder().ccentrab((short) 2).xcacetra("CACETRA").finvaldt(LocalDate.now(ZoneId.systemDefault())).ffivaldt(LocalDate.now(ZoneId.systemDefault())).fregilog(LocalDate.now(ZoneId.systemDefault())).build(),
+      IndicadoresCentroDomain.builder().ccentrab((short) 3).xcacetra("CACETRA").finvaldt(LocalDate.now(ZoneId.systemDefault())).ffivaldt(LocalDate.now(ZoneId.systemDefault())).fregilog(LocalDate.now(ZoneId.systemDefault())).build());
   }
 
   public static List<IndicadorResource> buildIndicadoresListResource() {
-    return Arrays.asList(new IndicadorResource(1, "CACETRA", LocalDate.now(), LocalDate.now(), LocalDate.now()),
-      new IndicadorResource(2, "CACETRA", LocalDate.now(), LocalDate.now(), LocalDate.now()),
-      new IndicadorResource(3, "CACETRA", LocalDate.now(), LocalDate.now(), LocalDate.now()));
+    return Arrays.asList(new IndicadorResource(1, "CACETRA", LocalDate.now(ZoneId.systemDefault()), LocalDate.now(ZoneId.systemDefault()), LocalDate.now(ZoneId.systemDefault())),
+      new IndicadorResource(2, "CACETRA", LocalDate.now(ZoneId.systemDefault()), LocalDate.now(ZoneId.systemDefault()), LocalDate.now(ZoneId.systemDefault())),
+      new IndicadorResource(3, "CACETRA", LocalDate.now(ZoneId.systemDefault()), LocalDate.now(ZoneId.systemDefault()), LocalDate.now(ZoneId.systemDefault())));
   }
 }

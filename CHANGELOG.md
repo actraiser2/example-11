@@ -80,6 +80,8 @@
 
 #### Chore commits
 
+ -  fix pom.xml ([29e82f86f7b8c77](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/29e82f86f7b8c7783bb21a6bc089b8b4eaf228eb))
+ 		Fecha: 05-10-2022 17:06:51
  -  fix kiuwan defects ([cf56166b9e8d7d6](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/cf56166b9e8d7d6cb7e7055f66aae633bbd43d6d))
  		Fecha: 29-08-2022 10:15:09
  -  fix kiuwan ([7f4b664be7762c8](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/7f4b664be7762c8c70ca3193e55958f9b26890cb))
