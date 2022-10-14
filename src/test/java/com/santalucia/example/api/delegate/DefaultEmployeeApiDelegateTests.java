@@ -23,11 +23,11 @@ import static org.mockito.ArgumentMatchers.anyList;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)
-class DefaultEmployeeApiDelegateTest {
-	
+class DefaultEmployeeApiDelegateTests {
+
   @Mock
   private EmployeeService employeeService;
-  
+
   @Mock
   private EmployeeDomainMapper employeeMapper;
 
@@ -41,7 +41,7 @@ class DefaultEmployeeApiDelegateTest {
 
     CompletableFuture<ResponseEntity<List<EmployeeResource>>> completableFuture =
       delegate.getEmployeesList(Optional.empty(), Pageable.ofSize(10));
-    
+
     assertThat(completableFuture).isNotNull();
     assertThat(completableFuture.join().getStatusCodeValue()).isEqualTo(200);
     assertThat(completableFuture.join().getBody()).isEqualTo(ApiDelegateTestDataFactory.buildListEmployeeResource());

@@ -18,7 +18,7 @@ import com.santalucia.example.infrastructure.entity.Employee;
 import com.santalucia.example.infrastructure.mybatis.secondary.EmployeeMapper;
 
 @ExtendWith(SpringExtension.class)
-class DefaultEmployeeRepositoryTest {
+class DefaultEmployeeRepositoryTests {
 
   @InjectMocks
   private DefaultEmployeeRepository repository;

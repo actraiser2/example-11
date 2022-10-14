@@ -24,7 +24,7 @@ import com.santalucia.example.core.mappers.CacetrafecDomainMapper;
 import com.santalucia.example.core.service.IndicadorService;
 
 @ExtendWith(SpringExtension.class)
-class DefaultIndicadoresApiDelegateTest {
+class DefaultIndicadoresApiDelegateTests {
 
   @Mock
   IndicadorService indicadorService;
@@ -44,7 +44,7 @@ class DefaultIndicadoresApiDelegateTest {
 
     CompletableFuture<ResponseEntity<List<IndicadorResource>>> completableFuture =
       delegate.getIndicadoresList(Optional.empty(), Pageable.ofSize(10));
-    
+
     assertThat(completableFuture).isNotNull();
     assertThat(completableFuture.join().getStatusCode()).isEqualTo(HttpStatus.OK);
     assertThat(completableFuture.join().getBody()).isEqualTo(resources);

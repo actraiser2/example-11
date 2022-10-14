@@ -23,11 +23,11 @@ import com.santalucia.example.core.mappers.IdentidadDigitalDomainMapper;
 import com.santalucia.example.core.service.HelloService;
 
 @ExtendWith(SpringExtension.class)
-class DefaultHelloNameApiDelegateTest {
-	
+class DefaultHelloNameApiDelegateTests {
+
   @Mock
   private HelloService helloService;
-  
+
   @Mock
   private IdentidadDigitalDomainMapper identidadDigitalDomainMapper;
 
@@ -37,7 +37,7 @@ class DefaultHelloNameApiDelegateTest {
     DefaultHelloNameApiDelegate delegate = new DefaultHelloNameApiDelegate(helloService, identidadDigitalDomainMapper);
     IdentidadDigitalConsultaResource resource = new IdentidadDigitalConsultaResource("User", "Hola");
     IdentidadDigitalDomain domain = IdentidadDigitalDomain.builder().nombre("User").saludo("Hola").build();
-    
+
     when(helloService.getHelloByName(anyString())).thenReturn(domain);
     when(helloService.getHelloByName(isNull())).thenReturn(null);
     when(identidadDigitalDomainMapper.toResource(any(IdentidadDigitalDomain.class))).thenReturn(resource);
@@ -61,7 +61,7 @@ class DefaultHelloNameApiDelegateTest {
     when(identidadDigitalDomainMapper.toResource(any(IdentidadDigitalDomain.class))).thenReturn(resource);
 
     CompletableFuture<ResponseEntity<IdentidadDigitalConsultaResource>> completableFuture = delegate.getHelloByNameRemote("User", Optional.empty());
-    
+
     assertThat(completableFuture).isNotNull();
     assertThat(completableFuture.join().getStatusCode()).isEqualTo(HttpStatus.OK);
     assertThat(completableFuture.join().getBody()).isEqualTo(resource);
