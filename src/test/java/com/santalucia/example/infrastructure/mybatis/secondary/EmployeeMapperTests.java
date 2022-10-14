@@ -20,7 +20,7 @@ import com.santalucia.example.infrastructure.entity.Employee;
 @MybatisTest
 @SqlMergeMode(MergeMode.MERGE)
 @Sql(scripts = { "/sql/schemas/employees-schema.sql" })
-class EmployeesDaoMappersTests {
+class EmployeeMapperTests {
 
 	@Autowired
 	private EmployeeMapper employeesDaoMappers;

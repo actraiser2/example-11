@@ -17,7 +17,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import com.santalucia.example.infrastructure.mybatis.primary.custom.CacetrafecCustomMapper;
 
 @ExtendWith(SpringExtension.class)
-class DefaultCacetrafecRepositoryTest {
+class DefaultCacetrafecRepositoryTests {
 
   @InjectMocks
   private DefaultCacetrafecRepository defaultCacetrafecRepository;
