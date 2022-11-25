@@ -1,35 +1,35 @@
 package com.santalucia.example.core.service;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.when;
-
-import java.util.Optional;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
-
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-
 import com.santalucia.example.api.client.HelloWorldApiClient;
 import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
 import com.santalucia.example.core.domain.IdentidadDigitalDomain;
 import com.santalucia.example.core.domain.IdentidadDigitalDomain.IdentidadDigitalDomainBuilder;
 import com.santalucia.example.core.mappers.IdentidadDigitalDomainMapper;
 
-@SpringBootTest
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+
+import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.when;
+
+@ExtendWith(SpringExtension.class)
 class DefaultHelloServiceTests {
 
 	@Mock
-	HelloWorldApiClient helloWorldApiClient;
+	private HelloWorldApiClient helloWorldApiClient;
 
 	@Mock
-	IdentidadDigitalDomainMapper identidadDigitalMapper;
+	private IdentidadDigitalDomainMapper identidadDigitalMapper;
 
 	@InjectMocks
 	private DefaultHelloService helloService;
@@ -50,7 +50,7 @@ class DefaultHelloServiceTests {
 
 	@Test
 	@DisplayName("Recupera un saludo del servicio remoto")
-	void testGetHelloRemoteByname() throws ExecutionException, InterruptedException {
+	void testGetHelloRemoteByname() {
 
 		//given
 		final String name = "mundo";
