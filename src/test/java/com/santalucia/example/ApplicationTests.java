@@ -1,17 +1,20 @@
 package com.santalucia.example;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.web.context.WebApplicationContext;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 
+@SpringBootTest
 class ApplicationTests {
 
 	@Test
 	@DisplayName("Prueba integrada de carga de contexto")
-	void contextLoads() {
-    Assertions.assertThatCode(()  -> Application.main(new String[] {}))
-      .doesNotThrowAnyException();
+	void contextLoads(WebApplicationContext context) {
+    assertThat(context).isNotNull();
 	}
 
 }
