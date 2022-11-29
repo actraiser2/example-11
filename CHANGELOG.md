@@ -80,6 +80,10 @@
 
 #### Chore commits
 
+ -  fix upgrade arquetype ([53a5ce82a719f27](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/53a5ce82a719f2793be6b0f19878fb7d2a09c888))
+ 		Fecha: 25-11-2022 08:50:18
+ -  fix arquetype ([b9ccf38255b7f4f](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/b9ccf38255b7f4fef0b917664fdc4e48a175bab9))
+ 		Fecha: 14-10-2022 13:57:56
  -  fix error-prone date ([3f938cda5f354db](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/3f938cda5f354db1cab518901b85ff9c56aab69d))
  		Fecha: 13-10-2022 10:26:46
  -  fix pom.xml ([29e82f86f7b8c77](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/29e82f86f7b8c7783bb21a6bc089b8b4eaf228eb))
