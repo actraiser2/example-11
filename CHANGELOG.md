@@ -80,6 +80,10 @@
 
 #### Chore commits
 
+ -  Auto stash before merge of "develop" and "origin/develop" ([292d2a287612f2f](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/292d2a287612f2f8e54a063e99d3f710ce7d415b))
+ 		Fecha: 30-11-2022 08:06:31
+ -  add assertThat contextLoads ([b0e114aa8fdc594](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/b0e114aa8fdc59467fd0b3c9377d8b42c6a2da52))
+ 		Fecha: 29-11-2022 13:49:49
  -  fix upgrade arquetype ([53a5ce82a719f27](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/53a5ce82a719f2793be6b0f19878fb7d2a09c888))
  		Fecha: 25-11-2022 08:50:18
  -  fix arquetype ([b9ccf38255b7f4f](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/b9ccf38255b7f4fef0b917664fdc4e48a175bab9))

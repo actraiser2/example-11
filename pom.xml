@@ -61,7 +61,8 @@
   </ciManagement>
 
   <properties>
-<!--    <ams.version>2.2.0-SNAPSHOT</ams.version> -->
+    <ams.version>2.2.0-SNAPSHOT</ams.version>
+    <!-- NACHO: Debido a pruebas -->
     <git.hooks.skip>false</git.hooks.skip>
     <mybatis.codegen.output.dir>src/main/java</mybatis.codegen.output.dir>
     <mybatis.generator.configurationFile>src/main/resources/mybatis/mybatis-generator.xml</mybatis.generator.configurationFile>
