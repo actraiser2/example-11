@@ -33,10 +33,6 @@ server:
       # undertow.threads.io * 8
       # !!! reviar por entorno !!!
       worker: 32
-    max-cookies: 20
-    max-headers: 20
-    max-parameters: 50
-    max-http-post-size: 64MB
   error:
     # Include the "exception" attribute. default false
     include-exception: true
@@ -177,6 +173,8 @@ santalucia:
             enabled: false
           process-thread-metrics:
             enabled: false
+        hikari:
+          enabled: true
       guardium:
         enabled: true
       feign:
@@ -261,8 +259,8 @@ info:
     name: ${spring.application.name}
     encoding: UTF-8
     java:
-      source: 11
-      target: 11
+      source: 17
+      target: 17
 ---
 #Profile habilitado de forma automatica cuando se despliega en OCP
 spring:

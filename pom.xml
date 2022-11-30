@@ -6,7 +6,7 @@
     <artifactId>ams-parent-sl-sw</artifactId>
     <version>2.2.0-SNAPSHOT</version>
     <relativePath />
-    <!-- lookup parent from repository -->
+
   </parent>
   <groupId>com.santalucia.example</groupId>
   <artifactId>example-app-11</artifactId>
@@ -61,6 +61,7 @@
   </ciManagement>
 
   <properties>
+<!--    <ams.version>2.2.0-SNAPSHOT</ams.version> -->
     <git.hooks.skip>false</git.hooks.skip>
     <mybatis.codegen.output.dir>src/main/java</mybatis.codegen.output.dir>
     <mybatis.generator.configurationFile>src/main/resources/mybatis/mybatis-generator.xml</mybatis.generator.configurationFile>
@@ -81,6 +82,11 @@
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>ams-componentes-feign-security</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.santalucia.arq.ams</groupId>
+      <artifactId>ams-componentes-feign</artifactId>
     </dependency>
 
     <dependency>
@@ -106,6 +112,11 @@
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>ams-componentes-database</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.santalucia.arq.ams</groupId>
+      <artifactId>ams-componentes-retry</artifactId>
     </dependency>
 
     <dependency>
