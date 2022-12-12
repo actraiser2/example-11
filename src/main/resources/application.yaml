@@ -230,13 +230,13 @@ logging:
     root: INFO
     "[com.santalucia]": DEBUG
     "[org.springframework]": INFO
-    #Paquete que indica cuando SB esta disponible
-    "[org.springframework.boot.availability]": DEBUG
-    #org.springframework.web.servlet: DEBUG
-    #org.springframework.security: DEBUG
-    #org.springframework.web.client: DEBUG
+    #"[org.springframework.web.servlet]": DEBUG
+    #"[org.springframework.security]": DEBUG
+    #"[org.springframework.web.client]": DEBUG
     #trazas para mostrar los errores de login debido a que salen en modo debug
     "[org.springframework.security.oauth2.server.resource]": DEBUG
+    #Paquete que indica cuando SB esta disponible
+    "[org.springframework.boot.availability]": DEBUG
 
 ###########################
 #                         #
