@@ -24,14 +24,14 @@ import com.santalucia.arq.ams.componentes.core.properties.reload.AmsCoreProperti
 @RestController
 @EnableConfigurationProperties(AmsCoreProperties.class)
 public class ProgressController {
-	
+
 	private Random rand;
 	private AmsCoreProperties properties;
-	
+
 	/**
 	 * ProgressController
 	 * @param AmsCoreProperties properties
-	 * @throws NoSuchAlgorithmException 
+	 * @throws NoSuchAlgorithmException
 	 */
     public ProgressController(AmsCoreProperties properties) throws NoSuchAlgorithmException {
     	this.rand = SecureRandom.getInstanceStrong();  // SecureRandom is preferred to Random
@@ -45,12 +45,12 @@ public class ProgressController {
 	@GetMapping("/getData")
 	public ResponseEntity<SseEmitter> getData() throws IOException {
 		SseEmitter sseEmitter = new SseEmitter(Long.MAX_VALUE);
-		
+
 		Set<DataWithMediaType> event = SseEmitter.event()
 			.name("timestamp")
-			.data(LocalDate.now(properties.getDefaultZoneId()) + " Nº del 1-100: " + rand.nextInt(100))
+			.data(LocalDate.now(properties.defaultZoneId()) + " Nº del 1-100: " + rand.nextInt(100))
 			.build();
-		
+
 		sseEmitter.send(event);
 		return new ResponseEntity<>(sseEmitter, HttpStatus.OK);
 	}
