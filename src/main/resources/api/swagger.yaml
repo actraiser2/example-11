@@ -4,7 +4,7 @@ info:
   description: Hello World API
   contact:
     name: Arquitectura Software
-    url: none
+    url: https://apis.santalucia.es/hello-world/1.0
     email: ignacio.lopezv@santalucia.es
   version: "1.0"
   x-dominio: Gadgets
