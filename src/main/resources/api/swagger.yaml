@@ -244,4 +244,3 @@ components:
         clientCredentials:
           tokenUrl: https://sso-sldev.santalucia.es/auth/realms/stl-int/protocol/openid-connect/token
           scopes: {}
-
