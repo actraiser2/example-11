@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.santalucia.arq.ams</groupId>
     <artifactId>ams-parent-sl-sw</artifactId>
     <version>2.2.0-RELEASE</version>
-    <relativePath />
-
+    <relativePath></relativePath>
   </parent>
   <groupId>com.santalucia.example</groupId>
   <artifactId>example-app-11</artifactId>
   <version>2.4.1-SNAPSHOT</version>
   <name>example-app-11</name>
   <description>Demo project for Spring Boot</description>
-
-  <url>https://git.santalucia.net/scm/amssrv/example-app-11.git</url>
-
+  <url>https://git.santalucia.net:443/scm/SLARQSOFAMSBACK/example-app-11.git</url>
   <organization>
     <name>Santalucia Seguros</name>
     <url>https://www.santalucia.es/</url>
@@ -26,7 +23,6 @@
       <email>ignacio.lopezv@santalucia.es</email>
     </developer>
   </developers>
-
   <contributors>
     <contributor>
       <name>Rafael Salinas Lopez</name>
@@ -37,14 +33,6 @@
       <email>santiago.cardine@externos.santalucia.es</email>
     </contributor>
   </contributors>
-
-  <scm>
-    <connection>scm:git:${project.url}</connection>
-    <developerConnection>${git.santalucia.url}</developerConnection>
-    <tag>HEAD</tag>
-    <url>${project.url}</url>
-  </scm>
-
   <ciManagement>
     <system>jenkins</system>
     <url>https://jenkins-devops.app-dev.santalucia.net/</url>
@@ -59,7 +47,6 @@
       </notifier>
     </notifiers>
   </ciManagement>
-
   <properties>
     <git.hooks.skip>false</git.hooks.skip>
     <mybatis.codegen.output.dir>src/main/java</mybatis.codegen.output.dir>
@@ -70,106 +57,81 @@
     <swagger.codegen.skip.client>false</swagger.codegen.skip.client>
     <swagger.codegen.skip.server>false</swagger.codegen.skip.server>
   </properties>
-
   <dependencies>
-
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>ams-componentes-web</artifactId>
     </dependency>
-
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>ams-componentes-feign-security</artifactId>
     </dependency>
-
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>ams-componentes-feign</artifactId>
     </dependency>
-
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>ams-componentes-web-security</artifactId>
     </dependency>
-
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>ams-starter-observability</artifactId>
     </dependency>
-
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>ams-componentes-springdoc</artifactId>
     </dependency>
-
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>ams-componentes-exceptions</artifactId>
     </dependency>
-
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>ams-componentes-database</artifactId>
     </dependency>
-
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>ams-componentes-retry</artifactId>
     </dependency>
-
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <scope>provided</scope>
     </dependency>
-
-    <!-- Needed for custom yaml tags -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-configuration-processor</artifactId>
       <optional>true</optional>
     </dependency>
-
-    <!-- IBM Informix JDBC Driver -->
     <dependency>
       <groupId>com.ibm.informix</groupId>
       <artifactId>jdbc</artifactId>
     </dependency>
-
-    <!-- Oracle JDBC Driver -->
     <dependency>
       <groupId>com.oracle.database.jdbc</groupId>
       <artifactId>ojdbc11</artifactId>
     </dependency>
-
     <dependency>
       <groupId>com.oracle.database.nls</groupId>
       <artifactId>orai18n</artifactId>
     </dependency>
-
     <dependency>
       <groupId>com.oracle.database.jdbc</groupId>
       <artifactId>ucp</artifactId>
     </dependency>
-
-    <!-- Test Dependencies -->
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>ams-componentes-web-test</artifactId>
       <scope>test</scope>
     </dependency>
-
-    <!-- Devtools -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-devtools</artifactId>
       <scope>runtime</scope>
       <optional>true</optional>
-    </dependency>
-
+    </dependency><!-- Devtools -->
   </dependencies>
-
   <build>
     <plugins>
       <plugin>
@@ -177,7 +139,10 @@
         <artifactId>spring-boot-maven-plugin</artifactId>
       </plugin>
     </plugins>
-
   </build>
-
+  <scm>
+    <connection>scm:git:${project.url}</connection>
+    <developerConnection>scm:git:${project.url}</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
 </project>
