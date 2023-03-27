@@ -14,7 +14,7 @@
   <description>Demo project for Spring Boot</description>
   <url>https://git.santalucia.net:443/scm/SLARQSOFAMSBACK/example-app-11.git</url>
   <organization>
-    <name>Santalucia Seguros</name>
+    <name>Santalucia Seguros</name> 
     <url>https://www.santalucia.es/</url>
   </organization>
   <developers>
