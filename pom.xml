@@ -13,7 +13,7 @@
   <name>example-app-11</name>
   <description>Demo project for Spring Boot</description>  
   <url>https://git.santalucia.net:443/scm/SLARQSOFAMSBACK/example-app-11.git</url>
-  <organization>
+  <organization> 
     <name>Santalucia Seguros</name> 
     <url>https://www.santalucia.es/</url> 
   </organization>
@@ -38,7 +38,7 @@
     <url>https://jenkins-devops.app-dev.santalucia.net/</url>
     <notifiers>
       <notifier>
-        <type>mail</type>
+        <type>mail</type> 
         <address>ignacio.lopezv@santalucia.es</address>
         <sendOnError>true</sendOnError>
         <sendOnFailure>true</sendOnFailure>
