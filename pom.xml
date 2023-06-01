@@ -10,7 +10,7 @@
   <groupId>com.santalucia.example</groupId>
   <artifactId>example-app-11</artifactId> 
   <version>2.4.2-SNAPSHOT</version>
-  <name>example-app-11</name>
+  <name>example-app-11</name> 
   <description>Demo project for Spring Boot</description>  
   <url>https://git.santalucia.net:443/scm/SLARQSOFAMSBACK/example-app-11.git</url>
   <organization> 
