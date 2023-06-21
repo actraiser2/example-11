@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <servers>
+    <!--IMPORTANT: Encrypt santalucia personal password  -->
+    <!--See Guia Desarrollo Aplicaciones Back End - Section: 3.5.1 Encriptación de las claves -->
+    <server>
+      <id>santalucia-maven-group</id>
+      <username>${env.MVN_USERNAME}</username>
+      <password>${env.MVN_PASSWORD}</password>
+    </server>
+    <server>
+      <id>santalucia-maven-releases</id>
+      <username>${env.MVN_USERNAME}</username>
+      <password>${env.MVN_PASSWORD}</password>
+    </server>
+    <server>
+      <id>santalucia-maven-snapshots</id>
+      <username>${env.MVN_USERNAME}</username>
+      <password>${env.MVN_PASSWORD}</password>
+    </server>
+  </servers>
+
+  <mirrors>
+    <mirror>
+      <id>santalucia-maven-group</id>
+      <name>Santa Lucia</name>
+      <url>https://nexus.santalucia.net/repository/santalucia-maven-group/</url>
+      <mirrorOf>central</mirrorOf>
+    </mirror>
+  </mirrors>
+
+  <profiles>
+    <profile>
+      <id>santalucia</id>
+      <properties>
+        <downloadSources>true</downloadSources>
+        <downloadJavadocs>true</downloadJavadocs>
+        <maven.wagon.http.ssl.insecure>true</maven.wagon.http.ssl.insecure>
+        <maven.wagon.http.ssl.allowall>true</maven.wagon.http.ssl.allowall>
+        <maven.wagon.http.ssl.ignore.validity.dates>true</maven.wagon.http.ssl.ignore.validity.dates>
+      </properties>
+      <repositories>
+        <repository>
+          <id>santalucia-maven-releases</id>
+          <name>santalucia-maven-releases</name>
+          <url>https://nexus.santalucia.net/repository/santalucia-maven-releases/</url>
+        </repository>
+        <repository>
+          <id>santalucia-maven-snapshots</id>
+          <name>santalucia-maven-snapshots</name>
+          <url>https://nexus.santalucia.net/repository/santalucia-maven-snapshots/</url>
+        </repository>
+        <repository>
+          <id>santalucia-maven-group</id>
+          <name>santalucia-maven-group</name>
+          <url>https://nexus.santalucia.net/repository/santalucia-maven-group/</url>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>santalucia-maven-snapshots</id>
+          <name>Internal Snapshots</name>
+          <url>https://nexus.santalucia.net/repository/santalucia-maven-snapshots/</url>
+        </pluginRepository>
+        <pluginRepository>
+          <id>santalucia-maven-group</id>
+          <name>santalucia-maven-group</name>
+          <url>https://nexus.santalucia.net/repository/santalucia-maven-group/</url>
+        </pluginRepository>
+        <pluginRepository>
+          <id>santalucia-maven-releases</id>
+          <name>Internal Releases</name>
+          <url>https://nexus.santalucia.net/repository/santalucia-maven-releases/</url>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+
+  <activeProfiles>
+    <activeProfile>santalucia</activeProfile>
+  </activeProfiles>
+
+</settings>
