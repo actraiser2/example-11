@@ -144,5 +144,6 @@
     <connection>scm:git:${project.url}</connection>
     <developerConnection>scm:git:${project.url}</developerConnection>
     <tag>HEAD</tag>
+    <url>${project.url}</url>
   </scm>
 </project>
