@@ -5,17 +5,17 @@
     <groupId>com.santalucia.arq.ams</groupId>
     <artifactId>ams-parent-sl-sw</artifactId>
     <version>2.3.0-SNAPSHOT</version>
-    <relativePath></relativePath>
+    <relativePath />
   </parent>
   <groupId>com.santalucia.example</groupId>
-  <artifactId>example-app-11</artifactId> 
+  <artifactId>example-app-11</artifactId>
   <version>2.4.2-SNAPSHOT</version>
-  <name>example-app-11</name> 
-  <description>Demo project for Spring Boot</description>  
+  <name>example-app-11</name>
+  <description>Demo project for Spring Boot</description>
   <url>https://git.santalucia.net:443/scm/SLARQSOFAMSBACK/example-app-11.git</url>
-  <organization> 
-    <name>Santalucia Seguros</name> 
-    <url>https://www.santalucia.es/</url> 
+  <organization>
+    <name>Santalucia Seguros</name>
+    <url>https://www.santalucia.es/</url>
   </organization>
   <developers>
     <developer>
@@ -33,12 +33,18 @@
       <email>santiago.cardine@externos.santalucia.es</email>
     </contributor>
   </contributors>
+  <scm>
+    <connection>scm:git:${project.url}</connection>
+    <developerConnection>scm:git:${project.url}</developerConnection>
+    <tag>HEAD</tag>
+    <url>${project.url}</url>
+  </scm>
   <ciManagement>
     <system>jenkins</system>
     <url>https://jenkins-devops.app-dev.santalucia.net/</url>
     <notifiers>
       <notifier>
-        <type>mail</type> 
+        <type>mail</type>
         <address>ignacio.lopezv@santalucia.es</address>
         <sendOnError>true</sendOnError>
         <sendOnFailure>true</sendOnFailure>
@@ -49,8 +55,6 @@
   </ciManagement>
   <properties>
     <git.hooks.skip>false</git.hooks.skip>
-    <mybatis.codegen.output.dir>src/main/java</mybatis.codegen.output.dir>
-    <mybatis.generator.configurationFile>src/main/resources/mybatis/mybatis-generator.xml</mybatis.generator.configurationFile>
     <skip.it>true</skip.it>
     <swagger.codegen.inputSpec>src/main/resources/api/swagger.yaml</swagger.codegen.inputSpec>
     <swagger.codegen.package>${project.groupId}</swagger.codegen.package>
@@ -130,7 +134,8 @@
       <artifactId>spring-boot-devtools</artifactId>
       <scope>runtime</scope>
       <optional>true</optional>
-    </dependency><!-- Devtools -->
+    </dependency>
+    <!-- Devtools -->
   </dependencies>
   <build>
     <plugins>
@@ -140,10 +145,4 @@
       </plugin>
     </plugins>
   </build>
-  <scm>
-    <connection>scm:git:${project.url}</connection>
-    <developerConnection>scm:git:${project.url}</developerConnection>
-    <tag>HEAD</tag>
-    <url>${project.url}</url>
-  </scm>
 </project>

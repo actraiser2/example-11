@@ -5,408 +5,428 @@
 
 #### Features
 
- -  migrate test to assertJ ([af8c17fecf1c59f](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/af8c17fecf1c59f63e7288fd4679454eff7358d7))
+ -  Migration pom.xml OCP4 ([30f8288bb5afc5e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/30f8288bb5afc5e2af651689e5e851f6139a32a3))
+   Fecha: 14-03-2023 17:30:58
+ -  migrate test to assertJ ([af8c17fecf1c59f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/af8c17fecf1c59f63e7288fd4679454eff7358d7))
    Fecha: 11-05-2022 18:13:16
- -  fix imports ([275a3aefca8a615](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/275a3aefca8a615a5b5d682c27a76ec378e9863b))
+ -  fix imports ([275a3aefca8a615](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/275a3aefca8a615a5b5d682c27a76ec378e9863b))
    Fecha: 10-05-2022 12:45:29
- -  modify to check AMS 2.1.0-RELEASE ([3936b83d9ccbf13](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/3936b83d9ccbf13fbd6aca0990a8beb3751cf4bf))
+ -  modify to check AMS 2.1.0-RELEASE ([3936b83d9ccbf13](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3936b83d9ccbf13fbd6aca0990a8beb3751cf4bf))
    Fecha: 27-04-2022 10:35:32
- -  refactor test ASW1279 ([59ee0e66316461d](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/59ee0e66316461d62649d631320ba6fa68b01b8b))
+ -  refactor test ASW1279 ([59ee0e66316461d](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/59ee0e66316461d62649d631320ba6fa68b01b8b))
    Fecha: 26-04-2022 12:49:51
- -  skip archunit ([567571eebf85740](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/567571eebf85740b9e7cb67bb0f6ec085af5cc51))
+ -  skip archunit ([567571eebf85740](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/567571eebf85740b9e7cb67bb0f6ec085af5cc51))
    Fecha: 25-04-2022 09:46:22
- -  skip archunit ([236b951a2bfdbc5](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/236b951a2bfdbc53055c26401d4f8c5e988c8a23))
+ -  skip archunit ([236b951a2bfdbc5](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/236b951a2bfdbc53055c26401d4f8c5e988c8a23))
    Fecha: 25-04-2022 09:15:31
- -  fixes for ams 2.2 ([4901aec596d5015](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/4901aec596d50159b66767d01aa129b826809c58))
+ -  fixes for ams 2.2 ([4901aec596d5015](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/4901aec596d50159b66767d01aa129b826809c58))
    Fecha: 12-04-2022 08:55:39
- -  integracion wiremock ([2a905b2ef596f9d](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/2a905b2ef596f9d52961585132a4bdf34a47faa7))
+ -  integracion wiremock ([2a905b2ef596f9d](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/2a905b2ef596f9d52961585132a4bdf34a47faa7))
    Fecha: 12-03-2021 07:27:50
- -  prueba hook ([11e73067e442ba4](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/11e73067e442ba4391f14dfbcb7c20fef3c25499))
+ -  prueba hook ([11e73067e442ba4](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/11e73067e442ba4391f14dfbcb7c20fef3c25499))
    Fecha: 09-03-2021 14:41:27
- -  aaa ([b4903c2648cccc6](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/b4903c2648cccc641cb00a61a1e5097a33e9ef42))
+ -  aaa ([b4903c2648cccc6](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b4903c2648cccc641cb00a61a1e5097a33e9ef42))
    Fecha: 07-10-2020 09:12:01
 
 #### Bug Fixes
 
- -  adapt properties ([54ece75969aff69](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/54ece75969aff6975f08d598cbb2f01c9efa5628))
+ -  adapt properties ([54ece75969aff69](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/54ece75969aff6975f08d598cbb2f01c9efa5628))
     Fecha: 01-06-2022 13:14:29
- -  fix lint ([1e77c9748fc82b2](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/1e77c9748fc82b216db4961b27338ba3d1eb5a84))
+ -  fix lint ([1e77c9748fc82b2](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/1e77c9748fc82b216db4961b27338ba3d1eb5a84))
     Fecha: 12-04-2022 10:13:05
- -  remove user pass application.yaml ([68462e3ce0d7fbe](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/68462e3ce0d7fbe63ea57234fd9ce1f5fb3c54c6))
+ -  remove user pass application.yaml ([68462e3ce0d7fbe](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/68462e3ce0d7fbe63ea57234fd9ce1f5fb3c54c6))
     Fecha: 15-12-2021 17:02:44
- -  add comment to redeploy ([6f37ace8c786db1](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/6f37ace8c786db14e027b4b2fe7c574fb760c319))
+ -  add comment to redeploy ([6f37ace8c786db1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6f37ace8c786db14e027b4b2fe7c574fb760c319))
     Fecha: 03-11-2021 13:33:52
- -  ASW829 Cambios en mappers de mapstruct ([aac901e51fd6d5a](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/aac901e51fd6d5af086c559ce6dc794b68b120a6))
+ -  ASW829 Cambios en mappers de mapstruct ([aac901e51fd6d5a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/aac901e51fd6d5af086c559ce6dc794b68b120a6))
     Fecha: 24-08-2021 10:00:34
- -  rectificar cambio de puerto local para actuator ([34bb61f41a53100](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/34bb61f41a5310024f6e17ccef77e3a2420f91bb))
+ -  rectificar cambio de puerto local para actuator ([34bb61f41a53100](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/34bb61f41a5310024f6e17ccef77e3a2420f91bb))
     Fecha: 02-12-2020 07:22:40
- -  corregir nombre driver Oracle ([a85e0923440e63f](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/a85e0923440e63f22781aed907017e459bd10776))
+ -  corregir nombre driver Oracle ([a85e0923440e63f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a85e0923440e63f22781aed907017e459bd10776))
     Fecha: 23-11-2020 13:44:07
- -  config ([7ae2f60ca7c11b4](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/7ae2f60ca7c11b422a7ed6b30d5b1d4c30e96809))
+ -  config ([7ae2f60ca7c11b4](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7ae2f60ca7c11b422a7ed6b30d5b1d4c30e96809))
     Fecha: 27-08-2020 09:41:14
- -  tab ([f0efce489765a0a](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/f0efce489765a0a078103908e69999152858cf24))
+ -  tab ([f0efce489765a0a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f0efce489765a0a078103908e69999152858cf24))
     Fecha: 27-08-2020 09:24:38
 
 #### Refactor code
 
- -  change springfox to springdoc using the ams component ([65aa1021d4a34af](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/65aa1021d4a34af9ff6ae0512a7f0e9568ce76a1))
+ -  change springfox to springdoc using the ams component ([65aa1021d4a34af](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/65aa1021d4a34af9ff6ae0512a7f0e9568ce76a1))
  		Fecha: 06-04-2022 15:04:01
- -  Incluir test para aplicaciones sin bbdd ([afa8b941e5e0802](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/afa8b941e5e0802060e55acbb0400d85c09f26ae))
+ -  Incluir test para aplicaciones sin bbdd ([afa8b941e5e0802](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/afa8b941e5e0802060e55acbb0400d85c09f26ae))
  		Fecha: 07-05-2021 07:29:40
- -  Extender customMapper de agencias y ejemplo de test de servicio ([baf1ba8f0183464](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/baf1ba8f01834641a5006340171d9bd3703a484c))
+ -  Extender customMapper de agencias y ejemplo de test de servicio ([baf1ba8f0183464](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/baf1ba8f01834641a5006340171d9bd3703a484c))
  		Fecha: 30-04-2021 09:33:37
- -  cobertura test init ([f45ba2c88c9f03c](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/f45ba2c88c9f03c7fd17f03868b31ac9009a78c4))
+ -  cobertura test init ([f45ba2c88c9f03c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f45ba2c88c9f03c7fd17f03868b31ac9009a78c4))
  		Fecha: 30-04-2021 06:29:48
- -  Resolve conflict ([926c414bcbbf29c](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/926c414bcbbf29c760f138fc043aa26ad1bef063))
+ -  Resolve conflict ([926c414bcbbf29c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/926c414bcbbf29c760f138fc043aa26ad1bef063))
  		Fecha: 23-04-2021 06:46:20
- -  Mergear conflicto con develop ([18216da3a706e62](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/18216da3a706e627b7f7dc2c147eb29823c68582))
+ -  Mergear conflicto con develop ([18216da3a706e62](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/18216da3a706e627b7f7dc2c147eb29823c68582))
  		Fecha: 22-04-2021 14:53:56
- -  Incluir llamada a indicadores ([bed554a6dda9ab9](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/bed554a6dda9ab9bb3e6b41f2a0b04bda72b0b3a))
+ -  Incluir llamada a indicadores ([bed554a6dda9ab9](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/bed554a6dda9ab9bb3e6b41f2a0b04bda72b0b3a))
  		Fecha: 22-04-2021 11:41:22
- -  pagination ([39005cb4f6503d5](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/39005cb4f6503d539133943eda208b210ddd992a))
+ -  pagination ([39005cb4f6503d5](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/39005cb4f6503d539133943eda208b210ddd992a))
  		Fecha: 20-04-2021 07:43:46
- -  ASW482 ([5c209095eafa7d2](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/5c209095eafa7d2e0e1eea68d34c973866cd08de))
+ -  ASW482 ([5c209095eafa7d2](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5c209095eafa7d2e0e1eea68d34c973866cd08de))
  		Fecha: 01-04-2021 15:04:56
- -  Cambio de pom padre a version 0.0.3-SNAPSHOT ([ed29ff608b13b8f](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/ed29ff608b13b8f8052f78dfef647f0152c5f4e5))
+ -  Cambio de pom padre a version 0.0.3-SNAPSHOT ([ed29ff608b13b8f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ed29ff608b13b8f8052f78dfef647f0152c5f4e5))
  		Fecha: 19-11-2020 06:57:48
- -  multiple datasource ([6203e9ecc609e11](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/6203e9ecc609e11723c318807a6639829ed49dec))
+ -  multiple datasource ([6203e9ecc609e11](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6203e9ecc609e11723c318807a6639829ed49dec))
  		Fecha: 11-11-2020 08:48:24
- -  Resolucion de conflictos ([b6180aed32b8854](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/b6180aed32b8854270582b327e411c060565dfa5))
+ -  Resolucion de conflictos ([b6180aed32b8854](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b6180aed32b8854270582b327e411c060565dfa5))
  		Fecha: 05-11-2020 10:02:54
- -  Incluir clases para probar componente database ([589c759056974e1](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/589c759056974e1592756fed0fe10e9a141bf4a5))
+ -  Incluir clases para probar componente database ([589c759056974e1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/589c759056974e1592756fed0fe10e9a141bf4a5))
  		Fecha: 05-11-2020 09:53:02
- -  Codigo para probar modulo databasse ([486f772254acb41](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/486f772254acb419098b3aca20de305ccdfc4220))
+ -  Codigo para probar modulo databasse ([486f772254acb41](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/486f772254acb419098b3aca20de305ccdfc4220))
  		Fecha: 27-10-2020 12:32:19
 
 #### Chore commits
 
- -  test ([077fdf947619855](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/077fdf947619855c0d38fac30e7098b7cb39ab4f))
+ -  makefile, settings.xml and maven.config ([18929734307fc27](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/18929734307fc27a7b98c4c0ac6a48f5b3736434))
+ 		Fecha: 21-06-2023 07:12:22
+ -  updated the pom in order to reference parent's version 2.3.0-SNAPSHOT ([6710bef0baef234](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6710bef0baef2348b1155e2d1b6bd05687f854b0))
+ 		Fecha: 19-04-2023 15:24:47
+ -  add .java-version ([9c3883dceb369db](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/9c3883dceb369dbb148c8a667a29c568a2ccb225))
+ 		Fecha: 10-03-2023 08:39:43
+ -  upgrade value contact.url ([e8877507df5b251](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/e8877507df5b251e84714d80f1d5ecf131690fba))
+ 		Fecha: 03-02-2023 09:28:27
+ -  remove line blank ([5fed8d3f9e13368](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5fed8d3f9e13368e8a7efa7d6a7fa8f972fe9811))
+ 		Fecha: 03-02-2023 08:59:53
+ -  convert OAS3 ([4604d56c3ede8a9](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/4604d56c3ede8a9b066451e9fd84cd61df89eff9))
+ 		Fecha: 03-02-2023 07:13:57
+ -  test ([c45dd6f68690af8](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c45dd6f68690af8b27998dd726b98a33631edcc4))
+ 		Fecha: 20-01-2023 06:22:25
+ -  change call amsCoreProperties ([dd84b693897d114](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/dd84b693897d114a7893336596185292e136c584))
+ 		Fecha: 18-01-2023 15:23:23
+ -  enable multi-thread build ([b32a005dbdf1034](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b32a005dbdf10341e1a9ab4f893855c7b62aa1ff))
+ 		Fecha: 12-12-2022 12:11:11
+ -  test ([077fdf947619855](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/077fdf947619855c0d38fac30e7098b7cb39ab4f))
  		Fecha: 30-11-2022 08:30:05
- -  fix ([208daf075f8ed23](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/208daf075f8ed23233bb157a0b22242896e7bdc1))
+ -  fix ([208daf075f8ed23](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/208daf075f8ed23233bb157a0b22242896e7bdc1))
  		Fecha: 30-11-2022 08:21:03
- -  Auto stash before merge of "develop" and "origin/develop" ([292d2a287612f2f](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/292d2a287612f2f8e54a063e99d3f710ce7d415b))
+ -  Auto stash before merge of "develop" and "origin/develop" ([292d2a287612f2f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/292d2a287612f2f8e54a063e99d3f710ce7d415b))
  		Fecha: 30-11-2022 08:06:31
- -  add assertThat contextLoads ([b0e114aa8fdc594](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/b0e114aa8fdc59467fd0b3c9377d8b42c6a2da52))
+ -  add assertThat contextLoads ([b0e114aa8fdc594](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b0e114aa8fdc59467fd0b3c9377d8b42c6a2da52))
  		Fecha: 29-11-2022 13:49:49
- -  fix upgrade arquetype ([53a5ce82a719f27](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/53a5ce82a719f2793be6b0f19878fb7d2a09c888))
+ -  fix upgrade arquetype ([53a5ce82a719f27](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/53a5ce82a719f2793be6b0f19878fb7d2a09c888))
  		Fecha: 25-11-2022 08:50:18
- -  fix arquetype ([b9ccf38255b7f4f](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/b9ccf38255b7f4fef0b917664fdc4e48a175bab9))
+ -  fix arquetype ([b9ccf38255b7f4f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b9ccf38255b7f4fef0b917664fdc4e48a175bab9))
  		Fecha: 14-10-2022 13:57:56
- -  fix error-prone date ([3f938cda5f354db](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/3f938cda5f354db1cab518901b85ff9c56aab69d))
+ -  fix error-prone date ([3f938cda5f354db](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3f938cda5f354db1cab518901b85ff9c56aab69d))
  		Fecha: 13-10-2022 10:26:46
- -  fix pom.xml ([29e82f86f7b8c77](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/29e82f86f7b8c7783bb21a6bc089b8b4eaf228eb))
+ -  fix pom.xml ([29e82f86f7b8c77](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/29e82f86f7b8c7783bb21a6bc089b8b4eaf228eb))
  		Fecha: 05-10-2022 17:06:51
- -  fix kiuwan defects ([cf56166b9e8d7d6](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/cf56166b9e8d7d6cb7e7055f66aae633bbd43d6d))
+ -  fix kiuwan defects ([cf56166b9e8d7d6](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/cf56166b9e8d7d6cb7e7055f66aae633bbd43d6d))
  		Fecha: 29-08-2022 10:15:09
- -  fix kiuwan ([7f4b664be7762c8](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/7f4b664be7762c8c70ca3193e55958f9b26890cb))
+ -  fix kiuwan ([7f4b664be7762c8](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7f4b664be7762c8c70ca3193e55958f9b26890cb))
  		Fecha: 29-08-2022 07:59:00
- -  fix kiuwan rules ([cf0f3b21aaf9382](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/cf0f3b21aaf93824a8f38219f2fde787f5254aa0))
+ -  fix kiuwan rules ([cf0f3b21aaf9382](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/cf0f3b21aaf93824a8f38219f2fde787f5254aa0))
  		Fecha: 26-08-2022 12:30:12
- -  update h2 string ([d28400e9a9da4b4](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/d28400e9a9da4b4e0e50f129829b2a82cc7ff350))
+ -  update h2 string ([d28400e9a9da4b4](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/d28400e9a9da4b4e0e50f129829b2a82cc7ff350))
  		Fecha: 22-08-2022 08:06:52
- -  add skip.it ([7d8e237a1e06433](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/7d8e237a1e06433735fb40b12e6a5b6330b82137))
+ -  add skip.it ([7d8e237a1e06433](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7d8e237a1e06433735fb40b12e6a5b6330b82137))
  		Fecha: 05-08-2022 13:21:33
- -  fix archunit ([ff9c2860e12758f](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/ff9c2860e12758fd0abfa69e5c07dbc85f33d7a7))
+ -  fix archunit ([ff9c2860e12758f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ff9c2860e12758fd0abfa69e5c07dbc85f33d7a7))
  		Fecha: 05-08-2022 12:52:12
- -  fix test ([3df131e7b575c09](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/3df131e7b575c090e6872d48d550b5b83e2b4c81))
+ -  fix test ([3df131e7b575c09](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3df131e7b575c090e6872d48d550b5b83e2b4c81))
  		Fecha: 05-08-2022 12:26:40
- -  update changes ([c245e8e79ced277](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/c245e8e79ced2779710ebfcf2edb3f9041ead4e2))
+ -  update changes ([c245e8e79ced277](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c245e8e79ced2779710ebfcf2edb3f9041ead4e2))
  		Fecha: 05-08-2022 11:31:38
- -  test commit ([b521d69f8e12e4f](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/b521d69f8e12e4fc7f9e4b998b9a546c8d456c2c))
+ -  test commit ([b521d69f8e12e4f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b521d69f8e12e4fc7f9e4b998b9a546c8d456c2c))
  		Fecha: 05-08-2022 11:24:41
- -  change null  UUID to empty optional, suppress null away alerts in test classes ([7cca088dbf3152c](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/7cca088dbf3152c9c1649b0095f133d85ae60ea7))
+ -  change null  UUID to empty optional, suppress null away alerts in test classes ([7cca088dbf3152c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7cca088dbf3152c9c1649b0095f133d85ae60ea7))
  		Fecha: 20-07-2022 13:02:34
- -  change null  UUID to empty optional, suppress null away alerts in test classes ([e32e2499c08d152](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/e32e2499c08d15257822d0ea0627d50111b9e940))
+ -  change null  UUID to empty optional, suppress null away alerts in test classes ([e32e2499c08d152](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/e32e2499c08d15257822d0ea0627d50111b9e940))
  		Fecha: 20-07-2022 12:50:10
- -  change null  UUID to empty optional, suppress null away alerts in test classes ([37216541355c18c](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/37216541355c18c476edea1cede9443065ab5a4c))
+ -  change null  UUID to empty optional, suppress null away alerts in test classes ([37216541355c18c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/37216541355c18c476edea1cede9443065ab5a4c))
  		Fecha: 20-07-2022 12:32:53
- -  change ApiDelegateTestUtils name to ApiDelegateTestDataFactory ([057663d951286b4](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/057663d951286b43e86bbff7302536337b7ab2e5))
+ -  change ApiDelegateTestUtils name to ApiDelegateTestDataFactory ([057663d951286b4](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/057663d951286b43e86bbff7302536337b7ab2e5))
  		Fecha: 20-07-2022 07:31:32
- -  change ApiDelegateTestUtils name to ApiDelegateTestData ([2f0d890cd22cff0](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/2f0d890cd22cff0d6356db501da132d817203b81))
+ -  change ApiDelegateTestUtils name to ApiDelegateTestData ([2f0d890cd22cff0](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/2f0d890cd22cff0d6356db501da132d817203b81))
  		Fecha: 20-07-2022 07:30:38
- -  change change ApiDelegateTestUtils name to ApiDelegateTestData ([485a5abcaa0f013](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/485a5abcaa0f0139701b1b48c10d9b2aee99280a))
+ -  change change ApiDelegateTestUtils name to ApiDelegateTestData ([485a5abcaa0f013](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/485a5abcaa0f0139701b1b48c10d9b2aee99280a))
  		Fecha: 20-07-2022 07:30:00
- -  change junit assertions to assertj, give descrptive names to test methods, refactor ApiDelegateTestUtils methods names ([f165d22bff65084](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/f165d22bff650841fc537f5c5f2f9fce7ba9e9ee))
+ -  change junit assertions to assertj, give descrptive names to test methods, refactor ApiDelegateTestUtils methods names ([f165d22bff65084](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f165d22bff650841fc537f5c5f2f9fce7ba9e9ee))
  		Fecha: 20-07-2022 07:27:39
- -  deleted comments ([0b019c09a4348c3](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/0b019c09a4348c3fc8cbdcc38783b70d68411784))
+ -  deleted comments ([0b019c09a4348c3](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/0b019c09a4348c3fc8cbdcc38783b70d68411784))
  		Fecha: 20-07-2022 06:29:50
- -  created tests for api delegate layer ([720eec130481b2a](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/720eec130481b2a17a784aba8047382d979745e5))
+ -  created tests for api delegate layer ([720eec130481b2a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/720eec130481b2a17a784aba8047382d979745e5))
  		Fecha: 20-07-2022 06:21:49
- -  fix gitleaks ([63bbdb12d039429](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/63bbdb12d039429df2771742478935395f821072))
+ -  fix gitleaks ([63bbdb12d039429](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/63bbdb12d039429df2771742478935395f821072))
  		Fecha: 14-07-2022 07:36:25
- -  ASW-1456 removed try catch ([494c4ebd49da182](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/494c4ebd49da182a9ca8de31740bee18314bef32))
+ -  ASW-1456 removed try catch ([494c4ebd49da182](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/494c4ebd49da182a9ca8de31740bee18314bef32))
  		Fecha: 13-07-2022 07:43:17
- -  ASW-1456 removed unused imports ([991faddeefbe4e1](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/991faddeefbe4e1083367216211a80ea2f57df5d))
+ -  ASW-1456 removed unused imports ([991faddeefbe4e1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/991faddeefbe4e1083367216211a80ea2f57df5d))
  		Fecha: 13-07-2022 07:05:50
- -  ASW-1456 @async annotation for asynchronous functions ([efa4b9cae173cce](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/efa4b9cae173cce892297f5c66a501ccdf0bbeb7))
+ -  ASW-1456 @async annotation for asynchronous functions ([efa4b9cae173cce](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/efa4b9cae173cce892297f5c66a501ccdf0bbeb7))
  		Fecha: 12-07-2022 07:53:00
- -  ASW-1456 test issue solved ([f8b2661c233b9a0](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/f8b2661c233b9a0973c4626d5f35610d28859764))
+ -  ASW-1456 test issue solved ([f8b2661c233b9a0](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f8b2661c233b9a0973c4626d5f35610d28859764))
  		Fecha: 06-07-2022 11:57:23
- -  ASW-1456 first changes, tests not passing ([1711c207d07f00b](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/1711c207d07f00b5be658f43bd15282bd036a437))
+ -  ASW-1456 first changes, tests not passing ([1711c207d07f00b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/1711c207d07f00b5be658f43bd15282bd036a437))
  		Fecha: 06-07-2022 09:08:35
- -  add new param db url ([be43cf1f7200985](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/be43cf1f7200985d00c76dd307488d4890229de5))
+ -  add new param db url ([be43cf1f7200985](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/be43cf1f7200985d00c76dd307488d4890229de5))
  		Fecha: 22-06-2022 08:12:52
- -  acomplish nullaway & errorProne ([5d3d50458e3912c](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/5d3d50458e3912cf4c11fc1cd4002128308fd017))
+ -  acomplish nullaway & errorProne ([5d3d50458e3912c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5d3d50458e3912cf4c11fc1cd4002128308fd017))
  		Fecha: 22-06-2022 07:41:17
- -  test ([672ecf73f6200fb](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/672ecf73f6200fbbf3d1097b858cfe2a65dd2bed))
+ -  test ([672ecf73f6200fb](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/672ecf73f6200fbbf3d1097b858cfe2a65dd2bed))
  		Fecha: 20-06-2022 16:24:28
- -  test ([5b20917c653473c](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/5b20917c653473cee5c9a93eb54fadab6093df17))
+ -  test ([5b20917c653473c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5b20917c653473cee5c9a93eb54fadab6093df17))
  		Fecha: 20-06-2022 16:07:53
- -  addapt lombok.config ([157bb120f1e5522](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/157bb120f1e5522ac035fee74035b1451cf1b90d))
+ -  addapt lombok.config ([157bb120f1e5522](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/157bb120f1e5522ac035fee74035b1451cf1b90d))
  		Fecha: 10-06-2022 06:26:37
- -  changes ([10d3885e16050a5](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/10d3885e16050a5d1371cf6816f6c3bcca3ec06e))
+ -  changes ([10d3885e16050a5](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/10d3885e16050a5d1371cf6816f6c3bcca3ec06e))
  		Fecha: 06-06-2022 12:41:39
- -  add archunit ([f50b22e18f7e9b5](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/f50b22e18f7e9b50b42baffbcb468c587014c47b))
+ -  add archunit ([f50b22e18f7e9b5](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f50b22e18f7e9b50b42baffbcb468c587014c47b))
  		Fecha: 06-06-2022 10:18:12
- -  ASW-1153 @Generated in Application ([94c524ca4d470b3](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/94c524ca4d470b3cd11e05cb6de3d659bac37f60))
+ -  ASW-1153 @Generated in Application ([94c524ca4d470b3](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/94c524ca4d470b3cd11e05cb6de3d659bac37f60))
  		Fecha: 06-06-2022 08:04:49
- -  fix eq ([00f08c2957aa97d](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/00f08c2957aa97d67a5f1c8037e40e7c17b32972))
+ -  fix eq ([00f08c2957aa97d](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/00f08c2957aa97d67a5f1c8037e40e7c17b32972))
  		Fecha: 02-06-2022 12:36:52
- -  test ([71c70753c884526](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/71c70753c8845263a5e5a61598f0fa0c0a9d971b))
+ -  test ([71c70753c884526](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/71c70753c8845263a5e5a61598f0fa0c0a9d971b))
  		Fecha: 02-06-2022 12:22:21
- -  test ([91f6e6f80919f47](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/91f6e6f80919f4774aa6cdbf4ea5d9c8e15a4df6))
+ -  test ([91f6e6f80919f47](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/91f6e6f80919f4774aa6cdbf4ea5d9c8e15a4df6))
  		Fecha: 02-06-2022 12:08:26
- -  fix deprecated ([fb83efb0fa75dc0](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/fb83efb0fa75dc089ab08cb55c9cae9d53a1035b))
+ -  fix deprecated ([fb83efb0fa75dc0](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/fb83efb0fa75dc089ab08cb55c9cae9d53a1035b))
  		Fecha: 02-06-2022 08:59:37
- -  test ([257f3920cbe5f08](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/257f3920cbe5f08990707395ed9630ed8bf9905c))
+ -  test ([257f3920cbe5f08](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/257f3920cbe5f08990707395ed9630ed8bf9905c))
  		Fecha: 02-06-2022 08:44:20
- -  test ([cc92979fe6aec15](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/cc92979fe6aec15ee22e881bb04e7f8cb2b8d3ae))
+ -  test ([cc92979fe6aec15](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/cc92979fe6aec15ee22e881bb04e7f8cb2b8d3ae))
  		Fecha: 31-05-2022 13:11:45
- -  test ([a7c3a754b029ce0](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/a7c3a754b029ce04f36d0b40a4e96688de10b3d8))
+ -  test ([a7c3a754b029ce0](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a7c3a754b029ce04f36d0b40a4e96688de10b3d8))
  		Fecha: 31-05-2022 13:07:37
- -  test refactor given, when, then ([11ec7c47c670064](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/11ec7c47c67006477b6b5f692128e6c9c6e83b3e))
+ -  test refactor given, when, then ([11ec7c47c670064](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/11ec7c47c67006477b6b5f692128e6c9c6e83b3e))
  		Fecha: 31-05-2022 12:40:05
- -  display name en los test ([5196a3b7ea2d2f4](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/5196a3b7ea2d2f40bdae1cc8f3f3e08921cfb3b3))
+ -  display name en los test ([5196a3b7ea2d2f4](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5196a3b7ea2d2f40bdae1cc8f3f3e08921cfb3b3))
  		Fecha: 31-05-2022 09:00:17
- -  tests for the repository layer ([067076a68209184](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/067076a68209184da7e13d25a9db7840e8072034))
+ -  tests for the repository layer ([067076a68209184](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/067076a68209184da7e13d25a9db7840e8072034))
  		Fecha: 31-05-2022 08:55:00
- -  test ([b99aeb4c3368030](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/b99aeb4c33680301e7f99f49256b9d8baa465119))
+ -  test ([b99aeb4c3368030](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b99aeb4c33680301e7f99f49256b9d8baa465119))
  		Fecha: 26-05-2022 10:05:18
- -  test ([98e369cb6ee7b45](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/98e369cb6ee7b45a3418c38de35d5ca8b4c7a21e))
+ -  test ([98e369cb6ee7b45](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/98e369cb6ee7b45a3418c38de35d5ca8b4c7a21e))
  		Fecha: 26-05-2022 08:01:11
- -  test ([a38ca0a4ae878a7](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/a38ca0a4ae878a7b815e3d489d431de8a943435f))
+ -  test ([a38ca0a4ae878a7](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a38ca0a4ae878a7b815e3d489d431de8a943435f))
  		Fecha: 24-05-2022 13:32:11
- -  test ([94876a63307a77e](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/94876a63307a77eea9fb0afd23f5afbe253f54c1))
+ -  test ([94876a63307a77e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/94876a63307a77eea9fb0afd23f5afbe253f54c1))
  		Fecha: 24-05-2022 13:31:45
- -  fix new arch-rules ([7b92947546edc1f](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/7b92947546edc1f95edffb633fbff5a18d76de98))
+ -  fix new arch-rules ([7b92947546edc1f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7b92947546edc1f95edffb633fbff5a18d76de98))
  		Fecha: 13-05-2022 12:54:44
- -  fix kiuwan ([ec0fb443d82a5f9](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/ec0fb443d82a5f96cfc5ac44f3f9d7259a7e7b06))
+ -  fix kiuwan ([ec0fb443d82a5f9](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ec0fb443d82a5f96cfc5ac44f3f9d7259a7e7b06))
  		Fecha: 11-05-2022 12:41:53
- -  fix tests ([c48f7b855e2db83](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/c48f7b855e2db830f38b46adc6731646e577cde1))
+ -  fix tests ([c48f7b855e2db83](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c48f7b855e2db830f38b46adc6731646e577cde1))
  		Fecha: 11-05-2022 12:15:06
- -  fix yamlint ([9f72633bbdbb28c](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/9f72633bbdbb28c2a9b3a3eecc0571f31a8e7436))
+ -  fix yamlint ([9f72633bbdbb28c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/9f72633bbdbb28c2a9b3a3eecc0571f31a8e7436))
  		Fecha: 11-05-2022 07:34:38
- -  test ([beadb33449536cf](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/beadb33449536cf977419c02ab8bd0ee8d3fb47d))
+ -  test ([beadb33449536cf](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/beadb33449536cf977419c02ab8bd0ee8d3fb47d))
  		Fecha: 09-05-2022 13:02:32
- -  test ([efe18507e9c17f7](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/efe18507e9c17f79d59403c96696c738c5f25931))
+ -  test ([efe18507e9c17f7](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/efe18507e9c17f79d59403c96696c738c5f25931))
  		Fecha: 09-05-2022 12:59:26
- -  Merge remote-tracking branch 'origin/develop' into develop ([8b9126b2e4cb8ea](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/8b9126b2e4cb8eaa95ce8d4007a634b71894be89))
+ -  Merge remote-tracking branch 'origin/develop' into develop ([8b9126b2e4cb8ea](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/8b9126b2e4cb8eaa95ce8d4007a634b71894be89))
  		Fecha: 09-05-2022 12:48:09
- -  test ([9e2a1eec5dc90a7](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/9e2a1eec5dc90a79156316ff42662e6c49ad9c4a))
+ -  test ([9e2a1eec5dc90a7](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/9e2a1eec5dc90a79156316ff42662e6c49ad9c4a))
  		Fecha: 09-05-2022 12:47:32
- -  SpringApplicationBuilder and unsecure startup property ([3d378a0d9218761](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/3d378a0d921876142da23d86699d06d0066176ba))
+ -  SpringApplicationBuilder and unsecure startup property ([3d378a0d9218761](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3d378a0d921876142da23d86699d06d0066176ba))
  		Fecha: 04-05-2022 11:05:31
- -  remove duplicated dependency springdoc ([41039da0a5a7b74](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/41039da0a5a7b74d15641174a50f3008a8e1f405))
+ -  remove duplicated dependency springdoc ([41039da0a5a7b74](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/41039da0a5a7b74d15641174a50f3008a8e1f405))
  		Fecha: 21-04-2022 10:06:06
- -  added comment for OAS version support ([8335bcb9e691f6b](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/8335bcb9e691f6be20e56ff9b6a6bec079c1c246))
+ -  added comment for OAS version support ([8335bcb9e691f6b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/8335bcb9e691f6be20e56ff9b6a6bec079c1c246))
  		Fecha: 20-04-2022 15:09:02
- -  resolve merge conflicts with develop ([2fc405ec8065a32](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/2fc405ec8065a327a924ff58995e2f928e15d634))
+ -  resolve merge conflicts with develop ([2fc405ec8065a32](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/2fc405ec8065a327a924ff58995e2f928e15d634))
  		Fecha: 20-04-2022 15:00:52
- -  test ([0397e25d321e974](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/0397e25d321e9741627ef7f63e01edc126ff57f7))
+ -  test ([0397e25d321e974](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/0397e25d321e9741627ef7f63e01edc126ff57f7))
  		Fecha: 12-04-2022 11:08:17
- -  fix lint ([7a37fd8a52bf8b6](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/7a37fd8a52bf8b6520a6ddb5494d7f0b0f5b4a47))
+ -  fix lint ([7a37fd8a52bf8b6](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7a37fd8a52bf8b6520a6ddb5494d7f0b0f5b4a47))
  		Fecha: 12-04-2022 10:45:52
- -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([6f610b57628392e](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/6f610b57628392eacd74e330a473edfa31bbfb35))
+ -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([6f610b57628392e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6f610b57628392eacd74e330a473edfa31bbfb35))
  		Fecha: 28-01-2022 13:01:43
- -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([15fab8e0a84f2bd](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/15fab8e0a84f2bd053b4ec94df18f2b416a18834))
+ -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([15fab8e0a84f2bd](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/15fab8e0a84f2bd053b4ec94df18f2b416a18834))
  		Fecha: 28-01-2022 12:22:41
- -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([834ead7c537df38](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/834ead7c537df389758cd2cbe614adffa53c1ec0))
+ -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([834ead7c537df38](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/834ead7c537df389758cd2cbe614adffa53c1ec0))
  		Fecha: 28-01-2022 10:25:04
- -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([ace53a49ccb064d](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/ace53a49ccb064d30e8a787b72cb3be50c504d99))
+ -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([ace53a49ccb064d](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ace53a49ccb064d30e8a787b72cb3be50c504d99))
  		Fecha: 26-01-2022 15:32:05
- -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([bc5b9d5242fbbbe](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/bc5b9d5242fbbbe993a10b6442168fd6012a7049))
+ -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([bc5b9d5242fbbbe](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/bc5b9d5242fbbbe993a10b6442168fd6012a7049))
  		Fecha: 24-01-2022 12:44:21
- -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([ee7ea1169440732](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/ee7ea1169440732c80932903fcf962de38b1cb04))
+ -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([ee7ea1169440732](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ee7ea1169440732c80932903fcf962de38b1cb04))
  		Fecha: 24-01-2022 12:36:44
- -  configure json banner ([f99e47c14bd1018](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/f99e47c14bd10186ca3f21d4aaa2bf0e7eb20be6))
+ -  configure json banner ([f99e47c14bd1018](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f99e47c14bd10186ca3f21d4aaa2bf0e7eb20be6))
  		Fecha: 15-12-2021 16:50:50
- -  configure banner json ([2ba501e4373f208](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/2ba501e4373f208ec8d4ea416e5989f827f0189b))
+ -  configure banner json ([2ba501e4373f208](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/2ba501e4373f208ec8d4ea416e5989f827f0189b))
  		Fecha: 15-12-2021 16:49:15
- -  Add responseEntity for SSE restController ([368858d487eee78](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/368858d487eee780a9a50e372291c0e46266119b))
+ -  Add responseEntity for SSE restController ([368858d487eee78](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/368858d487eee780a9a50e372291c0e46266119b))
  		Fecha: 03-11-2021 12:16:00
- -  SSE para cliente angular ([a4534211652c06b](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/a4534211652c06bbe54d39c6c0356838bf2b91da))
+ -  SSE para cliente angular ([a4534211652c06b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a4534211652c06bbe54d39c6c0356838bf2b91da))
  		Fecha: 03-11-2021 11:40:03
- -  fix editorconfig ([220f4ba415ef024](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/220f4ba415ef0241edbd801bafcac2586918e356))
+ -  fix editorconfig ([220f4ba415ef024](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/220f4ba415ef0241edbd801bafcac2586918e356))
  		Fecha: 28-10-2021 05:02:46
- -  fix logback ([58f100bf916cec7](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/58f100bf916cec780fc8e91a75e3206a8fc941d1))
+ -  fix logback ([58f100bf916cec7](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/58f100bf916cec780fc8e91a75e3206a8fc941d1))
  		Fecha: 15-10-2021 11:36:32
- -  pasar editorconfig ([c2ce7f00280e355](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/c2ce7f00280e35594e1719bc2b5b5648514d7652))
+ -  pasar editorconfig ([c2ce7f00280e355](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c2ce7f00280e35594e1719bc2b5b5648514d7652))
  		Fecha: 13-10-2021 17:06:42
- -  pasar editorconfig ([407789f20cf2edc](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/407789f20cf2edc5ea6877b9dacec83f860f0977))
+ -  pasar editorconfig ([407789f20cf2edc](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/407789f20cf2edc5ea6877b9dacec83f860f0977))
  		Fecha: 13-10-2021 16:26:39
- -  modificar layer.xml ([aa02324c38cc068](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/aa02324c38cc068173337568dc4f63ffac176461))
+ -  modificar layer.xml ([aa02324c38cc068](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/aa02324c38cc068173337568dc4f63ffac176461))
  		Fecha: 13-10-2021 15:58:39
- -  add layer ([4427bf2d0e42a1d](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/4427bf2d0e42a1d33c4e5b13dad5d7b54d9d943c))
+ -  add layer ([4427bf2d0e42a1d](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/4427bf2d0e42a1d33c4e5b13dad5d7b54d9d943c))
  		Fecha: 07-10-2021 11:46:24
- -  test ([c9203d14bfa8fc9](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/c9203d14bfa8fc9cf05f6386a915dd6941b2dc5c))
+ -  test ([c9203d14bfa8fc9](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c9203d14bfa8fc9cf05f6386a915dd6941b2dc5c))
  		Fecha: 08-09-2021 12:29:59
- -  fix gitleaks ([683a66688b6670c](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/683a66688b6670c34041a9e09aa787ce323b9f9a))
+ -  fix gitleaks ([683a66688b6670c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/683a66688b6670c34041a9e09aa787ce323b9f9a))
  		Fecha: 08-09-2021 10:54:26
- -  fix indent ([f9bc13e7b4911ad](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/f9bc13e7b4911adb1656bd8526c67a65582573ff))
+ -  fix indent ([f9bc13e7b4911ad](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f9bc13e7b4911adb1656bd8526c67a65582573ff))
  		Fecha: 07-09-2021 09:03:53
- -  editorconfig fix ([a56f06e584da460](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/a56f06e584da460213cabaa4566bff663e7a057e))
+ -  editorconfig fix ([a56f06e584da460](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a56f06e584da460213cabaa4566bff663e7a057e))
  		Fecha: 07-09-2021 08:50:08
- -  add editor config ([2f003ab65af3a8e](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/2f003ab65af3a8e7b266cccca2a4df309ca04366))
+ -  add editor config ([2f003ab65af3a8e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/2f003ab65af3a8e7b266cccca2a4df309ca04366))
  		Fecha: 07-09-2021 08:34:18
- -  fix passwords ([20a013e6da57362](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/20a013e6da573624efcc8739b431b94d6bc82630))
+ -  fix passwords ([20a013e6da57362](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/20a013e6da573624efcc8739b431b94d6bc82630))
  		Fecha: 06-09-2021 13:07:49
- -  test ([c791e25b12077db](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/c791e25b12077db5272315e3043dfa98ffa5082c))
+ -  test ([c791e25b12077db](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c791e25b12077db5272315e3043dfa98ffa5082c))
  		Fecha: 06-09-2021 12:39:40
- -  test ([7bef978acfbd48f](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/7bef978acfbd48f44d0a5611ea1026e26bfb7938))
+ -  test ([7bef978acfbd48f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7bef978acfbd48f44d0a5611ea1026e26bfb7938))
  		Fecha: 06-09-2021 12:34:22
- -  remove password ([9c65db114e75097](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/9c65db114e75097929a35ca185604339293e2960))
+ -  remove password ([9c65db114e75097](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/9c65db114e75097929a35ca185604339293e2960))
  		Fecha: 06-09-2021 12:33:15
- -  add gitignore ([68265110c5ac727](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/68265110c5ac727d67f3a0fa2e25cb2ebb9bd658))
+ -  add gitignore ([68265110c5ac727](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/68265110c5ac727d67f3a0fa2e25cb2ebb9bd658))
  		Fecha: 06-09-2021 12:32:49
- -  Refactorizacion cambios reglas kiuwan ([9c261cc3e5bfe8c](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/9c261cc3e5bfe8c5ae4f784e146acaa3fdbacbe0))
+ -  Refactorizacion cambios reglas kiuwan ([9c261cc3e5bfe8c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/9c261cc3e5bfe8c5ae4f784e146acaa3fdbacbe0))
  		Fecha: 24-08-2021 11:42:08
- -  Refactorizacion cambios reglas kiuwan ([a6b14890b08859d](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/a6b14890b08859d556c8d47e48118140bbb166c1))
+ -  Refactorizacion cambios reglas kiuwan ([a6b14890b08859d](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a6b14890b08859d556c8d47e48118140bbb166c1))
  		Fecha: 24-08-2021 11:17:19
- -  fix scm ([f19c0c14807a42c](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/f19c0c14807a42c466587983bb5e9030b63706d1))
+ -  fix scm ([f19c0c14807a42c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f19c0c14807a42c466587983bb5e9030b63706d1))
  		Fecha: 06-07-2021 05:22:51
- -  point to new snapshot version ([256c415d35a0e3b](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/256c415d35a0e3bf6ae8581c934af78052c40d40))
+ -  point to new snapshot version ([256c415d35a0e3b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/256c415d35a0e3bf6ae8581c934af78052c40d40))
  		Fecha: 20-05-2021 11:12:42
- -  disable tracing for test ([3d2e0ed074b6d8f](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/3d2e0ed074b6d8f34ddb4a30430a3aa267a52a79))
+ -  disable tracing for test ([3d2e0ed074b6d8f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3d2e0ed074b6d8f34ddb4a30430a3aa267a52a79))
  		Fecha: 07-05-2021 22:08:41
- -  remove agencias ([280e2843b8eab6f](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/280e2843b8eab6fbd3e71909b28ab666737e9f60))
+ -  remove agencias ([280e2843b8eab6f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/280e2843b8eab6fbd3e71909b28ab666737e9f60))
  		Fecha: 06-05-2021 17:41:54
- -  temporal commit ([9ae9dda209afb1e](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/9ae9dda209afb1e48033f42fdec448a8c2f823d9))
+ -  temporal commit ([9ae9dda209afb1e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/9ae9dda209afb1e48033f42fdec448a8c2f823d9))
  		Fecha: 06-05-2021 12:02:20
- -  remove agencia ([245813531f67a2f](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/245813531f67a2fc1b0aa1876286ab8d1a456f30))
+ -  remove agencia ([245813531f67a2f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/245813531f67a2fc1b0aa1876286ab8d1a456f30))
  		Fecha: 05-05-2021 22:29:28
- -  point to first release ([e0d04e572924fff](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/e0d04e572924fff22a780584cc7b6cf12ae77e93))
+ -  point to first release ([e0d04e572924fff](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/e0d04e572924fff22a780584cc7b6cf12ae77e93))
  		Fecha: 04-05-2021 18:42:10
- -  test ([d317816333edc43](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/d317816333edc438d1428421f7f8f1c3934b40b7))
+ -  test ([d317816333edc43](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/d317816333edc438d1428421f7f8f1c3934b40b7))
  		Fecha: 01-05-2021 12:14:31
- -  move properties to bootstrap ([d7d0a56db9f06ed](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/d7d0a56db9f06ed10301b45491b5a51a88bd6dad))
+ -  move properties to bootstrap ([d7d0a56db9f06ed](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/d7d0a56db9f06ed10301b45491b5a51a88bd6dad))
  		Fecha: 01-05-2021 12:00:13
- -  add comments ([e5fa0c2b93c408a](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/e5fa0c2b93c408aa02e824fb900347fcafc24a2f))
+ -  add comments ([e5fa0c2b93c408a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/e5fa0c2b93c408aa02e824fb900347fcafc24a2f))
  		Fecha: 01-05-2021 11:28:55
- -  fixes kiuwan ([be786b7bc12bf78](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/be786b7bc12bf783160e1a0c08ebb68536610f61))
+ -  fixes kiuwan ([be786b7bc12bf78](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/be786b7bc12bf783160e1a0c08ebb68536610f61))
  		Fecha: 27-04-2021 09:03:04
- -  kiuwan fixes ([f3705bac4575ce1](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/f3705bac4575ce18cf22608e2604e0cf813c0fe6))
+ -  kiuwan fixes ([f3705bac4575ce1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f3705bac4575ce18cf22608e2604e0cf813c0fe6))
  		Fecha: 27-04-2021 08:35:25
- -  remove Agencias delegate ([9409f2c5ca27cd9](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/9409f2c5ca27cd977a19c8b4ae0928b2c2f62441))
+ -  remove Agencias delegate ([9409f2c5ca27cd9](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/9409f2c5ca27cd977a19c8b4ae0928b2c2f62441))
  		Fecha: 27-04-2021 08:05:27
- -  kiuwan fixes ([91cb6ad0ea8a7b6](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/91cb6ad0ea8a7b6ea2f3276fdc672fede1f5d27b))
+ -  kiuwan fixes ([91cb6ad0ea8a7b6](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/91cb6ad0ea8a7b6ea2f3276fdc672fede1f5d27b))
  		Fecha: 27-04-2021 07:45:57
- -  remove throw ([8c18c4c2e29a056](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/8c18c4c2e29a05675ad3e4f1c727e72ab6f620cd))
+ -  remove throw ([8c18c4c2e29a056](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/8c18c4c2e29a05675ad3e4f1c727e72ab6f620cd))
  		Fecha: 24-04-2021 02:04:15
- -  fix pom.xml ([7e31a88bc6efe2d](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/7e31a88bc6efe2df0431d0545f642f1712d3dac8))
+ -  fix pom.xml ([7e31a88bc6efe2d](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7e31a88bc6efe2df0431d0545f642f1712d3dac8))
  		Fecha: 24-04-2021 01:44:16
- -  fix scm url ([a48c505c08c10bd](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/a48c505c08c10bdf69dbe015276170c2ef6d5f0a))
+ -  fix scm url ([a48c505c08c10bd](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a48c505c08c10bdf69dbe015276170c2ef6d5f0a))
  		Fecha: 23-04-2021 06:39:32
- -  remove errors ([2b01dcc02a8eac6](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/2b01dcc02a8eac6bcb92e8c41a248756486bae48))
+ -  remove errors ([2b01dcc02a8eac6](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/2b01dcc02a8eac6bcb92e8c41a248756486bae48))
  		Fecha: 23-04-2021 06:39:09
- -  changes ([2d912a5a93c4683](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/2d912a5a93c468339b587e08fa029e13ad9eb50c))
+ -  changes ([2d912a5a93c4683](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/2d912a5a93c468339b587e08fa029e13ad9eb50c))
  		Fecha: 15-04-2021 15:55:26
- -  error test ([aeaaa01ddd12de8](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/aeaaa01ddd12de8e257f39084cb37aeca966f55a))
+ -  error test ([aeaaa01ddd12de8](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/aeaaa01ddd12de8e257f39084cb37aeca966f55a))
  		Fecha: 12-04-2021 04:51:00
- -  test ([6d9d582d95e671d](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/6d9d582d95e671d4c831375755f1c47e84a277bb))
+ -  test ([6d9d582d95e671d](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6d9d582d95e671d4c831375755f1c47e84a277bb))
  		Fecha: 18-03-2021 16:19:49
- -  cumplir regla NO_STATE_VARIABLES_SHOULD_BE_DECLARED ([e0a72cc1112a1de](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/e0a72cc1112a1de08a589f4b17760ef53e04e38c))
+ -  cumplir regla NO_STATE_VARIABLES_SHOULD_BE_DECLARED ([e0a72cc1112a1de](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/e0a72cc1112a1de08a589f4b17760ef53e04e38c))
  		Fecha: 15-03-2021 14:26:13
- -  habilitar web environment en test ([2fea719ea6064b1](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/2fea719ea6064b1607101e99aa8cacdafd699b01))
+ -  habilitar web environment en test ([2fea719ea6064b1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/2fea719ea6064b1607101e99aa8cacdafd699b01))
  		Fecha: 14-03-2021 18:18:39
- -  temp ([2306c35b1fc2d91](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/2306c35b1fc2d916b8db51b4df937dd1977f1810))
+ -  temp ([2306c35b1fc2d91](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/2306c35b1fc2d916b8db51b4df937dd1977f1810))
  		Fecha: 13-03-2021 02:12:23
- -  remove import that is in ams ([68419dc29c32af5](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/68419dc29c32af597ded632b28750186f6e6fa95))
+ -  remove import that is in ams ([68419dc29c32af5](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/68419dc29c32af597ded632b28750186f6e6fa95))
  		Fecha: 12-03-2021 14:30:21
- -  heredar dependencias de wiremock ([6a39f51b0337de1](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/6a39f51b0337de11fa1840a60e958753ba1ea925))
+ -  heredar dependencias de wiremock ([6a39f51b0337de1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6a39f51b0337de11fa1840a60e958753ba1ea925))
  		Fecha: 12-03-2021 10:12:34
- -  add gitmodules ([36bbde1a65a7c40](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/36bbde1a65a7c40e768e4c83d6dc7f4207c05c70))
+ -  add gitmodules ([36bbde1a65a7c40](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/36bbde1a65a7c40e768e4c83d6dc7f4207c05c70))
  		Fecha: 10-03-2021 12:05:57
- -  test ([892b05a7dcbcf58](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/892b05a7dcbcf585ade1b313b5ade5f3c21fc1c2))
+ -  test ([892b05a7dcbcf58](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/892b05a7dcbcf585ade1b313b5ade5f3c21fc1c2))
  		Fecha: 10-03-2021 11:33:50
- -  test ([a6a3484f3df0d0e](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/a6a3484f3df0d0e996bceb2670b955c6ea5bbe26))
+ -  test ([a6a3484f3df0d0e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a6a3484f3df0d0e996bceb2670b955c6ea5bbe26))
  		Fecha: 10-03-2021 11:33:12
- -  test hook ([6c4c745f90eca18](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/6c4c745f90eca186c3664c5a981f6458e966911a))
+ -  test hook ([6c4c745f90eca18](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6c4c745f90eca186c3664c5a981f6458e966911a))
  		Fecha: 09-03-2021 14:44:04
- -  add githook ([c88db03d41a1f2a](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/c88db03d41a1f2ab63da1d71debf877977d1fce2))
+ -  add githook ([c88db03d41a1f2a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c88db03d41a1f2ab63da1d71debf877977d1fce2))
  		Fecha: 09-03-2021 14:36:10
- -  test ([6158d2fe5942e64](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/6158d2fe5942e646d4839b664f7274c5749adf69))
+ -  test ([6158d2fe5942e64](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6158d2fe5942e646d4839b664f7274c5749adf69))
  		Fecha: 09-03-2021 09:42:22
- -  .gitmodules edited online with Bitbucket ([91b0447e42044d4](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/91b0447e42044d400f03ce63d17af38a6d2b70af))
+ -  .gitmodules edited online with Bitbucket ([91b0447e42044d4](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/91b0447e42044d400f03ce63d17af38a6d2b70af))
  		Fecha: 09-03-2021 09:39:11
- -  add .gitmodules ([c67c3707bfc3b2f](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/c67c3707bfc3b2f443c3cbda986154c3f15f17d7))
+ -  add .gitmodules ([c67c3707bfc3b2f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c67c3707bfc3b2f443c3cbda986154c3f15f17d7))
  		Fecha: 09-03-2021 09:36:08
- -  fix tests ([1f4367739e1308c](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/1f4367739e1308ccf5ff9b16585c2aa11966e664))
+ -  fix tests ([1f4367739e1308c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/1f4367739e1308ccf5ff9b16585c2aa11966e664))
  		Fecha: 08-03-2021 13:20:31
- -  changes ([d07ec8c257eabfa](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/d07ec8c257eabfad6b62367e7401d12dcff79479))
+ -  changes ([d07ec8c257eabfa](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/d07ec8c257eabfad6b62367e7401d12dcff79479))
  		Fecha: 03-03-2021 18:22:12
- -  intermediate commit ([3e91a243e808e6b](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/3e91a243e808e6b336148b6fb54d578f5ea03ec5))
+ -  intermediate commit ([3e91a243e808e6b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3e91a243e808e6b336148b6fb54d578f5ea03ec5))
  		Fecha: 01-03-2021 06:13:29
- -  add Controller Test ([b8341f780c81a04](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/b8341f780c81a04633c9a77332811dd12123d605))
+ -  add Controller Test ([b8341f780c81a04](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b8341f780c81a04633c9a77332811dd12123d605))
  		Fecha: 27-02-2021 02:41:19
- -  changes ([66b18808ee63fa3](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/66b18808ee63fa39572f4384df9936e65b9acda0))
+ -  changes ([66b18808ee63fa3](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/66b18808ee63fa39572f4384df9936e65b9acda0))
  		Fecha: 26-02-2021 14:35:27
- -  many changes ([16037b23f27f377](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/16037b23f27f37782b582e4faf82629923a1af79))
+ -  many changes ([16037b23f27f377](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/16037b23f27f37782b582e4faf82629923a1af79))
  		Fecha: 25-02-2021 09:46:55
- -  temp commit ([c8e077ff25953fb](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/c8e077ff25953fb3dfb903d375db7f7807401d88))
+ -  temp commit ([c8e077ff25953fb](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c8e077ff25953fb3dfb903d375db7f7807401d88))
  		Fecha: 18-02-2021 16:23:20
- -  temp commit ([a01dc0d10de2d85](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/a01dc0d10de2d85f76bf1d53cfe10e94882ca57d))
+ -  temp commit ([a01dc0d10de2d85](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a01dc0d10de2d85f76bf1d53cfe10e94882ca57d))
  		Fecha: 18-02-2021 06:18:36
- -  temporal commit ([3c2bbd891d62ee5](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/3c2bbd891d62ee5a6a2e037c992472ac1735805f))
+ -  temporal commit ([3c2bbd891d62ee5](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3c2bbd891d62ee5a6a2e037c992472ac1735805f))
  		Fecha: 17-02-2021 15:47:45
- -  many changes ([ce5c3ca5c5bdd55](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/ce5c3ca5c5bdd551fd4c74932b32cdf778f23887))
+ -  many changes ([ce5c3ca5c5bdd55](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ce5c3ca5c5bdd551fd4c74932b32cdf778f23887))
  		Fecha: 13-02-2021 01:36:22
- -  temp build ([9a564b93292e4ae](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/9a564b93292e4aec4cf380c1f1b6c23a11d92be7))
+ -  temp build ([9a564b93292e4ae](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/9a564b93292e4aec4cf380c1f1b6c23a11d92be7))
  		Fecha: 10-02-2021 21:09:50
- -  regularice yaml files ([b711b0bfc6a687a](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/b711b0bfc6a687a9c660df39b91e5916c02ad2d1))
+ -  regularice yaml files ([b711b0bfc6a687a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b711b0bfc6a687a9c660df39b91e5916c02ad2d1))
  		Fecha: 01-02-2021 10:55:53
- -  ejemplo de llamada a servicio remoto ([dffcca92733afd7](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/dffcca92733afd75b592e8dec87879acc87c014a))
+ -  ejemplo de llamada a servicio remoto ([dffcca92733afd7](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/dffcca92733afd75b592e8dec87879acc87c014a))
  		Fecha: 02-12-2020 07:02:00
- -  add default test ([8b5f9f408ea72f9](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/8b5f9f408ea72f9bbb3484a2455431efa417f126))
+ -  add default test ([8b5f9f408ea72f9](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/8b5f9f408ea72f9bbb3484a2455431efa417f126))
  		Fecha: 27-11-2020 08:41:34
- -  remove unussed anottions ([6ffb19bacde7f6d](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/6ffb19bacde7f6df366ac94c536d94de247a271b))
+ -  remove unussed anottions ([6ffb19bacde7f6d](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6ffb19bacde7f6df366ac94c536d94de247a271b))
  		Fecha: 26-11-2020 08:35:25
- -  add mapstruct test ([738f56da888d804](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/738f56da888d8041459df0c3f4164bc86ecab60a))
+ -  add mapstruct test ([738f56da888d804](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/738f56da888d8041459df0c3f4164bc86ecab60a))
  		Fecha: 25-11-2020 20:06:09
- -  fix tabs ([94e7ec3dea55932](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/94e7ec3dea55932e478c93da08f10604503d3172))
+ -  fix tabs ([94e7ec3dea55932](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/94e7ec3dea55932e478c93da08f10604503d3172))
  		Fecha: 24-11-2020 21:29:56
- -  remove tabs ([4fe4f7ade1ca8c8](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/4fe4f7ade1ca8c82cd8f9427e28566e316dfcb3e))
+ -  remove tabs ([4fe4f7ade1ca8c8](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/4fe4f7ade1ca8c82cd8f9427e28566e316dfcb3e))
  		Fecha: 24-11-2020 20:58:13
- -  enable UTF-8 check for devops ([eb98bc4defabd7b](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/eb98bc4defabd7b209fbd0cffdd1cd23a4ea1a3c))
+ -  enable UTF-8 check for devops ([eb98bc4defabd7b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/eb98bc4defabd7b209fbd0cffdd1cd23a4ea1a3c))
  		Fecha: 24-11-2020 20:38:35
- -  add micrometer property; remove properties by monitoring.properties ([a6086711997cde6](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/a6086711997cde6600fae638f0c38d46a673e2af))
+ -  add micrometer property; remove properties by monitoring.properties ([a6086711997cde6](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a6086711997cde6600fae638f0c38d46a673e2af))
  		Fecha: 24-11-2020 20:37:58
- -  reubicar propiedades expandibles ([050ac55453945d2](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/050ac55453945d2892b81b9dd89af9745c89615f))
+ -  reubicar propiedades expandibles ([050ac55453945d2](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/050ac55453945d2892b81b9dd89af9745c89615f))
  		Fecha: 23-11-2020 16:50:29
- -  eliminar codigo innecesario ([82725c381e71de3](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/82725c381e71de3ab742edfc989c295eb558b018))
+ -  eliminar codigo innecesario ([82725c381e71de3](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/82725c381e71de3ab742edfc989c295eb558b018))
  		Fecha: 23-11-2020 13:36:39
- -  Revision dependencias k8s ([12b3fa22f68f5e9](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/12b3fa22f68f5e94b1db9a542a2f5a1be71b3aea))
+ -  Revision dependencias k8s ([12b3fa22f68f5e9](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/12b3fa22f68f5e94b1db9a542a2f5a1be71b3aea))
  		Fecha: 23-11-2020 13:27:55
- -  configuracion multidatasource ([7bc66e835c44939](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/7bc66e835c4493995e8363d2906b5810554892ce))
+ -  configuracion multidatasource ([7bc66e835c44939](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7bc66e835c4493995e8363d2906b5810554892ce))
  		Fecha: 12-11-2020 17:04:08
- -  reactivar MapStruct ([db656cbccbd389a](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/db656cbccbd389af6624cbc5c1fd3234cf68b980))
+ -  reactivar MapStruct ([db656cbccbd389a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/db656cbccbd389af6624cbc5c1fd3234cf68b980))
  		Fecha: 27-10-2020 15:20:01
- -  changes ([02e3942a5521e53](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/02e3942a5521e53eeffb6f22738ab05d14264f6e))
+ -  changes ([02e3942a5521e53](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/02e3942a5521e53eeffb6f22738ab05d14264f6e))
  		Fecha: 07-10-2020 07:44:40
- -  test3 ([c0b9bafdf788621](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/c0b9bafdf788621d671ab1cf594af054ec8f9e61))
+ -  test3 ([c0b9bafdf788621](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c0b9bafdf788621d671ab1cf594af054ec8f9e61))
  		Fecha: 05-10-2020 12:24:41
- -  test ([534b100d09833b8](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/534b100d09833b8dd118f6b0c80518fc7942e3c1))
+ -  test ([534b100d09833b8](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/534b100d09833b8dd118f6b0c80518fc7942e3c1))
  		Fecha: 05-10-2020 10:55:04
- -  incorporar tracing ([72e74f7d933e828](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/72e74f7d933e828475afd67bd9bdac9524b5ec7a))
+ -  incorporar tracing ([72e74f7d933e828](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/72e74f7d933e828475afd67bd9bdac9524b5ec7a))
  		Fecha: 22-09-2020 14:17:26
- -  disable debug traces ([0dd9083adee87fc](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/0dd9083adee87fccc76b3e97475af58eabefdd14))
+ -  disable debug traces ([0dd9083adee87fc](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/0dd9083adee87fccc76b3e97475af58eabefdd14))
  		Fecha: 04-08-2020 11:40:26
- -  test ([f64c393324c7ed5](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/f64c393324c7ed539e5264c0ecff8a6dd924310c))
+ -  test ([f64c393324c7ed5](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f64c393324c7ed539e5264c0ecff8a6dd924310c))
  		Fecha: 04-08-2020 11:28:11
- -  gitignore ([de5705e628852fd](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/de5705e628852fd7620e52b402a33c13e5db547b))
+ -  gitignore ([de5705e628852fd](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/de5705e628852fd7620e52b402a33c13e5db547b))
  		Fecha: 30-07-2020 18:04:51
- -  a ([c48d945cc16e818](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/c48d945cc16e818a52319eb4841bfaea5ec3f4a8))
+ -  a ([c48d945cc16e818](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c48d945cc16e818a52319eb4841bfaea5ec3f4a8))
  		Fecha: 30-07-2020 17:39:19
- -  Merge branch 'master' into develop ([5f9ce7f13e5dd18](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/5f9ce7f13e5dd18dd93414c32b6af92b7010aa7a))
+ -  Merge branch 'master' into develop ([5f9ce7f13e5dd18](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5f9ce7f13e5dd18dd93414c32b6af92b7010aa7a))
  		Fecha: 30-07-2020 17:19:44
- -  add checkstyle ([35bcf27a0c7d495](https://git.santalucia.net/projects/amssrv/repos/example-app-11/commits/35bcf27a0c7d4953a25387657353dee476738a7e))
+ -  add checkstyle ([35bcf27a0c7d495](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/35bcf27a0c7d4953a25387657353dee476738a7e))
  		Fecha: 30-07-2020 16:37:22
