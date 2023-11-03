@@ -4,6 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.argThat;
 import static org.mockito.Mockito.verify;
 
+import java.util.Locale;
 import java.util.Map;
 
 import org.junit.jupiter.api.DisplayName;
@@ -34,7 +35,7 @@ class DefaultEmployeeRepositoryTests {
     // when
     verify(employeeMapper).selectMany(argThat(selectStatment -> {
       // then
-      assertThat(selectStatment.getSelectStatement().toUpperCase().toLowerCase()).isEqualTo("select * from employee");
+      assertThat(selectStatment.getSelectStatement().toUpperCase(Locale.getDefault()).toLowerCase(Locale.getDefault())).isEqualTo("select * from employee");
       Map<String, Object> parameters = selectStatment.getParameters();
       assertThat(parameters).isEmpty();
       return true;
@@ -49,7 +50,7 @@ class DefaultEmployeeRepositoryTests {
     // when
     verify(employeeMapper).selectMany(argThat(selectStatment -> {
       // then
-      assertThat(selectStatment.getSelectStatement().toLowerCase()).isEqualTo("select * from employee offset #{parameters.p1} rows fetch first #{parameters.p2} rows only");
+      assertThat(selectStatment.getSelectStatement().toLowerCase(Locale.getDefault())).isEqualTo("select * from employee offset #{parameters.p1} rows fetch first #{parameters.p2} rows only");
       Map<String, Object> parameters = selectStatment.getParameters();
       assertThat(parameters)
         .containsEntry("p1",0L)

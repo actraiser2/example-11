@@ -2,19 +2,16 @@ package com.santalucia.example.core.mappers;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import java.util.Arrays;
 import java.util.List;
 
+import org.instancio.Instancio;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
 import com.santalucia.example.core.domain.IdentidadDigitalDomain;
-import com.santalucia.example.core.domain.IdentidadDigitalDomain.IdentidadDigitalDomainBuilder;
 
 class IdentidadDigitalDomainMapperTests {
-
-	private static final String NOMBRE = "john";
 
 	@Test
 	@DisplayName("Dado un objeto dominio retornamos un objeto resource")
@@ -22,7 +19,7 @@ class IdentidadDigitalDomainMapperTests {
 
 		IdentidadDigitalDomainMapper mapper = new IdentidadDigitalDomainMapperImpl();
 
-		IdentidadDigitalDomain entity = buildIdentidadDigitalDomain(NOMBRE);
+		IdentidadDigitalDomain entity = Instancio.create(IdentidadDigitalDomain.class);
 
 		IdentidadDigitalConsultaResource dto = mapper.toResource(entity);
 		compare(dto, entity);
@@ -34,7 +31,7 @@ class IdentidadDigitalDomainMapperTests {
 
 		IdentidadDigitalDomainMapper mapper = new IdentidadDigitalDomainMapperImpl();
 
-		IdentidadDigitalConsultaResource dto = buildIdentidadDigitalConsultaResource(NOMBRE);
+		IdentidadDigitalConsultaResource dto = Instancio.create(IdentidadDigitalConsultaResource.class);
 
 		IdentidadDigitalDomain entity = mapper.toDomain(dto);
 		compare(dto, entity);
@@ -46,9 +43,7 @@ class IdentidadDigitalDomainMapperTests {
 
 		IdentidadDigitalDomainMapper mapper = new IdentidadDigitalDomainMapperImpl();
 
-		IdentidadDigitalDomain entity = buildIdentidadDigitalDomain(NOMBRE);
-
-		List<IdentidadDigitalDomain> entitys = Arrays.asList(entity);
+		List<IdentidadDigitalDomain> entitys = Instancio.createList(IdentidadDigitalDomain.class);
 
 		List<IdentidadDigitalConsultaResource> apis = mapper.toResources(entitys);
 
@@ -60,28 +55,13 @@ class IdentidadDigitalDomainMapperTests {
 	void toDomains_ok() {
 
 		IdentidadDigitalDomainMapper mapper = new IdentidadDigitalDomainMapperImpl();
-		IdentidadDigitalConsultaResource dto = buildIdentidadDigitalConsultaResource(NOMBRE);
 
-		List<IdentidadDigitalConsultaResource> apis = Arrays.asList(dto);
+		List<IdentidadDigitalConsultaResource> apis = Instancio.createList(IdentidadDigitalConsultaResource.class);
 		List<IdentidadDigitalDomain> entitys = mapper.toDomainsfromResources(apis);
 
 		compare(apis, entitys);
 
 	}
-
-	private IdentidadDigitalConsultaResource buildIdentidadDigitalConsultaResource(String nombre) {
-    	IdentidadDigitalConsultaResource response = new IdentidadDigitalConsultaResource();
-    	response.setNombre(nombre);
-    	response.setSaludo(String.format("Hello %s", nombre));
-    	return response;
-    }
-
-	private IdentidadDigitalDomain buildIdentidadDigitalDomain(String nombre) {
-    	IdentidadDigitalDomainBuilder identidad = IdentidadDigitalDomain.builder();
-		identidad.nombre(nombre);
-		identidad.saludo(String.format("Hello %s", nombre));
-		return identidad.build();
-    }
 
 	protected void compare(List<IdentidadDigitalConsultaResource> dtos, List<IdentidadDigitalDomain> entitys) {
 

@@ -1,6 +1,9 @@
 package com.santalucia.example.infrastructure.mybatis.secondary;
 
-import com.santalucia.example.infrastructure.entity.Employee;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mybatis.dynamic.sql.SqlBuilder.select;
+
+import java.util.List;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -12,10 +15,7 @@ import org.springframework.boot.test.autoconfigure.data.jdbc.DataJdbcTest;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.jdbc.SqlMergeMode;
 
-import java.util.List;
-
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.mybatis.dynamic.sql.SqlBuilder.select;
+import com.santalucia.example.infrastructure.entity.Employee;
 
 
 @DataJdbcTest
@@ -39,11 +39,7 @@ class EmployeeDataTests {
 
     List<Employee> employees = employeeMapper.selectMany(selectStatement);
 
-    assertThat(employees)
-      .isNotNull();
-
-    assertThat(employees.size())
-      .isEqualTo(1);
+    assertThat(employees).isNotNull().hasSize(1);
 
     assertThat(employees.get(0).getFirstName())
       .isEqualTo("firstname");

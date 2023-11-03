@@ -2,9 +2,9 @@ package com.santalucia.example.core.mappers;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import java.util.Arrays;
 import java.util.List;
 
+import org.instancio.Instancio;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -19,7 +19,7 @@ class EmployeeDomainMapperTests {
 
 		EmployeeDomainMapper mapper = new EmployeeDomainMapperImpl();
 
-		EmployeeDomain entity = buildEmployeeDomain();
+		EmployeeDomain entity = Instancio.create(EmployeeDomain.class);
 
 		EmployeeResource dto = mapper.toResource(entity);
 		compare(dto, entity);
@@ -31,7 +31,7 @@ class EmployeeDomainMapperTests {
 
 		EmployeeDomainMapper mapper = new EmployeeDomainMapperImpl();
 
-		EmployeeResource dto = buildEmployee();
+		EmployeeResource dto = Instancio.create(EmployeeResource.class);
 
 		EmployeeDomain entity = mapper.toDomain(dto);
 		compare(dto, entity);
@@ -43,9 +43,7 @@ class EmployeeDomainMapperTests {
 
 		EmployeeDomainMapper mapper = new EmployeeDomainMapperImpl();
 
-		EmployeeDomain entity = buildEmployeeDomain();
-
-		List<EmployeeDomain> entitys = Arrays.asList(entity);
+		List<EmployeeDomain> entitys = Instancio.createList(EmployeeDomain.class);
 
 		List<EmployeeResource> apis = mapper.toResources(entitys);
 
@@ -57,32 +55,11 @@ class EmployeeDomainMapperTests {
 	void toDomains_ok() {
 
 		EmployeeDomainMapper mapper = new EmployeeDomainMapperImpl();
-		EmployeeResource dto = buildEmployee();
-
-		List<EmployeeResource> apis = Arrays.asList(dto);
+		List<EmployeeResource> apis = Instancio.createList(EmployeeResource.class);
 		List<EmployeeDomain> entitys = mapper.toDomainsfromResources(apis);
 
 		compare(apis, entitys);
 
-	}
-
-	protected EmployeeResource buildEmployee() {
-
-		EmployeeResource dto = new EmployeeResource();
-		dto.setEmailAddress("email");
-		dto.setNombre("firstName");
-		dto.setApellido("lastName");
-		return dto;
-	}
-
-	protected EmployeeDomain buildEmployeeDomain() {
-
-		EmployeeDomain entity = EmployeeDomain.builder()
-		.emailAddress("email")
-		.firstName("firstName")
-		.lastName("lastName")
-		.build();
-		return entity;
 	}
 
 	protected void compare(List<EmployeeResource> dtos, List<EmployeeDomain> entitys) {

@@ -13,6 +13,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 
+import org.instancio.Instancio;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -50,7 +51,7 @@ class HelloApiControllerTests {
   void given_a_name_an_ok_response_is_expected() throws Exception  {
 
 	String xrequest = UUID.randomUUID().toString();
-    IdentidadDigitalConsultaResource resource = buildIdentidadDigitalConsultaResource("mock-response");
+	 IdentidadDigitalConsultaResource resource = Instancio.create(IdentidadDigitalConsultaResource.class);
 
     when(helloApiDelegate.getHelloByName(Mockito.anyString(), Mockito.any()))
       .thenReturn(CompletableFuture.completedFuture(ResponseEntity.ok(resource)));
@@ -71,24 +72,17 @@ class HelloApiControllerTests {
   @DisplayName("dado un usuario no logado se espera un error al no haber seguridad")
   void given_no_security_an_401_response_is_expected() throws Exception {
 
-	String xrequest = UUID.randomUUID().toString();
-    IdentidadDigitalConsultaResource resource = buildIdentidadDigitalConsultaResource("mock-response");
+    IdentidadDigitalConsultaResource resource = Instancio.create(IdentidadDigitalConsultaResource.class);
 
     when(helloApiDelegate.getHelloByName(Mockito.anyString(), Mockito.any()))
       .thenReturn(CompletableFuture.completedFuture(new ResponseEntity<>(resource, HttpStatus.OK)));
 
     mvc.perform(get("/hello-world/v1/hello/{name}", resource.getNombre())
-        .header(XRequestIDUtils.X_REQUEST_HEADER, xrequest)
+        .header(XRequestIDUtils.X_REQUEST_HEADER, UUID.randomUUID())
         .contentType(MediaType.APPLICATION_JSON)
         .accept(MediaType.APPLICATION_JSON))
     .andExpect(status().isUnauthorized())
     .andExpect(content().encoding(StandardCharsets.UTF_8));
-  }
-
-  private IdentidadDigitalConsultaResource buildIdentidadDigitalConsultaResource(String nombre) {
-    IdentidadDigitalConsultaResource response = new IdentidadDigitalConsultaResource();
-    response.setNombre(nombre);
-    return response;
   }
 
 

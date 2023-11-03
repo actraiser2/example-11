@@ -82,6 +82,12 @@
 
 #### Chore commits
 
+ -  fix ([fa268d76f57b615](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/fa268d76f57b6154b55f9ea2c30a2183bbf7a45e))
+ 		Fecha: 03-11-2023 09:53:11
+ -  fix ([ec4ed623a1a0aaf](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ec4ed623a1a0aaf63034be9f03cef47a7a240f34))
+ 		Fecha: 03-11-2023 09:52:50
+ -  fix imports ([eb6ce4047eb125e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/eb6ce4047eb125e033fa9732430c05a72be84498))
+ 		Fecha: 02-11-2023 13:07:16
  -  makefile, settings.xml and maven.config ([18929734307fc27](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/18929734307fc27a7b98c4c0ac6a48f5b3736434))
  		Fecha: 21-06-2023 07:12:22
  -  updated the pom in order to reference parent's version 2.3.0-SNAPSHOT ([6710bef0baef234](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6710bef0baef2348b1155e2d1b6bd05687f854b0))

@@ -4,6 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.argThat;
 import static org.mockito.Mockito.verify;
 
+import java.util.Locale;
 import java.util.Map;
 
 import org.junit.jupiter.api.DisplayName;
@@ -33,7 +34,7 @@ class DefaultCacetrafecRepositoryTests {
     //when
     verify(cacetrafecCustomMapper).selectMany(argThat(selectStatment -> {
 	    //then
-	    assertThat(selectStatment.getSelectStatement().toLowerCase()).isEqualTo("select * from cacetrafec where xcacetra = :p1");
+	    assertThat(selectStatment.getSelectStatement().toLowerCase(Locale.getDefault())).isEqualTo("select * from cacetrafec where xcacetra = :p1");
 	    Map<String, Object> parameters = selectStatment.getParameters();
 	    assertThat(parameters).containsEntry("p1","I");
 	    return true;

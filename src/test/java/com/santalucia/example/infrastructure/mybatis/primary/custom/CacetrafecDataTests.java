@@ -1,7 +1,10 @@
 package com.santalucia.example.infrastructure.mybatis.primary.custom;
 
-import com.santalucia.example.infrastructure.entity.Cacetrafec;
-import com.santalucia.example.infrastructure.mybatis.primary.CacetrafecDynamicSqlSupport;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mybatis.dynamic.sql.SqlBuilder.isEqualTo;
+import static org.mybatis.dynamic.sql.SqlBuilder.select;
+
+import java.util.List;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -13,11 +16,8 @@ import org.springframework.boot.test.autoconfigure.data.jdbc.DataJdbcTest;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.jdbc.SqlMergeMode;
 
-import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.mybatis.dynamic.sql.SqlBuilder.isEqualTo;
-import static org.mybatis.dynamic.sql.SqlBuilder.select;
+import com.santalucia.example.infrastructure.entity.Cacetrafec;
+import com.santalucia.example.infrastructure.mybatis.primary.CacetrafecDynamicSqlSupport;
 
 
 @DataJdbcTest
@@ -43,10 +43,8 @@ class CacetrafecDataTests {
     List<Cacetrafec> city = cacetrafecCustomMapper.selectMany(selectStatement);
 
     assertThat(city)
-      .isNotNull();
-
-    assertThat(city.size())
-      .isEqualTo(1);
+      .isNotNull()
+      .hasSize(1);
 
   }
 }
