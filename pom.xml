@@ -56,7 +56,6 @@
   <properties>
     <ams.version>2.3.0-SNAPSHOT</ams.version>
     <git.hooks.skip>false</git.hooks.skip>
-    <mybatis.generator.configurationFile>src/main/resources/mybatis/mybatis-generator.xml</mybatis.generator.configurationFile>
     <skip.it>true</skip.it>
     <swagger.codegen.inputSpec>src/main/resources/api/swagger.yaml</swagger.codegen.inputSpec>
     <swagger.codegen.package>${project.groupId}</swagger.codegen.package>

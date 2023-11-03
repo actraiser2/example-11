@@ -35,7 +35,7 @@ class DefaultHelloNameApiDelegateTests {
   @DisplayName("Dado un contexto de prueba, probamos respuesta de la llamada a get hello name")
   void test_hello_by_name_delegate() {
     DefaultHelloNameApiDelegate delegate = new DefaultHelloNameApiDelegate(helloService, identidadDigitalDomainMapper);
-    IdentidadDigitalConsultaResource resource = new IdentidadDigitalConsultaResource("User", "Hola");
+    IdentidadDigitalConsultaResource resource = new IdentidadDigitalConsultaResource();
     IdentidadDigitalDomain domain = IdentidadDigitalDomain.builder().nombre("User").saludo("Hola").build();
 
     when(helloService.getHelloByName(anyString())).thenReturn(domain);
@@ -53,7 +53,7 @@ class DefaultHelloNameApiDelegateTests {
   @DisplayName("Dado un contexto de prueba, probamos respuesta de la llamada a get hello by name remote")
   void test_hello_by_name_remote_delegate() {
     DefaultHelloNameApiDelegate delegate = new DefaultHelloNameApiDelegate(helloService, identidadDigitalDomainMapper);
-    IdentidadDigitalConsultaResource resource = new IdentidadDigitalConsultaResource("User", "Hola");
+    IdentidadDigitalConsultaResource resource = new IdentidadDigitalConsultaResource();
     IdentidadDigitalDomain domain = IdentidadDigitalDomain.builder().nombre("User").saludo("Hola").build();
 
     when(helloService.getHelloRemoteByName(anyString())).thenReturn(Optional.of(domain));

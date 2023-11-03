@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
+import org.instancio.Instancio;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -20,6 +21,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.santalucia.example.api.model.IndicadorResource;
+import com.santalucia.example.core.domain.IndicadoresCentroDomain;
 import com.santalucia.example.core.mappers.CacetrafecDomainMapper;
 import com.santalucia.example.core.service.IndicadorService;
 
@@ -36,9 +38,11 @@ class DefaultIndicadoresApiDelegateTests {
   @DisplayName("Dado un contexto de prueba, probamos respuesta de la llamada a get indicadores list")
   void test_indicadores_api_delegate() {
     DefaultIndicadoresApiDelegate delegate = new DefaultIndicadoresApiDelegate(indicadorService, cacetrafecMapper);
-    List<IndicadorResource> resources = ApiDelegateTestDataFactory.buildIndicadoresListResource();
+    List<IndicadorResource> resources = Instancio.createList(IndicadorResource.class);
+    List<IndicadoresCentroDomain> domains = Instancio.createList(IndicadoresCentroDomain.class);
 
-    when(indicadorService.getIndicadores(any(Pageable.class))).thenReturn(ApiDelegateTestDataFactory.buildIndicadoresList());
+    
+    when(indicadorService.getIndicadores(any(Pageable.class))).thenReturn(domains);
     when(indicadorService.getIndicadores(isNull())).thenReturn(null);
     when(cacetrafecMapper.indicadoresDomainToResources(anyList())).thenReturn(resources);
 

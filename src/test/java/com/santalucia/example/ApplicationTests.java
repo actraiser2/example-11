@@ -14,7 +14,8 @@ class ApplicationTests {
 	@Test
 	@DisplayName("Prueba integrada de carga de contexto")
 	void contextLoads(WebApplicationContext context) {
-    assertThat(context).isNotNull();
+		assertThat(context).isNotNull();
+		assertThat("hola").isEqualTo("Hola");
 	}
 
 }
