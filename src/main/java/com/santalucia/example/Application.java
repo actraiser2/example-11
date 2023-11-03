@@ -4,26 +4,26 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.metrics.buffering.BufferingApplicationStartup;
 
-import lombok.Generated;
+import com.santalucia.arq.ams.componentes.core.constants.ByteSizeConstants;
 
+import lombok.Generated;
 
 /**
  * Application
- *
+ * Hay que incluir @Generated para evitar que compute en cobertura
  */
+@Generated
 @SpringBootApplication
 public class Application {
 
-	private static final int STARTUP_LOG_BUFFER_SIZE = 2048;
     /**
-     * carga del aplicativo
+     * Carga del aplicativo
      *
      * @param String[] args
      */
-    @Generated
     public static void main(String[] args) {
         new SpringApplicationBuilder(Application.class)
-                .applicationStartup(new BufferingApplicationStartup(STARTUP_LOG_BUFFER_SIZE))
+                .applicationStartup(new BufferingApplicationStartup(ByteSizeConstants.TWO_KB.intValue()))
                 .run(args);
     }
 }
