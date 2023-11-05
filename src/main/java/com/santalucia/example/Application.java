@@ -2,9 +2,6 @@ package com.santalucia.example;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.context.metrics.buffering.BufferingApplicationStartup;
-
-import com.santalucia.arq.ams.componentes.core.constants.ByteSizeConstants;
 
 import lombok.Generated;
 
@@ -23,7 +20,7 @@ public class Application {
      */
     public static void main(String[] args) {
         new SpringApplicationBuilder(Application.class)
-                .applicationStartup(new BufferingApplicationStartup(ByteSizeConstants.TWO_KB.intValue()))
+                //.applicationStartup(new BufferingApplicationStartup(ByteSizeConstants.TWO_KB.intValue()))
                 .run(args);
     }
 }

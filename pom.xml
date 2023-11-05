@@ -4,7 +4,7 @@
   <parent>
     <groupId>com.santalucia.arq.ams</groupId>
     <artifactId>ams-parent-sl-sw</artifactId>
-    <version>2.3.0-SNAPSHOT</version>
+    <version>2.3.0-RELEASE</version>
     <relativePath />
   </parent>
   <groupId>com.santalucia.example</groupId>
