@@ -34,6 +34,9 @@ class DefaultEmployeeServiceTests {
 	@Test
 	@DisplayName("dada una busqueda a getEmployees sin paginacion el resultado es correcto")
 	void test_get_employees_without_pagination() {
+		
+	    List<Employee> employees = Instancio.createList(Employee.class);
+	    List<EmployeeDomain> employeeDomains = Instancio.createList(EmployeeDomain.class);
 
 		 List<Employee> employees = Instancio.createList(Employee.class);
 		 List<EmployeeDomain> employeeDomains = Instancio.createList(EmployeeDomain.class);

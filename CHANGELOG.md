@@ -82,6 +82,7 @@
 
 #### Chore commits
 
+<<<<<<< Updated upstream
  -  temp commit ([272f31c30674f3e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/272f31c30674f3ef45009b57595c4ec7b792ef0e))
  		Fecha: 03-11-2023 13:50:14
  -  fixes ([70cc5050ae21600](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/70cc5050ae216007cfb3bfc3d9a7d2b747fa8502))
@@ -90,6 +91,8 @@
  		Fecha: 03-11-2023 09:53:11
  -  fix ([ec4ed623a1a0aaf](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ec4ed623a1a0aaf63034be9f03cef47a7a240f34))
  		Fecha: 03-11-2023 09:52:50
+=======
+>>>>>>> Stashed changes
  -  fix imports ([eb6ce4047eb125e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/eb6ce4047eb125e033fa9732430c05a72be84498))
  		Fecha: 02-11-2023 13:07:16
  -  makefile, settings.xml and maven.config ([18929734307fc27](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/18929734307fc27a7b98c4c0ac6a48f5b3736434))

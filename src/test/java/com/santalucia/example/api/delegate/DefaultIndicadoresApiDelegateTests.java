@@ -3,7 +3,6 @@ package com.santalucia.example.api.delegate;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyList;
-import static org.mockito.ArgumentMatchers.isNull;
 import static org.mockito.Mockito.when;
 
 import java.util.List;
@@ -43,7 +42,6 @@ class DefaultIndicadoresApiDelegateTests {
 
     
     when(indicadorService.getIndicadores(any(Pageable.class))).thenReturn(domains);
-    when(indicadorService.getIndicadores(isNull())).thenReturn(null);
     when(cacetrafecMapper.indicadoresDomainToResources(anyList())).thenReturn(resources);
 
     CompletableFuture<ResponseEntity<List<IndicadorResource>>> completableFuture =

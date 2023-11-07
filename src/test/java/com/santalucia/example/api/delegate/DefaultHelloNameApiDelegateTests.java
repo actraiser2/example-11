@@ -39,7 +39,6 @@ class DefaultHelloNameApiDelegateTests {
     IdentidadDigitalDomain domain = IdentidadDigitalDomain.builder().nombre("User").saludo("Hola").build();
 
     when(helloService.getHelloByName(anyString())).thenReturn(domain);
-    when(helloService.getHelloByName(isNull())).thenReturn(null);
     when(identidadDigitalDomainMapper.toResource(any(IdentidadDigitalDomain.class))).thenReturn(resource);
 
 
@@ -57,7 +56,6 @@ class DefaultHelloNameApiDelegateTests {
     IdentidadDigitalDomain domain = IdentidadDigitalDomain.builder().nombre("User").saludo("Hola").build();
 
     when(helloService.getHelloRemoteByName(anyString())).thenReturn(Optional.of(domain));
-    when(helloService.getHelloRemoteByName(isNull())).thenReturn(null);
     when(identidadDigitalDomainMapper.toResource(any(IdentidadDigitalDomain.class))).thenReturn(resource);
 
     CompletableFuture<ResponseEntity<IdentidadDigitalConsultaResource>> completableFuture = delegate.getHelloByNameRemote("User", Optional.empty());
