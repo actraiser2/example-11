@@ -37,10 +37,7 @@ class DefaultEmployeeServiceTests {
 		
 	    List<Employee> employees = Instancio.createList(Employee.class);
 	    List<EmployeeDomain> employeeDomains = Instancio.createList(EmployeeDomain.class);
-
-		 List<Employee> employees = Instancio.createList(Employee.class);
-		 List<EmployeeDomain> employeeDomains = Instancio.createList(EmployeeDomain.class);
-		    
+    
 		    
 		when(employeeRepository.getAllEmployees()).thenReturn(employees);
 		when(employeeMapper.toDomainsfromEntities(Mockito.anyList())).thenReturn(employeeDomains);
