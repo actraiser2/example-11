@@ -54,7 +54,6 @@
     </notifiers>
   </ciManagement>
   <properties>
-    <ams.version>2.3.0-SNAPSHOT</ams.version>
     <git.hooks.skip>false</git.hooks.skip>
     <skip.it>true</skip.it>
     <swagger.codegen.inputSpec>src/main/resources/api/swagger.yaml</swagger.codegen.inputSpec>
