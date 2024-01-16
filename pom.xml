@@ -12,7 +12,7 @@
   <version>2.4.2-SNAPSHOT</version>
   <name>example-app-11</name>
   <description>Demo project for Spring Boot</description>
-  <url>https://git.santalucia.net:443/scm/SLARQSOFAMSBACK/example-app-11.git</url>
+  <url>https://git.santalucia.net/scm/SLARQSOFAMSBACK/example-app-11.git</url>
   <organization>
     <name>Santalucia Seguros</name>
     <url>https://www.santalucia.es/</url>
