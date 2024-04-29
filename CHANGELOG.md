@@ -82,6 +82,12 @@
 
 #### Chore commits
 
+ -  fix read.md ([7ffdb6a5ff43390](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7ffdb6a5ff433908c2d7ee9bbcc322aee342a9df))
+ 		Fecha: 18-04-2024 06:39:44
+ -  remove security ([b16bb4e7aab3e96](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b16bb4e7aab3e964acb599982a1e9d0e1420c03a))
+ 		Fecha: 08-01-2024 11:17:38
+ -  fix commit ([49acf9440b7cdf7](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/49acf9440b7cdf7916b6be5c411aa19aa4313774))
+ 		Fecha: 13-11-2023 08:14:19
  -  fixes ([6285e74bd2d0aa3](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6285e74bd2d0aa39d07838b988993bdf6467779b))
  		Fecha: 07-11-2023 07:42:36
  -  commenting line that is not compiling ([cd9f1414a14fe9d](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/cd9f1414a14fe9d783111be452c04cf22d4d579b))

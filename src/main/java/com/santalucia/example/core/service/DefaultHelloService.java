@@ -41,9 +41,9 @@ public class DefaultHelloService implements HelloService {
 		// Ejemplo de llamada a remota
 		CompletableFuture<ResponseEntity<IdentidadDigitalConsultaResource>> completableFuture = helloWorldApiClient
 				.getHelloByName(name, Optional.empty());
-		
+
 		ResponseEntity<IdentidadDigitalConsultaResource> identidadDigitalConsultaResource = completableFuture.join();
-		
+
 		return Optional.ofNullable(identidadDigitalConsultaResource.getBody())
 				.map(v -> this.identidadDigitalMapper.toDomain(v));
 	}

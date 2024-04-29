@@ -40,7 +40,7 @@ class DefaultIndicadoresApiDelegateTests {
     List<IndicadorResource> resources = Instancio.createList(IndicadorResource.class);
     List<IndicadoresCentroDomain> domains = Instancio.createList(IndicadoresCentroDomain.class);
 
-    
+
     when(indicadorService.getIndicadores(any(Pageable.class))).thenReturn(domains);
     when(cacetrafecMapper.indicadoresDomainToResources(anyList())).thenReturn(resources);
 

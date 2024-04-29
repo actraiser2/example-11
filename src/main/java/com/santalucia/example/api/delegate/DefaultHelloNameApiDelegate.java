@@ -54,7 +54,7 @@ public class DefaultHelloNameApiDelegate implements HelloApiDelegate {
    * DefaultHelloNameApiDelegate getHelloByNameRemote
    * @param String name
    * @param Optional<UUID> xRequestID
-   * 
+   *
    */
   @Async
   @Override

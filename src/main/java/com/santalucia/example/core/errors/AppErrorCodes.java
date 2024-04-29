@@ -21,4 +21,3 @@ public enum AppErrorCodes implements ErrorCode {
 		return this.code;
 	}
 }
-

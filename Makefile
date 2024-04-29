@@ -20,7 +20,7 @@ NAVIGATOR_TOOL := chrome
 
 # # sonar
 SONAR_TOKEN := ${SONAR_TOKEN} # required - change this or set in env variable
-SONAR_HOST_URL ?= https://sonarqube-sonarqube.apps.nopro.ocp.santalucia.net/ 
+SONAR_HOST_URL ?= https://sonarqube-sonarqube.apps.nopro.ocp.santalucia.net/
 
 # # jacoco variables
 SPRING_PROFILE ?= default
@@ -29,15 +29,15 @@ SPRING_PROFILE ?= default
 MEM_OPTS := -Xms150m -Xmx1024m
 JMX_OPTS := -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
 DEBUG_OPTS := -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,server=y,suspend=n
-OTHER_OPTS := 
+OTHER_OPTS :=
 
 # # release variables
 RELEASE_VERSION := ${RELEASE_VERSION} # required - change this or set in env variable
 POM_VERSION := ${POM_VERSION} # required - change this or set in env variable
-SCM_COMMENT_PREFIX ?= fix: [maven-release-plugin] # Default 
-EXCLUDE_LIST ?= mvnw,mvnw.cmd,.mvn/**,.githooks/**,CHANGELOG.md,.gitmodules/**,.githooks,.gitmodules # Default 
+SCM_COMMENT_PREFIX ?= fix: [maven-release-plugin] # Default
+EXCLUDE_LIST ?= mvnw,mvnw.cmd,.mvn/**,.githooks/**,CHANGELOG.md,.gitmodules/**,.githooks,.gitmodules # Default
 GIT_REPO_URL := ${GIT_REPO_URL} # required - change this or set in env variable
-GPG_SKIP ?= true # Default 
+GPG_SKIP ?= true # Default
 
 # # makefile
 .PHONY: help release release-perform release release-clean release-perform
@@ -89,7 +89,7 @@ clean-install-no-test :		## Clean and Install the application package without la
 ###################################
 
 release-clean: ## maven release:clean
-	$(BUILD_TOOL) org.apache.maven.plugins:maven-release-plugin:clean 
+	$(BUILD_TOOL) org.apache.maven.plugins:maven-release-plugin:clean
 
 release-prepare:	## maven release:prepare
 	./$(BUILD_TOOL) org.apache.maven.plugins:maven-release-plugin:prepare \
@@ -109,18 +109,18 @@ release-perform :	## maven release:perform
 	-DignoreSnapshots=true \
 	-DreleaseVersion=$(RELEASE_VERSION) \
 	-DdevelopmentVersion=$(POM_VERSION) \
-	-DscmCommentPrefix=$(SCM_COMMENT_PREFIX) \ 
+	-DscmCommentPrefix=$(SCM_COMMENT_PREFIX) \
 	-DautoVersionSubmodules=true \
 	-DcheckModificationExcludeList=$(EXCLUDE_LIST) \
 	-Dtag=$(RELEASE_VERSION) \
 	-Dgit.santalucia.url=scm:git:$(GIT_REPO_URL) \
 	-Darguments="-Dgpg.skip=$(GPG_SKIP) -Dmaven.javadoc.skip=true" \
 	-Dgpg.skip=$(GPG_SKIP)
-			
+
 release :  release-clean release-prepare release-perform
-	
+
 #######################
-# # other maven goals 
+# # other maven goals
 #######################
 maven-version :		## get maven version
 	@$(BUILD_TOOL) --version
@@ -165,7 +165,7 @@ sonar :		## Execute sonar analisys. Need SONAR_PROJECT_KEY and SONAR_HOST_URL en
 	$(BUILD_TOOL) sonar:sonar -Dsonar.login=$(SONAR_TOKEN) -Dsonar.host.url=$(SONAR_HOST_URL)
 
 jacoco :		## Execute sonar analisys. Need SONAR_PROJECT_KEY and SONAR_HOST_URL environment variables or provide as a makefile local variables
-	$(BUILD_TOOL) org.jacoco:jacoco-maven-plugin:prepare-agent test org.jacoco:jacoco-maven-plugin:report -Dspring.profiles.active=$(SPRING_PROFILE) 
+	$(BUILD_TOOL) org.jacoco:jacoco-maven-plugin:prepare-agent test org.jacoco:jacoco-maven-plugin:report -Dspring.profiles.active=$(SPRING_PROFILE)
 
 ###################################
 # # running
@@ -223,7 +223,7 @@ help :		## Help
 	@grep -E '^[a-zA-Z_-]+ :.*?## .*$$' $(MAKEFILE_LIST) | sort -k 1,1 | awk 'BEGIN {FS = ":.*?## "}; {printf "\t\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 	@echo ""
 
-print-variables :		## Print variables values 
+print-variables :		## Print variables values
 	@echo "$(APP_NAME) - - - makefile - - -"
 	@echo "MAKE: $(MAKE)"
 	@echo "MAKEFILES: $(MAKEFILES)"

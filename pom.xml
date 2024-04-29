@@ -4,15 +4,15 @@
   <parent>
     <groupId>com.santalucia.arq.ams</groupId>
     <artifactId>ams-parent-sl-sw</artifactId>
-    <version>2.3.0-RELEASE</version>
+    <version>2.4.0-RELEASE</version>
     <relativePath />
   </parent>
   <groupId>com.santalucia.example</groupId>
   <artifactId>example-app-11</artifactId>
-  <version>2.4.2-SNAPSHOT</version>
+  <version>2.4.3-SNAPSHOT</version>
   <name>example-app-11</name>
   <description>Demo project for Spring Boot</description>
-  <url>https://git.santalucia.net/scm/SLARQSOFAMSBACK/example-app-11.git</url>
+  <url>https://git.santalucia.net/scm/slarqsofamsback/example-app-11.git</url>
   <organization>
     <name>Santalucia Seguros</name>
     <url>https://www.santalucia.es/</url>
@@ -121,10 +121,6 @@
       <artifactId>orai18n</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.oracle.database.jdbc</groupId>
-      <artifactId>ucp</artifactId>
-    </dependency>
-    <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>ams-componentes-web-test</artifactId>
       <scope>test</scope>
@@ -142,6 +138,40 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.2.0</version>
+        <executions>
+          <execution>
+            <id>initialize-pre-commit</id>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+            <phase>initialize</phase>
+            <configuration>
+              <executable>pre-commit</executable>
+              <arguments>
+                <argument>install</argument>
+              </arguments>
+            </configuration>
+          </execution>
+          <execution>
+            <id>install-pre-commit</id>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+            <phase>initialize</phase>
+            <configuration>
+              <executable>pip</executable>
+              <arguments>
+                <argument>install</argument>
+                <argument>pre-commit</argument>
+              </arguments>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>

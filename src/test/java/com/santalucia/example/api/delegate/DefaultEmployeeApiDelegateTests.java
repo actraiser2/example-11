@@ -38,7 +38,7 @@ class DefaultEmployeeApiDelegateTests {
   @DisplayName("Dado un contexto de prueba,  probamos respuesta de la llamada a get employees list")
   void test_employes_delegate() {
     DefaultEmployeesApiDelegate delegate = new DefaultEmployeesApiDelegate(employeeService, employeeMapper);
-    
+
     List<EmployeeDomain> lstDomain = Instancio.createList(EmployeeDomain.class);
     List<EmployeeResource> lstResource = Instancio.createList(EmployeeResource.class);
 

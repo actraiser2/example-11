@@ -26,7 +26,7 @@ import lombok.extern.slf4j.Slf4j;
 @Repository
 @AllArgsConstructor
 public class DefaultCacetrafecRepository implements CacetrafecRepository {
-	
+
 	private final CacetrafecCustomMapper cacetrafecCustomMapper;
 
 	/**

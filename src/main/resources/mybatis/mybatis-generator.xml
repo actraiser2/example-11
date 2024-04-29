@@ -4,27 +4,27 @@
 <generatorConfiguration>
   <!-- **************************************************************************
   	** INFO: Para ejecutar en maven usar el comando:
-  	** WARN: Es necesario poner comillas para escapar caracteres 
+  	** WARN: Es necesario poner comillas para escapar caracteres
     **    - Informix: mvn -Dmybatis.generator.contexts=informix mybatis-generator:generate -Dmybatis.generator.jdbcUserId= -Dmybatis.generator.jdbcPassword= -Dmybatis.generator.jdbcURL=''
     **    - Oracle:   mvn -Dmybatis.generator.contexts=oracle mybatis-generator:generate -Dmybatis.generator.jdbcUserId= -Dmybatis.generator.jdbcPassword= -Dmybatis.generator.jdbcURL=''
   	** el reference se encuentra en https://mybatis.org/generator/configreference/xmlconfig.html
-  	
+
   	************************************************************************** -->
   <!-- !!!! Configuracion del contexto INFORMIX !!!! -->
   <context id="informix" targetRuntime="MyBatis3DynamicSql" >
-  
+
     <plugin type="com.softwareloop.mybatis.generator.plugins.LombokPlugin">
          <property name="builder" value="true"/>
     </plugin>
-        
+
     <commentGenerator>
       <property name="suppressDate" value="true" />
     </commentGenerator>
-    
+
     <!-- El usuario y password debe pasan-->
-    <jdbcConnection driverClass="com.informix.jdbc.IfxDriver" 
+    <jdbcConnection driverClass="com.informix.jdbc.IfxDriver"
       connectionURL="${mybatis.generator.jdbcURL}"
-      userId="${mybatis.generator.jdbcUserId}" 
+      userId="${mybatis.generator.jdbcUserId}"
       password="${mybatis.generator.jdbcPassword}"
       />
 
@@ -47,7 +47,7 @@
 
   <!-- !!!! Configuracion del contexto ORACLE !!!! -->
   <context id="oracle" targetRuntime="MyBatis3DynamicSql">
-  
+
     <plugin type="com.softwareloop.mybatis.generator.plugins.LombokPlugin">
          <property name="builder" value="true"/>
     </plugin>
@@ -56,9 +56,9 @@
       <property name="suppressDate" value="true" />
     </commentGenerator>
 
-    <jdbcConnection driverClass="oracle.jdbc.OracleDriver" 
-      connectionURL="${mybatis.generator.jdbcURL}" 
-      userId="${mybatis.generator.jdbcUserId}" 
+    <jdbcConnection driverClass="oracle.jdbc.OracleDriver"
+      connectionURL="${mybatis.generator.jdbcURL}"
+      userId="${mybatis.generator.jdbcUserId}"
       password="${mybatis.generator.jdbcPassword}" />
 
     <javaTypeResolver>
