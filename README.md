@@ -1,4 +1,4 @@
-example-app-11 
+example-app-11
 
 [![Maintainability Rating](https://sonarqube-sonarqube.apps.nopro.ocp.santalucia.net/api/project_badges/measure?project=example-app-11&metric=sqale_rating&token=sqb_e4241b3b559d1ca4e4c99f02068e3d0c1b1a87b7)](https://sonarqube-sonarqube.apps.nopro.ocp.santalucia.net/dashboard?id=example-app-11)
 [![Reliability Rating](https://sonarqube-sonarqube.apps.nopro.ocp.santalucia.net/api/project_badges/measure?project=example-app-11&metric=reliability_rating&token=sqb_e4241b3b559d1ca4e4c99f02068e3d0c1b1a87b7)](https://sonarqube-sonarqube.apps.nopro.ocp.santalucia.net/dashboard?id=example-app-11)
