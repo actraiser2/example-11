@@ -11,11 +11,11 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 import com.santalucia.example.api.model.IndicadorResource;
-import com.santalucia.example.api.server.IndicadoresApiDelegate;
+import com.santalucia.example.api.server.ListIndicadoresApiDelegate;
 import com.santalucia.example.core.mappers.CacetrafecDomainMapper;
 import com.santalucia.example.core.service.IndicadorService;
 
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 
 /**
@@ -23,8 +23,8 @@ import lombok.AllArgsConstructor;
  *
  */
 @Component
-@AllArgsConstructor
-public class DefaultIndicadoresApiDelegate implements IndicadoresApiDelegate {
+@RequiredArgsConstructor
+public class DefaultIndicadoresApiDelegate implements ListIndicadoresApiDelegate {
 
   private final IndicadorService indicadorService;
   private final CacetrafecDomainMapper cacetrafecMapper;
@@ -43,7 +43,7 @@ public class DefaultIndicadoresApiDelegate implements IndicadoresApiDelegate {
     return CompletableFuture.completedFuture( Optional
       .ofNullable(this.indicadorService.getIndicadores(pageable))
       .map(indicadores -> ResponseEntity.ok().body(this.cacetrafecMapper.indicadoresDomainToResources(indicadores)))
-      .orElse(ResponseEntity.notFound().build()));
+      .orElseGet(() -> ResponseEntity.notFound().build()));
   }
 
 

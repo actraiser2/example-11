@@ -34,15 +34,15 @@ import com.santalucia.arq.ams.componentes.web.config.WebAutoConfiguration;
 import com.santalucia.arq.ams.componentes.web.security.config.SecurityAutoConfig;
 import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
 
-@ContextConfiguration(classes = {HelloApiController.class, WebAutoConfiguration.class, SecurityAutoConfig.class, TracerAutoConfiguration.class})
-@WebMvcTest(HelloApiController.class)
+@ContextConfiguration(classes = {HelloWorldApiController.class, WebAutoConfiguration.class, SecurityAutoConfig.class, TracerAutoConfiguration.class})
+@WebMvcTest(HelloWorldApiController.class)
 class HelloApiControllerTests {
 
   @Autowired
   private MockMvc mvc;
 
   @MockBean
-  private HelloApiDelegate helloApiDelegate;
+  private HelloWorldApiDelegate helloApiDelegate;
 
 
   @Test

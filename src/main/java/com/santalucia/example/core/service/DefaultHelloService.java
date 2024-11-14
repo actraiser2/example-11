@@ -1,18 +1,15 @@
 package com.santalucia.example.core.service;
 
 import java.util.Optional;
-import java.util.concurrent.CompletableFuture;
 
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.santalucia.example.api.client.HelloWorldApiClient;
 import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
 import com.santalucia.example.core.domain.IdentidadDigitalDomain;
 import com.santalucia.example.core.exceptions.InvalidNameException;
 import com.santalucia.example.core.mappers.IdentidadDigitalDomainMapper;
 
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 
 /**
@@ -20,11 +17,11 @@ import lombok.AllArgsConstructor;
  *
  */
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class DefaultHelloService implements HelloService {
 
-	private HelloWorldApiClient helloWorldApiClient;
-	private IdentidadDigitalDomainMapper identidadDigitalMapper;
+
+	private final IdentidadDigitalDomainMapper identidadDigitalMapper;
 
 	/**
 	 * servicio getHello
@@ -38,13 +35,9 @@ public class DefaultHelloService implements HelloService {
 			throw new InvalidNameException();
 		}
 
-		// Ejemplo de llamada a remota
-		CompletableFuture<ResponseEntity<IdentidadDigitalConsultaResource>> completableFuture = helloWorldApiClient
-				.getHelloByName(name, Optional.empty());
+		IdentidadDigitalConsultaResource resource = new IdentidadDigitalConsultaResource();
 
-		ResponseEntity<IdentidadDigitalConsultaResource> identidadDigitalConsultaResource = completableFuture.join();
-
-		return Optional.ofNullable(identidadDigitalConsultaResource.getBody())
+		return Optional.ofNullable(resource)
 				.map(v -> this.identidadDigitalMapper.toDomain(v));
 	}
 

@@ -4,12 +4,12 @@
   <parent>
     <groupId>com.santalucia.arq.ams</groupId>
     <artifactId>ams-parent-sl-sw</artifactId>
-    <version>2.4.0-RELEASE</version>
+    <version>2.5.0-SNAPSHOT</version>
     <relativePath />
   </parent>
   <groupId>com.santalucia.example</groupId>
   <artifactId>example-app-11</artifactId>
-  <version>2.4.3-SNAPSHOT</version>
+  <version>2.4.4-SNAPSHOT</version>
   <name>example-app-11</name>
   <description>Demo project for Spring Boot</description>
   <url>https://git.santalucia.net/scm/slarqsofamsback/example-app-11.git</url>
@@ -58,7 +58,7 @@
     <skip.it>true</skip.it>
     <swagger.codegen.inputSpec>src/main/resources/api/swagger.yaml</swagger.codegen.inputSpec>
     <swagger.codegen.package>${project.groupId}</swagger.codegen.package>
-    <swagger.codegen.skip.client>false</swagger.codegen.skip.client>
+    <swagger.codegen.skip.client>true</swagger.codegen.skip.client>
     <swagger.codegen.skip.server>false</swagger.codegen.skip.server>
   </properties>
   <dependencies>
@@ -139,6 +139,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
       </plugin>
+      <!--
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
@@ -173,6 +174,7 @@
           </execution>
         </executions>
       </plugin>
+      -->
     </plugins>
   </build>
 </project>

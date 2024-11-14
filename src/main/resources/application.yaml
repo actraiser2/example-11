@@ -164,9 +164,11 @@ spring:
 #                         #
 ###########################
 santalucia:
-  default-zone-id: ${TZ:Europe/Madrid}
   ams:
     features:
+      core:
+        default-zone-id: ${TZ:Europe/Madrid}
+        entorno: dev
       micrometer:
         jvm-extras:
           process-memory-metrics:
@@ -217,7 +219,7 @@ santalucia:
 # feign client properties #
 #                         #
 ###########################
-helloWorld:
+helloworld:
   url: http://localhost:8080/hello-world/v1
 ###########################
 #                         #

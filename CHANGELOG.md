@@ -82,6 +82,14 @@
 
 #### Chore commits
 
+ -  force build ([0f7fc8b29acd6f5](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/0f7fc8b29acd6f53d6620198282bdc89e0ccceab))
+ 		Fecha: 13-05-2024 11:16:40
+ -  README.md edited online with Bitbucket ([9b94c78437fb065](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/9b94c78437fb065133ba5f9fdff0ab25e8734db4))
+ 		Fecha: 13-05-2024 10:29:02
+ -  force build ([9792f94d58af0e0](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/9792f94d58af0e0df011520e77744084ed4cc965))
+ 		Fecha: 13-05-2024 10:24:27
+ -  test ([21bf6526494474a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/21bf6526494474aaa1e665ba6a882a89e0d117fe))
+ 		Fecha: 29-04-2024 13:16:59
  -  fix read.md ([7ffdb6a5ff43390](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7ffdb6a5ff433908c2d7ee9bbcc322aee342a9df))
  		Fecha: 18-04-2024 06:39:44
  -  remove security ([b16bb4e7aab3e96](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b16bb4e7aab3e964acb599982a1e9d0e1420c03a))

@@ -47,20 +47,20 @@ class DefaultHelloNameApiDelegateTests {
     assertThat(completableFuture.join().getBody()).isEqualTo(resource);
   }
 
-  @Test
-  @DisplayName("Dado un contexto de prueba, probamos respuesta de la llamada a get hello by name remote")
-  void test_hello_by_name_remote_delegate() {
-    DefaultHelloNameApiDelegate delegate = new DefaultHelloNameApiDelegate(helloService, identidadDigitalDomainMapper);
-    IdentidadDigitalConsultaResource resource = new IdentidadDigitalConsultaResource();
-    IdentidadDigitalDomain domain = IdentidadDigitalDomain.builder().nombre("User").saludo("Hola").build();
-
-    when(helloService.getHelloRemoteByName(anyString())).thenReturn(Optional.of(domain));
-    when(identidadDigitalDomainMapper.toResource(any(IdentidadDigitalDomain.class))).thenReturn(resource);
-
-    CompletableFuture<ResponseEntity<IdentidadDigitalConsultaResource>> completableFuture = delegate.getHelloByNameRemote("User", Optional.empty());
-
-    assertThat(completableFuture).isNotNull();
-    assertThat(completableFuture.join().getStatusCode()).isEqualTo(HttpStatus.OK);
-    assertThat(completableFuture.join().getBody()).isEqualTo(resource);
-  }
+//  @Test
+//  @DisplayName("Dado un contexto de prueba, probamos respuesta de la llamada a get hello by name remote")
+//  void test_hello_by_name_remote_delegate() {
+//    DefaultHelloNameApiDelegate delegate = new DefaultHelloNameApiDelegate(helloService, identidadDigitalDomainMapper);
+//    IdentidadDigitalConsultaResource resource = new IdentidadDigitalConsultaResource();
+//    IdentidadDigitalDomain domain = IdentidadDigitalDomain.builder().nombre("User").saludo("Hola").build();
+//
+//    when(helloService.getHelloRemoteByName(anyString())).thenReturn(Optional.of(domain));
+//    when(identidadDigitalDomainMapper.toResource(any(IdentidadDigitalDomain.class))).thenReturn(resource);
+//
+//    CompletableFuture<ResponseEntity<IdentidadDigitalConsultaResource>> completableFuture = delegate.getHelloByNameRemote("User", Optional.empty());
+//
+//    assertThat(completableFuture).isNotNull();
+//    assertThat(completableFuture.join().getStatusCode()).isEqualTo(HttpStatus.OK);
+//    assertThat(completableFuture.join().getBody()).isEqualTo(resource);
+//  }
 }

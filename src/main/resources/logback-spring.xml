@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE configuration>
-<configuration debug="false" scan="true">
+<configuration debug="false" scan="false">
   <include resource="org/springframework/boot/logging/logback/defaults.xml" />
   <include resource="com/santalucia/arq/ams/componentes/logging/logback-appenders-std.xml" />
 

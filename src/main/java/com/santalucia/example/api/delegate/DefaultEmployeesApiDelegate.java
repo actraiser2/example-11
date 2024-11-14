@@ -11,11 +11,11 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 import com.santalucia.example.api.model.EmployeeResource;
-import com.santalucia.example.api.server.EmployeesApiDelegate;
+import com.santalucia.example.api.server.ListEmployeesApiDelegate;
 import com.santalucia.example.core.mappers.EmployeeDomainMapper;
 import com.santalucia.example.core.service.EmployeeService;
 
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 
@@ -25,8 +25,8 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 @Component
-@AllArgsConstructor
-public class DefaultEmployeesApiDelegate implements EmployeesApiDelegate {
+@RequiredArgsConstructor
+public class DefaultEmployeesApiDelegate implements ListEmployeesApiDelegate {
 
   private final EmployeeService employeeService;
   private final EmployeeDomainMapper employeeMapper;
@@ -50,6 +50,6 @@ public class DefaultEmployeesApiDelegate implements EmployeesApiDelegate {
           .of(employeeService.getEmployees(pageable))
           .map(employees -> ResponseEntity.ok()
           .body(employeeMapper.toResources(employees))) // 200 OK
-          .orElse(ResponseEntity.notFound().build())); // 404 Not found
+          .orElseGet(() -> ResponseEntity.notFound().build())); // 404 Not found
   }
 }
