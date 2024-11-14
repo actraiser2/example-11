@@ -232,6 +232,7 @@ logging:
     root: INFO
     "[com.santalucia]": DEBUG
     "[org.springframework]": INFO
+    "[org.springframework.test]": DEBUG
     #"[org.springframework.web.servlet]": DEBUG
     #"[org.springframework.security]": DEBUG
     #"[org.springframework.web.client]": DEBUG

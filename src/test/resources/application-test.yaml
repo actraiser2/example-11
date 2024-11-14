@@ -30,6 +30,10 @@ santalucia:
       guardium:
         enabled: false
 
+springdoc:
+  api-docs:
+    enabled: false
+        
 helloWorld:
   url: http://localhost:${wiremock.server.port:8089}/hello-world/v1
 #deshabilitamos el tracing para los test

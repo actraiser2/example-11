@@ -18,24 +18,23 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.test.context.support.WithAnonymousUser;
 import org.springframework.security.test.context.support.WithMockUser;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.santalucia.arq.ams.componentes.tracing.config.TracerAutoConfiguration;
 import com.santalucia.arq.ams.componentes.tracing.util.XRequestIDUtils;
-import com.santalucia.arq.ams.componentes.web.config.WebAutoConfiguration;
-import com.santalucia.arq.ams.componentes.web.security.config.SecurityAutoConfig;
 import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
 
-@ContextConfiguration(classes = {HelloWorldApiController.class, WebAutoConfiguration.class, SecurityAutoConfig.class, TracerAutoConfiguration.class})
-@WebMvcTest(HelloWorldApiController.class)
+@SpringBootTest
+@AutoConfigureMockMvc
+//@ContextConfiguration(classes = {HelloWorldApiController.class, WebAutoConfiguration.class, SecurityAutoConfig.class, TracerAutoConfiguration.class})
+//@WebMvcTest(HelloWorldApiController.class)
 class HelloApiControllerTests {
 
   @Autowired
@@ -53,9 +52,15 @@ class HelloApiControllerTests {
 	String xrequest = UUID.randomUUID().toString();
 	 IdentidadDigitalConsultaResource resource = Instancio.create(IdentidadDigitalConsultaResource.class);
 
+	 String[] brand = new String[] { "Toyota" };
+//    when(helloApiDelegate.getHelloByName(Mockito.anyString(), Mockito.any()))
+//      .thenReturn(CompletableFuture.completedFuture(ResponseEntity.ok(resource)));
+//    
     when(helloApiDelegate.getHelloByName(Mockito.anyString(), Mockito.any()))
-      .thenReturn(CompletableFuture.completedFuture(ResponseEntity.ok(resource)));
-
+   // .thenThrow(new SantaluciaWebRuntimeException(AppErrorCodes.INVALID_NAME, brand)); OK
+    // .thenThrow(new TypeMismatchException("","Toyota".getClass())); //OK
+     .thenThrow(new RuntimeException("")); //KO
+    
     mvc.perform(asyncDispatch(mvc.perform(get("/hello-world/v1/hello/{name}", resource.getNombre())
         .header(XRequestIDUtils.X_REQUEST_HEADER, xrequest)
         .contentType(MediaType.APPLICATION_JSON)
