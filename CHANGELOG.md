@@ -82,6 +82,16 @@
 
 #### Chore commits
 
+ -  Merge remote-tracking branch 'origin/develop' into develop ([ec4f47bbdd2c43b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ec4f47bbdd2c43b3b54abeadeeef4185fec56584))
+ 		Fecha: 14-11-2024 17:02:40
+ -  update ([350e447fb46d178](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/350e447fb46d178bc44de9f3833d3aee4812949b))
+ 		Fecha: 14-11-2024 17:02:17
+ -  README.md edited online with Bitbucket ([3b8e812f9f34043](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3b8e812f9f340434cf450b16467a26145bfc7f2b))
+ 		Fecha: 14-11-2024 10:16:07
+ -  README.md edited online with Bitbucket ([8ee6cbdf5e46123](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/8ee6cbdf5e461232b81aaf908d40ceef13749816))
+ 		Fecha: 14-11-2024 10:13:48
+ -  adjust to 2.52 ([26e4388aca60e96](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/26e4388aca60e96ebae0cd9542e1b5583e042151))
+ 		Fecha: 14-11-2024 10:11:01
  -  force build ([0f7fc8b29acd6f5](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/0f7fc8b29acd6f53d6620198282bdc89e0ccceab))
  		Fecha: 13-05-2024 11:16:40
  -  README.md edited online with Bitbucket ([9b94c78437fb065](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/9b94c78437fb065133ba5f9fdff0ab25e8734db4))

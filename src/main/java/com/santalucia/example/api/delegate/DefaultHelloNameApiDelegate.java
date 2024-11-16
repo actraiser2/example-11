@@ -44,7 +44,7 @@ public class DefaultHelloNameApiDelegate implements HelloWorldApiDelegate {
       Optional
         .ofNullable(helloService.getHelloByName(name))
         .map(idDomain -> ResponseEntity.ok().body(identidadDigitalDomainMapper.toResource(idDomain))) // 200 OK
-        .orElse(ResponseEntity.notFound().build()));// 404 Not found
+        .orElseGet(() -> ResponseEntity.notFound().build()));// 404 Not found
 
   }
 
