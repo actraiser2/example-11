@@ -52,14 +52,8 @@ class HelloApiControllerTests {
 	String xrequest = UUID.randomUUID().toString();
 	 IdentidadDigitalConsultaResource resource = Instancio.create(IdentidadDigitalConsultaResource.class);
 
-	 String[] brand = new String[] { "Toyota" };
-//    when(helloApiDelegate.getHelloByName(Mockito.anyString(), Mockito.any()))
-//      .thenReturn(CompletableFuture.completedFuture(ResponseEntity.ok(resource)));
-//    
     when(helloApiDelegate.getHelloByName(Mockito.anyString(), Mockito.any()))
-   // .thenThrow(new SantaluciaWebRuntimeException(AppErrorCodes.INVALID_NAME, brand)); OK
-    // .thenThrow(new TypeMismatchException("","Toyota".getClass())); //OK
-     .thenThrow(new RuntimeException("")); //KO
+      .thenReturn(CompletableFuture.completedFuture(ResponseEntity.ok(resource)));
     
     mvc.perform(asyncDispatch(mvc.perform(get("/hello-world/v1/hello/{name}", resource.getNombre())
         .header(XRequestIDUtils.X_REQUEST_HEADER, xrequest)
