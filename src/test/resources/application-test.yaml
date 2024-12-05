@@ -33,13 +33,11 @@ santalucia:
 springdoc:
   api-docs:
     enabled: false
-    
 management:
   metrics:
     export:
       prometheus:
         enabled: false
-        
 helloWorld:
   url: http://localhost:${wiremock.server.port:8089}/hello-world/v1
 #deshabilitamos el tracing para los test
