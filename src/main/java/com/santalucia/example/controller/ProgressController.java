@@ -25,8 +25,8 @@ import com.santalucia.arq.ams.componentes.core.properties.reload.AmsCoreProperti
 @EnableConfigurationProperties(AmsCoreProperties.class)
 public class ProgressController {
 
-	private Random rand;
-	private AmsCoreProperties properties;
+	private final Random rand;
+	private final AmsCoreProperties properties;
 
 	/**
 	 * ProgressController
