@@ -82,6 +82,20 @@
 
 #### Chore commits
 
+ -  README.md edited online with Bitbucket ([1d15a794b5d7bfe](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/1d15a794b5d7bfef70f9c943319ef3a9d4376dfc))
+ 		Fecha: 05-12-2024 12:30:32
+ -  README.md edited online with Bitbucket ([4383085bf1389f0](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/4383085bf1389f0d3ef379d52107192f021cc859))
+ 		Fecha: 05-12-2024 12:19:54
+ -  README.md edited online with Bitbucket ([a6c7715813df030](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a6c7715813df03041d087eafd259f2c05dafd58c))
+ 		Fecha: 05-12-2024 10:42:43
+ -  application-test.yaml edited online with Bitbucket ([1a7b54a59ccab0b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/1a7b54a59ccab0b865e4922e5a1cd5b3cffcee24))
+ 		Fecha: 05-12-2024 10:29:06
+ -  pom.xml edited online with Bitbucket ([f6dbfe542a09026](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f6dbfe542a09026b36dc8c2e4f92e7810b9a4960))
+ 		Fecha: 05-12-2024 10:21:45
+ -  fix tests ([58397f40d5579f6](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/58397f40d5579f62138052433b588525f29068c1))
+ 		Fecha: 16-11-2024 11:56:23
+ -  fix errorProne ([99b4bc11ea80fa3](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/99b4bc11ea80fa3f5989b0917e0eba420fbce13e))
+ 		Fecha: 16-11-2024 11:41:00
  -  Merge remote-tracking branch 'origin/develop' into develop ([ec4f47bbdd2c43b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ec4f47bbdd2c43b3b54abeadeeef4185fec56584))
  		Fecha: 14-11-2024 17:02:40
  -  update ([350e447fb46d178](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/350e447fb46d178bc44de9f3833d3aee4812949b))

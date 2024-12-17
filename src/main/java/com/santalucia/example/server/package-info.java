@@ -7,7 +7,7 @@
  */
 @NonNullApi
 @NonNullFields
-package com.santalucia.example.controller;
+package com.santalucia.example.server;
 
 import org.springframework.lang.NonNullApi;
 import org.springframework.lang.NonNullFields;

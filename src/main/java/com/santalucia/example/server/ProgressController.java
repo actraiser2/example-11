@@ -1,4 +1,4 @@
-package com.santalucia.example.controller;
+package com.santalucia.example.server;
 
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;

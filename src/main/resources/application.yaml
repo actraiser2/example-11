@@ -137,11 +137,24 @@ spring:
         driver-class-name: com.informix.jdbc.IfxDriver
         pool-name: informix-pool
         jdbc-url: jdbc:informix-sqli://slbdifxd15.servidores.net:20101/siis:INFORMIXSERVER=fun_jdbc
+        register-mbeans: true
+        keepalive-time: 120000
+        connection-init-sql: SELECT 1
+        connection-timeout: 3000
+        data-source-properties:
+          "[LOGINTIMEOUT]": 3000
+          "[INFORMIXCONTIME]": 3
+          # revisar si es necesario al haber establecido el keepalive-time
+          #"[IFX_SOC_KEEPALIVE]": true
     secondary:
       hikari:
         driver-class-name: oracle.jdbc.OracleDriver
         pool-name: oracle-pool
         jdbc-url: jdbc:oracle:thin:@slbdorad15.servidores.net:1548/DB12UTF8D.DES.SANTALUCIA.ES
+        register-mbeans: true
+        keepalive-time: 120000
+        connection-init-sql: SELECT 1
+        connection-timeout: 3000
 
 ######################################
 #                                    #
