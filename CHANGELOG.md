@@ -82,6 +82,10 @@
 
 #### Chore commits
 
+ -  fix package ([ba2443c339c9878](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ba2443c339c98784138841f023590a07bd2b6e0a))
+ 		Fecha: 17-12-2024 14:05:27
+ -  fix dani ([7e82e2375dab273](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7e82e2375dab2731a598845813710bd2831c22a9))
+ 		Fecha: 17-12-2024 13:51:04
  -  README.md edited online with Bitbucket ([1d15a794b5d7bfe](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/1d15a794b5d7bfef70f9c943319ef3a9d4376dfc))
  		Fecha: 05-12-2024 12:30:32
  -  README.md edited online with Bitbucket ([4383085bf1389f0](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/4383085bf1389f0d3ef379d52107192f021cc859))

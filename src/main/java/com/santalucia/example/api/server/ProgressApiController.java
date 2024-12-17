@@ -23,7 +23,7 @@ import com.santalucia.arq.ams.componentes.core.properties.reload.AmsCoreProperti
  */
 @RestController
 @EnableConfigurationProperties(AmsCoreProperties.class)
-public class ProgressController {
+public class ProgressApiController {
 
 	private final Random rand;
 	private final AmsCoreProperties properties;
@@ -33,7 +33,7 @@ public class ProgressController {
 	 * @param AmsCoreProperties properties
 	 * @throws NoSuchAlgorithmException
 	 */
-    public ProgressController(AmsCoreProperties properties) throws NoSuchAlgorithmException {
+    public ProgressApiController(AmsCoreProperties properties) throws NoSuchAlgorithmException {
     	this.rand = SecureRandom.getInstanceStrong();  // SecureRandom is preferred to Random
     	this.properties = properties;
     }
