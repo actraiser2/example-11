@@ -1,4 +1,4 @@
-package com.santalucia.example.server;
+package com.santalucia.example.api.server;
 
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
