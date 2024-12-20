@@ -136,26 +136,92 @@ spring:
       hikari:
         driver-class-name: com.informix.jdbc.IfxDriver
         pool-name: informix-pool
-        jdbc-url: jdbc:informix-sqli://slbdifxd15.servidores.net:20101/siis:INFORMIXSERVER=fun_jdbc
+        jdbc-url: jdbc:informix-sqli://slbdifxd15.servidores.net:20100/siis:INFORMIXSERVER=fun_jdbc
+        # jdbc-url: jdbc:informix-sqli://INFORMIXSERVER=fun_tcp;DATABASE=siis;SQLH_TYPE=FILE;SQLH_FILE=/deployments/config/sqlhosts
+        # leakDetectionThreshold: (milisegundos) Muestra en el log si una
+        #   conexión del pool lleva más de 10 segundos en uso.
+        leak-detection-threshold: 10000
+        # register-mbeans: Habilita que se pueda ver el pool en Dynatrace.
         register-mbeans: true
+        # keepalive-time: (milisegundos) "Ping" de aplicación, a nivel 7.
+        #   2 paquetes C->S y 1 paquete S->C
         keepalive-time: 120000
+        # connection-init-sql: Para que se valide la conexión en la
+        #   fase de creación.
         connection-init-sql: SELECT 1
-        connection-timeout: 3000
+        # connection-timeout: (milisegundos) Tiempo de espera del código de
+        #   usuario para obtener un objeto de conexión idle del pool. NO es el
+        #   tiempo de espera de la conexión TCP.
+        connection-timeout: 10000
+        # minimumIdle: Número mínimo de conexiones inactivas que se mantendrán
+        #   en el pool.
+        #minimumIdle: 10
+        # maximumPoolSize: Número máximo de conexiones que se mantendrán en el
+        #   pool.
+        #maximumPoolSize: 10
+        # maxLifetime: (milisegundos) Tiempo máximo de vida de una conexión en
+        #   el pool. Si una conexión lleva más de 30 minutos en el pool, se
+        #   cierra y se crea una nueva.
+        max-lifetime: 1740000
+        # Propiedades de conexión adicionales específicas del driver de Informix
         data-source-properties:
-          "[LOGINTIMEOUT]": 3000
-          "[INFORMIXCONTIME]": 3
-          # revisar si es necesario al haber establecido el keepalive-time
-          #"[IFX_SOC_KEEPALIVE]": true
+          # IFX_SOC_TIMEOUT: (milisegundos) Tiempo máximo de espera TCP de la
+          #   conexión a la base de datos. Afecta en la fase de conexión y en
+          #   las fases de ejecución de las sentencias SQL!!!
+          #"[IFX_SOC_TIMEOUT]": 10000
+          # LOGINTIMEOUT: (milisegundos) Tiempo máximo de espera para la
+          #   autenticación del usuario en la base de datos. No se observa
+          #   efecto cuando se usa CP junto a INFORMIXCONTIME
+          #"[LOGINTIMEOUT]": 5000
+          # INFORMIXCONTIME: (segundos) Tiempo máximo de espera TCP para la
+          #   conexión inicial a la base de datos. No afecta en las fases de
+          #   ejecución de las sentencias SQL
+          "[INFORMIXCONTIME]": 5
+          # INFORMIXCONRETRY: Número de reintentos de conexión a la base de
+          #   datos en caso de fallo. Por defecto es 0. Al usar CP, es Hikari
+          #   quien se encarga de los reintentos.
+          # "[INFORMIXCONRETRY]": 3
+          # IFX_SOC_KEEPALIVE: (boolean) Habilita el keepalive, a nivel 4,
+          #   añadiendo SO_KEEPALIVE al socket de la conexión TCP.
+          "[IFX_SOC_KEEPALIVE]": true
     secondary:
       hikari:
         driver-class-name: oracle.jdbc.OracleDriver
         pool-name: oracle-pool
-        jdbc-url: jdbc:oracle:thin:@slbdorad15.servidores.net:1548/DB12UTF8D.DES.SANTALUCIA.ES
+        # TRANSPORT_CONNECT_TIMEOUT: (segundos) Tiempo máximo de espera TCP
+        # CONNECT_TIMEOUT: (segundos) Tiempo máximo de espera al crear la
+        #   sesiónn de la base de datos.
+        #jdbc-url: jdbc:oracle:thin:@(DESCRIPTION=(TRANSPORT_CONNECT_TIMEOUT=3)(CONNECT_TIMEOUT=5)(ADDRESS_LIST=(ADDRESS=(HOST=slbdorad15.servidores.net)(PORT=1548)(PROTOCOL=tcp)))(CONNECT_DATA=(SERVICE_NAME=DB12UTF8D.DES.SANTALUCIA.ES)))
+        jdbc-url: jdbc:oracle:thin:@(DESCRIPTION=(CONNECT_TIMEOUT=5)(RETRY_COUNT=4)(RETRY_DELAY=2)(TRANSPORT_CONNECT_TIMEOUT=3)(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=slbdorad15.servidores.net)(PORT=1548)))(CONNECT_DATA=(SERVICE_NAME=DB12UTF8D.DES.SANTALUCIA.ES)))
+        # register-mbeans: Habilita que se pueda ver el pool en Dynatrace.
         register-mbeans: true
+        # keepalive-time: (milisegundos) "Ping" de aplicación, a nivel 7.
+        #   2 paquetes C->S y 1 paquete S->C
         keepalive-time: 120000
-        connection-init-sql: SELECT 1
-        connection-timeout: 3000
-
+        # connection-init-sql: Para que se valide la conexión en la
+        #   fase de creación.
+        #   En Oracle no se puede usar "SELECT 1". Failed to initialize pool:
+        #   ORA-00923: FROM keyword not found where expected
+        connection-init-sql: SELECT 1 FROM DUAL
+        # connection-timeout: (milisegundos) Tiempo de espera del código de
+        #   usuario para obtener un objeto de conexión idle del pool. NO es el
+        #   tiempo de espera de la conexión TCP.
+        connection-timeout: 10000
+        # leakDetectionThreshold: (milisegundos) Muestra en el log si una
+        #   conexión del pool lleva más de 10 segundos en uso.
+        leak-detection-threshold: 10000
+        # minimumIdle: Número mínimo de conexiones inactivas que se mantendrán
+        #   en el pool.
+        #minimumIdle: 10
+        # maximumPoolSize: Número máximo de conexiones que se mantendrán en el
+        #   pool.
+        #maximumPoolSize: 10
+        # maxLifetime: (milisegundos) Tiempo máximo de vida de una conexión en
+        #   el pool. Si una conexión lleva más de 30 minutos en el pool, se
+        #   cierra y se crea una nueva.
+        max-lifetime: 1740000
+        data-source-properties:
+          "[oracle.jdbc.defaultConnectionValidation]": COMPLETE
 ######################################
 #                                    #
 # security properties                #
@@ -253,6 +319,7 @@ logging:
     "[org.springframework.security.oauth2.server.resource]": DEBUG
     #Paquete que indica cuando SB esta disponible
     "[org.springframework.boot.availability]": DEBUG
+    com.zaxxer.hikari: DEBUG # En todos los entornos a DEBUG
 
 ###########################
 #                         #
