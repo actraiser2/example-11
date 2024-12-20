@@ -140,7 +140,7 @@ spring:
         # jdbc-url: jdbc:informix-sqli://INFORMIXSERVER=fun_tcp;DATABASE=siis;SQLH_TYPE=FILE;SQLH_FILE=/deployments/config/sqlhosts
         # leakDetectionThreshold: (milisegundos) Muestra en el log si una
         #   conexión del pool lleva más de 10 segundos en uso.
-        leakDetectionThreshold: 10000
+        leak-detection-threshold: 10000
         # register-mbeans: Habilita que se pueda ver el pool en Dynatrace.
         register-mbeans: true
         # keepalive-time: (milisegundos) "Ping" de aplicación, a nivel 7.
@@ -155,14 +155,14 @@ spring:
         connection-timeout: 10000
         # minimumIdle: Número mínimo de conexiones inactivas que se mantendrán
         #   en el pool.
-        minimumIdle: 10
+        #minimumIdle: 10
         # maximumPoolSize: Número máximo de conexiones que se mantendrán en el
         #   pool.
-        maximumPoolSize: 10
+        #maximumPoolSize: 10
         # maxLifetime: (milisegundos) Tiempo máximo de vida de una conexión en
         #   el pool. Si una conexión lleva más de 30 minutos en el pool, se
         #   cierra y se crea una nueva.
-        maxLifetime: 1800000
+        max-lifetime: 1740000
         # Propiedades de conexión adicionales específicas del driver de Informix
         data-source-properties:
           # IFX_SOC_TIMEOUT: (milisegundos) Tiempo máximo de espera TCP de la
@@ -191,7 +191,8 @@ spring:
         # TRANSPORT_CONNECT_TIMEOUT: (segundos) Tiempo máximo de espera TCP
         # CONNECT_TIMEOUT: (segundos) Tiempo máximo de espera al crear la
         #   sesiónn de la base de datos.
-        jdbc-url: jdbc:oracle:thin:@(DESCRIPTION=(TRANSPORT_CONNECT_TIMEOUT=3)(CONNECT_TIMEOUT=5)(ADDRESS_LIST=(ADDRESS=(HOST=slbdorad15.servidores.net)(PORT=1548)(PROTOCOL=tcp)))(CONNECT_DATA=(SERVICE_NAME=DB12UTF8D.DES.SANTALUCIA.ES)))
+        #jdbc-url: jdbc:oracle:thin:@(DESCRIPTION=(TRANSPORT_CONNECT_TIMEOUT=3)(CONNECT_TIMEOUT=5)(ADDRESS_LIST=(ADDRESS=(HOST=slbdorad15.servidores.net)(PORT=1548)(PROTOCOL=tcp)))(CONNECT_DATA=(SERVICE_NAME=DB12UTF8D.DES.SANTALUCIA.ES)))
+        jdbc-url: jdbc:oracle:thin:@(DESCRIPTION=(CONNECT_TIMEOUT=5)(RETRY_COUNT=4)(RETRY_DELAY=2)(TRANSPORT_CONNECT_TIMEOUT=3)(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=slbdorad15.servidores.net)(PORT=1548)))(CONNECT_DATA=(SERVICE_NAME=DB12UTF8D.DES.SANTALUCIA.ES)))
         # register-mbeans: Habilita que se pueda ver el pool en Dynatrace.
         register-mbeans: true
         # keepalive-time: (milisegundos) "Ping" de aplicación, a nivel 7.
@@ -208,18 +209,19 @@ spring:
         connection-timeout: 10000
         # leakDetectionThreshold: (milisegundos) Muestra en el log si una
         #   conexión del pool lleva más de 10 segundos en uso.
-        leakDetectionThreshold: 10000
+        leak-detection-threshold: 10000
         # minimumIdle: Número mínimo de conexiones inactivas que se mantendrán
         #   en el pool.
-        minimumIdle: 10
+        #minimumIdle: 10
         # maximumPoolSize: Número máximo de conexiones que se mantendrán en el
         #   pool.
-        maximumPoolSize: 10
+        #maximumPoolSize: 10
         # maxLifetime: (milisegundos) Tiempo máximo de vida de una conexión en
         #   el pool. Si una conexión lleva más de 30 minutos en el pool, se
         #   cierra y se crea una nueva.
-        maxLifetime: 1800000
-
+        max-lifetime: 1740000
+        data-source-properties:
+          "[oracle.jdbc.defaultConnectionValidation]": COMPLETE
 ######################################
 #                                    #
 # security properties                #
