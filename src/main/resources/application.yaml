@@ -188,7 +188,10 @@ spring:
       hikari:
         driver-class-name: oracle.jdbc.OracleDriver
         pool-name: oracle-pool
-        jdbc-url: jdbc:oracle:thin:@slbdorad15.servidores.net:1548/DB12UTF8D.DES.SANTALUCIA.ES
+        # TRANSPORT_CONNECT_TIMEOUT: (segundos) Tiempo máximo de espera TCP
+        # CONNECT_TIMEOUT: (segundos) Tiempo máximo de espera al crear la
+        #   sesiónn de la base de datos.
+        jdbc-url: jdbc:oracle:thin:@(DESCRIPTION=(TRANSPORT_CONNECT_TIMEOUT=3)(CONNECT_TIMEOUT=5)(ADDRESS_LIST=(ADDRESS=(HOST=slbdorad15.servidores.net)(PORT=1548)(PROTOCOL=tcp)))(CONNECT_DATA=(SERVICE_NAME=DB12UTF8D.DES.SANTALUCIA.ES)))
         # register-mbeans: Habilita que se pueda ver el pool en Dynatrace.
         register-mbeans: true
         # keepalive-time: (milisegundos) "Ping" de aplicación, a nivel 7.
@@ -206,7 +209,16 @@ spring:
         # leakDetectionThreshold: (milisegundos) Muestra en el log si una
         #   conexión del pool lleva más de 10 segundos en uso.
         leakDetectionThreshold: 10000
-
+        # minimumIdle: Número mínimo de conexiones inactivas que se mantendrán
+        #   en el pool.
+        minimumIdle: 10
+        # maximumPoolSize: Número máximo de conexiones que se mantendrán en el
+        #   pool.
+        maximumPoolSize: 10
+        # maxLifetime: (milisegundos) Tiempo máximo de vida de una conexión en
+        #   el pool. Si una conexión lleva más de 30 minutos en el pool, se
+        #   cierra y se crea una nueva.
+        maxLifetime: 1800000
 
 ######################################
 #                                    #
