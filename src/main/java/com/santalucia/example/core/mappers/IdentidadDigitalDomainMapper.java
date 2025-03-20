@@ -2,6 +2,7 @@ package com.santalucia.example.core.mappers;
 
 import java.util.List;
 
+
 import org.mapstruct.Mapper;
 
 import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;

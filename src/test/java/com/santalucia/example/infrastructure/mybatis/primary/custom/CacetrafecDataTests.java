@@ -6,6 +6,7 @@ import static org.mybatis.dynamic.sql.SqlBuilder.select;
 
 import java.util.List;
 
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mybatis.dynamic.sql.render.RenderingStrategies;
@@ -23,7 +24,7 @@ import com.santalucia.example.infrastructure.mybatis.primary.CacetrafecDynamicSq
 @DataJdbcTest
 @SqlMergeMode(SqlMergeMode.MergeMode.MERGE)
 @AutoConfigureMybatis
-@Sql(scripts = { "/sql/schemas/cacetrafec-schema.sql" })
+@Sql(scripts = {"/sql/schemas/cacetrafec-schema.sql"})
 class CacetrafecDataTests {
 
   @Autowired

@@ -1,8 +1,7 @@
 package com.santalucia.example.infrastructure.config;
 
-import org.springframework.context.annotation.Configuration;
-
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.annotation.Configuration;
 
 
 /**

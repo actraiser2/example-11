@@ -2,11 +2,12 @@ package com.santalucia.example.infrastructure.mybatis.secondary;
 
 import static com.santalucia.example.infrastructure.mybatis.secondary.EmployeeDynamicSqlSupport.*;
 
-import com.santalucia.example.infrastructure.entity.Employee;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
-import javax.annotation.Generated;
+import jakarta.annotation.Generated;
+
+
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.ResultMap;
@@ -27,6 +28,8 @@ import org.mybatis.dynamic.sql.util.mybatis3.CommonDeleteMapper;
 import org.mybatis.dynamic.sql.util.mybatis3.CommonInsertMapper;
 import org.mybatis.dynamic.sql.util.mybatis3.CommonUpdateMapper;
 import org.mybatis.dynamic.sql.util.mybatis3.MyBatis3Utils;
+
+import com.santalucia.example.infrastructure.entity.Employee;
 
 @Mapper
 public interface EmployeeMapper extends CommonCountMapper, CommonDeleteMapper, CommonInsertMapper<Employee>, CommonUpdateMapper {

@@ -1,9 +1,8 @@
 package com.santalucia.example;
 
+import lombok.Generated;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-
-import lombok.Generated;
 
 /**
  * Application

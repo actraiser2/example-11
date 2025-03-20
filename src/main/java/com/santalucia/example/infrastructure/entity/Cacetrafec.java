@@ -1,7 +1,9 @@
 package com.santalucia.example.infrastructure.entity;
 
 import java.util.Date;
-import javax.annotation.Generated;
+import jakarta.annotation.Generated;
+
+
 import lombok.Builder;
 import lombok.Data;
 

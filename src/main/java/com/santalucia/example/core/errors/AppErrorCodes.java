@@ -1,8 +1,8 @@
 package com.santalucia.example.core.errors;
 
-import com.santalucia.arq.ams.componentes.exceptions.errors.ErrorCode;
-
 import lombok.Getter;
+
+import com.santalucia.arq.ams.componentes.exceptions.errors.ErrorCode;
 
 @Getter
 public enum AppErrorCodes implements ErrorCode {

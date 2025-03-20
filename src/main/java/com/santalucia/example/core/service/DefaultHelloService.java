@@ -2,14 +2,14 @@ package com.santalucia.example.core.service;
 
 import java.util.Optional;
 
+
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
 import com.santalucia.example.core.domain.IdentidadDigitalDomain;
 import com.santalucia.example.core.exceptions.InvalidNameException;
 import com.santalucia.example.core.mappers.IdentidadDigitalDomainMapper;
-
-import lombok.RequiredArgsConstructor;
 
 
 /**
@@ -50,7 +50,7 @@ public class DefaultHelloService implements HelloService {
 	public IdentidadDigitalDomain getHelloByName(String name) {
 		return IdentidadDigitalDomain.builder()
 		.nombre(name)
-		.saludo(String.format("Hello %s", name))
+		.saludo("Hello %s".formatted(name))
 		.build();
 	}
 }
