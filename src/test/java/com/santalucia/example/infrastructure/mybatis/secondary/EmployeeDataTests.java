@@ -5,6 +5,7 @@ import static org.mybatis.dynamic.sql.SqlBuilder.select;
 
 import java.util.List;
 
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mybatis.dynamic.sql.render.RenderingStrategies;
@@ -21,7 +22,7 @@ import com.santalucia.example.infrastructure.entity.Employee;
 @DataJdbcTest
 @SqlMergeMode(SqlMergeMode.MergeMode.MERGE)
 @AutoConfigureMybatis
-@Sql(scripts = {"/sql/schemas/employees-schema.sql" })
+@Sql(scripts = {"/sql/schemas/employees-schema.sql"})
 class EmployeeDataTests {
 
   @Autowired
@@ -41,13 +42,13 @@ class EmployeeDataTests {
 
     assertThat(employees).isNotNull().hasSize(1);
 
-    assertThat(employees.get(0).getFirstName())
+    assertThat(employees.getFirst().getFirstName())
       .isEqualTo("firstname");
 
-    assertThat(employees.get(0).getLastName())
+    assertThat(employees.getFirst().getLastName())
       .isEqualTo("lastname");
 
-    assertThat(employees.get(0).getEmailAddress())
+    assertThat(employees.getFirst().getEmailAddress())
       .isEqualTo("a@a.com");
 
   }

@@ -4,6 +4,9 @@ import static org.mybatis.dynamic.sql.SqlBuilder.select;
 
 import java.util.List;
 
+
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.mybatis.dynamic.sql.render.RenderingStrategies;
 import org.mybatis.dynamic.sql.select.render.SelectStatementProvider;
 import org.springframework.data.domain.Pageable;
@@ -12,9 +15,6 @@ import org.springframework.stereotype.Repository;
 import com.santalucia.example.infrastructure.entity.Employee;
 import com.santalucia.example.infrastructure.mybatis.secondary.EmployeeDynamicSqlSupport;
 import com.santalucia.example.infrastructure.mybatis.secondary.EmployeeMapper;
-
-import lombok.AllArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
 
 /**

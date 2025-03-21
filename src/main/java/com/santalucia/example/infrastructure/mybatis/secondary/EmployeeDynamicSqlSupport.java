@@ -1,7 +1,9 @@
 package com.santalucia.example.infrastructure.mybatis.secondary;
 
 import java.sql.JDBCType;
-import javax.annotation.Generated;
+import jakarta.annotation.Generated;
+
+
 import org.mybatis.dynamic.sql.AliasableSqlTable;
 import org.mybatis.dynamic.sql.SqlColumn;
 

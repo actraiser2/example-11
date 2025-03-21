@@ -4,12 +4,12 @@
   <parent>
     <groupId>com.santalucia.arq.ams</groupId>
     <artifactId>ams-parent-sl-sw</artifactId>
-    <version>2.5.0-RELEASE</version>
+    <version>3.0.0-SNAPSHOT</version>
     <relativePath />
   </parent>
   <groupId>com.santalucia.example</groupId>
   <artifactId>example-app-11</artifactId>
-  <version>2.4.4-SNAPSHOT</version>
+  <version>3.0.0-SNAPSHOT</version>
   <name>example-app-11</name>
   <description>Demo project for Spring Boot</description>
   <url>https://git.santalucia.net/scm/slarqsofamsback/example-app-11.git</url>
@@ -130,6 +130,11 @@
       <artifactId>spring-boot-devtools</artifactId>
       <scope>runtime</scope>
       <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-properties-migrator</artifactId>
+      <scope>runtime</scope>
     </dependency>
     <!-- Devtools -->
   </dependencies>

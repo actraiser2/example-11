@@ -2,18 +2,17 @@ package com.santalucia.example.core.service;
 
 import java.util.List;
 
+
+import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.santalucia.arq.ams.componentes.database.properties.DatasourceProperties;
 import com.santalucia.example.core.domain.EmployeeDomain;
 import com.santalucia.example.core.mappers.EmployeeDomainMapper;
 import com.santalucia.example.infrastructure.entity.Employee;
 import com.santalucia.example.infrastructure.repository.EmployeeRepository;
-
-import lombok.AllArgsConstructor;
-
-import com.santalucia.arq.ams.componentes.database.properties.DatasourceProperties;
 
 
 /**

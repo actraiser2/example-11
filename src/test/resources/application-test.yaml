@@ -34,9 +34,9 @@ springdoc:
   api-docs:
     enabled: false
 management:
-  metrics:
-    export:
-      prometheus:
+  prometheus:
+    metrics:
+      export:
         enabled: false
 helloWorld:
   url: http://localhost:${wiremock.server.port:8089}/hello-world/v1

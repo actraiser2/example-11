@@ -1,9 +1,10 @@
 package com.santalucia.example.core.domain;
 
+import java.time.LocalDate;
+
+
 import lombok.Builder;
 import lombok.Data;
-
-import java.time.LocalDate;
 
 
 /**

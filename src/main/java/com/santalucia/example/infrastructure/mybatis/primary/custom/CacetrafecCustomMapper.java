@@ -2,6 +2,7 @@ package com.santalucia.example.infrastructure.mybatis.primary.custom;
 
 import java.util.List;
 
+
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -15,7 +16,7 @@ import com.santalucia.example.infrastructure.mybatis.primary.CacetrafecMapper;
  *
  */
 @Mapper
-public interface CacetrafecCustomMapper extends CacetrafecMapper{
+public interface CacetrafecCustomMapper extends CacetrafecMapper {
 
     /**
      * recupera los indicadores paginados

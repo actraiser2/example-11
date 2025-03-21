@@ -2,6 +2,8 @@ package com.santalucia.example.core.service;
 
 import java.util.List;
 
+
+import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,8 +14,6 @@ import com.santalucia.example.core.mappers.CacetrafecDomainMapper;
 import com.santalucia.example.infrastructure.entity.Cacetrafec;
 import com.santalucia.example.infrastructure.repository.CacetrafecRepository;
 
-import lombok.AllArgsConstructor;
-
 /**
  * DefaultIndicadorService
  *
@@ -21,7 +21,7 @@ import lombok.AllArgsConstructor;
 @Service
 @AllArgsConstructor
 @Transactional(value = DatasourceProperties.PRIMARY_TRANSACTION_MANAGER)
-public class DefaultIndicadorService implements IndicadorService{
+public class DefaultIndicadorService implements IndicadorService {
 
 	private final CacetrafecRepository cacetrafecRepository;
 	private final CacetrafecDomainMapper cacetrafecMapper;

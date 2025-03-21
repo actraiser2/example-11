@@ -4,6 +4,9 @@ import java.util.Optional;
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 
+
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
@@ -12,9 +15,6 @@ import com.santalucia.example.api.model.IdentidadDigitalConsultaResource;
 import com.santalucia.example.api.server.HelloWorldApiDelegate;
 import com.santalucia.example.core.mappers.IdentidadDigitalDomainMapper;
 import com.santalucia.example.core.service.HelloService;
-
-import lombok.AllArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
 
 /**

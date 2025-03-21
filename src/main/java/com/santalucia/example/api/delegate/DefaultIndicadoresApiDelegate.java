@@ -5,6 +5,8 @@ import java.util.Optional;
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 
+
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.Async;
@@ -14,8 +16,6 @@ import com.santalucia.example.api.model.IndicadorResource;
 import com.santalucia.example.api.server.ListIndicadoresApiDelegate;
 import com.santalucia.example.core.mappers.CacetrafecDomainMapper;
 import com.santalucia.example.core.service.IndicadorService;
-
-import lombok.RequiredArgsConstructor;
 
 
 /**

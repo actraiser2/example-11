@@ -2,11 +2,12 @@ package com.santalucia.example.infrastructure.mybatis.primary;
 
 import static com.santalucia.example.infrastructure.mybatis.primary.CacetrafecDynamicSqlSupport.*;
 
-import com.santalucia.example.infrastructure.entity.Cacetrafec;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
-import javax.annotation.Generated;
+import jakarta.annotation.Generated;
+
+
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.ResultMap;
@@ -27,6 +28,8 @@ import org.mybatis.dynamic.sql.util.mybatis3.CommonDeleteMapper;
 import org.mybatis.dynamic.sql.util.mybatis3.CommonInsertMapper;
 import org.mybatis.dynamic.sql.util.mybatis3.CommonUpdateMapper;
 import org.mybatis.dynamic.sql.util.mybatis3.MyBatis3Utils;
+
+import com.santalucia.example.infrastructure.entity.Cacetrafec;
 
 @Mapper
 public interface CacetrafecMapper extends CommonCountMapper, CommonDeleteMapper, CommonInsertMapper<Cacetrafec>, CommonUpdateMapper {
