@@ -5,6 +5,16 @@
 
 #### Features
 
+ -  application-local ([f865171ce77c3b3](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f865171ce77c3b33a9f323c0deff3127098582a0))
+   Fecha: 20-03-2025 17:44:32
+ -  basic migration java 21 and spring boot 3 ([4d9ff9919e092b1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/4d9ff9919e092b11d3a38dce93d9619d25c93266))
+   Fecha: 20-03-2025 12:39:42
+ -  migrate mvn wrapper ([e074dabb1d70a8f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/e074dabb1d70a8f549d277391db80269e2b470cb))
+   Fecha: 20-03-2025 12:11:52
+ -  Propiedades safe-default del driver JDBC de Oracle y de HikariCP para Oracle para aumentar la confiabilidad del pool de conexiones ([6364f6bc1845c81](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6364f6bc1845c819e85b25fc25ce98295053218b))
+   Fecha: 20-12-2024 08:55:38
+ -  Propiedades safe-default del driver JDBC de Informix y de HikariCP para Informix para aumentar la confiabilidad del pool de conexiones ([f0d406ee348d052](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f0d406ee348d0527f0ca4d2ebabf1a556c4f3a55))
+   Fecha: 19-12-2024 12:01:40
  -  Migration pom.xml OCP4 ([30f8288bb5afc5e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/30f8288bb5afc5e2af651689e5e851f6139a32a3))
    Fecha: 14-03-2023 17:30:58
  -  migrate test to assertJ ([af8c17fecf1c59f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/af8c17fecf1c59f63e7288fd4679454eff7358d7))
@@ -82,6 +92,22 @@
 
 #### Chore commits
 
+ -  force build ([f9721cfbdd54b7f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f9721cfbdd54b7f331dcc90de4881e1971e529d7))
+ 		Fecha: 24-03-2025 08:49:52
+ -  forece build ([398411096d7e68c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/398411096d7e68cfaada552336c64e26bd54af46))
+ 		Fecha: 24-03-2025 07:12:47
+ -  Pull request #4: Feature/migrate ams3 ([3871a974bd3a5f4](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3871a974bd3a5f40713cdd367c4011905d06c492))
+ 		Fecha: 21-03-2025 08:52:43
+ -  README.md edited online with Bitbucket ([443954df045683a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/443954df045683a60fff9131883945bada2dc152))
+ 		Fecha: 21-02-2025 07:32:10
+ -  README.md edited online with Bitbucket ([b876e44f7fc59d1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b876e44f7fc59d147354f571614125931e466cee))
+ 		Fecha: 06-02-2025 08:22:07
+ -  Pull request #3: feat: Propiedades safe-default del driver JDBC de Informix y de HikariCP para Informix para aumentar la confiabilidad del pool de conexiones ([91af17cfb2c92ca](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/91af17cfb2c92ca34d959c663831ece51b2f171c))
+ 		Fecha: 20-12-2024 09:36:09
+ -  application.yaml edited online with Bitbucket ([a9dc543b0631f74](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a9dc543b0631f741769afd1df5c387b9581086ea))
+ 		Fecha: 20-12-2024 09:35:09
+ -  fix archunit rule ([fb3858284b5b729](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/fb3858284b5b7299fc4fdaef4cd1804bcf9f6115))
+ 		Fecha: 17-12-2024 14:31:02
  -  fix package ([ba2443c339c9878](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ba2443c339c98784138841f023590a07bd2b6e0a))
  		Fecha: 17-12-2024 14:05:27
  -  fix dani ([7e82e2375dab273](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7e82e2375dab2731a598845813710bd2831c22a9))
