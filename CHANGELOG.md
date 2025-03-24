@@ -92,6 +92,10 @@
 
 #### Chore commits
 
+ -  tryout ([824cff3983cebe0](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/824cff3983cebe044e4b97a7697302f2db3b1824))
+ 		Fecha: 24-03-2025 12:44:48
+ -  try-out ([5a60fdc69b07f6f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5a60fdc69b07f6fda9e472c3f6fb14bcf4fa4d1e))
+ 		Fecha: 24-03-2025 12:05:32
  -  Merge remote-tracking branch 'origin/develop' into develop ([e1bb8493d022807](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/e1bb8493d02280775b5463b43f509b47658ed538))
  		Fecha: 24-03-2025 11:24:08
  -  try-out ([fa5f07052dcf19b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/fa5f07052dcf19b17daa4737a89d6958889d12a7))

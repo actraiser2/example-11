@@ -60,6 +60,7 @@
     <swagger.codegen.package>${project.groupId}</swagger.codegen.package>
     <swagger.codegen.skip.client>true</swagger.codegen.skip.client>
     <swagger.codegen.skip.server>false</swagger.codegen.skip.server>
+    <surfire.output.skip>false</surfire.output.skip>
   </properties>
   <dependencies>
     <dependency>
