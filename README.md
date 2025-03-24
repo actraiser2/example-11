@@ -17,7 +17,7 @@ example-app-11
 
 Parent de arquitectura AMS
 
-Links de interes 
+Links de interes
 ------------
 
 * [Portal de Arquitectura](https://santalucia.sharepoint.com/sites/PortalArquitecturaEmpresarial)
