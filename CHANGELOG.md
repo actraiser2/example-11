@@ -92,6 +92,20 @@
 
 #### Chore commits
 
+ -  Merge remote-tracking branch 'origin/develop' into develop ([e1bb8493d022807](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/e1bb8493d02280775b5463b43f509b47658ed538))
+ 		Fecha: 24-03-2025 11:24:08
+ -  try-out ([fa5f07052dcf19b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/fa5f07052dcf19b17daa4737a89d6958889d12a7))
+ 		Fecha: 24-03-2025 11:20:43
+ -  disparar ([7dedd13d8b0a42d](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7dedd13d8b0a42d6d2a3b093e5e02bb035f944b8))
+ 		Fecha: 24-03-2025 10:56:09
+ -  Mezzo Mix ([4d92d64911c3fd1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/4d92d64911c3fd1d08fc2b2421ea0047e33a4283))
+ 		Fecha: 24-03-2025 10:23:40
+ -  disparar pipeline ([61b89a669311d37](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/61b89a669311d378b38ec7f2770fda924bafd8c0))
+ 		Fecha: 24-03-2025 09:58:20
+ -  disparar pipeline ([a32ebbdd6e8314b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a32ebbdd6e8314bf01f138223e3043913a483e10))
+ 		Fecha: 24-03-2025 09:46:42
+ -  disparar el pipeline. ([8f8967b163188ff](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/8f8967b163188fffcf7b20d1db9d5ffb21c0205a))
+ 		Fecha: 24-03-2025 09:38:34
  -  force build ([f9721cfbdd54b7f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f9721cfbdd54b7f331dcc90de4881e1971e529d7))
  		Fecha: 24-03-2025 08:49:52
  -  forece build ([398411096d7e68c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/398411096d7e68cfaada552336c64e26bd54af46))
