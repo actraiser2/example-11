@@ -47,8 +47,3 @@ opentracing:
   spring:
     web:
       enabled: false
-logging:
-  structured:
-    format:
-      console: ecs
-      file: ecs
