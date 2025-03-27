@@ -361,6 +361,11 @@ spring:
       enabled: true
       reload:
         enabled: false
+logging:
+  structured:
+    format:
+      console: ecs
+      file: ecs
 
 ---
 #Profile habilitado de forma automatica cuando se compila en jenkins
