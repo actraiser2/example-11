@@ -1,5 +1,14 @@
-# you can list packages
+# you can list packages https://packages.ubuntu.com/ dpkg -l | grep curl ./layers/fagiani_apt/apt/.profile.d/000_apt.sh | source /layers/fagiani_apt/apt/.profile.d/000_apt.sh
+libcurl4
+libnghttp2-14
+libssh-4
+librtmp1
+libpsl5
+libldap-2.5-0
+libbrotli1
+libsasl2-2
 curl
+fontconfig
 
 # or include links to specific .deb files
 #http://downloads.sourceforge.net/project/wkhtmltopdf/0.12.1/wkhtmltox-0.12.1_linux-precise-amd64.deb
