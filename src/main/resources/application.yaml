@@ -134,8 +134,6 @@ spring:
   datasource:
     primary:
       hikari:
-        username: formcont
-        password: V553$*+as
         driver-class-name: com.informix.jdbc.IfxDriver
         pool-name: informix-pool
         jdbc-url: jdbc:informix-sqli://slbdifxd15.servidores.net:20100/siis:INFORMIXSERVER=fun_jdbc
@@ -189,8 +187,6 @@ spring:
           "[IFX_SOC_KEEPALIVE]": true
     secondary:
       hikari:
-        username: LAB_ARQ_SW_DEV
-        password: lab_arq_sw_dev
         driver-class-name: oracle.jdbc.OracleDriver
         pool-name: oracle-pool
         allow-pool-suspension: true
