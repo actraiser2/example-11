@@ -3,9 +3,6 @@ spring:
     activate:
       on-profile:
       - test
-  cloud:
-    kubernetes:
-      enabled: false
   datasource:
     primary:
       hikari:
@@ -29,7 +26,6 @@ santalucia:
     features:
       guardium:
         enabled: false
-
 springdoc:
   api-docs:
     enabled: false
@@ -40,10 +36,7 @@ management:
         enabled: false
 helloWorld:
   url: http://localhost:${wiremock.server.port:8089}/hello-world/v1
-#deshabilitamos el tracing para los test
-opentracing:
-  jaeger:
+#deshabilitamos infinispan embedded para los test
+infinispan:
+  embedded:
     enabled: false
-  spring:
-    web:
-      enabled: false

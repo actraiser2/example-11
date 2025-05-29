@@ -31,7 +31,7 @@ import org.mybatis.dynamic.sql.util.mybatis3.MyBatis3Utils;
 
 import com.santalucia.example.infrastructure.entity.Cacetrafec;
 
-@Mapper
+
 public interface CacetrafecMapper extends CommonCountMapper, CommonDeleteMapper, CommonInsertMapper<Cacetrafec>, CommonUpdateMapper {
     @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source Table: cacetrafec")
     BasicColumn[] selectList = BasicColumn.columnList(ccentrab, xcacetra, finvaldt, ffivaldt, fregilog);

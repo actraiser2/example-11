@@ -5,6 +5,12 @@
 
 #### Features
 
+ -  removes dependency mapping ([a366391a8b8331a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a366391a8b8331a4cbc5820c9896fdfde511e560))
+   Fecha: 25-05-2025 10:05:59
+ -  and structured logging config ([5acbcf242b0d0a3](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5acbcf242b0d0a36dcda1c2de8cbf740b67462aa))
+   Fecha: 28-03-2025 12:39:26
+ -  and structured logging config ([3d2b1f224b17376](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3d2b1f224b173764470b984b616add5dd2c92ee4))
+   Fecha: 27-03-2025 08:00:06
  -  application-local ([f865171ce77c3b3](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f865171ce77c3b33a9f323c0deff3127098582a0))
    Fecha: 20-03-2025 17:44:32
  -  basic migration java 21 and spring boot 3 ([4d9ff9919e092b1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/4d9ff9919e092b11d3a38dce93d9619d25c93266))
@@ -92,6 +98,120 @@
 
 #### Chore commits
 
+ -  force pipeline ([ce73b36550ec9c1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ce73b36550ec9c130094ad2c5bc0e58bbdd5a6c1))
+ 		Fecha: 17-05-2025 21:03:28
+ -  force pipeline ([64fec2abb69a509](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/64fec2abb69a5097be14094deb2f421f318d4cd3))
+ 		Fecha: 17-05-2025 14:35:45
+ -  corrects property order ([7cc0ecb67ec77a6](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7cc0ecb67ec77a6ad01af247f859472af7394a06))
+ 		Fecha: 14-05-2025 13:32:03
+ -  Merge remote-tracking branch 'origin/develop' into develop ([f4335bdb14c520b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f4335bdb14c520bcacfd4d204e88b4aed0c30205))
+ 		Fecha: 14-05-2025 13:31:29
+ -  Updates apt packages in Aptfile ([6d6a1600a531cc7](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6d6a1600a531cc7b91c07c327dda78257ed37549))
+ 		Fecha: 14-05-2025 13:31:11
+ -  force pipeline ([6f6131cafdb353a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6f6131cafdb353ad9b3d2ea42117f60f5cc44c80))
+ 		Fecha: 13-05-2025 22:22:49
+ -  force pipeline ([ae976d22f99c24e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ae976d22f99c24e44839b45c51c715f691ace737))
+ 		Fecha: 13-05-2025 19:59:38
+ -  increased the version of the pom ([437afd862d2f2fb](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/437afd862d2f2fb04ea830c53bd6db11f6dc9c15))
+ 		Fecha: 13-05-2025 09:22:07
+ -  force pipeline ([fab681bebfc4d6c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/fab681bebfc4d6cc549d52d10f88d17f5044351a))
+ 		Fecha: 13-05-2025 08:18:23
+ -  README.md edited online with Bitbucket ([f82b60aa4165c61](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f82b60aa4165c612b4e280801cf5131b9b2d9a3a))
+ 		Fecha: 11-05-2025 18:37:03
+ -  README.md edited online with Bitbucket ([02ff35ece8e0e3f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/02ff35ece8e0e3fa60a01688576d82775712d578))
+ 		Fecha: 11-05-2025 18:21:18
+ -  README.md edited online with Bitbucket ([22e6695f40d16c8](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/22e6695f40d16c8f63b988aa55e779b1b9023f1d))
+ 		Fecha: 11-05-2025 17:26:41
+ -  README.md edited online with Bitbucket ([3fb0ccc3968f164](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3fb0ccc3968f16436fd7fecf66f11f551c51f816))
+ 		Fecha: 11-05-2025 17:13:38
+ -  README.md edited online with Bitbucket ([0d4eb78f597b8fb](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/0d4eb78f597b8fbbf3f6e66085c58dd8ade0f8eb))
+ 		Fecha: 11-05-2025 16:53:51
+ -  README.md edited online with Bitbucket ([cfb0050da75d586](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/cfb0050da75d586ce15e61950925185100a92fea))
+ 		Fecha: 11-05-2025 16:36:58
+ -  README.md edited online with Bitbucket ([b97c1624ff84aa4](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b97c1624ff84aa405196c86f7425a675fc5f81bc))
+ 		Fecha: 11-05-2025 16:04:02
+ -  README.md edited online with Bitbucket ([b4fea1ef510a938](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b4fea1ef510a9389fb69881b452142cfd2f3138c))
+ 		Fecha: 11-05-2025 14:59:37
+ -  README.md edited online with Bitbucket ([8d46e86c47cb6e0](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/8d46e86c47cb6e0c23ec99367bc45a625aa112db))
+ 		Fecha: 11-05-2025 12:26:53
+ -  force build ([99dd277ddcad87a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/99dd277ddcad87a856f3ee85086dc25198ecab5a))
+ 		Fecha: 11-05-2025 11:25:28
+ -  README.md edited online with Bitbucket ([f87cc9e9abcf67c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f87cc9e9abcf67c5a6303741b05d8a9efa197f09))
+ 		Fecha: 10-05-2025 16:33:20
+ -  fix ([368134b6dfbe63b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/368134b6dfbe63bf6718b99c008b766e4db18663))
+ 		Fecha: 10-05-2025 15:26:20
+ -  add temp folder ([2aa15df4b491fc4](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/2aa15df4b491fc489c47cc093b14a0baf198da31))
+ 		Fecha: 10-05-2025 14:37:32
+ -  Merge remote-tracking branch 'origin/develop' into develop ([03d2c14f54f7b2c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/03d2c14f54f7b2ce2d0350ae9882b89194ea756a))
+ 		Fecha: 10-05-2025 13:46:37
+ -  add binding ([17e730721a708c9](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/17e730721a708c92eabf3652538c6f46054a09e0))
+ 		Fecha: 10-05-2025 13:46:20
+ -  README.md edited online with Bitbucket ([5ea208efd2569c7](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5ea208efd2569c7c9101d887e781579860e68836))
+ 		Fecha: 10-05-2025 12:52:57
+ -  add bindings ([78a17211bf102d1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/78a17211bf102d1c1f2ee198af44484116ec1d59))
+ 		Fecha: 10-05-2025 12:12:18
+ -  fix ([3d635b9aa6c7197](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3d635b9aa6c71971ed2f2194880ae5eafc11028e))
+ 		Fecha: 08-05-2025 11:24:58
+ -  fix ([a24e2a463220e85](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a24e2a463220e85e0a2452e2b92c394103914673))
+ 		Fecha: 07-05-2025 17:42:19
+ -  README.md edited online with Bitbucket ([87e134720482066](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/87e134720482066f33ec77b6bf4bebc631a7afd0))
+ 		Fecha: 07-05-2025 14:10:13
+ -  README.md edited online with Bitbucket ([ae7ed97a1a25ef2](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ae7ed97a1a25ef2ab0f69fd43615f7a076facca7))
+ 		Fecha: 07-05-2025 13:26:26
+ -  README.md edited online with Bitbucket ([aaf5d8149d01061](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/aaf5d8149d010617a87f6a7d96cab15f006d6268))
+ 		Fecha: 07-05-2025 12:02:44
+ -  README.md edited online with Bitbucket ([3e31da418f4a9c2](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3e31da418f4a9c27773d55fc41fa66b2f6bd284f))
+ 		Fecha: 07-05-2025 09:55:07
+ -  README.md edited online with Bitbucket ([badb3c2ee8ad6f4](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/badb3c2ee8ad6f43723f6774949e0407dcebd680))
+ 		Fecha: 07-05-2025 08:56:21
+ -  try ([fcbbc1d0f02e417](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/fcbbc1d0f02e41760e45021fcd98be2887a88193))
+ 		Fecha: 07-05-2025 06:23:16
+ -  try ([807bd1d1a62f176](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/807bd1d1a62f1766050447e7bddc6b31d5868067))
+ 		Fecha: 06-05-2025 18:49:17
+ -  try2 ([feca1b9ac418f83](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/feca1b9ac418f832ae37188692ff6193e3400e65))
+ 		Fecha: 06-05-2025 16:03:47
+ -  change ([115257fd931e33a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/115257fd931e33a41dac3b6af9726c1604bb99bb))
+ 		Fecha: 06-05-2025 15:55:31
+ -  try ([a4d45dc29189249](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a4d45dc291892495ffa95de74ae6a5df56b3f34c))
+ 		Fecha: 06-05-2025 15:47:16
+ -  try ([07d06fa67f7a5ab](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/07d06fa67f7a5ab70287e3e984f6b649603b9a4b))
+ 		Fecha: 06-05-2025 15:14:46
+ -  tryy ([5dbf12e03eccb29](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5dbf12e03eccb297c02c9475e0b500fb0482bef4))
+ 		Fecha: 06-05-2025 11:43:10
+ -  try ([000b230cf4e42a0](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/000b230cf4e42a09e8ead6d6af93ff974548ee85))
+ 		Fecha: 06-05-2025 11:29:15
+ -  fix ([7bb782ac7eaed9c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7bb782ac7eaed9c41585a108ff7925ee8adc7033))
+ 		Fecha: 05-05-2025 18:57:20
+ -  vamos que nos vamos ([d8a0f8dbbfdbda4](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/d8a0f8dbbfdbda40f6c258dfb13849fe88002323))
+ 		Fecha: 05-05-2025 17:16:50
+ -  other try out ([192010f92b13364](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/192010f92b133644b3c092fb9e485d5434d53bbd))
+ 		Fecha: 05-05-2025 16:38:29
+ -  fix ([4b5c69559594b9c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/4b5c69559594b9c1bc8bcd9ba777a1732ed8a5d1))
+ 		Fecha: 05-05-2025 16:01:46
+ -  try ([d093decfd044cbf](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/d093decfd044cbf40ccd1e247290731439546f8b))
+ 		Fecha: 05-05-2025 15:26:29
+ -  try ([892af7275169853](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/892af7275169853081dd37e2d4baa49933a09198))
+ 		Fecha: 05-05-2025 13:37:53
+ -  change ([2b58bfb9cc87700](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/2b58bfb9cc8770087863d0294aeaa9f2a489043e))
+ 		Fecha: 05-05-2025 13:07:21
+ -  README.md edited online with Bitbucket ([ccdf840d543b5b9](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ccdf840d543b5b9bbfe96263e4512bb692069fd1))
+ 		Fecha: 05-05-2025 12:25:36
+ -  fix sonnar ([b9a6ccc68ad3e66](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b9a6ccc68ad3e660f0f38676df7ca4e417115d23))
+ 		Fecha: 05-05-2025 11:57:32
+ -  force build ([f887cd43512167f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f887cd43512167fb0db669ce18174a8b49ed574d))
+ 		Fecha: 05-05-2025 11:17:49
+ -  try ([a85a9f6fb35be1e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a85a9f6fb35be1eea5adaffd6ee9a3d08dd22bd9))
+ 		Fecha: 28-03-2025 13:33:47
+ -  Merge remote-tracking branch 'origin/develop' into develop ([04d058b641b203d](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/04d058b641b203d0901d6cc38d4cd5a6bc2454c7))
+ 		Fecha: 24-03-2025 18:22:34
+ -  restore output ([95f9848c78068d1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/95f9848c78068d1c2d870692f80dce0166b434dd))
+ 		Fecha: 24-03-2025 18:22:22
+ -  README.md edited online with Bitbucket ([3364edf5d440eb5](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3364edf5d440eb53f815c96245616a4d8724fdfb))
+ 		Fecha: 24-03-2025 17:26:22
+ -  try ([bf593a7cac065cb](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/bf593a7cac065cb625f2fb4059222f3da2b09b2b))
+ 		Fecha: 24-03-2025 16:48:25
+ -  fixes ([ea0af93ac0b31eb](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ea0af93ac0b31eb2bcfd7982e7e412c4c488c508))
+ 		Fecha: 24-03-2025 15:02:05
  -  tryout ([824cff3983cebe0](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/824cff3983cebe044e4b97a7697302f2db3b1824))
  		Fecha: 24-03-2025 12:44:48
  -  try-out ([5a60fdc69b07f6f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5a60fdc69b07f6fda9e472c3f6fb14bcf4fa4d1e))

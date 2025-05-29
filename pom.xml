@@ -54,7 +54,6 @@
     </notifiers>
   </ciManagement>
   <properties>
-    <git.hooks.skip>false</git.hooks.skip>
     <skip.it>true</skip.it>
     <surfire.output.skip>false</surfire.output.skip>
     <swagger.codegen.inputSpec>src/main/resources/api/swagger.yaml</swagger.codegen.inputSpec>

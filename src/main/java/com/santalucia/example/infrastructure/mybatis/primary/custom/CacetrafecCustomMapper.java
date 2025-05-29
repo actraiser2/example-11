@@ -2,10 +2,10 @@ package com.santalucia.example.infrastructure.mybatis.primary.custom;
 
 import java.util.List;
 
-
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 import com.santalucia.example.infrastructure.entity.Cacetrafec;
 import com.santalucia.example.infrastructure.mybatis.primary.CacetrafecMapper;
@@ -16,6 +16,7 @@ import com.santalucia.example.infrastructure.mybatis.primary.CacetrafecMapper;
  *
  */
 @Mapper
+@Qualifier("pepecacetrafecCustomMapper")
 public interface CacetrafecCustomMapper extends CacetrafecMapper {
 
     /**

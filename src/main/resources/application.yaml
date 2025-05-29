@@ -77,8 +77,9 @@ springdoc:
 spring:
   mandatory-file-encoding: UTF-8
   main:
+    cloud-platform: none
     lazy-initialization: true
-    allow-bean-definition-overriding: false
+    allow-bean-definition-overriding: true
   application:
     name: example-app-11
   banner:
@@ -107,7 +108,6 @@ spring:
 ######################################
   cloud:
     kubernetes:
-      enabled: false
       reload:
         enabled: false
       config:
@@ -134,9 +134,12 @@ spring:
   datasource:
     primary:
       hikari:
+        username: formcont
+        password: V553$*+as
         driver-class-name: com.informix.jdbc.IfxDriver
         pool-name: informix-pool
         jdbc-url: jdbc:informix-sqli://slbdifxd15.servidores.net:20100/siis:INFORMIXSERVER=fun_jdbc
+        allow-pool-suspension: true
         # jdbc-url: jdbc:informix-sqli://INFORMIXSERVER=fun_tcp;DATABASE=siis;SQLH_TYPE=FILE;SQLH_FILE=/deployments/config/sqlhosts
         # leakDetectionThreshold: (milisegundos) Muestra en el log si una
         #   conexión del pool lleva más de 10 segundos en uso.
@@ -186,8 +189,11 @@ spring:
           "[IFX_SOC_KEEPALIVE]": true
     secondary:
       hikari:
+        username: LAB_ARQ_SW_DEV
+        password: lab_arq_sw_dev
         driver-class-name: oracle.jdbc.OracleDriver
         pool-name: oracle-pool
+        allow-pool-suspension: true
         # TRANSPORT_CONNECT_TIMEOUT: (segundos) Tiempo máximo de espera TCP
         # CONNECT_TIMEOUT: (segundos) Tiempo máximo de espera al crear la
         #   sesiónn de la base de datos.
@@ -265,12 +271,14 @@ santalucia:
           lazy-initialization: true
           configuration:
             lazy-loading-enabled: true
+            aggressive-lazy-loading: true
           base-packages:
           - com.santalucia.example.infrastructure.mybatis.primary
         secondary:
           lazy-initialization: true
           configuration:
             lazy-loading-enabled: true
+            aggressive-lazy-loading: true
           base-packages:
           - com.santalucia.example.infrastructure.mybatis.secondary
       security:
@@ -311,15 +319,14 @@ logging:
     root: INFO
     "[com.santalucia]": DEBUG
     "[org.springframework]": INFO
-    "[org.springframework.test]": DEBUG
+    "[org.springframework.test]": INFO
     #"[org.springframework.web.servlet]": DEBUG
     #"[org.springframework.security]": DEBUG
     #"[org.springframework.web.client]": DEBUG
     #trazas para mostrar los errores de login debido a que salen en modo debug
-    "[org.springframework.security.oauth2.server.resource]": DEBUG
+    "[org.springframework.security.oauth2.server.resource]": INFO
     #Paquete que indica cuando SB esta disponible
     "[org.springframework.boot.availability]": DEBUG
-    com.zaxxer.hikari: DEBUG # En todos los entornos a DEBUG
 
 ###########################
 #                         #
@@ -358,7 +365,6 @@ spring:
     location: classpath:santalucia-banner.json
   cloud:
     kubernetes:
-      enabled: true
       reload:
         enabled: false
 logging:
@@ -367,14 +373,3 @@ logging:
       exclude: ecs.version
     format:
       console: ecs
-
----
-#Profile habilitado de forma automatica cuando se compila en jenkins
-spring:
-  config:
-    activate:
-      on-profile:
-      - devops
-  cloud:
-    kubernetes:
-      enabled: false
