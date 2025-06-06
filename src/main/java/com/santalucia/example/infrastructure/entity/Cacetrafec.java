@@ -1,27 +1,33 @@
 package com.santalucia.example.infrastructure.entity;
 
 import java.util.Date;
-import jakarta.annotation.Generated;
 
 
 import lombok.Builder;
 import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.Table;
 
 @Data
 @Builder
+@Table("CACETRAFEC")
 public class Cacetrafec {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: cacetrafec.ccentrab")
-    private Short ccentrab;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: cacetrafec.xcacetra")
+    @Id
+    @Column("CCENTRAB")
+    private Integer ccentrab;
+
+    @Column("XCACETRA")
     private String xcacetra;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: cacetrafec.finvaldt")
+    @Column("FINVALDT")
     private Date finvaldt;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: cacetrafec.ffivaldt")
+    @Column("FFIVALDT")
     private Date ffivaldt;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: cacetrafec.fregilog")
+    @Column("FREGILOG")
     private Date fregilog;
+
 }

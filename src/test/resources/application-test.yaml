@@ -5,15 +5,15 @@ spring:
       - test
   datasource:
     primary:
+      driver-class-name: org.h2.Driver
+      url: jdbc:h2:mem:db-informix;DB_CLOSE_DELAY=-1;MODE=DB2;DEFAULT_NULL_ORDERING=HIGH
       hikari:
-        driver-class-name: org.h2.Driver
         pool-name: h2-primary
-        jdbc-url: jdbc:h2:mem:db-informix;DB_CLOSE_DELAY=-1;MODE=DB2;DEFAULT_NULL_ORDERING=HIGH
     secondary:
+      driver-class-name: org.h2.Driver
+      url: jdbc:h2:mem:db-oracle;DB_CLOSE_DELAY=-1;MODE=Oracle;DEFAULT_NULL_ORDERING=HIGH
       hikari:
-        driver-class-name: org.h2.Driver
         pool-name: h2-secondary
-        jdbc-url: jdbc:h2:mem:db-oracle;DB_CLOSE_DELAY=-1;MODE=Oracle;DEFAULT_NULL_ORDERING=HIGH
 
 ##En entornos de test no se levanta informix
 ## Se deshabilita la autoconfiguracion de sprint gest jdbc

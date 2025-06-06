@@ -133,14 +133,14 @@ spring:
 ######################################
   datasource:
     primary:
+      driver-class-name: com.informix.jdbc.IfxDriver
+      # url: jdbc:informix-sqli://INFORMIXSERVER=fun_tcp;DATABASE=siis;SQLH_TYPE=FILE;SQLH_FILE=/deployments/config/sqlhosts
+      url: jdbc:informix-sqli://slbdifxd15.servidores.net:20100/siis:INFORMIXSERVER=fun_jdbc
+      type: com.zaxxer.hikari.HikariDataSource
       hikari:
-        driver-class-name: com.informix.jdbc.IfxDriver
         pool-name: informix-pool
-        jdbc-url: jdbc:informix-sqli://slbdifxd15.servidores.net:20100/siis:INFORMIXSERVER=fun_jdbc
         allow-pool-suspension: true
-        # jdbc-url: jdbc:informix-sqli://INFORMIXSERVER=fun_tcp;DATABASE=siis;SQLH_TYPE=FILE;SQLH_FILE=/deployments/config/sqlhosts
-        # leakDetectionThreshold: (milisegundos) Muestra en el log si una
-        #   conexión del pool lleva más de 10 segundos en uso.
+
         leak-detection-threshold: 10000
         # register-mbeans: Habilita que se pueda ver el pool en Dynatrace.
         register-mbeans: true
@@ -186,15 +186,16 @@ spring:
           #   añadiendo SO_KEEPALIVE al socket de la conexión TCP.
           "[IFX_SOC_KEEPALIVE]": true
     secondary:
+      driver-class-name: oracle.jdbc.OracleDriver
+      # TRANSPORT_CONNECT_TIMEOUT: (segundos) Tiempo máximo de espera TCP
+      # CONNECT_TIMEOUT: (segundos) Tiempo máximo de espera al crear la
+      #   sesiónn de la base de datos.
+      # url: jdbc:oracle:thin:@(DESCRIPTION=(TRANSPORT_CONNECT_TIMEOUT=3)(CONNECT_TIMEOUT=5)(ADDRESS_LIST=(ADDRESS=(HOST=slbdorad15.servidores.net)(PORT=1548)(PROTOCOL=tcp)))(CONNECT_DATA=(SERVICE_NAME=DB12UTF8D.DES.SANTALUCIA.ES)))
+      url: jdbc:oracle:thin:@(DESCRIPTION=(CONNECT_TIMEOUT=5)(RETRY_COUNT=4)(RETRY_DELAY=2)(TRANSPORT_CONNECT_TIMEOUT=3)(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=slbdorad15.servidores.net)(PORT=1548)))(CONNECT_DATA=(SERVICE_NAME=DB12UTF8D.DES.SANTALUCIA.ES)))
+      type: com.zaxxer.hikari.HikariDataSource
       hikari:
-        driver-class-name: oracle.jdbc.OracleDriver
         pool-name: oracle-pool
         allow-pool-suspension: true
-        # TRANSPORT_CONNECT_TIMEOUT: (segundos) Tiempo máximo de espera TCP
-        # CONNECT_TIMEOUT: (segundos) Tiempo máximo de espera al crear la
-        #   sesiónn de la base de datos.
-        #jdbc-url: jdbc:oracle:thin:@(DESCRIPTION=(TRANSPORT_CONNECT_TIMEOUT=3)(CONNECT_TIMEOUT=5)(ADDRESS_LIST=(ADDRESS=(HOST=slbdorad15.servidores.net)(PORT=1548)(PROTOCOL=tcp)))(CONNECT_DATA=(SERVICE_NAME=DB12UTF8D.DES.SANTALUCIA.ES)))
-        jdbc-url: jdbc:oracle:thin:@(DESCRIPTION=(CONNECT_TIMEOUT=5)(RETRY_COUNT=4)(RETRY_DELAY=2)(TRANSPORT_CONNECT_TIMEOUT=3)(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=slbdorad15.servidores.net)(PORT=1548)))(CONNECT_DATA=(SERVICE_NAME=DB12UTF8D.DES.SANTALUCIA.ES)))
         # register-mbeans: Habilita que se pueda ver el pool en Dynatrace.
         register-mbeans: true
         # keepalive-time: (milisegundos) "Ping" de aplicación, a nivel 7.
@@ -262,21 +263,11 @@ santalucia:
         enabled: true
       feign:
         base-packages: com.santalucia
-      mybatis:
+      database:
         primary:
-          lazy-initialization: true
-          configuration:
-            lazy-loading-enabled: true
-            aggressive-lazy-loading: true
-          base-packages:
-          - com.santalucia.example.infrastructure.mybatis.primary
+          base-packages: com.santalucia.example.infrastructure.repository.primary
         secondary:
-          lazy-initialization: true
-          configuration:
-            lazy-loading-enabled: true
-            aggressive-lazy-loading: true
-          base-packages:
-          - com.santalucia.example.infrastructure.mybatis.secondary
+          base-packages: com.santalucia.example.infrastructure.repository.secondary
       security:
         core:
           enabled: true

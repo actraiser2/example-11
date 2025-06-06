@@ -3,16 +3,18 @@ package com.santalucia.example.core.service;
 import java.util.List;
 
 
+import com.santalucia.arq.ams.data.jdbc.constants.DatasourceConstants;
+import com.santalucia.example.infrastructure.repository.secondary.EmployeePageableRepository;
+import com.santalucia.example.infrastructure.repository.secondary.EmployeeRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.santalucia.arq.ams.componentes.database.properties.DatasourceProperties;
 import com.santalucia.example.core.domain.EmployeeDomain;
 import com.santalucia.example.core.mappers.EmployeeDomainMapper;
 import com.santalucia.example.infrastructure.entity.Employee;
-import com.santalucia.example.infrastructure.repository.EmployeeRepository;
 
 
 /**
@@ -21,10 +23,11 @@ import com.santalucia.example.infrastructure.repository.EmployeeRepository;
  */
 @Service
 @AllArgsConstructor
-@Transactional(value = DatasourceProperties.SECONDARY_TRANSACTION_MANAGER)
+@Transactional(value = DatasourceConstants.SECONDARY_TRANSACTION_MANAGER)
 public class DefaultEmployeeService implements EmployeeService {
 
 	private final EmployeeRepository employeeRepository;
+  private final EmployeePageableRepository employeePageableRepository;
 	private final EmployeeDomainMapper employeeMapper;
 
 	/**
@@ -33,19 +36,19 @@ public class DefaultEmployeeService implements EmployeeService {
 	 */
 	@Override
 	public List<EmployeeDomain> getEmployees() {
-		List<Employee> lstEntity = employeeRepository.getAllEmployees();
+		List<Employee> lstEntity = employeeRepository.findAll();
 		return employeeMapper.toDomainsfromEntities(lstEntity);
 	}
 
 	/**
 	 * recupera los empleados paginados
-	 * @param Pageable pageable
+	 * @param pageable Pageable
 	 * @return List<EmployeeDomain>
 	 */
 	@Override
 	public List<EmployeeDomain> getEmployees(Pageable pageable) {
-		List<Employee> employees = employeeRepository.getEmployees(pageable);
-		return employeeMapper.toDomainsfromEntities(employees);
+		Page<Employee> employees = employeePageableRepository.findAll(pageable);
+		return employeeMapper.toDomainsfromEntities(employees.stream().toList());
 	}
 
 	/**
@@ -59,16 +62,16 @@ public class DefaultEmployeeService implements EmployeeService {
     		.emailAddress("julie@accenture.com")
     		.build();
 
-    this.employeeRepository.insertEmployee(emp);
+    employeeRepository.save(emp);
 
     Employee empDos = Employee.builder()
     		.firstName("Juan")
     		.lastName("Lopez")
-    		.emailAddress("")
+    		.emailAddress("juan@email.com")
     		.build();
 
 
-    this.employeeRepository.insertEmployee(empDos);
+    employeeRepository.save(empDos);
 	}
 
 }
