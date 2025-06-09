@@ -7,7 +7,7 @@
  */
 @NonNullApi
 @NonNullFields
-package com.santalucia.example.infrastructure.repository;
+package com.santalucia.example.infrastructure.repository.primary;
 
 import org.springframework.lang.NonNullApi;
 import org.springframework.lang.NonNullFields;

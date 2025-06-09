@@ -91,8 +91,8 @@
       <artifactId>ams-componentes-exceptions</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.santalucia.arq.ams</groupId>
-      <artifactId>ams-componentes-database</artifactId>
+      <groupId>com.santalucia.arq.ams.data</groupId>
+      <artifactId>ams-spring-data-jdbc</artifactId>
     </dependency>
     <!--<dependency>
       <groupId>com.santalucia.arq.ams</groupId>

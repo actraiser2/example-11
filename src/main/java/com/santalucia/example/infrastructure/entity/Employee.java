@@ -1,20 +1,27 @@
 package com.santalucia.example.infrastructure.entity;
 
-import jakarta.annotation.Generated;
-
-
 import lombok.Builder;
 import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.Table;
 
 @Data
 @Builder
+@Table("EMPLOYEE")
 public class Employee {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: EMPLOYEE.FIRST_NAME")
+
+    @Id
+    @Column("ID")
+    private Long id;
+
+    @Column("FIRST_NAME")
     private String firstName;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: EMPLOYEE.LAST_NAME")
+    @Column("LAST_NAME")
     private String lastName;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", comments="Source field: EMPLOYEE.EMAIL_ADDRESS")
+    @Column("EMAIL_ADDRESS")
     private String emailAddress;
+
 }
