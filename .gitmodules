@@ -1,4 +1,0 @@
-[submodule ".githooks"]
-	path = .githooks
-	url = https://git.santalucia.net/scm/arq/bitbucket-client-side-hooks
-	branch = master
