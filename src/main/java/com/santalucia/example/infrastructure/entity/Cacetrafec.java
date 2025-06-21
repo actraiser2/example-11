@@ -1,13 +1,13 @@
 package com.santalucia.example.infrastructure.entity;
 
-import java.util.Date;
+import java.time.LocalDate;
 
-
-import lombok.Builder;
-import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
+
+import lombok.Builder;
+import lombok.Data;
 
 @Data
 @Builder
@@ -22,12 +22,12 @@ public class Cacetrafec {
     private String xcacetra;
 
     @Column("FINVALDT")
-    private Date finvaldt;
+    private LocalDate finvaldt;
 
     @Column("FFIVALDT")
-    private Date ffivaldt;
+    private LocalDate ffivaldt;
 
     @Column("FREGILOG")
-    private Date fregilog;
+    private LocalDate fregilog;
 
 }
