@@ -82,6 +82,7 @@ spring:
     allow-bean-definition-overriding: true
   application:
     name: example-app-11
+    version: "@project.version@"
   banner:
     location: classpath:santalucia-banner.txt
   mvc:
@@ -302,6 +303,11 @@ helloworld:
 ###########################
 
 logging:
+  structured:
+    json:
+      exclude: ecs
+    format:
+      console: ecs
   level:
     root: INFO
     "[com.santalucia]": DEBUG
@@ -336,27 +342,5 @@ info:
     name: ${spring.application.name}
     encoding: UTF-8
     java:
-      source: 17
-      target: 17
----
-#Profile habilitado de forma automatica cuando se despliega en OCP
-spring:
-  config:
-    import:
-    - optional:classpath:monitoring.yaml
-    - optional:classpath:tracing.yaml
-    activate:
-      on-profile:
-      - kubernetes
-  banner:
-    location: classpath:santalucia-banner.json
-  cloud:
-    kubernetes:
-      reload:
-        enabled: false
-logging:
-  structured:
-    json:
-      exclude: ecs.version
-    format:
-      console: ecs
+      source: "@java.version@"
+      target: "@java.version@"
