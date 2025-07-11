@@ -13,7 +13,7 @@ example-app-11
 [![Security Hotspots](https://sonarqube.santalucia.net/api/project_badges/measure?project=example-app-11&metric=security_hotspots&token=sqb_e4241b3b559d1ca4e4c99f02068e3d0c1b1a87b7)](https://sonarqube.santalucia.net/dashboard?id=example-app-11)
 [![Technical Debt](https://sonarqube.santalucia.net/api/project_badges/measure?project=example-app-11&metric=sqale_index&token=sqb_e4241b3b559d1ca4e4c99f02068e3d0c1b1a87b7)](https://sonarqube.santalucia.net/dashboard?id=example-app-11)
 ==========
-
+ 
 Parent de arquitectura AMS 
 
 Links de interes
