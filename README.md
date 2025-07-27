@@ -19,4 +19,4 @@ Parent de arquitectura AMS
 Links de interes
 ------------
 
-* [Portal de Arquitectura](https://santalucia.sharepoint.com/sites/PortalArquitecturaEmpresarial)
+* [Portal de Arquitectura](https://santalucia.sharepoint.com/sites/PortalArquitecturaEmpresarial)b
