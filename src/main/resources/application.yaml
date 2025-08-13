@@ -113,19 +113,6 @@ spring:
         enabled: false
       config:
         name: ${spring.application.name}
-######################################
-#                                    #
-# internationalization properties    #
-#                                    #
-######################################
-
-  messages:
-    basename: classpath:i18n/messages
-    # si no se especifica se cachean para siempre. Al
-    # estar en el jar no es correcto
-    #cache-duration: 1s
-    encoding: UTF-8
-    fallback-to-system-locale: false
 
 ######################################
 #                                    #
@@ -342,5 +329,5 @@ info:
     name: ${spring.application.name}
     encoding: UTF-8
     java:
-      source: "@java.version@"
-      target: "@java.version@"
+      source: "21"
+      target: "21"
