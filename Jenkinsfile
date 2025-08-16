@@ -14,7 +14,7 @@ pipeline{
         stage('Build'){
             steps{
                 echo 'Building...'
-                withMaven{
+                withMaven(maven:'maven 3.9.11'){
                     sh 'mvn clean package -DskipTests=true'
                 }
                 
