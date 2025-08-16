@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    environment {
+      GITHUB_REPOSITORY_URL = 'https://github.com/actraiser2/example-11.git"
+    }
     stages{
         stage('Checkout'){
             steps{
