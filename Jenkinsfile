@@ -14,7 +14,10 @@ pipeline{
         stage('Build'){
             steps{
                 echo 'Building...'
-                sh 'mvn clean package -DskipTests=true'
+                withMaven{
+                    sh 'mvn clean package -DskipTests=true'
+                }
+                
             }
             
         }
