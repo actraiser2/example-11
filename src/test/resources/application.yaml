@@ -4,4 +4,4 @@ spring:
     - test
   config:
     import:
-    - file:src/main/resources/application.yaml
+    - file:./config/application.yaml

@@ -54,13 +54,28 @@
     </notifiers>
   </ciManagement>
   <properties>
+    <bp.jvmJlinkAddModules>java.base,java.logging,java.naming,java.desktop,jdk.unsupported,java.sql,java.management,java.security.jgss,jdk.jfr,jdk.management,java.instrument,java.rmi,jdk.crypto.ec</bp.jvmJlinkAddModules>
     <skip.it>true</skip.it>
+    <spring-ai.version>1.0.1</spring-ai.version>
+    <spring-shell-starter.version>3.4.0</spring-shell-starter.version>
     <surfire.output.skip>false</surfire.output.skip>
+    <swagger.codegen.async.server>false</swagger.codegen.async.server>
     <swagger.codegen.inputSpec>src/main/resources/api/swagger.yaml</swagger.codegen.inputSpec>
     <swagger.codegen.package>${project.groupId}</swagger.codegen.package>
     <swagger.codegen.skip.client>true</swagger.codegen.skip.client>
     <swagger.codegen.skip.server>false</swagger.codegen.skip.server>
   </properties>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.ai</groupId>
+        <artifactId>spring-ai-bom</artifactId>
+        <version>${spring-ai.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
@@ -135,6 +150,46 @@
       <scope>runtime</scope>
       <optional>true</optional>
     </dependency>
+    <dependency>
+      <groupId>org.springframework.shell</groupId>
+      <artifactId>spring-shell-starter</artifactId>
+      <version>${spring-shell-starter.version}</version>
+    </dependency>
+    <!--<dependency>
+      <groupId>com.github.gavlyukovskiy</groupId>
+      <artifactId>p6spy-spring-boot-starter</artifactId>
+      <version>1.12.0</version>-.>
+    </dependency>-->
+    <dependency>
+      <groupId>com.santalucia.arq.ams.utils</groupId>
+      <artifactId>ams-crypto-pgp</artifactId>
+      <version>1.0.1-SNAPSHOT</version>
+    </dependency>
+    <!---
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-kubernetes-client-loadbalancer</artifactId>
+    </dependency>-->
+    <dependency>
+      <groupId>com.fasterxml.jackson.dataformat</groupId>
+      <artifactId>jackson-dataformat-xml</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.datatype</groupId>
+      <artifactId>jackson-datatype-jdk8</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.datatype</groupId>
+      <artifactId>jackson-datatype-jsr310</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.ai</groupId>
+      <artifactId>spring-ai-starter-model-openai</artifactId>
+    </dependency>
     <!-- Devtools -->
   </dependencies>
   <build>
@@ -146,6 +201,40 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <jvmArguments>-Djdk.tracePinnedThreads=full -Dfile.encoding=utf-8</jvmArguments>
+          <image>
+            <name>docker.io/actraiser/example-11-app</name>
+            <publish>true</publish>
+          </image>
+          <docker>
+            <publishRegistry>
+              <username>actraiser</username>
+              <password>fenix000</password>
+            </publishRegistry>
+          </docker>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.jsonschema2pojo</groupId>
+        <artifactId>jsonschema2pojo-maven-plugin</artifactId>
+        <dependencies />
+        <executions>
+          <execution>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+            <configuration>
+              <includeGetters>false</includeGetters>
+              <includeSetters>false</includeSetters>
+              <includeAdditionalProperties>true</includeAdditionalProperties>
+              <sourcePaths>
+                <sourcePath>${project.basedir}/src/main/resources/json-schema/random_name.jsd.json</sourcePath>
+              </sourcePaths>
+              <targetPackage>com.santalucia.example.infrastructure.model</targetPackage>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
       <!--
       <plugin>

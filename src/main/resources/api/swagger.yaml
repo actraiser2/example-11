@@ -148,6 +148,12 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/indicador'
+            application/xml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/indicador' 
+            
       x-spring-paginated: true
 components:
   schemas:

@@ -12,4 +12,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CacetrafecPageableRepository extends ListPagingAndSortingRepository<Cacetrafec, Long> {
 
+
 }

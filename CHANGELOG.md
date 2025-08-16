@@ -5,6 +5,10 @@
 
 #### Features
 
+ -  Migrate to spring-data-jdbc [ARQ-8571] ([a027af6ca951e93](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a027af6ca951e93c17215037709e2a5ac9ea81c5))
+   Fecha: 09-06-2025 05:58:54
+ -  Migrate to spring-data-jdbc [ARQ-8571] ([bad5e19f1800c01](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/bad5e19f1800c01253cb7dcb2f70bec79bbc628c))
+   Fecha: 06-06-2025 10:52:32
  -  removes dependency mapping ([a366391a8b8331a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a366391a8b8331a4cbc5820c9896fdfde511e560))
    Fecha: 25-05-2025 10:05:59
  -  and structured logging config ([5acbcf242b0d0a3](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5acbcf242b0d0a36dcda1c2de8cbf740b67462aa))
@@ -98,6 +102,36 @@
 
 #### Chore commits
 
+ -  force build ([24a454492630497](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/24a4544926304971e9b8efc9e4fa875d025c051b))
+ 		Fecha: 11-07-2025 06:29:06
+ -  try oute pipeline validation ([f9e137cefddfea0](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f9e137cefddfea0a9c12d5b17e68e05083f96859))
+ 		Fecha: 10-07-2025 18:19:08
+ -  remove monitoring ([704615788cc34e1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/704615788cc34e10fc5927627b5c193376c0d02e))
+ 		Fecha: 24-06-2025 11:12:23
+ -  update to release ([9d33cc1046f648e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/9d33cc1046f648e8820d9303637efb07eb677eba))
+ 		Fecha: 24-06-2025 10:11:51
+ -  update to release ([8b928258fcaff37](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/8b928258fcaff37e51f0c8f9390464ad24661e3a))
+ 		Fecha: 24-06-2025 10:11:40
+ -  Merge branch 'develop' of https://git.santalucia.net/scm/slarqsofamsback/example-app-11 into develop ([1fdfadce73b1e2f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/1fdfadce73b1e2fe6d06032364cae85323d69e2a))
+ 		Fecha: 21-06-2025 21:42:07
+ -  fix dates ([739459810a54df2](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/739459810a54df29a21e7675addaf02cb669dacc))
+ 		Fecha: 21-06-2025 21:41:12
+ -  force pipeline ([c0652fa0e0543cd](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c0652fa0e0543cdbff0370111fccc18b827afd0a))
+ 		Fecha: 21-06-2025 21:15:24
+ -  force build ([53284839b7f9899](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/53284839b7f9899b77c1500bbc728c37cf9df255))
+ 		Fecha: 21-06-2025 09:16:27
+ -  force pipeline ([d2d743deae5508b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/d2d743deae5508b5cf8159782699426268926e4a))
+ 		Fecha: 19-06-2025 15:26:00
+ -  update oracle driver ([e2dfd0b26302c15](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/e2dfd0b26302c15ddabaabb0883aeac221231fd3))
+ 		Fecha: 18-06-2025 11:06:43
+ -  update maven to 3.9.10 ([490136b0a5fe8e1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/490136b0a5fe8e17440ca4a16823a71a6accab57))
+ 		Fecha: 17-06-2025 06:33:18
+ -  remove properties migrator ([5dd0b1c9659676b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5dd0b1c9659676b74944efa1b954f4c272da6fb0))
+ 		Fecha: 17-06-2025 06:01:45
+ -  try-out ([c653e49a64ebbdf](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c653e49a64ebbdf92ee02430ed25bd86dd02beb6))
+ 		Fecha: 17-06-2025 05:34:17
+ -  force build ([a66ba2998fafe90](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a66ba2998fafe90a610cfda3013b90513d6eca9c))
+ 		Fecha: 16-06-2025 15:54:41
  -  README.md edited online with Bitbucket ([53a195dec853a90](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/53a195dec853a908570b93500a14eea9faf245d4))
  		Fecha: 30-05-2025 12:47:54
  -  force build ([223c1f0a8b8ac28](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/223c1f0a8b8ac287f53b2507d3d76276ed59bce7))

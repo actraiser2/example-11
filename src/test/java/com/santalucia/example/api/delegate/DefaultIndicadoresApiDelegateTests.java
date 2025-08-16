@@ -1,56 +1,46 @@
 package com.santalucia.example.api.delegate;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyList;
-import static org.mockito.Mockito.when;
+import static org.hamcrest.Matchers.is;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.concurrent.CompletableFuture;
-
-
-import org.instancio.Instancio;
-import org.junit.jupiter.api.DisplayName;
+import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mock;
-import org.springframework.data.domain.Pageable;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
-
-import com.santalucia.example.api.model.IndicadorResource;
-import com.santalucia.example.core.domain.IndicadoresCentroDomain;
-import com.santalucia.example.core.mappers.CacetrafecDomainMapper;
-import com.santalucia.example.core.service.IndicadorService;
-
-@ExtendWith(SpringExtension.class)
-class DefaultIndicadoresApiDelegateTests {
-
-  @Mock
-  IndicadorService indicadorService;
-
-  @Mock
-  CacetrafecDomainMapper cacetrafecMapper;
-
-  @Test
-  @DisplayName("Dado un contexto de prueba, probamos respuesta de la llamada a get indicadores list")
-  void test_indicadores_api_delegate() {
-    DefaultIndicadoresApiDelegate delegate = new DefaultIndicadoresApiDelegate(indicadorService, cacetrafecMapper);
-    List<IndicadorResource> resources = Instancio.createList(IndicadorResource.class);
-    List<IndicadoresCentroDomain> domains = Instancio.createList(IndicadoresCentroDomain.class);
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 
-    when(indicadorService.getIndicadores(any(Pageable.class))).thenReturn(domains);
-    when(cacetrafecMapper.indicadoresDomainToResources(anyList())).thenReturn(resources);
+@SpringBootTest
+@AutoConfigureMockMvc
+public class DefaultIndicadoresApiDelegateTests {
 
-    CompletableFuture<ResponseEntity<List<IndicadorResource>>> completableFuture =
-      delegate.getIndicadoresList(Optional.empty(), Pageable.ofSize(10));
+	@Autowired
+    private MockMvc mockMvc;
 
-    assertThat(completableFuture).isNotNull();
-    assertThat(completableFuture.join().getStatusCode()).isEqualTo(HttpStatus.OK);
-    assertThat(completableFuture.join().getBody()).isEqualTo(resources);
-
-  }
+    @Test
+    public void testGetIndicadoresList() throws Exception {
+        mockMvc.perform(get("/hello-world/v1/indicadores/list").
+        		accept(MediaType.APPLICATION_JSON))
+                .andExpect(MockMvcResultMatchers.content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("$", Matchers.hasSize(Matchers.greaterThan(3))))
+                .andExpect(jsonPath("$[0].ccentrab", is(965)))
+                .andExpect(jsonPath("$[0].xcacetra", is("I")))
+                .andExpect(jsonPath("$[0].finvaldt", is("2005-04-01")))
+                .andExpect(jsonPath("$[0].ffivaldt", is("9999-12-31")))
+                .andExpect(jsonPath("$[0].fregilog", is("2005-04-28")))
+                .andExpect(jsonPath("$[1].ccentrab", is(970)))
+                .andExpect(jsonPath("$[1].xcacetra", is("I")))
+                .andExpect(jsonPath("$[1].finvaldt", is("2005-04-01")))
+                .andExpect(jsonPath("$[1].ffivaldt", is("9999-12-31")))
+                .andExpect(jsonPath("$[1].fregilog", is("2005-04-28")))
+                .andExpect(jsonPath("$[2].ccentrab", is(975)))
+                .andExpect(jsonPath("$[2].xcacetra", is("I")))
+                .andExpect(jsonPath("$[2].finvaldt", is("2005-05-01")))
+                .andExpect(jsonPath("$[2].ffivaldt", is("9999-12-31")))
+                .andExpect(jsonPath("$[2].fregilog", is("2005-04-28")));
+    }
 }

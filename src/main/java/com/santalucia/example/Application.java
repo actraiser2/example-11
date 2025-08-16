@@ -1,8 +1,11 @@
 package com.santalucia.example;
 
-import lombok.Generated;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+
+import lombok.Generated;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Application
@@ -10,6 +13,8 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
  */
 @Generated
 @SpringBootApplication
+@EnableDiscoveryClient
+@Slf4j
 public class Application {
 
     /**
@@ -17,8 +22,15 @@ public class Application {
      *
      * @param String[] args
      */
+	
+	static {
+		//System.setProperty("javax.net.debug", "all");
+		//System.setProperty("jdk.tls.client.protocols", "TLSv1.3");
+	}
     public static void main(String[] args) {
-        new SpringApplicationBuilder(Application.class)
+        log.info("jdk.tracePinnedThreads: {}", System.getProperty("jdk.tracePinnedThreads"));
+        log.info("jdk.fileEncoding: {}", System.getProperty("file.encoding"));
+    	new SpringApplicationBuilder(Application.class)
                 //.applicationStartup(new BufferingApplicationStartup(ByteSizeConstants.TWO_KB.intValue()))
                 .run(args);
     }
