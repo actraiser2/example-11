@@ -77,7 +77,6 @@ springdoc:
 spring:
   mandatory-file-encoding: UTF-8
   main:
-    cloud-platform: none
     lazy-initialization: true
     allow-bean-definition-overriding: true
   application:
@@ -101,18 +100,6 @@ spring:
   devtools:
     livereload:
       enabled: true
-
-######################################
-#                                    #
-# cloud properties                   #
-#                                    #
-######################################
-  cloud:
-    kubernetes:
-      reload:
-        enabled: false
-      config:
-        name: ${spring.application.name}
 
 ######################################
 #                                    #
