@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
-
 import org.instancio.Instancio;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -50,7 +49,7 @@ class DefaultEmployeeApiDelegateTests {
       delegate.getEmployeesList(Optional.empty(), Pageable.ofSize(10));
 
     assertThat(completableFuture).isNotNull();
-    assertThat(completableFuture.join().getStatusCodeValue()).isEqualTo(HttpStatus.OK.value());
+    assertThat(completableFuture.join().getStatusCode()).isEqualTo(HttpStatus.OK);
     assertThat(completableFuture.join().getBody()).isEqualTo(lstResource);
   }
 }
