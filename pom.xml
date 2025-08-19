@@ -54,6 +54,7 @@
     </notifiers>
   </ciManagement>
   <properties>
+    <ams-spring-data.version>2.0.0-SNAPSHOT</ams-spring-data.version>
     <skip.it>true</skip.it>
     <surfire.output.skip>false</surfire.output.skip>
     <swagger.codegen.inputSpec>src/main/resources/api/swagger.yaml</swagger.codegen.inputSpec>
