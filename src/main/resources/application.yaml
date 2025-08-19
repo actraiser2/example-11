@@ -77,7 +77,6 @@ springdoc:
 spring:
   mandatory-file-encoding: UTF-8
   main:
-    cloud-platform: none
     lazy-initialization: true
     allow-bean-definition-overriding: true
   application:
@@ -101,31 +100,6 @@ spring:
   devtools:
     livereload:
       enabled: true
-
-######################################
-#                                    #
-# cloud properties                   #
-#                                    #
-######################################
-  cloud:
-    kubernetes:
-      reload:
-        enabled: false
-      config:
-        name: ${spring.application.name}
-######################################
-#                                    #
-# internationalization properties    #
-#                                    #
-######################################
-
-  messages:
-    basename: classpath:i18n/messages
-    # si no se especifica se cachean para siempre. Al
-    # estar en el jar no es correcto
-    #cache-duration: 1s
-    encoding: UTF-8
-    fallback-to-system-locale: false
 
 ######################################
 #                                    #
@@ -310,7 +284,7 @@ logging:
       console: ecs
   level:
     root: INFO
-    "[com.santalucia]": DEBUG
+    "[com.santalucia]": INFO
     "[org.springframework]": INFO
     "[org.springframework.test]": INFO
     #"[org.springframework.web.servlet]": DEBUG
@@ -319,7 +293,7 @@ logging:
     #trazas para mostrar los errores de login debido a que salen en modo debug
     "[org.springframework.security.oauth2.server.resource]": INFO
     #Paquete que indica cuando SB esta disponible
-    "[org.springframework.boot.availability]": DEBUG
+    "[org.springframework.boot.availability]": INFO
 
 ###########################
 #                         #
@@ -342,5 +316,5 @@ info:
     name: ${spring.application.name}
     encoding: UTF-8
     java:
-      source: "@java.version@"
-      target: "@java.version@"
+      source: "21"
+      target: "21"
