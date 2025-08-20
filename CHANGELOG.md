@@ -50,6 +50,8 @@
 
 #### Bug Fixes
 
+ -  uses HttpStatus enum for comparison ([5bee5941a142a17](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5bee5941a142a17859cb5de8eec44b1f752cbfb1))
+    Fecha: 18-08-2025 08:29:23
  -  adapt properties ([54ece75969aff69](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/54ece75969aff6975f08d598cbb2f01c9efa5628))
     Fecha: 01-06-2022 13:14:29
  -  fix lint ([1e77c9748fc82b2](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/1e77c9748fc82b216db4961b27338ba3d1eb5a84))
@@ -102,6 +104,22 @@
 
 #### Chore commits
 
+ -  fix credentials ([cd7ab5947e5980a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/cd7ab5947e5980a5e09cd75df193cf0780d4a387))
+ 		Fecha: 20-08-2025 06:26:53
+ -  Auto stash before merge of "develop" and "origin/develop" ([70dd3bc493e735a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/70dd3bc493e735a770671132adaf438fa405ec79))
+ 		Fecha: 19-08-2025 11:09:21
+ -  try-out pipelines ([3f43b6e8dbccef0](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3f43b6e8dbccef0f328842760251c30dec4884fd))
+ 		Fecha: 19-08-2025 11:08:10
+ -  update properties ([6bb13fe95a49f89](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6bb13fe95a49f89f3554c808e47d7acaa2e3e129))
+ 		Fecha: 18-08-2025 07:32:07
+ -  force build ([0d76b9b14f54f55](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/0d76b9b14f54f556723b950cc0d4a61ebca65b59))
+ 		Fecha: 13-08-2025 06:43:16
+ -  force build ([a9c6abfa60aa278](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a9c6abfa60aa2789c4908110154cb9163eaa21de))
+ 		Fecha: 13-08-2025 06:38:18
+ -  level log to info ([699dc5064f76033](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/699dc5064f76033ec9a85c9338a30b9185e5243f))
+ 		Fecha: 06-08-2025 09:46:21
+ -  force pipeline ([1459e6a0ce58510](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/1459e6a0ce58510f4b52df77383ccb6b2ec4adf3))
+ 		Fecha: 06-08-2025 09:41:59
  -  force pipeline ([84b3fd3becf4805](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/84b3fd3becf4805455a88d90a0d93444a57e49e1))
  		Fecha: 27-07-2025 08:37:59
  -  force build ([24a454492630497](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/24a4544926304971e9b8efc9e4fa875d025c051b))

@@ -245,7 +245,7 @@ santalucia:
           base-packages: com.santalucia.example.infrastructure.repository.secondary
       security:
         core:
-          enabled: false
+          enabled: true
         cors:
           enabled: true
           allowed-origins:
