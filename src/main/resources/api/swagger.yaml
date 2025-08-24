@@ -16,6 +16,29 @@ servers:
 security:
 - oauthApplication: []
 paths:
+  /documentos/{id}:
+    get:
+      tags:
+        - Gestor Documental
+      summary: Recupera la meta-información de un documento
+      operationId: recuperarDocumento
+      parameters:
+        - name: id
+          in: path
+          description: Identificador del documento a consultar
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: Documento consultado (meta-información)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Documento'
+    
+           
   /hello/{name}:
     get:
       tags:
@@ -237,6 +260,60 @@ components:
           description: fregilog
           format: date
           example: 2019-01-30
+    Documento:
+      type: object
+      properties:
+        identificador:
+          type: integer
+          description: Identificador del documento (antiguo nidenfic/nidendoc)
+          format: int64
+          example: 12345678
+        codigoSistema:
+          maxLength: 3
+          type: string
+          description: Código de sistema (contexto de negocio)
+          example: sft
+        codigoSubsistema:
+          maxLength: 3
+          type: string
+          description: Código de subsistema (contexto de negocio)
+          example: exp
+        codigoProceso:
+          maxLength: 12
+          type: string
+          description: Código de proceso (contexto de negocio)
+          example: pnconacticur
+        codigoTabla:
+          maxLength: 12
+          type: string
+          description: Código de tabla (contexto de negocio)
+          example: documinsta
+        codigoTipoDocumento:
+          maxLength: 8
+          type: string
+          description: Código de tipo de documento
+          example: SGISFTSO
+        codigoRepositorio:
+          type: string
+          description: Código de repositorio
+          example: H
+          enum:
+            - H
+            - "N"
+            - L
+        carpetaLogica:
+          maxLength: 999
+          type: string
+          description: Carpeta lógica
+          example: /prueba
+        fechaCaducidad:
+          type: string
+          description: Fecha de caducidad
+          example: 2017-07-21
+        depuracion:
+          type: boolean
+          description: Indicador de depuración (el documento es susceptible de ser depurado por un proceso de limpieza)
+          
   securitySchemes:
     oauthApplication:
       type: oauth2

@@ -6,7 +6,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 
 /**
  * Application
- * Hay que incluir @Generated para evitar que compute en cobertura
+ * Hay que incluir @Generated para evitar que compute en cobertura   
  */
 @Generated
 @SpringBootApplication

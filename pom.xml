@@ -4,7 +4,7 @@
   <parent>
     <groupId>com.santalucia.arq.ams</groupId>
     <artifactId>ams-parent-sl-sw</artifactId>
-    <version>3.0.0-RELEASE</version>
+    <version>3.1.0-SNAPSHOT</version>
     <relativePath />
   </parent>
   <groupId>com.santalucia.example</groupId>
@@ -54,7 +54,7 @@
     </notifiers>
   </ciManagement>
   <properties>
-    <ams-spring-data.version>2.0.0-SNAPSHOT</ams-spring-data.version>
+    <repositorio-documental-java-21-feign-api-client.version>1.5.0-SNAPSHOT</repositorio-documental-java-21-feign-api-client.version>
     <skip.it>true</skip.it>
     <surfire.output.skip>false</surfire.output.skip>
     <swagger.codegen.inputSpec>src/main/resources/api/swagger.yaml</swagger.codegen.inputSpec>
@@ -135,6 +135,15 @@
       <artifactId>spring-boot-devtools</artifactId>
       <scope>runtime</scope>
       <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>com.santalucia.arq.ams.cloud</groupId>
+      <artifactId>ams-spring-cloud-kubernetes-loadbalancer</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.santalucia.arq.ams</groupId>
+      <artifactId>repositorio-documental-java-21-feign-api-client</artifactId>
+      <version>${repositorio-documental-java-21-feign-api-client.version}</version>
     </dependency>
     <!-- Devtools -->
   </dependencies>

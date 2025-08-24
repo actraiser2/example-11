@@ -104,6 +104,8 @@
 
 #### Chore commits
 
+ -  Enables security core ([b550e6bcef86526](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b550e6bcef865261c94ee931fa8d382351c5b633))
+ 		Fecha: 20-08-2025 08:12:44
  -  fix credentials ([cd7ab5947e5980a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/cd7ab5947e5980a5e09cd75df193cf0780d4a387))
  		Fecha: 20-08-2025 06:26:53
  -  Auto stash before merge of "develop" and "origin/develop" ([70dd3bc493e735a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/70dd3bc493e735a770671132adaf438fa405ec79))
