@@ -19,17 +19,17 @@ paths:
   /documentos/{id}:
     get:
       tags:
-        - Gestor Documental
+      - Gestor Documental
       summary: Recupera la meta-información de un documento
       operationId: recuperarDocumento
       parameters:
-        - name: id
-          in: path
-          description: Identificador del documento a consultar
-          required: true
-          schema:
-            type: integer
-            format: int64
+      - name: id
+        in: path
+        description: Identificador del documento a consultar
+        required: true
+        schema:
+          type: integer
+          format: int64
       responses:
         "200":
           description: Documento consultado (meta-información)
@@ -37,8 +37,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Documento'
-    
-           
   /hello/{name}:
     get:
       tags:
@@ -298,9 +296,9 @@ components:
           description: Código de repositorio
           example: H
           enum:
-            - H
-            - "N"
-            - L
+          - H
+          - "N"
+          - L
         carpetaLogica:
           maxLength: 999
           type: string
@@ -313,7 +311,6 @@ components:
         depuracion:
           type: boolean
           description: Indicador de depuración (el documento es susceptible de ser depurado por un proceso de limpieza)
-          
   securitySchemes:
     oauthApplication:
       type: oauth2
