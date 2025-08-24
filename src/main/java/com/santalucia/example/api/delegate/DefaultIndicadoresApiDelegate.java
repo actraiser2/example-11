@@ -36,7 +36,7 @@ public class DefaultIndicadoresApiDelegate implements ListIndicadoresApiDelegate
    * @param Pageable       pageable
    * @return ResponseEntity<List < IndicadorResource>>
    */
-  @Async
+
   @Override
   public CompletableFuture<ResponseEntity<List<IndicadorResource>>> getIndicadoresList(Optional<UUID> xRequestID, Pageable pageable) {
 

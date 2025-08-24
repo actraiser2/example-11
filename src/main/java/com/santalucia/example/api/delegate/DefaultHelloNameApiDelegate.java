@@ -35,7 +35,6 @@ public class DefaultHelloNameApiDelegate implements HelloWorldApiDelegate {
    * @param String name
    * @param Optional<UUID> xRequestID
    */
-  @Async
   @Override
   public CompletableFuture<ResponseEntity<IdentidadDigitalConsultaResource>> getHelloByName(String name, Optional<UUID> xRequestID) {
     log.debug("processing getHelloByName");

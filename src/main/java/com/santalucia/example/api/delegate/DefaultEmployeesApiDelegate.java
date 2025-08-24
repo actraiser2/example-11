@@ -38,7 +38,6 @@ public class DefaultEmployeesApiDelegate implements ListEmployeesApiDelegate {
    * @param Pageable       pageable
    * @return ResponseEntity<List <EmployeeResource>>
    */
-  @Async
   @Override
   public CompletableFuture<ResponseEntity<List<EmployeeResource>>> getEmployeesList(Optional<UUID> xRequestId, Pageable pageable) {
     log.info("Pageable pagenumber: {} ", pageable.getPageNumber());
