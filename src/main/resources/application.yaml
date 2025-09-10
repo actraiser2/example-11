@@ -106,6 +106,9 @@ spring:
 # datasource properties              #
 #                                    #
 ######################################
+  data:
+    jdbc:
+      dialect: jdbc
   datasource:
     primary:
       driver-class-name: com.informix.jdbc.IfxDriver
