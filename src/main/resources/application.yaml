@@ -108,7 +108,7 @@ spring:
 ######################################
   data:
     jdbc:
-      dialect: jdbc
+      dialect: oracle
   datasource:
     primary:
       driver-class-name: com.informix.jdbc.IfxDriver
