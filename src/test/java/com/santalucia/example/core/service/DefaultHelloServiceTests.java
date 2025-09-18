@@ -5,7 +5,6 @@ import static org.mockito.Mockito.when;
 
 import java.util.Optional;
 
-
 import org.instancio.Instancio;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -13,6 +12,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.springframework.context.support.MessageSourceAccessor;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.santalucia.example.core.domain.IdentidadDigitalDomain;
@@ -21,6 +21,9 @@ import com.santalucia.example.core.mappers.IdentidadDigitalDomainMapper;
 @ExtendWith(SpringExtension.class)
 class DefaultHelloServiceTests {
 
+	@Mock
+	private MessageSourceAccessor messageSourceAccessor;
+	
 	@Mock
 	private IdentidadDigitalDomainMapper identidadDigitalMapper;
 
