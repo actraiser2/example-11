@@ -231,8 +231,8 @@ spring:
           repositoriodocumental:
             authorization-grant-type: client_credentials
             client-authentication-method: client_secret_post
-            client-id: xxxxxxxxxxxxx
-            client-secret: xxxxxxxxx
+            client-id: ${spring.application.name}
+            client-secret: ${spring.application.name}
         provider:
           repositoriodocumental:
             issuer-uri: https://sso-sldev.santalucia.es/auth/realms/3scale
