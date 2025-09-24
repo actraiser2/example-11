@@ -85,7 +85,7 @@ spring:
   banner:
     location: classpath:santalucia-banner.txt
   mvc:
-# Whether logging of (potentially sensitive) request details at DEBUG and TRACE 
+# Whether logging of (potentially sensitive) request details at DEBUG and TRACE
     log-request-details: false
   web:
     locale-resolver: accept-header
@@ -99,7 +99,7 @@ spring:
     unique-names: true
   devtools:
     livereload:
-      enabled: true 
+      enabled: true
   cloud:
     openfeign:
       client:
