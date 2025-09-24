@@ -85,7 +85,7 @@ spring:
   banner:
     location: classpath:santalucia-banner.txt
   mvc:
-# Whether logging of (potentially sensitive) request details at DEBUG and TRACE   
+# Whether logging of (potentially sensitive) request details at DEBUG and TRACE 
     log-request-details: false
   web:
     locale-resolver: accept-header
@@ -99,16 +99,13 @@ spring:
     unique-names: true
   devtools:
     livereload:
-      enabled: true
-      
+      enabled: true 
   cloud:
     openfeign:
       client:
         config:
           repositorio-documental:
             url: https://repositorio-documental-ams-back-dev.dev.nopro.ocp.santalucia.net/repositorio-documental/v1
-                    
-
 ######################################
 #                                    #
 # datasource properties              #
@@ -293,7 +290,6 @@ santalucia:
 ###########################
 helloworld:
   url: http://localhost:8080/hello-world/v1
-  
 repositoriodocumental:
   name: repositorio-documental
   #path: /repositorio-documental/v1
