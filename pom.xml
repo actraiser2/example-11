@@ -136,10 +136,11 @@
       <scope>runtime</scope>
       <optional>true</optional>
     </dependency>
+    <!--
     <dependency>
       <groupId>com.santalucia.arq.ams.cloud</groupId>
       <artifactId>ams-spring-cloud-kubernetes-loadbalancer</artifactId>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>repositorio-documental-java-21-feign-api-client</artifactId>

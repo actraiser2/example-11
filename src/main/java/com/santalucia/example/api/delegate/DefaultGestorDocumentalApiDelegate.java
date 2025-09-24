@@ -6,7 +6,7 @@ import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
-import com.santalucia.arq.ams.api.client.GestorDocumentalApi;
+import com.santalucia.arq.ams.api.client.DocumentosApi;
 import com.santalucia.example.api.model.DocumentoResource;
 import com.santalucia.example.api.server.GestorDocumentalApiDelegate;
 import com.santalucia.example.core.mappers.DocumentResourceMapper;
@@ -22,7 +22,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class DefaultGestorDocumentalApiDelegate implements GestorDocumentalApiDelegate {
 
-	private final GestorDocumentalApi gestorDocumentalApi;
+	private final DocumentosApi gestorDocumentalApi;
 	private final DocumentResourceMapper documentResourceMapper;
 	private final DiscoveryClient discoveryClient;
 	
