@@ -61,6 +61,7 @@
     <swagger.codegen.package>${project.groupId}</swagger.codegen.package>
     <swagger.codegen.skip.client>true</swagger.codegen.skip.client>
     <swagger.codegen.skip.server>false</swagger.codegen.skip.server>
+    <enforcer.check.aot.skip>false</enforcer.check.aot.skip>
   </properties>
   <dependencies>
     <dependency>
@@ -136,11 +137,11 @@
       <scope>runtime</scope>
       <optional>true</optional>
     </dependency>
-    <!--
-    <dependency>
+    
+   <dependency>
       <groupId>com.santalucia.arq.ams.cloud</groupId>
       <artifactId>ams-spring-cloud-kubernetes-loadbalancer</artifactId>
-    </dependency>-->
+    </dependency>
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
       <artifactId>repositorio-documental-java-21-feign-api-client</artifactId>

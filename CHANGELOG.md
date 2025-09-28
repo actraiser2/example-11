@@ -5,6 +5,8 @@
 
 #### Features
 
+ -  Adds internationalization for hello message ([8d6671e0cd5d27a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/8d6671e0cd5d27afc86014209fcef370ce5282d1))
+   Fecha: 17-09-2025 09:40:29
  -  Migrate to spring-data-jdbc [ARQ-8571] ([a027af6ca951e93](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a027af6ca951e93c17215037709e2a5ac9ea81c5))
    Fecha: 09-06-2025 05:58:54
  -  Migrate to spring-data-jdbc [ARQ-8571] ([bad5e19f1800c01](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/bad5e19f1800c01253cb7dcb2f70bec79bbc628c))
@@ -104,6 +106,38 @@
 
 #### Chore commits
 
+ -  fix ([67c2180a7f14846](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/67c2180a7f14846b62c2253a52641766c1ea1aa1))
+ 		Fecha: 24-09-2025 14:45:11
+ -  fix ([1a30332815155dd](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/1a30332815155ddbad46a977477c5ac4a7170794))
+ 		Fecha: 24-09-2025 14:06:18
+ -  fix yamllint ([2f3e172fc862081](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/2f3e172fc862081f6c1e300f2fd2456d6c333f02))
+ 		Fecha: 24-09-2025 13:16:11
+ -  fix yamllint ([43c6e3f5e90209f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/43c6e3f5e90209f5e68f47b60b77a270b29e7a42))
+ 		Fecha: 24-09-2025 13:13:07
+ -  fix identation yaml ([3c8616f310d7a5c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3c8616f310d7a5c2e95bc805c4286aeb4808fe92))
+ 		Fecha: 24-09-2025 13:04:21
+ -  changes required for using the feign repo documental generated with the new way (useTags:false) ([4749d56db0604ee](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/4749d56db0604eeea710beda017696ed76cdf0b0))
+ 		Fecha: 24-09-2025 12:58:38
+ -  added paramaters spring.data.jdbc.primary.dialect and spring.data.jdbc.secondary.dialect ([7f326581ca03e3e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7f326581ca03e3e83723b701fedca592e622dc6e))
+ 		Fecha: 18-09-2025 20:45:37
+ -  force pipeline ([8f504d3e5e14bf9](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/8f504d3e5e14bf9a7d3a5cdc07665cb76ef80cc1))
+ 		Fecha: 18-09-2025 18:13:45
+ -  fix ([d8b98fd0f402d76](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/d8b98fd0f402d764cfb413e089a1ba8360cccbe2))
+ 		Fecha: 10-09-2025 15:35:20
+ -  added parameter spring.data.jdbc.dialect for cds ([290e33cb2f8ac13](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/290e33cb2f8ac13c81c1238aecce28306b1aa1f1))
+ 		Fecha: 10-09-2025 15:34:20
+ -  force pipeline ([870cc4407eefdd8](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/870cc4407eefdd8f68f1ef4b5080312b9e8d5dbe))
+ 		Fecha: 10-09-2025 14:58:04
+ -  fix kiuwan ([a8c64ab3fef4c90](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a8c64ab3fef4c90ec2da43bfb4361ec7a342c6de))
+ 		Fecha: 24-08-2025 15:24:19
+ -  removed @Async ([76a6cc1dbbc88bb](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/76a6cc1dbbc88bba2bf74546459e2be7ff1dbd60))
+ 		Fecha: 24-08-2025 14:17:01
+ -  fix kiuwan ([a93b866cc7d8049](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a93b866cc7d80494fa8adbb166cdb9d8ed55e694))
+ 		Fecha: 24-08-2025 11:44:19
+ -  fix yamllint in the file swagger.yaml ([312b94c99d5315a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/312b94c99d5315a0b9258ae2f7d5867cff9fa50a))
+ 		Fecha: 24-08-2025 11:17:04
+ -  added a new endpoint for testing feign ([739616566a682fd](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/739616566a682fdd1958df9ac5e044614d1a2652))
+ 		Fecha: 24-08-2025 10:44:14
  -  Enables security core ([b550e6bcef86526](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b550e6bcef865261c94ee931fa8d382351c5b633))
  		Fecha: 20-08-2025 08:12:44
  -  fix credentials ([cd7ab5947e5980a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/cd7ab5947e5980a5e09cd75df193cf0780d4a387))
