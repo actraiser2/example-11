@@ -14,7 +14,7 @@ jobs:
           distribution: 'temurin'
           architecture: x64
       - name: Compile project
-        run: mvn -s ./.m2 clean package
+        run: mvn -s ./.m2/settings.xml clean package
       
       - name: generate image
         run: docker build -t docker.io/actraiser/example-11:latest .
