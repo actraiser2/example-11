@@ -1,15 +1,21 @@
-on: [push]
+on: 
+  push:
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - name: Checkout of the project
+        uses: actions/checkout@v5
       - name: Set up JDK 21 for x64
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           java-version: '21'
           distribution: 'temurin'
           architecture: x64
       - name: Compile project
-        run: mvn compile
+        run: mvn package
+      
+      - name: generate image
+        run: docker build -t docker.io/actraiser/example-11:latest .
       

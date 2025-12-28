@@ -1,770 +1,770 @@
-# example-app-11 changelog
+# example-11 changelog
 
 ## Current SNAPSHOT ()
 
 
 #### Features
 
- -  Adds internationalization for hello message ([8d6671e0cd5d27a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/8d6671e0cd5d27afc86014209fcef370ce5282d1))
+ -  Adds internationalization for hello message ([8d6671e0cd5d27a](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/8d6671e0cd5d27afc86014209fcef370ce5282d1))
    Fecha: 17-09-2025 09:40:29
- -  Migrate to spring-data-jdbc [ARQ-8571] ([a027af6ca951e93](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a027af6ca951e93c17215037709e2a5ac9ea81c5))
+ -  Migrate to spring-data-jdbc [ARQ-8571] ([a027af6ca951e93](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/a027af6ca951e93c17215037709e2a5ac9ea81c5))
    Fecha: 09-06-2025 05:58:54
- -  Migrate to spring-data-jdbc [ARQ-8571] ([bad5e19f1800c01](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/bad5e19f1800c01253cb7dcb2f70bec79bbc628c))
+ -  Migrate to spring-data-jdbc [ARQ-8571] ([bad5e19f1800c01](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/bad5e19f1800c01253cb7dcb2f70bec79bbc628c))
    Fecha: 06-06-2025 10:52:32
- -  removes dependency mapping ([a366391a8b8331a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a366391a8b8331a4cbc5820c9896fdfde511e560))
+ -  removes dependency mapping ([a366391a8b8331a](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/a366391a8b8331a4cbc5820c9896fdfde511e560))
    Fecha: 25-05-2025 10:05:59
- -  and structured logging config ([5acbcf242b0d0a3](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5acbcf242b0d0a36dcda1c2de8cbf740b67462aa))
+ -  and structured logging config ([5acbcf242b0d0a3](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/5acbcf242b0d0a36dcda1c2de8cbf740b67462aa))
    Fecha: 28-03-2025 12:39:26
- -  and structured logging config ([3d2b1f224b17376](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3d2b1f224b173764470b984b616add5dd2c92ee4))
+ -  and structured logging config ([3d2b1f224b17376](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/3d2b1f224b173764470b984b616add5dd2c92ee4))
    Fecha: 27-03-2025 08:00:06
- -  application-local ([f865171ce77c3b3](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f865171ce77c3b33a9f323c0deff3127098582a0))
+ -  application-local ([f865171ce77c3b3](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/f865171ce77c3b33a9f323c0deff3127098582a0))
    Fecha: 20-03-2025 17:44:32
- -  basic migration java 21 and spring boot 3 ([4d9ff9919e092b1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/4d9ff9919e092b11d3a38dce93d9619d25c93266))
+ -  basic migration java 21 and spring boot 3 ([4d9ff9919e092b1](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/4d9ff9919e092b11d3a38dce93d9619d25c93266))
    Fecha: 20-03-2025 12:39:42
- -  migrate mvn wrapper ([e074dabb1d70a8f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/e074dabb1d70a8f549d277391db80269e2b470cb))
+ -  migrate mvn wrapper ([e074dabb1d70a8f](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/e074dabb1d70a8f549d277391db80269e2b470cb))
    Fecha: 20-03-2025 12:11:52
- -  Propiedades safe-default del driver JDBC de Oracle y de HikariCP para Oracle para aumentar la confiabilidad del pool de conexiones ([6364f6bc1845c81](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6364f6bc1845c819e85b25fc25ce98295053218b))
+ -  Propiedades safe-default del driver JDBC de Oracle y de HikariCP para Oracle para aumentar la confiabilidad del pool de conexiones ([6364f6bc1845c81](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/6364f6bc1845c819e85b25fc25ce98295053218b))
    Fecha: 20-12-2024 08:55:38
- -  Propiedades safe-default del driver JDBC de Informix y de HikariCP para Informix para aumentar la confiabilidad del pool de conexiones ([f0d406ee348d052](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f0d406ee348d0527f0ca4d2ebabf1a556c4f3a55))
+ -  Propiedades safe-default del driver JDBC de Informix y de HikariCP para Informix para aumentar la confiabilidad del pool de conexiones ([f0d406ee348d052](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/f0d406ee348d0527f0ca4d2ebabf1a556c4f3a55))
    Fecha: 19-12-2024 12:01:40
- -  Migration pom.xml OCP4 ([30f8288bb5afc5e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/30f8288bb5afc5e2af651689e5e851f6139a32a3))
+ -  Migration pom.xml OCP4 ([30f8288bb5afc5e](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/30f8288bb5afc5e2af651689e5e851f6139a32a3))
    Fecha: 14-03-2023 17:30:58
- -  migrate test to assertJ ([af8c17fecf1c59f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/af8c17fecf1c59f63e7288fd4679454eff7358d7))
+ -  migrate test to assertJ ([af8c17fecf1c59f](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/af8c17fecf1c59f63e7288fd4679454eff7358d7))
    Fecha: 11-05-2022 18:13:16
- -  fix imports ([275a3aefca8a615](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/275a3aefca8a615a5b5d682c27a76ec378e9863b))
+ -  fix imports ([275a3aefca8a615](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/275a3aefca8a615a5b5d682c27a76ec378e9863b))
    Fecha: 10-05-2022 12:45:29
- -  modify to check AMS 2.1.0-RELEASE ([3936b83d9ccbf13](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3936b83d9ccbf13fbd6aca0990a8beb3751cf4bf))
+ -  modify to check AMS 2.1.0-RELEASE ([3936b83d9ccbf13](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/3936b83d9ccbf13fbd6aca0990a8beb3751cf4bf))
    Fecha: 27-04-2022 10:35:32
- -  refactor test ASW1279 ([59ee0e66316461d](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/59ee0e66316461d62649d631320ba6fa68b01b8b))
+ -  refactor test ASW1279 ([59ee0e66316461d](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/59ee0e66316461d62649d631320ba6fa68b01b8b))
    Fecha: 26-04-2022 12:49:51
- -  skip archunit ([567571eebf85740](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/567571eebf85740b9e7cb67bb0f6ec085af5cc51))
+ -  skip archunit ([567571eebf85740](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/567571eebf85740b9e7cb67bb0f6ec085af5cc51))
    Fecha: 25-04-2022 09:46:22
- -  skip archunit ([236b951a2bfdbc5](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/236b951a2bfdbc53055c26401d4f8c5e988c8a23))
+ -  skip archunit ([236b951a2bfdbc5](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/236b951a2bfdbc53055c26401d4f8c5e988c8a23))
    Fecha: 25-04-2022 09:15:31
- -  fixes for ams 2.2 ([4901aec596d5015](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/4901aec596d50159b66767d01aa129b826809c58))
+ -  fixes for ams 2.2 ([4901aec596d5015](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/4901aec596d50159b66767d01aa129b826809c58))
    Fecha: 12-04-2022 08:55:39
- -  integracion wiremock ([2a905b2ef596f9d](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/2a905b2ef596f9d52961585132a4bdf34a47faa7))
+ -  integracion wiremock ([2a905b2ef596f9d](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/2a905b2ef596f9d52961585132a4bdf34a47faa7))
    Fecha: 12-03-2021 07:27:50
- -  prueba hook ([11e73067e442ba4](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/11e73067e442ba4391f14dfbcb7c20fef3c25499))
+ -  prueba hook ([11e73067e442ba4](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/11e73067e442ba4391f14dfbcb7c20fef3c25499))
    Fecha: 09-03-2021 14:41:27
- -  aaa ([b4903c2648cccc6](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b4903c2648cccc641cb00a61a1e5097a33e9ef42))
+ -  aaa ([b4903c2648cccc6](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/b4903c2648cccc641cb00a61a1e5097a33e9ef42))
    Fecha: 07-10-2020 09:12:01
 
 #### Bug Fixes
 
- -  uses HttpStatus enum for comparison ([5bee5941a142a17](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5bee5941a142a17859cb5de8eec44b1f752cbfb1))
+ -  uses HttpStatus enum for comparison ([5bee5941a142a17](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/5bee5941a142a17859cb5de8eec44b1f752cbfb1))
     Fecha: 18-08-2025 08:29:23
- -  adapt properties ([54ece75969aff69](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/54ece75969aff6975f08d598cbb2f01c9efa5628))
+ -  adapt properties ([54ece75969aff69](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/54ece75969aff6975f08d598cbb2f01c9efa5628))
     Fecha: 01-06-2022 13:14:29
- -  fix lint ([1e77c9748fc82b2](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/1e77c9748fc82b216db4961b27338ba3d1eb5a84))
+ -  fix lint ([1e77c9748fc82b2](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/1e77c9748fc82b216db4961b27338ba3d1eb5a84))
     Fecha: 12-04-2022 10:13:05
- -  remove user pass application.yaml ([68462e3ce0d7fbe](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/68462e3ce0d7fbe63ea57234fd9ce1f5fb3c54c6))
+ -  remove user pass application.yaml ([68462e3ce0d7fbe](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/68462e3ce0d7fbe63ea57234fd9ce1f5fb3c54c6))
     Fecha: 15-12-2021 17:02:44
- -  add comment to redeploy ([6f37ace8c786db1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6f37ace8c786db14e027b4b2fe7c574fb760c319))
+ -  add comment to redeploy ([6f37ace8c786db1](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/6f37ace8c786db14e027b4b2fe7c574fb760c319))
     Fecha: 03-11-2021 13:33:52
- -  ASW829 Cambios en mappers de mapstruct ([aac901e51fd6d5a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/aac901e51fd6d5af086c559ce6dc794b68b120a6))
+ -  ASW829 Cambios en mappers de mapstruct ([aac901e51fd6d5a](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/aac901e51fd6d5af086c559ce6dc794b68b120a6))
     Fecha: 24-08-2021 10:00:34
- -  rectificar cambio de puerto local para actuator ([34bb61f41a53100](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/34bb61f41a5310024f6e17ccef77e3a2420f91bb))
+ -  rectificar cambio de puerto local para actuator ([34bb61f41a53100](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/34bb61f41a5310024f6e17ccef77e3a2420f91bb))
     Fecha: 02-12-2020 07:22:40
- -  corregir nombre driver Oracle ([a85e0923440e63f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a85e0923440e63f22781aed907017e459bd10776))
+ -  corregir nombre driver Oracle ([a85e0923440e63f](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/a85e0923440e63f22781aed907017e459bd10776))
     Fecha: 23-11-2020 13:44:07
- -  config ([7ae2f60ca7c11b4](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7ae2f60ca7c11b422a7ed6b30d5b1d4c30e96809))
+ -  config ([7ae2f60ca7c11b4](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/7ae2f60ca7c11b422a7ed6b30d5b1d4c30e96809))
     Fecha: 27-08-2020 09:41:14
- -  tab ([f0efce489765a0a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f0efce489765a0a078103908e69999152858cf24))
+ -  tab ([f0efce489765a0a](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/f0efce489765a0a078103908e69999152858cf24))
     Fecha: 27-08-2020 09:24:38
 
 #### Refactor code
 
- -  change springfox to springdoc using the ams component ([65aa1021d4a34af](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/65aa1021d4a34af9ff6ae0512a7f0e9568ce76a1))
+ -  change springfox to springdoc using the ams component ([65aa1021d4a34af](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/65aa1021d4a34af9ff6ae0512a7f0e9568ce76a1))
  		Fecha: 06-04-2022 15:04:01
- -  Incluir test para aplicaciones sin bbdd ([afa8b941e5e0802](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/afa8b941e5e0802060e55acbb0400d85c09f26ae))
+ -  Incluir test para aplicaciones sin bbdd ([afa8b941e5e0802](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/afa8b941e5e0802060e55acbb0400d85c09f26ae))
  		Fecha: 07-05-2021 07:29:40
- -  Extender customMapper de agencias y ejemplo de test de servicio ([baf1ba8f0183464](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/baf1ba8f01834641a5006340171d9bd3703a484c))
+ -  Extender customMapper de agencias y ejemplo de test de servicio ([baf1ba8f0183464](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/baf1ba8f01834641a5006340171d9bd3703a484c))
  		Fecha: 30-04-2021 09:33:37
- -  cobertura test init ([f45ba2c88c9f03c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f45ba2c88c9f03c7fd17f03868b31ac9009a78c4))
+ -  cobertura test init ([f45ba2c88c9f03c](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/f45ba2c88c9f03c7fd17f03868b31ac9009a78c4))
  		Fecha: 30-04-2021 06:29:48
- -  Resolve conflict ([926c414bcbbf29c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/926c414bcbbf29c760f138fc043aa26ad1bef063))
+ -  Resolve conflict ([926c414bcbbf29c](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/926c414bcbbf29c760f138fc043aa26ad1bef063))
  		Fecha: 23-04-2021 06:46:20
- -  Mergear conflicto con develop ([18216da3a706e62](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/18216da3a706e627b7f7dc2c147eb29823c68582))
+ -  Mergear conflicto con develop ([18216da3a706e62](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/18216da3a706e627b7f7dc2c147eb29823c68582))
  		Fecha: 22-04-2021 14:53:56
- -  Incluir llamada a indicadores ([bed554a6dda9ab9](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/bed554a6dda9ab9bb3e6b41f2a0b04bda72b0b3a))
+ -  Incluir llamada a indicadores ([bed554a6dda9ab9](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/bed554a6dda9ab9bb3e6b41f2a0b04bda72b0b3a))
  		Fecha: 22-04-2021 11:41:22
- -  pagination ([39005cb4f6503d5](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/39005cb4f6503d539133943eda208b210ddd992a))
+ -  pagination ([39005cb4f6503d5](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/39005cb4f6503d539133943eda208b210ddd992a))
  		Fecha: 20-04-2021 07:43:46
- -  ASW482 ([5c209095eafa7d2](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5c209095eafa7d2e0e1eea68d34c973866cd08de))
+ -  ASW482 ([5c209095eafa7d2](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/5c209095eafa7d2e0e1eea68d34c973866cd08de))
  		Fecha: 01-04-2021 15:04:56
- -  Cambio de pom padre a version 0.0.3-SNAPSHOT ([ed29ff608b13b8f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ed29ff608b13b8f8052f78dfef647f0152c5f4e5))
+ -  Cambio de pom padre a version 0.0.3-SNAPSHOT ([ed29ff608b13b8f](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/ed29ff608b13b8f8052f78dfef647f0152c5f4e5))
  		Fecha: 19-11-2020 06:57:48
- -  multiple datasource ([6203e9ecc609e11](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6203e9ecc609e11723c318807a6639829ed49dec))
+ -  multiple datasource ([6203e9ecc609e11](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/6203e9ecc609e11723c318807a6639829ed49dec))
  		Fecha: 11-11-2020 08:48:24
- -  Resolucion de conflictos ([b6180aed32b8854](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b6180aed32b8854270582b327e411c060565dfa5))
+ -  Resolucion de conflictos ([b6180aed32b8854](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/b6180aed32b8854270582b327e411c060565dfa5))
  		Fecha: 05-11-2020 10:02:54
- -  Incluir clases para probar componente database ([589c759056974e1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/589c759056974e1592756fed0fe10e9a141bf4a5))
+ -  Incluir clases para probar componente database ([589c759056974e1](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/589c759056974e1592756fed0fe10e9a141bf4a5))
  		Fecha: 05-11-2020 09:53:02
- -  Codigo para probar modulo databasse ([486f772254acb41](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/486f772254acb419098b3aca20de305ccdfc4220))
+ -  Codigo para probar modulo databasse ([486f772254acb41](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/486f772254acb419098b3aca20de305ccdfc4220))
  		Fecha: 27-10-2020 12:32:19
 
 #### Chore commits
 
- -  fix ([67c2180a7f14846](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/67c2180a7f14846b62c2253a52641766c1ea1aa1))
+ -  fix ([67c2180a7f14846](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/67c2180a7f14846b62c2253a52641766c1ea1aa1))
  		Fecha: 24-09-2025 14:45:11
- -  fix ([1a30332815155dd](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/1a30332815155ddbad46a977477c5ac4a7170794))
+ -  fix ([1a30332815155dd](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/1a30332815155ddbad46a977477c5ac4a7170794))
  		Fecha: 24-09-2025 14:06:18
- -  fix yamllint ([2f3e172fc862081](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/2f3e172fc862081f6c1e300f2fd2456d6c333f02))
+ -  fix yamllint ([2f3e172fc862081](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/2f3e172fc862081f6c1e300f2fd2456d6c333f02))
  		Fecha: 24-09-2025 13:16:11
- -  fix yamllint ([43c6e3f5e90209f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/43c6e3f5e90209f5e68f47b60b77a270b29e7a42))
+ -  fix yamllint ([43c6e3f5e90209f](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/43c6e3f5e90209f5e68f47b60b77a270b29e7a42))
  		Fecha: 24-09-2025 13:13:07
- -  fix identation yaml ([3c8616f310d7a5c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3c8616f310d7a5c2e95bc805c4286aeb4808fe92))
+ -  fix identation yaml ([3c8616f310d7a5c](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/3c8616f310d7a5c2e95bc805c4286aeb4808fe92))
  		Fecha: 24-09-2025 13:04:21
- -  changes required for using the feign repo documental generated with the new way (useTags:false) ([4749d56db0604ee](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/4749d56db0604eeea710beda017696ed76cdf0b0))
+ -  changes required for using the feign repo documental generated with the new way (useTags:false) ([4749d56db0604ee](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/4749d56db0604eeea710beda017696ed76cdf0b0))
  		Fecha: 24-09-2025 12:58:38
- -  added paramaters spring.data.jdbc.primary.dialect and spring.data.jdbc.secondary.dialect ([7f326581ca03e3e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7f326581ca03e3e83723b701fedca592e622dc6e))
+ -  added paramaters spring.data.jdbc.primary.dialect and spring.data.jdbc.secondary.dialect ([7f326581ca03e3e](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/7f326581ca03e3e83723b701fedca592e622dc6e))
  		Fecha: 18-09-2025 20:45:37
- -  force pipeline ([8f504d3e5e14bf9](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/8f504d3e5e14bf9a7d3a5cdc07665cb76ef80cc1))
+ -  force pipeline ([8f504d3e5e14bf9](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/8f504d3e5e14bf9a7d3a5cdc07665cb76ef80cc1))
  		Fecha: 18-09-2025 18:13:45
- -  fix ([d8b98fd0f402d76](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/d8b98fd0f402d764cfb413e089a1ba8360cccbe2))
+ -  fix ([d8b98fd0f402d76](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/d8b98fd0f402d764cfb413e089a1ba8360cccbe2))
  		Fecha: 10-09-2025 15:35:20
- -  added parameter spring.data.jdbc.dialect for cds ([290e33cb2f8ac13](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/290e33cb2f8ac13c81c1238aecce28306b1aa1f1))
+ -  added parameter spring.data.jdbc.dialect for cds ([290e33cb2f8ac13](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/290e33cb2f8ac13c81c1238aecce28306b1aa1f1))
  		Fecha: 10-09-2025 15:34:20
- -  force pipeline ([870cc4407eefdd8](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/870cc4407eefdd8f68f1ef4b5080312b9e8d5dbe))
+ -  force pipeline ([870cc4407eefdd8](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/870cc4407eefdd8f68f1ef4b5080312b9e8d5dbe))
  		Fecha: 10-09-2025 14:58:04
- -  fix kiuwan ([a8c64ab3fef4c90](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a8c64ab3fef4c90ec2da43bfb4361ec7a342c6de))
+ -  fix kiuwan ([a8c64ab3fef4c90](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/a8c64ab3fef4c90ec2da43bfb4361ec7a342c6de))
  		Fecha: 24-08-2025 15:24:19
- -  removed @Async ([76a6cc1dbbc88bb](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/76a6cc1dbbc88bba2bf74546459e2be7ff1dbd60))
+ -  removed @Async ([76a6cc1dbbc88bb](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/76a6cc1dbbc88bba2bf74546459e2be7ff1dbd60))
  		Fecha: 24-08-2025 14:17:01
- -  fix kiuwan ([a93b866cc7d8049](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a93b866cc7d80494fa8adbb166cdb9d8ed55e694))
+ -  fix kiuwan ([a93b866cc7d8049](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/a93b866cc7d80494fa8adbb166cdb9d8ed55e694))
  		Fecha: 24-08-2025 11:44:19
- -  fix yamllint in the file swagger.yaml ([312b94c99d5315a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/312b94c99d5315a0b9258ae2f7d5867cff9fa50a))
+ -  fix yamllint in the file swagger.yaml ([312b94c99d5315a](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/312b94c99d5315a0b9258ae2f7d5867cff9fa50a))
  		Fecha: 24-08-2025 11:17:04
- -  added a new endpoint for testing feign ([739616566a682fd](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/739616566a682fdd1958df9ac5e044614d1a2652))
+ -  added a new endpoint for testing feign ([739616566a682fd](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/739616566a682fdd1958df9ac5e044614d1a2652))
  		Fecha: 24-08-2025 10:44:14
- -  Enables security core ([b550e6bcef86526](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b550e6bcef865261c94ee931fa8d382351c5b633))
+ -  Enables security core ([b550e6bcef86526](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/b550e6bcef865261c94ee931fa8d382351c5b633))
  		Fecha: 20-08-2025 08:12:44
- -  fix credentials ([cd7ab5947e5980a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/cd7ab5947e5980a5e09cd75df193cf0780d4a387))
+ -  fix credentials ([cd7ab5947e5980a](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/cd7ab5947e5980a5e09cd75df193cf0780d4a387))
  		Fecha: 20-08-2025 06:26:53
- -  Auto stash before merge of "develop" and "origin/develop" ([70dd3bc493e735a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/70dd3bc493e735a770671132adaf438fa405ec79))
+ -  Auto stash before merge of "develop" and "origin/develop" ([70dd3bc493e735a](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/70dd3bc493e735a770671132adaf438fa405ec79))
  		Fecha: 19-08-2025 11:09:21
- -  try-out pipelines ([3f43b6e8dbccef0](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3f43b6e8dbccef0f328842760251c30dec4884fd))
+ -  try-out pipelines ([3f43b6e8dbccef0](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/3f43b6e8dbccef0f328842760251c30dec4884fd))
  		Fecha: 19-08-2025 11:08:10
- -  update properties ([6bb13fe95a49f89](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6bb13fe95a49f89f3554c808e47d7acaa2e3e129))
+ -  update properties ([6bb13fe95a49f89](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/6bb13fe95a49f89f3554c808e47d7acaa2e3e129))
  		Fecha: 18-08-2025 07:32:07
- -  force build ([0d76b9b14f54f55](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/0d76b9b14f54f556723b950cc0d4a61ebca65b59))
+ -  force build ([0d76b9b14f54f55](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/0d76b9b14f54f556723b950cc0d4a61ebca65b59))
  		Fecha: 13-08-2025 06:43:16
- -  force build ([a9c6abfa60aa278](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a9c6abfa60aa2789c4908110154cb9163eaa21de))
+ -  force build ([a9c6abfa60aa278](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/a9c6abfa60aa2789c4908110154cb9163eaa21de))
  		Fecha: 13-08-2025 06:38:18
- -  level log to info ([699dc5064f76033](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/699dc5064f76033ec9a85c9338a30b9185e5243f))
+ -  level log to info ([699dc5064f76033](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/699dc5064f76033ec9a85c9338a30b9185e5243f))
  		Fecha: 06-08-2025 09:46:21
- -  force pipeline ([1459e6a0ce58510](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/1459e6a0ce58510f4b52df77383ccb6b2ec4adf3))
+ -  force pipeline ([1459e6a0ce58510](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/1459e6a0ce58510f4b52df77383ccb6b2ec4adf3))
  		Fecha: 06-08-2025 09:41:59
- -  force pipeline ([84b3fd3becf4805](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/84b3fd3becf4805455a88d90a0d93444a57e49e1))
+ -  force pipeline ([84b3fd3becf4805](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/84b3fd3becf4805455a88d90a0d93444a57e49e1))
  		Fecha: 27-07-2025 08:37:59
- -  force build ([24a454492630497](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/24a4544926304971e9b8efc9e4fa875d025c051b))
+ -  force build ([24a454492630497](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/24a4544926304971e9b8efc9e4fa875d025c051b))
  		Fecha: 11-07-2025 06:29:06
- -  try oute pipeline validation ([f9e137cefddfea0](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f9e137cefddfea0a9c12d5b17e68e05083f96859))
+ -  try oute pipeline validation ([f9e137cefddfea0](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/f9e137cefddfea0a9c12d5b17e68e05083f96859))
  		Fecha: 10-07-2025 18:19:08
- -  remove monitoring ([704615788cc34e1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/704615788cc34e10fc5927627b5c193376c0d02e))
+ -  remove monitoring ([704615788cc34e1](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/704615788cc34e10fc5927627b5c193376c0d02e))
  		Fecha: 24-06-2025 11:12:23
- -  update to release ([9d33cc1046f648e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/9d33cc1046f648e8820d9303637efb07eb677eba))
+ -  update to release ([9d33cc1046f648e](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/9d33cc1046f648e8820d9303637efb07eb677eba))
  		Fecha: 24-06-2025 10:11:51
- -  update to release ([8b928258fcaff37](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/8b928258fcaff37e51f0c8f9390464ad24661e3a))
+ -  update to release ([8b928258fcaff37](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/8b928258fcaff37e51f0c8f9390464ad24661e3a))
  		Fecha: 24-06-2025 10:11:40
- -  Merge branch 'develop' of https://git.santalucia.net/scm/slarqsofamsback/example-app-11 into develop ([1fdfadce73b1e2f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/1fdfadce73b1e2fe6d06032364cae85323d69e2a))
+ -  Merge branch 'develop' of https://git.santalucia.net/scm/slarqsofamsback/example-app-11 into develop ([1fdfadce73b1e2f](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/1fdfadce73b1e2fe6d06032364cae85323d69e2a))
  		Fecha: 21-06-2025 21:42:07
- -  fix dates ([739459810a54df2](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/739459810a54df29a21e7675addaf02cb669dacc))
+ -  fix dates ([739459810a54df2](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/739459810a54df29a21e7675addaf02cb669dacc))
  		Fecha: 21-06-2025 21:41:12
- -  force pipeline ([c0652fa0e0543cd](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c0652fa0e0543cdbff0370111fccc18b827afd0a))
+ -  force pipeline ([c0652fa0e0543cd](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/c0652fa0e0543cdbff0370111fccc18b827afd0a))
  		Fecha: 21-06-2025 21:15:24
- -  force build ([53284839b7f9899](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/53284839b7f9899b77c1500bbc728c37cf9df255))
+ -  force build ([53284839b7f9899](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/53284839b7f9899b77c1500bbc728c37cf9df255))
  		Fecha: 21-06-2025 09:16:27
- -  force pipeline ([d2d743deae5508b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/d2d743deae5508b5cf8159782699426268926e4a))
+ -  force pipeline ([d2d743deae5508b](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/d2d743deae5508b5cf8159782699426268926e4a))
  		Fecha: 19-06-2025 15:26:00
- -  update oracle driver ([e2dfd0b26302c15](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/e2dfd0b26302c15ddabaabb0883aeac221231fd3))
+ -  update oracle driver ([e2dfd0b26302c15](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/e2dfd0b26302c15ddabaabb0883aeac221231fd3))
  		Fecha: 18-06-2025 11:06:43
- -  update maven to 3.9.10 ([490136b0a5fe8e1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/490136b0a5fe8e17440ca4a16823a71a6accab57))
+ -  update maven to 3.9.10 ([490136b0a5fe8e1](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/490136b0a5fe8e17440ca4a16823a71a6accab57))
  		Fecha: 17-06-2025 06:33:18
- -  remove properties migrator ([5dd0b1c9659676b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5dd0b1c9659676b74944efa1b954f4c272da6fb0))
+ -  remove properties migrator ([5dd0b1c9659676b](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/5dd0b1c9659676b74944efa1b954f4c272da6fb0))
  		Fecha: 17-06-2025 06:01:45
- -  try-out ([c653e49a64ebbdf](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c653e49a64ebbdf92ee02430ed25bd86dd02beb6))
+ -  try-out ([c653e49a64ebbdf](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/c653e49a64ebbdf92ee02430ed25bd86dd02beb6))
  		Fecha: 17-06-2025 05:34:17
- -  force build ([a66ba2998fafe90](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a66ba2998fafe90a610cfda3013b90513d6eca9c))
+ -  force build ([a66ba2998fafe90](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/a66ba2998fafe90a610cfda3013b90513d6eca9c))
  		Fecha: 16-06-2025 15:54:41
- -  README.md edited online with Bitbucket ([53a195dec853a90](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/53a195dec853a908570b93500a14eea9faf245d4))
+ -  README.md edited online with Bitbucket ([53a195dec853a90](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/53a195dec853a908570b93500a14eea9faf245d4))
  		Fecha: 30-05-2025 12:47:54
- -  force build ([223c1f0a8b8ac28](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/223c1f0a8b8ac287f53b2507d3d76276ed59bce7))
+ -  force build ([223c1f0a8b8ac28](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/223c1f0a8b8ac287f53b2507d3d76276ed59bce7))
  		Fecha: 30-05-2025 11:58:11
- -  force ([e85c24344f1babe](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/e85c24344f1babee0f6c9730492d44d9817374c5))
+ -  force ([e85c24344f1babe](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/e85c24344f1babee0f6c9730492d44d9817374c5))
  		Fecha: 30-05-2025 10:32:18
- -  README.md edited online with Bitbucket ([1ae85282c006acc](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/1ae85282c006acc49d2c5751f72af89598e8342b))
+ -  README.md edited online with Bitbucket ([1ae85282c006acc](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/1ae85282c006acc49d2c5751f72af89598e8342b))
  		Fecha: 30-05-2025 07:02:41
- -  force ([b8e7d65088cc661](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b8e7d65088cc6613f7a7e0c7d6c953616389b926))
+ -  force ([b8e7d65088cc661](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/b8e7d65088cc6613f7a7e0c7d6c953616389b926))
  		Fecha: 29-05-2025 14:10:23
- -  force build ([d4152ed28cea51b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/d4152ed28cea51b4622da0ab23caa8deb25e3ad4))
+ -  force build ([d4152ed28cea51b](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/d4152ed28cea51b4622da0ab23caa8deb25e3ad4))
  		Fecha: 29-05-2025 13:36:11
- -  force ([44b4e4d1f0b890b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/44b4e4d1f0b890bcb352a81324ef0781782904df))
+ -  force ([44b4e4d1f0b890b](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/44b4e4d1f0b890bcb352a81324ef0781782904df))
  		Fecha: 29-05-2025 13:03:14
- -  force ([e9f1bfec24a3115](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/e9f1bfec24a31150466aca4c0b9b681c4dc74d40))
+ -  force ([e9f1bfec24a3115](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/e9f1bfec24a31150466aca4c0b9b681c4dc74d40))
  		Fecha: 29-05-2025 12:27:31
- -  force build ([abb3f42cd566257](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/abb3f42cd56625796d0c2a96b5ee6baeffb18f00))
+ -  force build ([abb3f42cd566257](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/abb3f42cd56625796d0c2a96b5ee6baeffb18f00))
  		Fecha: 29-05-2025 11:58:11
- -  fix ams ([7f34eae3b19df7d](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7f34eae3b19df7d8f2e2415ccda5fbaaa4849bb1))
+ -  fix ams ([7f34eae3b19df7d](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/7f34eae3b19df7d8f2e2415ccda5fbaaa4849bb1))
  		Fecha: 29-05-2025 11:19:40
- -  force build ([a93726c0212491a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a93726c0212491aa511bc9bd08c20afce51f11f3))
+ -  force build ([a93726c0212491a](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/a93726c0212491aa511bc9bd08c20afce51f11f3))
  		Fecha: 29-05-2025 10:42:57
- -  changes ([7700875752057c8](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7700875752057c810577fe852969743709e30a1f))
+ -  changes ([7700875752057c8](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/7700875752057c810577fe852969743709e30a1f))
  		Fecha: 29-05-2025 07:00:37
- -  Refactors application configuration and logging ([3eb4776109a64e6](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3eb4776109a64e676d353b455d258eb2cc448036))
+ -  Refactors application configuration and logging ([3eb4776109a64e6](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/3eb4776109a64e676d353b455d258eb2cc448036))
  		Fecha: 29-05-2025 06:55:47
- -  force build ([e6f409a905eda39](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/e6f409a905eda399ffa3868f6924bd31f988f211))
+ -  force build ([e6f409a905eda39](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/e6f409a905eda399ffa3868f6924bd31f988f211))
  		Fecha: 29-05-2025 06:51:55
- -  force pipeline ([ce73b36550ec9c1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ce73b36550ec9c130094ad2c5bc0e58bbdd5a6c1))
+ -  force pipeline ([ce73b36550ec9c1](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/ce73b36550ec9c130094ad2c5bc0e58bbdd5a6c1))
  		Fecha: 17-05-2025 21:03:28
- -  force pipeline ([64fec2abb69a509](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/64fec2abb69a5097be14094deb2f421f318d4cd3))
+ -  force pipeline ([64fec2abb69a509](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/64fec2abb69a5097be14094deb2f421f318d4cd3))
  		Fecha: 17-05-2025 14:35:45
- -  corrects property order ([7cc0ecb67ec77a6](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7cc0ecb67ec77a6ad01af247f859472af7394a06))
+ -  corrects property order ([7cc0ecb67ec77a6](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/7cc0ecb67ec77a6ad01af247f859472af7394a06))
  		Fecha: 14-05-2025 13:32:03
- -  Merge remote-tracking branch 'origin/develop' into develop ([f4335bdb14c520b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f4335bdb14c520bcacfd4d204e88b4aed0c30205))
+ -  Merge remote-tracking branch 'origin/develop' into develop ([f4335bdb14c520b](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/f4335bdb14c520bcacfd4d204e88b4aed0c30205))
  		Fecha: 14-05-2025 13:31:29
- -  Updates apt packages in Aptfile ([6d6a1600a531cc7](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6d6a1600a531cc7b91c07c327dda78257ed37549))
+ -  Updates apt packages in Aptfile ([6d6a1600a531cc7](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/6d6a1600a531cc7b91c07c327dda78257ed37549))
  		Fecha: 14-05-2025 13:31:11
- -  force pipeline ([6f6131cafdb353a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6f6131cafdb353ad9b3d2ea42117f60f5cc44c80))
+ -  force pipeline ([6f6131cafdb353a](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/6f6131cafdb353ad9b3d2ea42117f60f5cc44c80))
  		Fecha: 13-05-2025 22:22:49
- -  force pipeline ([ae976d22f99c24e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ae976d22f99c24e44839b45c51c715f691ace737))
+ -  force pipeline ([ae976d22f99c24e](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/ae976d22f99c24e44839b45c51c715f691ace737))
  		Fecha: 13-05-2025 19:59:38
- -  increased the version of the pom ([437afd862d2f2fb](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/437afd862d2f2fb04ea830c53bd6db11f6dc9c15))
+ -  increased the version of the pom ([437afd862d2f2fb](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/437afd862d2f2fb04ea830c53bd6db11f6dc9c15))
  		Fecha: 13-05-2025 09:22:07
- -  force pipeline ([fab681bebfc4d6c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/fab681bebfc4d6cc549d52d10f88d17f5044351a))
+ -  force pipeline ([fab681bebfc4d6c](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/fab681bebfc4d6cc549d52d10f88d17f5044351a))
  		Fecha: 13-05-2025 08:18:23
- -  README.md edited online with Bitbucket ([f82b60aa4165c61](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f82b60aa4165c612b4e280801cf5131b9b2d9a3a))
+ -  README.md edited online with Bitbucket ([f82b60aa4165c61](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/f82b60aa4165c612b4e280801cf5131b9b2d9a3a))
  		Fecha: 11-05-2025 18:37:03
- -  README.md edited online with Bitbucket ([02ff35ece8e0e3f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/02ff35ece8e0e3fa60a01688576d82775712d578))
+ -  README.md edited online with Bitbucket ([02ff35ece8e0e3f](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/02ff35ece8e0e3fa60a01688576d82775712d578))
  		Fecha: 11-05-2025 18:21:18
- -  README.md edited online with Bitbucket ([22e6695f40d16c8](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/22e6695f40d16c8f63b988aa55e779b1b9023f1d))
+ -  README.md edited online with Bitbucket ([22e6695f40d16c8](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/22e6695f40d16c8f63b988aa55e779b1b9023f1d))
  		Fecha: 11-05-2025 17:26:41
- -  README.md edited online with Bitbucket ([3fb0ccc3968f164](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3fb0ccc3968f16436fd7fecf66f11f551c51f816))
+ -  README.md edited online with Bitbucket ([3fb0ccc3968f164](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/3fb0ccc3968f16436fd7fecf66f11f551c51f816))
  		Fecha: 11-05-2025 17:13:38
- -  README.md edited online with Bitbucket ([0d4eb78f597b8fb](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/0d4eb78f597b8fbbf3f6e66085c58dd8ade0f8eb))
+ -  README.md edited online with Bitbucket ([0d4eb78f597b8fb](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/0d4eb78f597b8fbbf3f6e66085c58dd8ade0f8eb))
  		Fecha: 11-05-2025 16:53:51
- -  README.md edited online with Bitbucket ([cfb0050da75d586](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/cfb0050da75d586ce15e61950925185100a92fea))
+ -  README.md edited online with Bitbucket ([cfb0050da75d586](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/cfb0050da75d586ce15e61950925185100a92fea))
  		Fecha: 11-05-2025 16:36:58
- -  README.md edited online with Bitbucket ([b97c1624ff84aa4](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b97c1624ff84aa405196c86f7425a675fc5f81bc))
+ -  README.md edited online with Bitbucket ([b97c1624ff84aa4](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/b97c1624ff84aa405196c86f7425a675fc5f81bc))
  		Fecha: 11-05-2025 16:04:02
- -  README.md edited online with Bitbucket ([b4fea1ef510a938](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b4fea1ef510a9389fb69881b452142cfd2f3138c))
+ -  README.md edited online with Bitbucket ([b4fea1ef510a938](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/b4fea1ef510a9389fb69881b452142cfd2f3138c))
  		Fecha: 11-05-2025 14:59:37
- -  README.md edited online with Bitbucket ([8d46e86c47cb6e0](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/8d46e86c47cb6e0c23ec99367bc45a625aa112db))
+ -  README.md edited online with Bitbucket ([8d46e86c47cb6e0](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/8d46e86c47cb6e0c23ec99367bc45a625aa112db))
  		Fecha: 11-05-2025 12:26:53
- -  force build ([99dd277ddcad87a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/99dd277ddcad87a856f3ee85086dc25198ecab5a))
+ -  force build ([99dd277ddcad87a](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/99dd277ddcad87a856f3ee85086dc25198ecab5a))
  		Fecha: 11-05-2025 11:25:28
- -  README.md edited online with Bitbucket ([f87cc9e9abcf67c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f87cc9e9abcf67c5a6303741b05d8a9efa197f09))
+ -  README.md edited online with Bitbucket ([f87cc9e9abcf67c](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/f87cc9e9abcf67c5a6303741b05d8a9efa197f09))
  		Fecha: 10-05-2025 16:33:20
- -  fix ([368134b6dfbe63b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/368134b6dfbe63bf6718b99c008b766e4db18663))
+ -  fix ([368134b6dfbe63b](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/368134b6dfbe63bf6718b99c008b766e4db18663))
  		Fecha: 10-05-2025 15:26:20
- -  add temp folder ([2aa15df4b491fc4](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/2aa15df4b491fc489c47cc093b14a0baf198da31))
+ -  add temp folder ([2aa15df4b491fc4](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/2aa15df4b491fc489c47cc093b14a0baf198da31))
  		Fecha: 10-05-2025 14:37:32
- -  Merge remote-tracking branch 'origin/develop' into develop ([03d2c14f54f7b2c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/03d2c14f54f7b2ce2d0350ae9882b89194ea756a))
+ -  Merge remote-tracking branch 'origin/develop' into develop ([03d2c14f54f7b2c](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/03d2c14f54f7b2ce2d0350ae9882b89194ea756a))
  		Fecha: 10-05-2025 13:46:37
- -  add binding ([17e730721a708c9](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/17e730721a708c92eabf3652538c6f46054a09e0))
+ -  add binding ([17e730721a708c9](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/17e730721a708c92eabf3652538c6f46054a09e0))
  		Fecha: 10-05-2025 13:46:20
- -  README.md edited online with Bitbucket ([5ea208efd2569c7](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5ea208efd2569c7c9101d887e781579860e68836))
+ -  README.md edited online with Bitbucket ([5ea208efd2569c7](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/5ea208efd2569c7c9101d887e781579860e68836))
  		Fecha: 10-05-2025 12:52:57
- -  add bindings ([78a17211bf102d1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/78a17211bf102d1c1f2ee198af44484116ec1d59))
+ -  add bindings ([78a17211bf102d1](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/78a17211bf102d1c1f2ee198af44484116ec1d59))
  		Fecha: 10-05-2025 12:12:18
- -  fix ([3d635b9aa6c7197](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3d635b9aa6c71971ed2f2194880ae5eafc11028e))
+ -  fix ([3d635b9aa6c7197](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/3d635b9aa6c71971ed2f2194880ae5eafc11028e))
  		Fecha: 08-05-2025 11:24:58
- -  fix ([a24e2a463220e85](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a24e2a463220e85e0a2452e2b92c394103914673))
+ -  fix ([a24e2a463220e85](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/a24e2a463220e85e0a2452e2b92c394103914673))
  		Fecha: 07-05-2025 17:42:19
- -  README.md edited online with Bitbucket ([87e134720482066](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/87e134720482066f33ec77b6bf4bebc631a7afd0))
+ -  README.md edited online with Bitbucket ([87e134720482066](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/87e134720482066f33ec77b6bf4bebc631a7afd0))
  		Fecha: 07-05-2025 14:10:13
- -  README.md edited online with Bitbucket ([ae7ed97a1a25ef2](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ae7ed97a1a25ef2ab0f69fd43615f7a076facca7))
+ -  README.md edited online with Bitbucket ([ae7ed97a1a25ef2](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/ae7ed97a1a25ef2ab0f69fd43615f7a076facca7))
  		Fecha: 07-05-2025 13:26:26
- -  README.md edited online with Bitbucket ([aaf5d8149d01061](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/aaf5d8149d010617a87f6a7d96cab15f006d6268))
+ -  README.md edited online with Bitbucket ([aaf5d8149d01061](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/aaf5d8149d010617a87f6a7d96cab15f006d6268))
  		Fecha: 07-05-2025 12:02:44
- -  README.md edited online with Bitbucket ([3e31da418f4a9c2](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3e31da418f4a9c27773d55fc41fa66b2f6bd284f))
+ -  README.md edited online with Bitbucket ([3e31da418f4a9c2](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/3e31da418f4a9c27773d55fc41fa66b2f6bd284f))
  		Fecha: 07-05-2025 09:55:07
- -  README.md edited online with Bitbucket ([badb3c2ee8ad6f4](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/badb3c2ee8ad6f43723f6774949e0407dcebd680))
+ -  README.md edited online with Bitbucket ([badb3c2ee8ad6f4](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/badb3c2ee8ad6f43723f6774949e0407dcebd680))
  		Fecha: 07-05-2025 08:56:21
- -  try ([fcbbc1d0f02e417](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/fcbbc1d0f02e41760e45021fcd98be2887a88193))
+ -  try ([fcbbc1d0f02e417](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/fcbbc1d0f02e41760e45021fcd98be2887a88193))
  		Fecha: 07-05-2025 06:23:16
- -  try ([807bd1d1a62f176](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/807bd1d1a62f1766050447e7bddc6b31d5868067))
+ -  try ([807bd1d1a62f176](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/807bd1d1a62f1766050447e7bddc6b31d5868067))
  		Fecha: 06-05-2025 18:49:17
- -  try2 ([feca1b9ac418f83](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/feca1b9ac418f832ae37188692ff6193e3400e65))
+ -  try2 ([feca1b9ac418f83](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/feca1b9ac418f832ae37188692ff6193e3400e65))
  		Fecha: 06-05-2025 16:03:47
- -  change ([115257fd931e33a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/115257fd931e33a41dac3b6af9726c1604bb99bb))
+ -  change ([115257fd931e33a](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/115257fd931e33a41dac3b6af9726c1604bb99bb))
  		Fecha: 06-05-2025 15:55:31
- -  try ([a4d45dc29189249](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a4d45dc291892495ffa95de74ae6a5df56b3f34c))
+ -  try ([a4d45dc29189249](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/a4d45dc291892495ffa95de74ae6a5df56b3f34c))
  		Fecha: 06-05-2025 15:47:16
- -  try ([07d06fa67f7a5ab](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/07d06fa67f7a5ab70287e3e984f6b649603b9a4b))
+ -  try ([07d06fa67f7a5ab](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/07d06fa67f7a5ab70287e3e984f6b649603b9a4b))
  		Fecha: 06-05-2025 15:14:46
- -  tryy ([5dbf12e03eccb29](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5dbf12e03eccb297c02c9475e0b500fb0482bef4))
+ -  tryy ([5dbf12e03eccb29](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/5dbf12e03eccb297c02c9475e0b500fb0482bef4))
  		Fecha: 06-05-2025 11:43:10
- -  try ([000b230cf4e42a0](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/000b230cf4e42a09e8ead6d6af93ff974548ee85))
+ -  try ([000b230cf4e42a0](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/000b230cf4e42a09e8ead6d6af93ff974548ee85))
  		Fecha: 06-05-2025 11:29:15
- -  fix ([7bb782ac7eaed9c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7bb782ac7eaed9c41585a108ff7925ee8adc7033))
+ -  fix ([7bb782ac7eaed9c](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/7bb782ac7eaed9c41585a108ff7925ee8adc7033))
  		Fecha: 05-05-2025 18:57:20
- -  vamos que nos vamos ([d8a0f8dbbfdbda4](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/d8a0f8dbbfdbda40f6c258dfb13849fe88002323))
+ -  vamos que nos vamos ([d8a0f8dbbfdbda4](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/d8a0f8dbbfdbda40f6c258dfb13849fe88002323))
  		Fecha: 05-05-2025 17:16:50
- -  other try out ([192010f92b13364](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/192010f92b133644b3c092fb9e485d5434d53bbd))
+ -  other try out ([192010f92b13364](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/192010f92b133644b3c092fb9e485d5434d53bbd))
  		Fecha: 05-05-2025 16:38:29
- -  fix ([4b5c69559594b9c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/4b5c69559594b9c1bc8bcd9ba777a1732ed8a5d1))
+ -  fix ([4b5c69559594b9c](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/4b5c69559594b9c1bc8bcd9ba777a1732ed8a5d1))
  		Fecha: 05-05-2025 16:01:46
- -  try ([d093decfd044cbf](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/d093decfd044cbf40ccd1e247290731439546f8b))
+ -  try ([d093decfd044cbf](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/d093decfd044cbf40ccd1e247290731439546f8b))
  		Fecha: 05-05-2025 15:26:29
- -  try ([892af7275169853](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/892af7275169853081dd37e2d4baa49933a09198))
+ -  try ([892af7275169853](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/892af7275169853081dd37e2d4baa49933a09198))
  		Fecha: 05-05-2025 13:37:53
- -  change ([2b58bfb9cc87700](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/2b58bfb9cc8770087863d0294aeaa9f2a489043e))
+ -  change ([2b58bfb9cc87700](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/2b58bfb9cc8770087863d0294aeaa9f2a489043e))
  		Fecha: 05-05-2025 13:07:21
- -  README.md edited online with Bitbucket ([ccdf840d543b5b9](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ccdf840d543b5b9bbfe96263e4512bb692069fd1))
+ -  README.md edited online with Bitbucket ([ccdf840d543b5b9](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/ccdf840d543b5b9bbfe96263e4512bb692069fd1))
  		Fecha: 05-05-2025 12:25:36
- -  fix sonnar ([b9a6ccc68ad3e66](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b9a6ccc68ad3e660f0f38676df7ca4e417115d23))
+ -  fix sonnar ([b9a6ccc68ad3e66](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/b9a6ccc68ad3e660f0f38676df7ca4e417115d23))
  		Fecha: 05-05-2025 11:57:32
- -  force build ([f887cd43512167f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f887cd43512167fb0db669ce18174a8b49ed574d))
+ -  force build ([f887cd43512167f](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/f887cd43512167fb0db669ce18174a8b49ed574d))
  		Fecha: 05-05-2025 11:17:49
- -  try ([a85a9f6fb35be1e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a85a9f6fb35be1eea5adaffd6ee9a3d08dd22bd9))
+ -  try ([a85a9f6fb35be1e](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/a85a9f6fb35be1eea5adaffd6ee9a3d08dd22bd9))
  		Fecha: 28-03-2025 13:33:47
- -  Merge remote-tracking branch 'origin/develop' into develop ([04d058b641b203d](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/04d058b641b203d0901d6cc38d4cd5a6bc2454c7))
+ -  Merge remote-tracking branch 'origin/develop' into develop ([04d058b641b203d](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/04d058b641b203d0901d6cc38d4cd5a6bc2454c7))
  		Fecha: 24-03-2025 18:22:34
- -  restore output ([95f9848c78068d1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/95f9848c78068d1c2d870692f80dce0166b434dd))
+ -  restore output ([95f9848c78068d1](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/95f9848c78068d1c2d870692f80dce0166b434dd))
  		Fecha: 24-03-2025 18:22:22
- -  README.md edited online with Bitbucket ([3364edf5d440eb5](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3364edf5d440eb53f815c96245616a4d8724fdfb))
+ -  README.md edited online with Bitbucket ([3364edf5d440eb5](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/3364edf5d440eb53f815c96245616a4d8724fdfb))
  		Fecha: 24-03-2025 17:26:22
- -  try ([bf593a7cac065cb](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/bf593a7cac065cb625f2fb4059222f3da2b09b2b))
+ -  try ([bf593a7cac065cb](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/bf593a7cac065cb625f2fb4059222f3da2b09b2b))
  		Fecha: 24-03-2025 16:48:25
- -  fixes ([ea0af93ac0b31eb](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ea0af93ac0b31eb2bcfd7982e7e412c4c488c508))
+ -  fixes ([ea0af93ac0b31eb](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/ea0af93ac0b31eb2bcfd7982e7e412c4c488c508))
  		Fecha: 24-03-2025 15:02:05
- -  tryout ([824cff3983cebe0](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/824cff3983cebe044e4b97a7697302f2db3b1824))
+ -  tryout ([824cff3983cebe0](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/824cff3983cebe044e4b97a7697302f2db3b1824))
  		Fecha: 24-03-2025 12:44:48
- -  try-out ([5a60fdc69b07f6f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5a60fdc69b07f6fda9e472c3f6fb14bcf4fa4d1e))
+ -  try-out ([5a60fdc69b07f6f](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/5a60fdc69b07f6fda9e472c3f6fb14bcf4fa4d1e))
  		Fecha: 24-03-2025 12:05:32
- -  Merge remote-tracking branch 'origin/develop' into develop ([e1bb8493d022807](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/e1bb8493d02280775b5463b43f509b47658ed538))
+ -  Merge remote-tracking branch 'origin/develop' into develop ([e1bb8493d022807](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/e1bb8493d02280775b5463b43f509b47658ed538))
  		Fecha: 24-03-2025 11:24:08
- -  try-out ([fa5f07052dcf19b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/fa5f07052dcf19b17daa4737a89d6958889d12a7))
+ -  try-out ([fa5f07052dcf19b](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/fa5f07052dcf19b17daa4737a89d6958889d12a7))
  		Fecha: 24-03-2025 11:20:43
- -  disparar ([7dedd13d8b0a42d](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7dedd13d8b0a42d6d2a3b093e5e02bb035f944b8))
+ -  disparar ([7dedd13d8b0a42d](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/7dedd13d8b0a42d6d2a3b093e5e02bb035f944b8))
  		Fecha: 24-03-2025 10:56:09
- -  Mezzo Mix ([4d92d64911c3fd1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/4d92d64911c3fd1d08fc2b2421ea0047e33a4283))
+ -  Mezzo Mix ([4d92d64911c3fd1](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/4d92d64911c3fd1d08fc2b2421ea0047e33a4283))
  		Fecha: 24-03-2025 10:23:40
- -  disparar pipeline ([61b89a669311d37](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/61b89a669311d378b38ec7f2770fda924bafd8c0))
+ -  disparar pipeline ([61b89a669311d37](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/61b89a669311d378b38ec7f2770fda924bafd8c0))
  		Fecha: 24-03-2025 09:58:20
- -  disparar pipeline ([a32ebbdd6e8314b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a32ebbdd6e8314bf01f138223e3043913a483e10))
+ -  disparar pipeline ([a32ebbdd6e8314b](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/a32ebbdd6e8314bf01f138223e3043913a483e10))
  		Fecha: 24-03-2025 09:46:42
- -  disparar el pipeline. ([8f8967b163188ff](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/8f8967b163188fffcf7b20d1db9d5ffb21c0205a))
+ -  disparar el pipeline. ([8f8967b163188ff](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/8f8967b163188fffcf7b20d1db9d5ffb21c0205a))
  		Fecha: 24-03-2025 09:38:34
- -  force build ([f9721cfbdd54b7f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f9721cfbdd54b7f331dcc90de4881e1971e529d7))
+ -  force build ([f9721cfbdd54b7f](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/f9721cfbdd54b7f331dcc90de4881e1971e529d7))
  		Fecha: 24-03-2025 08:49:52
- -  forece build ([398411096d7e68c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/398411096d7e68cfaada552336c64e26bd54af46))
+ -  forece build ([398411096d7e68c](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/398411096d7e68cfaada552336c64e26bd54af46))
  		Fecha: 24-03-2025 07:12:47
- -  Pull request #4: Feature/migrate ams3 ([3871a974bd3a5f4](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3871a974bd3a5f40713cdd367c4011905d06c492))
+ -  Pull request #4: Feature/migrate ams3 ([3871a974bd3a5f4](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/3871a974bd3a5f40713cdd367c4011905d06c492))
  		Fecha: 21-03-2025 08:52:43
- -  README.md edited online with Bitbucket ([443954df045683a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/443954df045683a60fff9131883945bada2dc152))
+ -  README.md edited online with Bitbucket ([443954df045683a](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/443954df045683a60fff9131883945bada2dc152))
  		Fecha: 21-02-2025 07:32:10
- -  README.md edited online with Bitbucket ([b876e44f7fc59d1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b876e44f7fc59d147354f571614125931e466cee))
+ -  README.md edited online with Bitbucket ([b876e44f7fc59d1](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/b876e44f7fc59d147354f571614125931e466cee))
  		Fecha: 06-02-2025 08:22:07
- -  Pull request #3: feat: Propiedades safe-default del driver JDBC de Informix y de HikariCP para Informix para aumentar la confiabilidad del pool de conexiones ([91af17cfb2c92ca](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/91af17cfb2c92ca34d959c663831ece51b2f171c))
+ -  Pull request #3: feat: Propiedades safe-default del driver JDBC de Informix y de HikariCP para Informix para aumentar la confiabilidad del pool de conexiones ([91af17cfb2c92ca](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/91af17cfb2c92ca34d959c663831ece51b2f171c))
  		Fecha: 20-12-2024 09:36:09
- -  application.yaml edited online with Bitbucket ([a9dc543b0631f74](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a9dc543b0631f741769afd1df5c387b9581086ea))
+ -  application.yaml edited online with Bitbucket ([a9dc543b0631f74](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/a9dc543b0631f741769afd1df5c387b9581086ea))
  		Fecha: 20-12-2024 09:35:09
- -  fix archunit rule ([fb3858284b5b729](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/fb3858284b5b7299fc4fdaef4cd1804bcf9f6115))
+ -  fix archunit rule ([fb3858284b5b729](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/fb3858284b5b7299fc4fdaef4cd1804bcf9f6115))
  		Fecha: 17-12-2024 14:31:02
- -  fix package ([ba2443c339c9878](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ba2443c339c98784138841f023590a07bd2b6e0a))
+ -  fix package ([ba2443c339c9878](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/ba2443c339c98784138841f023590a07bd2b6e0a))
  		Fecha: 17-12-2024 14:05:27
- -  fix dani ([7e82e2375dab273](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7e82e2375dab2731a598845813710bd2831c22a9))
+ -  fix dani ([7e82e2375dab273](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/7e82e2375dab2731a598845813710bd2831c22a9))
  		Fecha: 17-12-2024 13:51:04
- -  README.md edited online with Bitbucket ([1d15a794b5d7bfe](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/1d15a794b5d7bfef70f9c943319ef3a9d4376dfc))
+ -  README.md edited online with Bitbucket ([1d15a794b5d7bfe](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/1d15a794b5d7bfef70f9c943319ef3a9d4376dfc))
  		Fecha: 05-12-2024 12:30:32
- -  README.md edited online with Bitbucket ([4383085bf1389f0](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/4383085bf1389f0d3ef379d52107192f021cc859))
+ -  README.md edited online with Bitbucket ([4383085bf1389f0](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/4383085bf1389f0d3ef379d52107192f021cc859))
  		Fecha: 05-12-2024 12:19:54
- -  README.md edited online with Bitbucket ([a6c7715813df030](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a6c7715813df03041d087eafd259f2c05dafd58c))
+ -  README.md edited online with Bitbucket ([a6c7715813df030](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/a6c7715813df03041d087eafd259f2c05dafd58c))
  		Fecha: 05-12-2024 10:42:43
- -  application-test.yaml edited online with Bitbucket ([1a7b54a59ccab0b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/1a7b54a59ccab0b865e4922e5a1cd5b3cffcee24))
+ -  application-test.yaml edited online with Bitbucket ([1a7b54a59ccab0b](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/1a7b54a59ccab0b865e4922e5a1cd5b3cffcee24))
  		Fecha: 05-12-2024 10:29:06
- -  pom.xml edited online with Bitbucket ([f6dbfe542a09026](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f6dbfe542a09026b36dc8c2e4f92e7810b9a4960))
+ -  pom.xml edited online with Bitbucket ([f6dbfe542a09026](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/f6dbfe542a09026b36dc8c2e4f92e7810b9a4960))
  		Fecha: 05-12-2024 10:21:45
- -  fix tests ([58397f40d5579f6](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/58397f40d5579f62138052433b588525f29068c1))
+ -  fix tests ([58397f40d5579f6](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/58397f40d5579f62138052433b588525f29068c1))
  		Fecha: 16-11-2024 11:56:23
- -  fix errorProne ([99b4bc11ea80fa3](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/99b4bc11ea80fa3f5989b0917e0eba420fbce13e))
+ -  fix errorProne ([99b4bc11ea80fa3](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/99b4bc11ea80fa3f5989b0917e0eba420fbce13e))
  		Fecha: 16-11-2024 11:41:00
- -  Merge remote-tracking branch 'origin/develop' into develop ([ec4f47bbdd2c43b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ec4f47bbdd2c43b3b54abeadeeef4185fec56584))
+ -  Merge remote-tracking branch 'origin/develop' into develop ([ec4f47bbdd2c43b](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/ec4f47bbdd2c43b3b54abeadeeef4185fec56584))
  		Fecha: 14-11-2024 17:02:40
- -  update ([350e447fb46d178](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/350e447fb46d178bc44de9f3833d3aee4812949b))
+ -  update ([350e447fb46d178](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/350e447fb46d178bc44de9f3833d3aee4812949b))
  		Fecha: 14-11-2024 17:02:17
- -  README.md edited online with Bitbucket ([3b8e812f9f34043](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3b8e812f9f340434cf450b16467a26145bfc7f2b))
+ -  README.md edited online with Bitbucket ([3b8e812f9f34043](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/3b8e812f9f340434cf450b16467a26145bfc7f2b))
  		Fecha: 14-11-2024 10:16:07
- -  README.md edited online with Bitbucket ([8ee6cbdf5e46123](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/8ee6cbdf5e461232b81aaf908d40ceef13749816))
+ -  README.md edited online with Bitbucket ([8ee6cbdf5e46123](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/8ee6cbdf5e461232b81aaf908d40ceef13749816))
  		Fecha: 14-11-2024 10:13:48
- -  adjust to 2.52 ([26e4388aca60e96](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/26e4388aca60e96ebae0cd9542e1b5583e042151))
+ -  adjust to 2.52 ([26e4388aca60e96](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/26e4388aca60e96ebae0cd9542e1b5583e042151))
  		Fecha: 14-11-2024 10:11:01
- -  force build ([0f7fc8b29acd6f5](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/0f7fc8b29acd6f53d6620198282bdc89e0ccceab))
+ -  force build ([0f7fc8b29acd6f5](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/0f7fc8b29acd6f53d6620198282bdc89e0ccceab))
  		Fecha: 13-05-2024 11:16:40
- -  README.md edited online with Bitbucket ([9b94c78437fb065](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/9b94c78437fb065133ba5f9fdff0ab25e8734db4))
+ -  README.md edited online with Bitbucket ([9b94c78437fb065](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/9b94c78437fb065133ba5f9fdff0ab25e8734db4))
  		Fecha: 13-05-2024 10:29:02
- -  force build ([9792f94d58af0e0](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/9792f94d58af0e0df011520e77744084ed4cc965))
+ -  force build ([9792f94d58af0e0](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/9792f94d58af0e0df011520e77744084ed4cc965))
  		Fecha: 13-05-2024 10:24:27
- -  test ([21bf6526494474a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/21bf6526494474aaa1e665ba6a882a89e0d117fe))
+ -  test ([21bf6526494474a](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/21bf6526494474aaa1e665ba6a882a89e0d117fe))
  		Fecha: 29-04-2024 13:16:59
- -  fix read.md ([7ffdb6a5ff43390](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7ffdb6a5ff433908c2d7ee9bbcc322aee342a9df))
+ -  fix read.md ([7ffdb6a5ff43390](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/7ffdb6a5ff433908c2d7ee9bbcc322aee342a9df))
  		Fecha: 18-04-2024 06:39:44
- -  remove security ([b16bb4e7aab3e96](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b16bb4e7aab3e964acb599982a1e9d0e1420c03a))
+ -  remove security ([b16bb4e7aab3e96](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/b16bb4e7aab3e964acb599982a1e9d0e1420c03a))
  		Fecha: 08-01-2024 11:17:38
- -  fix commit ([49acf9440b7cdf7](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/49acf9440b7cdf7916b6be5c411aa19aa4313774))
+ -  fix commit ([49acf9440b7cdf7](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/49acf9440b7cdf7916b6be5c411aa19aa4313774))
  		Fecha: 13-11-2023 08:14:19
- -  fixes ([6285e74bd2d0aa3](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6285e74bd2d0aa39d07838b988993bdf6467779b))
+ -  fixes ([6285e74bd2d0aa3](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/6285e74bd2d0aa39d07838b988993bdf6467779b))
  		Fecha: 07-11-2023 07:42:36
- -  commenting line that is not compiling ([cd9f1414a14fe9d](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/cd9f1414a14fe9d783111be452c04cf22d4d579b))
+ -  commenting line that is not compiling ([cd9f1414a14fe9d](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/cd9f1414a14fe9d783111be452c04cf22d4d579b))
  		Fecha: 05-11-2023 19:14:49
- -  temp commit ([272f31c30674f3e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/272f31c30674f3ef45009b57595c4ec7b792ef0e))
+ -  temp commit ([272f31c30674f3e](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/272f31c30674f3ef45009b57595c4ec7b792ef0e))
  		Fecha: 03-11-2023 13:50:14
- -  fixes ([70cc5050ae21600](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/70cc5050ae216007cfb3bfc3d9a7d2b747fa8502))
+ -  fixes ([70cc5050ae21600](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/70cc5050ae216007cfb3bfc3d9a7d2b747fa8502))
  		Fecha: 03-11-2023 11:45:02
- -  fix ([fa268d76f57b615](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/fa268d76f57b6154b55f9ea2c30a2183bbf7a45e))
+ -  fix ([fa268d76f57b615](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/fa268d76f57b6154b55f9ea2c30a2183bbf7a45e))
  		Fecha: 03-11-2023 09:53:11
- -  fix ([ec4ed623a1a0aaf](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ec4ed623a1a0aaf63034be9f03cef47a7a240f34))
+ -  fix ([ec4ed623a1a0aaf](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/ec4ed623a1a0aaf63034be9f03cef47a7a240f34))
  		Fecha: 03-11-2023 09:52:50
- -  fix imports ([eb6ce4047eb125e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/eb6ce4047eb125e033fa9732430c05a72be84498))
+ -  fix imports ([eb6ce4047eb125e](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/eb6ce4047eb125e033fa9732430c05a72be84498))
  		Fecha: 02-11-2023 13:07:16
- -  makefile, settings.xml and maven.config ([18929734307fc27](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/18929734307fc27a7b98c4c0ac6a48f5b3736434))
+ -  makefile, settings.xml and maven.config ([18929734307fc27](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/18929734307fc27a7b98c4c0ac6a48f5b3736434))
  		Fecha: 21-06-2023 07:12:22
- -  updated the pom in order to reference parent's version 2.3.0-SNAPSHOT ([6710bef0baef234](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6710bef0baef2348b1155e2d1b6bd05687f854b0))
+ -  updated the pom in order to reference parent's version 2.3.0-SNAPSHOT ([6710bef0baef234](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/6710bef0baef2348b1155e2d1b6bd05687f854b0))
  		Fecha: 19-04-2023 15:24:47
- -  add .java-version ([9c3883dceb369db](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/9c3883dceb369dbb148c8a667a29c568a2ccb225))
+ -  add .java-version ([9c3883dceb369db](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/9c3883dceb369dbb148c8a667a29c568a2ccb225))
  		Fecha: 10-03-2023 08:39:43
- -  upgrade value contact.url ([e8877507df5b251](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/e8877507df5b251e84714d80f1d5ecf131690fba))
+ -  upgrade value contact.url ([e8877507df5b251](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/e8877507df5b251e84714d80f1d5ecf131690fba))
  		Fecha: 03-02-2023 09:28:27
- -  remove line blank ([5fed8d3f9e13368](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5fed8d3f9e13368e8a7efa7d6a7fa8f972fe9811))
+ -  remove line blank ([5fed8d3f9e13368](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/5fed8d3f9e13368e8a7efa7d6a7fa8f972fe9811))
  		Fecha: 03-02-2023 08:59:53
- -  convert OAS3 ([4604d56c3ede8a9](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/4604d56c3ede8a9b066451e9fd84cd61df89eff9))
+ -  convert OAS3 ([4604d56c3ede8a9](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/4604d56c3ede8a9b066451e9fd84cd61df89eff9))
  		Fecha: 03-02-2023 07:13:57
- -  test ([c45dd6f68690af8](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c45dd6f68690af8b27998dd726b98a33631edcc4))
+ -  test ([c45dd6f68690af8](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/c45dd6f68690af8b27998dd726b98a33631edcc4))
  		Fecha: 20-01-2023 06:22:25
- -  change call amsCoreProperties ([dd84b693897d114](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/dd84b693897d114a7893336596185292e136c584))
+ -  change call amsCoreProperties ([dd84b693897d114](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/dd84b693897d114a7893336596185292e136c584))
  		Fecha: 18-01-2023 15:23:23
- -  enable multi-thread build ([b32a005dbdf1034](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b32a005dbdf10341e1a9ab4f893855c7b62aa1ff))
+ -  enable multi-thread build ([b32a005dbdf1034](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/b32a005dbdf10341e1a9ab4f893855c7b62aa1ff))
  		Fecha: 12-12-2022 12:11:11
- -  test ([077fdf947619855](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/077fdf947619855c0d38fac30e7098b7cb39ab4f))
+ -  test ([077fdf947619855](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/077fdf947619855c0d38fac30e7098b7cb39ab4f))
  		Fecha: 30-11-2022 08:30:05
- -  fix ([208daf075f8ed23](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/208daf075f8ed23233bb157a0b22242896e7bdc1))
+ -  fix ([208daf075f8ed23](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/208daf075f8ed23233bb157a0b22242896e7bdc1))
  		Fecha: 30-11-2022 08:21:03
- -  Auto stash before merge of "develop" and "origin/develop" ([292d2a287612f2f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/292d2a287612f2f8e54a063e99d3f710ce7d415b))
+ -  Auto stash before merge of "develop" and "origin/develop" ([292d2a287612f2f](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/292d2a287612f2f8e54a063e99d3f710ce7d415b))
  		Fecha: 30-11-2022 08:06:31
- -  add assertThat contextLoads ([b0e114aa8fdc594](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b0e114aa8fdc59467fd0b3c9377d8b42c6a2da52))
+ -  add assertThat contextLoads ([b0e114aa8fdc594](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/b0e114aa8fdc59467fd0b3c9377d8b42c6a2da52))
  		Fecha: 29-11-2022 13:49:49
- -  fix upgrade arquetype ([53a5ce82a719f27](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/53a5ce82a719f2793be6b0f19878fb7d2a09c888))
+ -  fix upgrade arquetype ([53a5ce82a719f27](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/53a5ce82a719f2793be6b0f19878fb7d2a09c888))
  		Fecha: 25-11-2022 08:50:18
- -  fix arquetype ([b9ccf38255b7f4f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b9ccf38255b7f4fef0b917664fdc4e48a175bab9))
+ -  fix arquetype ([b9ccf38255b7f4f](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/b9ccf38255b7f4fef0b917664fdc4e48a175bab9))
  		Fecha: 14-10-2022 13:57:56
- -  fix error-prone date ([3f938cda5f354db](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3f938cda5f354db1cab518901b85ff9c56aab69d))
+ -  fix error-prone date ([3f938cda5f354db](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/3f938cda5f354db1cab518901b85ff9c56aab69d))
  		Fecha: 13-10-2022 10:26:46
- -  fix pom.xml ([29e82f86f7b8c77](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/29e82f86f7b8c7783bb21a6bc089b8b4eaf228eb))
+ -  fix pom.xml ([29e82f86f7b8c77](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/29e82f86f7b8c7783bb21a6bc089b8b4eaf228eb))
  		Fecha: 05-10-2022 17:06:51
- -  fix kiuwan defects ([cf56166b9e8d7d6](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/cf56166b9e8d7d6cb7e7055f66aae633bbd43d6d))
+ -  fix kiuwan defects ([cf56166b9e8d7d6](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/cf56166b9e8d7d6cb7e7055f66aae633bbd43d6d))
  		Fecha: 29-08-2022 10:15:09
- -  fix kiuwan ([7f4b664be7762c8](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7f4b664be7762c8c70ca3193e55958f9b26890cb))
+ -  fix kiuwan ([7f4b664be7762c8](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/7f4b664be7762c8c70ca3193e55958f9b26890cb))
  		Fecha: 29-08-2022 07:59:00
- -  fix kiuwan rules ([cf0f3b21aaf9382](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/cf0f3b21aaf93824a8f38219f2fde787f5254aa0))
+ -  fix kiuwan rules ([cf0f3b21aaf9382](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/cf0f3b21aaf93824a8f38219f2fde787f5254aa0))
  		Fecha: 26-08-2022 12:30:12
- -  update h2 string ([d28400e9a9da4b4](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/d28400e9a9da4b4e0e50f129829b2a82cc7ff350))
+ -  update h2 string ([d28400e9a9da4b4](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/d28400e9a9da4b4e0e50f129829b2a82cc7ff350))
  		Fecha: 22-08-2022 08:06:52
- -  add skip.it ([7d8e237a1e06433](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7d8e237a1e06433735fb40b12e6a5b6330b82137))
+ -  add skip.it ([7d8e237a1e06433](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/7d8e237a1e06433735fb40b12e6a5b6330b82137))
  		Fecha: 05-08-2022 13:21:33
- -  fix archunit ([ff9c2860e12758f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ff9c2860e12758fd0abfa69e5c07dbc85f33d7a7))
+ -  fix archunit ([ff9c2860e12758f](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/ff9c2860e12758fd0abfa69e5c07dbc85f33d7a7))
  		Fecha: 05-08-2022 12:52:12
- -  fix test ([3df131e7b575c09](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3df131e7b575c090e6872d48d550b5b83e2b4c81))
+ -  fix test ([3df131e7b575c09](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/3df131e7b575c090e6872d48d550b5b83e2b4c81))
  		Fecha: 05-08-2022 12:26:40
- -  update changes ([c245e8e79ced277](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c245e8e79ced2779710ebfcf2edb3f9041ead4e2))
+ -  update changes ([c245e8e79ced277](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/c245e8e79ced2779710ebfcf2edb3f9041ead4e2))
  		Fecha: 05-08-2022 11:31:38
- -  test commit ([b521d69f8e12e4f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b521d69f8e12e4fc7f9e4b998b9a546c8d456c2c))
+ -  test commit ([b521d69f8e12e4f](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/b521d69f8e12e4fc7f9e4b998b9a546c8d456c2c))
  		Fecha: 05-08-2022 11:24:41
- -  change null  UUID to empty optional, suppress null away alerts in test classes ([7cca088dbf3152c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7cca088dbf3152c9c1649b0095f133d85ae60ea7))
+ -  change null  UUID to empty optional, suppress null away alerts in test classes ([7cca088dbf3152c](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/7cca088dbf3152c9c1649b0095f133d85ae60ea7))
  		Fecha: 20-07-2022 13:02:34
- -  change null  UUID to empty optional, suppress null away alerts in test classes ([e32e2499c08d152](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/e32e2499c08d15257822d0ea0627d50111b9e940))
+ -  change null  UUID to empty optional, suppress null away alerts in test classes ([e32e2499c08d152](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/e32e2499c08d15257822d0ea0627d50111b9e940))
  		Fecha: 20-07-2022 12:50:10
- -  change null  UUID to empty optional, suppress null away alerts in test classes ([37216541355c18c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/37216541355c18c476edea1cede9443065ab5a4c))
+ -  change null  UUID to empty optional, suppress null away alerts in test classes ([37216541355c18c](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/37216541355c18c476edea1cede9443065ab5a4c))
  		Fecha: 20-07-2022 12:32:53
- -  change ApiDelegateTestUtils name to ApiDelegateTestDataFactory ([057663d951286b4](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/057663d951286b43e86bbff7302536337b7ab2e5))
+ -  change ApiDelegateTestUtils name to ApiDelegateTestDataFactory ([057663d951286b4](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/057663d951286b43e86bbff7302536337b7ab2e5))
  		Fecha: 20-07-2022 07:31:32
- -  change ApiDelegateTestUtils name to ApiDelegateTestData ([2f0d890cd22cff0](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/2f0d890cd22cff0d6356db501da132d817203b81))
+ -  change ApiDelegateTestUtils name to ApiDelegateTestData ([2f0d890cd22cff0](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/2f0d890cd22cff0d6356db501da132d817203b81))
  		Fecha: 20-07-2022 07:30:38
- -  change change ApiDelegateTestUtils name to ApiDelegateTestData ([485a5abcaa0f013](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/485a5abcaa0f0139701b1b48c10d9b2aee99280a))
+ -  change change ApiDelegateTestUtils name to ApiDelegateTestData ([485a5abcaa0f013](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/485a5abcaa0f0139701b1b48c10d9b2aee99280a))
  		Fecha: 20-07-2022 07:30:00
- -  change junit assertions to assertj, give descrptive names to test methods, refactor ApiDelegateTestUtils methods names ([f165d22bff65084](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f165d22bff650841fc537f5c5f2f9fce7ba9e9ee))
+ -  change junit assertions to assertj, give descrptive names to test methods, refactor ApiDelegateTestUtils methods names ([f165d22bff65084](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/f165d22bff650841fc537f5c5f2f9fce7ba9e9ee))
  		Fecha: 20-07-2022 07:27:39
- -  deleted comments ([0b019c09a4348c3](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/0b019c09a4348c3fc8cbdcc38783b70d68411784))
+ -  deleted comments ([0b019c09a4348c3](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/0b019c09a4348c3fc8cbdcc38783b70d68411784))
  		Fecha: 20-07-2022 06:29:50
- -  created tests for api delegate layer ([720eec130481b2a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/720eec130481b2a17a784aba8047382d979745e5))
+ -  created tests for api delegate layer ([720eec130481b2a](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/720eec130481b2a17a784aba8047382d979745e5))
  		Fecha: 20-07-2022 06:21:49
- -  fix gitleaks ([63bbdb12d039429](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/63bbdb12d039429df2771742478935395f821072))
+ -  fix gitleaks ([63bbdb12d039429](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/63bbdb12d039429df2771742478935395f821072))
  		Fecha: 14-07-2022 07:36:25
- -  ASW-1456 removed try catch ([494c4ebd49da182](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/494c4ebd49da182a9ca8de31740bee18314bef32))
+ -  ASW-1456 removed try catch ([494c4ebd49da182](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/494c4ebd49da182a9ca8de31740bee18314bef32))
  		Fecha: 13-07-2022 07:43:17
- -  ASW-1456 removed unused imports ([991faddeefbe4e1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/991faddeefbe4e1083367216211a80ea2f57df5d))
+ -  ASW-1456 removed unused imports ([991faddeefbe4e1](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/991faddeefbe4e1083367216211a80ea2f57df5d))
  		Fecha: 13-07-2022 07:05:50
- -  ASW-1456 @async annotation for asynchronous functions ([efa4b9cae173cce](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/efa4b9cae173cce892297f5c66a501ccdf0bbeb7))
+ -  ASW-1456 @async annotation for asynchronous functions ([efa4b9cae173cce](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/efa4b9cae173cce892297f5c66a501ccdf0bbeb7))
  		Fecha: 12-07-2022 07:53:00
- -  ASW-1456 test issue solved ([f8b2661c233b9a0](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f8b2661c233b9a0973c4626d5f35610d28859764))
+ -  ASW-1456 test issue solved ([f8b2661c233b9a0](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/f8b2661c233b9a0973c4626d5f35610d28859764))
  		Fecha: 06-07-2022 11:57:23
- -  ASW-1456 first changes, tests not passing ([1711c207d07f00b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/1711c207d07f00b5be658f43bd15282bd036a437))
+ -  ASW-1456 first changes, tests not passing ([1711c207d07f00b](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/1711c207d07f00b5be658f43bd15282bd036a437))
  		Fecha: 06-07-2022 09:08:35
- -  add new param db url ([be43cf1f7200985](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/be43cf1f7200985d00c76dd307488d4890229de5))
+ -  add new param db url ([be43cf1f7200985](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/be43cf1f7200985d00c76dd307488d4890229de5))
  		Fecha: 22-06-2022 08:12:52
- -  acomplish nullaway & errorProne ([5d3d50458e3912c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5d3d50458e3912cf4c11fc1cd4002128308fd017))
+ -  acomplish nullaway & errorProne ([5d3d50458e3912c](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/5d3d50458e3912cf4c11fc1cd4002128308fd017))
  		Fecha: 22-06-2022 07:41:17
- -  test ([672ecf73f6200fb](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/672ecf73f6200fbbf3d1097b858cfe2a65dd2bed))
+ -  test ([672ecf73f6200fb](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/672ecf73f6200fbbf3d1097b858cfe2a65dd2bed))
  		Fecha: 20-06-2022 16:24:28
- -  test ([5b20917c653473c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5b20917c653473cee5c9a93eb54fadab6093df17))
+ -  test ([5b20917c653473c](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/5b20917c653473cee5c9a93eb54fadab6093df17))
  		Fecha: 20-06-2022 16:07:53
- -  addapt lombok.config ([157bb120f1e5522](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/157bb120f1e5522ac035fee74035b1451cf1b90d))
+ -  addapt lombok.config ([157bb120f1e5522](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/157bb120f1e5522ac035fee74035b1451cf1b90d))
  		Fecha: 10-06-2022 06:26:37
- -  changes ([10d3885e16050a5](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/10d3885e16050a5d1371cf6816f6c3bcca3ec06e))
+ -  changes ([10d3885e16050a5](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/10d3885e16050a5d1371cf6816f6c3bcca3ec06e))
  		Fecha: 06-06-2022 12:41:39
- -  add archunit ([f50b22e18f7e9b5](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f50b22e18f7e9b50b42baffbcb468c587014c47b))
+ -  add archunit ([f50b22e18f7e9b5](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/f50b22e18f7e9b50b42baffbcb468c587014c47b))
  		Fecha: 06-06-2022 10:18:12
- -  ASW-1153 @Generated in Application ([94c524ca4d470b3](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/94c524ca4d470b3cd11e05cb6de3d659bac37f60))
+ -  ASW-1153 @Generated in Application ([94c524ca4d470b3](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/94c524ca4d470b3cd11e05cb6de3d659bac37f60))
  		Fecha: 06-06-2022 08:04:49
- -  fix eq ([00f08c2957aa97d](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/00f08c2957aa97d67a5f1c8037e40e7c17b32972))
+ -  fix eq ([00f08c2957aa97d](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/00f08c2957aa97d67a5f1c8037e40e7c17b32972))
  		Fecha: 02-06-2022 12:36:52
- -  test ([71c70753c884526](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/71c70753c8845263a5e5a61598f0fa0c0a9d971b))
+ -  test ([71c70753c884526](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/71c70753c8845263a5e5a61598f0fa0c0a9d971b))
  		Fecha: 02-06-2022 12:22:21
- -  test ([91f6e6f80919f47](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/91f6e6f80919f4774aa6cdbf4ea5d9c8e15a4df6))
+ -  test ([91f6e6f80919f47](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/91f6e6f80919f4774aa6cdbf4ea5d9c8e15a4df6))
  		Fecha: 02-06-2022 12:08:26
- -  fix deprecated ([fb83efb0fa75dc0](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/fb83efb0fa75dc089ab08cb55c9cae9d53a1035b))
+ -  fix deprecated ([fb83efb0fa75dc0](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/fb83efb0fa75dc089ab08cb55c9cae9d53a1035b))
  		Fecha: 02-06-2022 08:59:37
- -  test ([257f3920cbe5f08](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/257f3920cbe5f08990707395ed9630ed8bf9905c))
+ -  test ([257f3920cbe5f08](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/257f3920cbe5f08990707395ed9630ed8bf9905c))
  		Fecha: 02-06-2022 08:44:20
- -  test ([cc92979fe6aec15](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/cc92979fe6aec15ee22e881bb04e7f8cb2b8d3ae))
+ -  test ([cc92979fe6aec15](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/cc92979fe6aec15ee22e881bb04e7f8cb2b8d3ae))
  		Fecha: 31-05-2022 13:11:45
- -  test ([a7c3a754b029ce0](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a7c3a754b029ce04f36d0b40a4e96688de10b3d8))
+ -  test ([a7c3a754b029ce0](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/a7c3a754b029ce04f36d0b40a4e96688de10b3d8))
  		Fecha: 31-05-2022 13:07:37
- -  test refactor given, when, then ([11ec7c47c670064](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/11ec7c47c67006477b6b5f692128e6c9c6e83b3e))
+ -  test refactor given, when, then ([11ec7c47c670064](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/11ec7c47c67006477b6b5f692128e6c9c6e83b3e))
  		Fecha: 31-05-2022 12:40:05
- -  display name en los test ([5196a3b7ea2d2f4](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5196a3b7ea2d2f40bdae1cc8f3f3e08921cfb3b3))
+ -  display name en los test ([5196a3b7ea2d2f4](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/5196a3b7ea2d2f40bdae1cc8f3f3e08921cfb3b3))
  		Fecha: 31-05-2022 09:00:17
- -  tests for the repository layer ([067076a68209184](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/067076a68209184da7e13d25a9db7840e8072034))
+ -  tests for the repository layer ([067076a68209184](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/067076a68209184da7e13d25a9db7840e8072034))
  		Fecha: 31-05-2022 08:55:00
- -  test ([b99aeb4c3368030](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b99aeb4c33680301e7f99f49256b9d8baa465119))
+ -  test ([b99aeb4c3368030](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/b99aeb4c33680301e7f99f49256b9d8baa465119))
  		Fecha: 26-05-2022 10:05:18
- -  test ([98e369cb6ee7b45](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/98e369cb6ee7b45a3418c38de35d5ca8b4c7a21e))
+ -  test ([98e369cb6ee7b45](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/98e369cb6ee7b45a3418c38de35d5ca8b4c7a21e))
  		Fecha: 26-05-2022 08:01:11
- -  test ([a38ca0a4ae878a7](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a38ca0a4ae878a7b815e3d489d431de8a943435f))
+ -  test ([a38ca0a4ae878a7](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/a38ca0a4ae878a7b815e3d489d431de8a943435f))
  		Fecha: 24-05-2022 13:32:11
- -  test ([94876a63307a77e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/94876a63307a77eea9fb0afd23f5afbe253f54c1))
+ -  test ([94876a63307a77e](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/94876a63307a77eea9fb0afd23f5afbe253f54c1))
  		Fecha: 24-05-2022 13:31:45
- -  fix new arch-rules ([7b92947546edc1f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7b92947546edc1f95edffb633fbff5a18d76de98))
+ -  fix new arch-rules ([7b92947546edc1f](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/7b92947546edc1f95edffb633fbff5a18d76de98))
  		Fecha: 13-05-2022 12:54:44
- -  fix kiuwan ([ec0fb443d82a5f9](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ec0fb443d82a5f96cfc5ac44f3f9d7259a7e7b06))
+ -  fix kiuwan ([ec0fb443d82a5f9](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/ec0fb443d82a5f96cfc5ac44f3f9d7259a7e7b06))
  		Fecha: 11-05-2022 12:41:53
- -  fix tests ([c48f7b855e2db83](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c48f7b855e2db830f38b46adc6731646e577cde1))
+ -  fix tests ([c48f7b855e2db83](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/c48f7b855e2db830f38b46adc6731646e577cde1))
  		Fecha: 11-05-2022 12:15:06
- -  fix yamlint ([9f72633bbdbb28c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/9f72633bbdbb28c2a9b3a3eecc0571f31a8e7436))
+ -  fix yamlint ([9f72633bbdbb28c](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/9f72633bbdbb28c2a9b3a3eecc0571f31a8e7436))
  		Fecha: 11-05-2022 07:34:38
- -  test ([beadb33449536cf](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/beadb33449536cf977419c02ab8bd0ee8d3fb47d))
+ -  test ([beadb33449536cf](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/beadb33449536cf977419c02ab8bd0ee8d3fb47d))
  		Fecha: 09-05-2022 13:02:32
- -  test ([efe18507e9c17f7](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/efe18507e9c17f79d59403c96696c738c5f25931))
+ -  test ([efe18507e9c17f7](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/efe18507e9c17f79d59403c96696c738c5f25931))
  		Fecha: 09-05-2022 12:59:26
- -  Merge remote-tracking branch 'origin/develop' into develop ([8b9126b2e4cb8ea](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/8b9126b2e4cb8eaa95ce8d4007a634b71894be89))
+ -  Merge remote-tracking branch 'origin/develop' into develop ([8b9126b2e4cb8ea](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/8b9126b2e4cb8eaa95ce8d4007a634b71894be89))
  		Fecha: 09-05-2022 12:48:09
- -  test ([9e2a1eec5dc90a7](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/9e2a1eec5dc90a79156316ff42662e6c49ad9c4a))
+ -  test ([9e2a1eec5dc90a7](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/9e2a1eec5dc90a79156316ff42662e6c49ad9c4a))
  		Fecha: 09-05-2022 12:47:32
- -  SpringApplicationBuilder and unsecure startup property ([3d378a0d9218761](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3d378a0d921876142da23d86699d06d0066176ba))
+ -  SpringApplicationBuilder and unsecure startup property ([3d378a0d9218761](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/3d378a0d921876142da23d86699d06d0066176ba))
  		Fecha: 04-05-2022 11:05:31
- -  remove duplicated dependency springdoc ([41039da0a5a7b74](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/41039da0a5a7b74d15641174a50f3008a8e1f405))
+ -  remove duplicated dependency springdoc ([41039da0a5a7b74](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/41039da0a5a7b74d15641174a50f3008a8e1f405))
  		Fecha: 21-04-2022 10:06:06
- -  added comment for OAS version support ([8335bcb9e691f6b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/8335bcb9e691f6be20e56ff9b6a6bec079c1c246))
+ -  added comment for OAS version support ([8335bcb9e691f6b](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/8335bcb9e691f6be20e56ff9b6a6bec079c1c246))
  		Fecha: 20-04-2022 15:09:02
- -  resolve merge conflicts with develop ([2fc405ec8065a32](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/2fc405ec8065a327a924ff58995e2f928e15d634))
+ -  resolve merge conflicts with develop ([2fc405ec8065a32](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/2fc405ec8065a327a924ff58995e2f928e15d634))
  		Fecha: 20-04-2022 15:00:52
- -  test ([0397e25d321e974](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/0397e25d321e9741627ef7f63e01edc126ff57f7))
+ -  test ([0397e25d321e974](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/0397e25d321e9741627ef7f63e01edc126ff57f7))
  		Fecha: 12-04-2022 11:08:17
- -  fix lint ([7a37fd8a52bf8b6](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7a37fd8a52bf8b6520a6ddb5494d7f0b0f5b4a47))
+ -  fix lint ([7a37fd8a52bf8b6](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/7a37fd8a52bf8b6520a6ddb5494d7f0b0f5b4a47))
  		Fecha: 12-04-2022 10:45:52
- -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([6f610b57628392e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6f610b57628392eacd74e330a473edfa31bbfb35))
+ -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([6f610b57628392e](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/6f610b57628392eacd74e330a473edfa31bbfb35))
  		Fecha: 28-01-2022 13:01:43
- -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([15fab8e0a84f2bd](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/15fab8e0a84f2bd053b4ec94df18f2b416a18834))
+ -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([15fab8e0a84f2bd](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/15fab8e0a84f2bd053b4ec94df18f2b416a18834))
  		Fecha: 28-01-2022 12:22:41
- -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([834ead7c537df38](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/834ead7c537df389758cd2cbe614adffa53c1ec0))
+ -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([834ead7c537df38](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/834ead7c537df389758cd2cbe614adffa53c1ec0))
  		Fecha: 28-01-2022 10:25:04
- -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([ace53a49ccb064d](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ace53a49ccb064d30e8a787b72cb3be50c504d99))
+ -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([ace53a49ccb064d](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/ace53a49ccb064d30e8a787b72cb3be50c504d99))
  		Fecha: 26-01-2022 15:32:05
- -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([bc5b9d5242fbbbe](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/bc5b9d5242fbbbe993a10b6442168fd6012a7049))
+ -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([bc5b9d5242fbbbe](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/bc5b9d5242fbbbe993a10b6442168fd6012a7049))
  		Fecha: 24-01-2022 12:44:21
- -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([ee7ea1169440732](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ee7ea1169440732c80932903fcf962de38b1cb04))
+ -  ASW-1115 Actualizar example-app-11 a la versión 6.2 de Spring Boot ([ee7ea1169440732](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/ee7ea1169440732c80932903fcf962de38b1cb04))
  		Fecha: 24-01-2022 12:36:44
- -  configure json banner ([f99e47c14bd1018](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f99e47c14bd10186ca3f21d4aaa2bf0e7eb20be6))
+ -  configure json banner ([f99e47c14bd1018](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/f99e47c14bd10186ca3f21d4aaa2bf0e7eb20be6))
  		Fecha: 15-12-2021 16:50:50
- -  configure banner json ([2ba501e4373f208](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/2ba501e4373f208ec8d4ea416e5989f827f0189b))
+ -  configure banner json ([2ba501e4373f208](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/2ba501e4373f208ec8d4ea416e5989f827f0189b))
  		Fecha: 15-12-2021 16:49:15
- -  Add responseEntity for SSE restController ([368858d487eee78](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/368858d487eee780a9a50e372291c0e46266119b))
+ -  Add responseEntity for SSE restController ([368858d487eee78](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/368858d487eee780a9a50e372291c0e46266119b))
  		Fecha: 03-11-2021 12:16:00
- -  SSE para cliente angular ([a4534211652c06b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a4534211652c06bbe54d39c6c0356838bf2b91da))
+ -  SSE para cliente angular ([a4534211652c06b](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/a4534211652c06bbe54d39c6c0356838bf2b91da))
  		Fecha: 03-11-2021 11:40:03
- -  fix editorconfig ([220f4ba415ef024](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/220f4ba415ef0241edbd801bafcac2586918e356))
+ -  fix editorconfig ([220f4ba415ef024](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/220f4ba415ef0241edbd801bafcac2586918e356))
  		Fecha: 28-10-2021 05:02:46
- -  fix logback ([58f100bf916cec7](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/58f100bf916cec780fc8e91a75e3206a8fc941d1))
+ -  fix logback ([58f100bf916cec7](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/58f100bf916cec780fc8e91a75e3206a8fc941d1))
  		Fecha: 15-10-2021 11:36:32
- -  pasar editorconfig ([c2ce7f00280e355](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c2ce7f00280e35594e1719bc2b5b5648514d7652))
+ -  pasar editorconfig ([c2ce7f00280e355](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/c2ce7f00280e35594e1719bc2b5b5648514d7652))
  		Fecha: 13-10-2021 17:06:42
- -  pasar editorconfig ([407789f20cf2edc](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/407789f20cf2edc5ea6877b9dacec83f860f0977))
+ -  pasar editorconfig ([407789f20cf2edc](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/407789f20cf2edc5ea6877b9dacec83f860f0977))
  		Fecha: 13-10-2021 16:26:39
- -  modificar layer.xml ([aa02324c38cc068](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/aa02324c38cc068173337568dc4f63ffac176461))
+ -  modificar layer.xml ([aa02324c38cc068](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/aa02324c38cc068173337568dc4f63ffac176461))
  		Fecha: 13-10-2021 15:58:39
- -  add layer ([4427bf2d0e42a1d](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/4427bf2d0e42a1d33c4e5b13dad5d7b54d9d943c))
+ -  add layer ([4427bf2d0e42a1d](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/4427bf2d0e42a1d33c4e5b13dad5d7b54d9d943c))
  		Fecha: 07-10-2021 11:46:24
- -  test ([c9203d14bfa8fc9](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c9203d14bfa8fc9cf05f6386a915dd6941b2dc5c))
+ -  test ([c9203d14bfa8fc9](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/c9203d14bfa8fc9cf05f6386a915dd6941b2dc5c))
  		Fecha: 08-09-2021 12:29:59
- -  fix gitleaks ([683a66688b6670c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/683a66688b6670c34041a9e09aa787ce323b9f9a))
+ -  fix gitleaks ([683a66688b6670c](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/683a66688b6670c34041a9e09aa787ce323b9f9a))
  		Fecha: 08-09-2021 10:54:26
- -  fix indent ([f9bc13e7b4911ad](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f9bc13e7b4911adb1656bd8526c67a65582573ff))
+ -  fix indent ([f9bc13e7b4911ad](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/f9bc13e7b4911adb1656bd8526c67a65582573ff))
  		Fecha: 07-09-2021 09:03:53
- -  editorconfig fix ([a56f06e584da460](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a56f06e584da460213cabaa4566bff663e7a057e))
+ -  editorconfig fix ([a56f06e584da460](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/a56f06e584da460213cabaa4566bff663e7a057e))
  		Fecha: 07-09-2021 08:50:08
- -  add editor config ([2f003ab65af3a8e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/2f003ab65af3a8e7b266cccca2a4df309ca04366))
+ -  add editor config ([2f003ab65af3a8e](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/2f003ab65af3a8e7b266cccca2a4df309ca04366))
  		Fecha: 07-09-2021 08:34:18
- -  fix passwords ([20a013e6da57362](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/20a013e6da573624efcc8739b431b94d6bc82630))
+ -  fix passwords ([20a013e6da57362](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/20a013e6da573624efcc8739b431b94d6bc82630))
  		Fecha: 06-09-2021 13:07:49
- -  test ([c791e25b12077db](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c791e25b12077db5272315e3043dfa98ffa5082c))
+ -  test ([c791e25b12077db](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/c791e25b12077db5272315e3043dfa98ffa5082c))
  		Fecha: 06-09-2021 12:39:40
- -  test ([7bef978acfbd48f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7bef978acfbd48f44d0a5611ea1026e26bfb7938))
+ -  test ([7bef978acfbd48f](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/7bef978acfbd48f44d0a5611ea1026e26bfb7938))
  		Fecha: 06-09-2021 12:34:22
- -  remove password ([9c65db114e75097](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/9c65db114e75097929a35ca185604339293e2960))
+ -  remove password ([9c65db114e75097](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/9c65db114e75097929a35ca185604339293e2960))
  		Fecha: 06-09-2021 12:33:15
- -  add gitignore ([68265110c5ac727](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/68265110c5ac727d67f3a0fa2e25cb2ebb9bd658))
+ -  add gitignore ([68265110c5ac727](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/68265110c5ac727d67f3a0fa2e25cb2ebb9bd658))
  		Fecha: 06-09-2021 12:32:49
- -  Refactorizacion cambios reglas kiuwan ([9c261cc3e5bfe8c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/9c261cc3e5bfe8c5ae4f784e146acaa3fdbacbe0))
+ -  Refactorizacion cambios reglas kiuwan ([9c261cc3e5bfe8c](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/9c261cc3e5bfe8c5ae4f784e146acaa3fdbacbe0))
  		Fecha: 24-08-2021 11:42:08
- -  Refactorizacion cambios reglas kiuwan ([a6b14890b08859d](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a6b14890b08859d556c8d47e48118140bbb166c1))
+ -  Refactorizacion cambios reglas kiuwan ([a6b14890b08859d](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/a6b14890b08859d556c8d47e48118140bbb166c1))
  		Fecha: 24-08-2021 11:17:19
- -  fix scm ([f19c0c14807a42c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f19c0c14807a42c466587983bb5e9030b63706d1))
+ -  fix scm ([f19c0c14807a42c](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/f19c0c14807a42c466587983bb5e9030b63706d1))
  		Fecha: 06-07-2021 05:22:51
- -  point to new snapshot version ([256c415d35a0e3b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/256c415d35a0e3bf6ae8581c934af78052c40d40))
+ -  point to new snapshot version ([256c415d35a0e3b](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/256c415d35a0e3bf6ae8581c934af78052c40d40))
  		Fecha: 20-05-2021 11:12:42
- -  disable tracing for test ([3d2e0ed074b6d8f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3d2e0ed074b6d8f34ddb4a30430a3aa267a52a79))
+ -  disable tracing for test ([3d2e0ed074b6d8f](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/3d2e0ed074b6d8f34ddb4a30430a3aa267a52a79))
  		Fecha: 07-05-2021 22:08:41
- -  remove agencias ([280e2843b8eab6f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/280e2843b8eab6fbd3e71909b28ab666737e9f60))
+ -  remove agencias ([280e2843b8eab6f](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/280e2843b8eab6fbd3e71909b28ab666737e9f60))
  		Fecha: 06-05-2021 17:41:54
- -  temporal commit ([9ae9dda209afb1e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/9ae9dda209afb1e48033f42fdec448a8c2f823d9))
+ -  temporal commit ([9ae9dda209afb1e](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/9ae9dda209afb1e48033f42fdec448a8c2f823d9))
  		Fecha: 06-05-2021 12:02:20
- -  remove agencia ([245813531f67a2f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/245813531f67a2fc1b0aa1876286ab8d1a456f30))
+ -  remove agencia ([245813531f67a2f](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/245813531f67a2fc1b0aa1876286ab8d1a456f30))
  		Fecha: 05-05-2021 22:29:28
- -  point to first release ([e0d04e572924fff](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/e0d04e572924fff22a780584cc7b6cf12ae77e93))
+ -  point to first release ([e0d04e572924fff](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/e0d04e572924fff22a780584cc7b6cf12ae77e93))
  		Fecha: 04-05-2021 18:42:10
- -  test ([d317816333edc43](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/d317816333edc438d1428421f7f8f1c3934b40b7))
+ -  test ([d317816333edc43](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/d317816333edc438d1428421f7f8f1c3934b40b7))
  		Fecha: 01-05-2021 12:14:31
- -  move properties to bootstrap ([d7d0a56db9f06ed](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/d7d0a56db9f06ed10301b45491b5a51a88bd6dad))
+ -  move properties to bootstrap ([d7d0a56db9f06ed](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/d7d0a56db9f06ed10301b45491b5a51a88bd6dad))
  		Fecha: 01-05-2021 12:00:13
- -  add comments ([e5fa0c2b93c408a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/e5fa0c2b93c408aa02e824fb900347fcafc24a2f))
+ -  add comments ([e5fa0c2b93c408a](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/e5fa0c2b93c408aa02e824fb900347fcafc24a2f))
  		Fecha: 01-05-2021 11:28:55
- -  fixes kiuwan ([be786b7bc12bf78](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/be786b7bc12bf783160e1a0c08ebb68536610f61))
+ -  fixes kiuwan ([be786b7bc12bf78](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/be786b7bc12bf783160e1a0c08ebb68536610f61))
  		Fecha: 27-04-2021 09:03:04
- -  kiuwan fixes ([f3705bac4575ce1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f3705bac4575ce18cf22608e2604e0cf813c0fe6))
+ -  kiuwan fixes ([f3705bac4575ce1](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/f3705bac4575ce18cf22608e2604e0cf813c0fe6))
  		Fecha: 27-04-2021 08:35:25
- -  remove Agencias delegate ([9409f2c5ca27cd9](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/9409f2c5ca27cd977a19c8b4ae0928b2c2f62441))
+ -  remove Agencias delegate ([9409f2c5ca27cd9](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/9409f2c5ca27cd977a19c8b4ae0928b2c2f62441))
  		Fecha: 27-04-2021 08:05:27
- -  kiuwan fixes ([91cb6ad0ea8a7b6](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/91cb6ad0ea8a7b6ea2f3276fdc672fede1f5d27b))
+ -  kiuwan fixes ([91cb6ad0ea8a7b6](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/91cb6ad0ea8a7b6ea2f3276fdc672fede1f5d27b))
  		Fecha: 27-04-2021 07:45:57
- -  remove throw ([8c18c4c2e29a056](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/8c18c4c2e29a05675ad3e4f1c727e72ab6f620cd))
+ -  remove throw ([8c18c4c2e29a056](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/8c18c4c2e29a05675ad3e4f1c727e72ab6f620cd))
  		Fecha: 24-04-2021 02:04:15
- -  fix pom.xml ([7e31a88bc6efe2d](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7e31a88bc6efe2df0431d0545f642f1712d3dac8))
+ -  fix pom.xml ([7e31a88bc6efe2d](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/7e31a88bc6efe2df0431d0545f642f1712d3dac8))
  		Fecha: 24-04-2021 01:44:16
- -  fix scm url ([a48c505c08c10bd](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a48c505c08c10bdf69dbe015276170c2ef6d5f0a))
+ -  fix scm url ([a48c505c08c10bd](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/a48c505c08c10bdf69dbe015276170c2ef6d5f0a))
  		Fecha: 23-04-2021 06:39:32
- -  remove errors ([2b01dcc02a8eac6](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/2b01dcc02a8eac6bcb92e8c41a248756486bae48))
+ -  remove errors ([2b01dcc02a8eac6](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/2b01dcc02a8eac6bcb92e8c41a248756486bae48))
  		Fecha: 23-04-2021 06:39:09
- -  changes ([2d912a5a93c4683](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/2d912a5a93c468339b587e08fa029e13ad9eb50c))
+ -  changes ([2d912a5a93c4683](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/2d912a5a93c468339b587e08fa029e13ad9eb50c))
  		Fecha: 15-04-2021 15:55:26
- -  error test ([aeaaa01ddd12de8](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/aeaaa01ddd12de8e257f39084cb37aeca966f55a))
+ -  error test ([aeaaa01ddd12de8](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/aeaaa01ddd12de8e257f39084cb37aeca966f55a))
  		Fecha: 12-04-2021 04:51:00
- -  test ([6d9d582d95e671d](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6d9d582d95e671d4c831375755f1c47e84a277bb))
+ -  test ([6d9d582d95e671d](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/6d9d582d95e671d4c831375755f1c47e84a277bb))
  		Fecha: 18-03-2021 16:19:49
- -  cumplir regla NO_STATE_VARIABLES_SHOULD_BE_DECLARED ([e0a72cc1112a1de](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/e0a72cc1112a1de08a589f4b17760ef53e04e38c))
+ -  cumplir regla NO_STATE_VARIABLES_SHOULD_BE_DECLARED ([e0a72cc1112a1de](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/e0a72cc1112a1de08a589f4b17760ef53e04e38c))
  		Fecha: 15-03-2021 14:26:13
- -  habilitar web environment en test ([2fea719ea6064b1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/2fea719ea6064b1607101e99aa8cacdafd699b01))
+ -  habilitar web environment en test ([2fea719ea6064b1](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/2fea719ea6064b1607101e99aa8cacdafd699b01))
  		Fecha: 14-03-2021 18:18:39
- -  temp ([2306c35b1fc2d91](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/2306c35b1fc2d916b8db51b4df937dd1977f1810))
+ -  temp ([2306c35b1fc2d91](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/2306c35b1fc2d916b8db51b4df937dd1977f1810))
  		Fecha: 13-03-2021 02:12:23
- -  remove import that is in ams ([68419dc29c32af5](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/68419dc29c32af597ded632b28750186f6e6fa95))
+ -  remove import that is in ams ([68419dc29c32af5](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/68419dc29c32af597ded632b28750186f6e6fa95))
  		Fecha: 12-03-2021 14:30:21
- -  heredar dependencias de wiremock ([6a39f51b0337de1](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6a39f51b0337de11fa1840a60e958753ba1ea925))
+ -  heredar dependencias de wiremock ([6a39f51b0337de1](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/6a39f51b0337de11fa1840a60e958753ba1ea925))
  		Fecha: 12-03-2021 10:12:34
- -  add gitmodules ([36bbde1a65a7c40](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/36bbde1a65a7c40e768e4c83d6dc7f4207c05c70))
+ -  add gitmodules ([36bbde1a65a7c40](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/36bbde1a65a7c40e768e4c83d6dc7f4207c05c70))
  		Fecha: 10-03-2021 12:05:57
- -  test ([892b05a7dcbcf58](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/892b05a7dcbcf585ade1b313b5ade5f3c21fc1c2))
+ -  test ([892b05a7dcbcf58](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/892b05a7dcbcf585ade1b313b5ade5f3c21fc1c2))
  		Fecha: 10-03-2021 11:33:50
- -  test ([a6a3484f3df0d0e](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a6a3484f3df0d0e996bceb2670b955c6ea5bbe26))
+ -  test ([a6a3484f3df0d0e](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/a6a3484f3df0d0e996bceb2670b955c6ea5bbe26))
  		Fecha: 10-03-2021 11:33:12
- -  test hook ([6c4c745f90eca18](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6c4c745f90eca186c3664c5a981f6458e966911a))
+ -  test hook ([6c4c745f90eca18](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/6c4c745f90eca186c3664c5a981f6458e966911a))
  		Fecha: 09-03-2021 14:44:04
- -  add githook ([c88db03d41a1f2a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c88db03d41a1f2ab63da1d71debf877977d1fce2))
+ -  add githook ([c88db03d41a1f2a](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/c88db03d41a1f2ab63da1d71debf877977d1fce2))
  		Fecha: 09-03-2021 14:36:10
- -  test ([6158d2fe5942e64](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6158d2fe5942e646d4839b664f7274c5749adf69))
+ -  test ([6158d2fe5942e64](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/6158d2fe5942e646d4839b664f7274c5749adf69))
  		Fecha: 09-03-2021 09:42:22
- -  .gitmodules edited online with Bitbucket ([91b0447e42044d4](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/91b0447e42044d400f03ce63d17af38a6d2b70af))
+ -  .gitmodules edited online with Bitbucket ([91b0447e42044d4](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/91b0447e42044d400f03ce63d17af38a6d2b70af))
  		Fecha: 09-03-2021 09:39:11
- -  add .gitmodules ([c67c3707bfc3b2f](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c67c3707bfc3b2f443c3cbda986154c3f15f17d7))
+ -  add .gitmodules ([c67c3707bfc3b2f](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/c67c3707bfc3b2f443c3cbda986154c3f15f17d7))
  		Fecha: 09-03-2021 09:36:08
- -  fix tests ([1f4367739e1308c](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/1f4367739e1308ccf5ff9b16585c2aa11966e664))
+ -  fix tests ([1f4367739e1308c](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/1f4367739e1308ccf5ff9b16585c2aa11966e664))
  		Fecha: 08-03-2021 13:20:31
- -  changes ([d07ec8c257eabfa](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/d07ec8c257eabfad6b62367e7401d12dcff79479))
+ -  changes ([d07ec8c257eabfa](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/d07ec8c257eabfad6b62367e7401d12dcff79479))
  		Fecha: 03-03-2021 18:22:12
- -  intermediate commit ([3e91a243e808e6b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3e91a243e808e6b336148b6fb54d578f5ea03ec5))
+ -  intermediate commit ([3e91a243e808e6b](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/3e91a243e808e6b336148b6fb54d578f5ea03ec5))
  		Fecha: 01-03-2021 06:13:29
- -  add Controller Test ([b8341f780c81a04](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b8341f780c81a04633c9a77332811dd12123d605))
+ -  add Controller Test ([b8341f780c81a04](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/b8341f780c81a04633c9a77332811dd12123d605))
  		Fecha: 27-02-2021 02:41:19
- -  changes ([66b18808ee63fa3](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/66b18808ee63fa39572f4384df9936e65b9acda0))
+ -  changes ([66b18808ee63fa3](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/66b18808ee63fa39572f4384df9936e65b9acda0))
  		Fecha: 26-02-2021 14:35:27
- -  many changes ([16037b23f27f377](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/16037b23f27f37782b582e4faf82629923a1af79))
+ -  many changes ([16037b23f27f377](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/16037b23f27f37782b582e4faf82629923a1af79))
  		Fecha: 25-02-2021 09:46:55
- -  temp commit ([c8e077ff25953fb](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c8e077ff25953fb3dfb903d375db7f7807401d88))
+ -  temp commit ([c8e077ff25953fb](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/c8e077ff25953fb3dfb903d375db7f7807401d88))
  		Fecha: 18-02-2021 16:23:20
- -  temp commit ([a01dc0d10de2d85](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a01dc0d10de2d85f76bf1d53cfe10e94882ca57d))
+ -  temp commit ([a01dc0d10de2d85](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/a01dc0d10de2d85f76bf1d53cfe10e94882ca57d))
  		Fecha: 18-02-2021 06:18:36
- -  temporal commit ([3c2bbd891d62ee5](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/3c2bbd891d62ee5a6a2e037c992472ac1735805f))
+ -  temporal commit ([3c2bbd891d62ee5](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/3c2bbd891d62ee5a6a2e037c992472ac1735805f))
  		Fecha: 17-02-2021 15:47:45
- -  many changes ([ce5c3ca5c5bdd55](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/ce5c3ca5c5bdd551fd4c74932b32cdf778f23887))
+ -  many changes ([ce5c3ca5c5bdd55](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/ce5c3ca5c5bdd551fd4c74932b32cdf778f23887))
  		Fecha: 13-02-2021 01:36:22
- -  temp build ([9a564b93292e4ae](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/9a564b93292e4aec4cf380c1f1b6c23a11d92be7))
+ -  temp build ([9a564b93292e4ae](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/9a564b93292e4aec4cf380c1f1b6c23a11d92be7))
  		Fecha: 10-02-2021 21:09:50
- -  regularice yaml files ([b711b0bfc6a687a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/b711b0bfc6a687a9c660df39b91e5916c02ad2d1))
+ -  regularice yaml files ([b711b0bfc6a687a](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/b711b0bfc6a687a9c660df39b91e5916c02ad2d1))
  		Fecha: 01-02-2021 10:55:53
- -  ejemplo de llamada a servicio remoto ([dffcca92733afd7](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/dffcca92733afd75b592e8dec87879acc87c014a))
+ -  ejemplo de llamada a servicio remoto ([dffcca92733afd7](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/dffcca92733afd75b592e8dec87879acc87c014a))
  		Fecha: 02-12-2020 07:02:00
- -  add default test ([8b5f9f408ea72f9](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/8b5f9f408ea72f9bbb3484a2455431efa417f126))
+ -  add default test ([8b5f9f408ea72f9](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/8b5f9f408ea72f9bbb3484a2455431efa417f126))
  		Fecha: 27-11-2020 08:41:34
- -  remove unussed anottions ([6ffb19bacde7f6d](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/6ffb19bacde7f6df366ac94c536d94de247a271b))
+ -  remove unussed anottions ([6ffb19bacde7f6d](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/6ffb19bacde7f6df366ac94c536d94de247a271b))
  		Fecha: 26-11-2020 08:35:25
- -  add mapstruct test ([738f56da888d804](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/738f56da888d8041459df0c3f4164bc86ecab60a))
+ -  add mapstruct test ([738f56da888d804](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/738f56da888d8041459df0c3f4164bc86ecab60a))
  		Fecha: 25-11-2020 20:06:09
- -  fix tabs ([94e7ec3dea55932](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/94e7ec3dea55932e478c93da08f10604503d3172))
+ -  fix tabs ([94e7ec3dea55932](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/94e7ec3dea55932e478c93da08f10604503d3172))
  		Fecha: 24-11-2020 21:29:56
- -  remove tabs ([4fe4f7ade1ca8c8](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/4fe4f7ade1ca8c82cd8f9427e28566e316dfcb3e))
+ -  remove tabs ([4fe4f7ade1ca8c8](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/4fe4f7ade1ca8c82cd8f9427e28566e316dfcb3e))
  		Fecha: 24-11-2020 20:58:13
- -  enable UTF-8 check for devops ([eb98bc4defabd7b](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/eb98bc4defabd7b209fbd0cffdd1cd23a4ea1a3c))
+ -  enable UTF-8 check for devops ([eb98bc4defabd7b](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/eb98bc4defabd7b209fbd0cffdd1cd23a4ea1a3c))
  		Fecha: 24-11-2020 20:38:35
- -  add micrometer property; remove properties by monitoring.properties ([a6086711997cde6](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/a6086711997cde6600fae638f0c38d46a673e2af))
+ -  add micrometer property; remove properties by monitoring.properties ([a6086711997cde6](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/a6086711997cde6600fae638f0c38d46a673e2af))
  		Fecha: 24-11-2020 20:37:58
- -  reubicar propiedades expandibles ([050ac55453945d2](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/050ac55453945d2892b81b9dd89af9745c89615f))
+ -  reubicar propiedades expandibles ([050ac55453945d2](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/050ac55453945d2892b81b9dd89af9745c89615f))
  		Fecha: 23-11-2020 16:50:29
- -  eliminar codigo innecesario ([82725c381e71de3](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/82725c381e71de3ab742edfc989c295eb558b018))
+ -  eliminar codigo innecesario ([82725c381e71de3](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/82725c381e71de3ab742edfc989c295eb558b018))
  		Fecha: 23-11-2020 13:36:39
- -  Revision dependencias k8s ([12b3fa22f68f5e9](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/12b3fa22f68f5e94b1db9a542a2f5a1be71b3aea))
+ -  Revision dependencias k8s ([12b3fa22f68f5e9](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/12b3fa22f68f5e94b1db9a542a2f5a1be71b3aea))
  		Fecha: 23-11-2020 13:27:55
- -  configuracion multidatasource ([7bc66e835c44939](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/7bc66e835c4493995e8363d2906b5810554892ce))
+ -  configuracion multidatasource ([7bc66e835c44939](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/7bc66e835c4493995e8363d2906b5810554892ce))
  		Fecha: 12-11-2020 17:04:08
- -  reactivar MapStruct ([db656cbccbd389a](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/db656cbccbd389af6624cbc5c1fd3234cf68b980))
+ -  reactivar MapStruct ([db656cbccbd389a](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/db656cbccbd389af6624cbc5c1fd3234cf68b980))
  		Fecha: 27-10-2020 15:20:01
- -  changes ([02e3942a5521e53](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/02e3942a5521e53eeffb6f22738ab05d14264f6e))
+ -  changes ([02e3942a5521e53](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/02e3942a5521e53eeffb6f22738ab05d14264f6e))
  		Fecha: 07-10-2020 07:44:40
- -  test3 ([c0b9bafdf788621](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c0b9bafdf788621d671ab1cf594af054ec8f9e61))
+ -  test3 ([c0b9bafdf788621](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/c0b9bafdf788621d671ab1cf594af054ec8f9e61))
  		Fecha: 05-10-2020 12:24:41
- -  test ([534b100d09833b8](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/534b100d09833b8dd118f6b0c80518fc7942e3c1))
+ -  test ([534b100d09833b8](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/534b100d09833b8dd118f6b0c80518fc7942e3c1))
  		Fecha: 05-10-2020 10:55:04
- -  incorporar tracing ([72e74f7d933e828](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/72e74f7d933e828475afd67bd9bdac9524b5ec7a))
+ -  incorporar tracing ([72e74f7d933e828](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/72e74f7d933e828475afd67bd9bdac9524b5ec7a))
  		Fecha: 22-09-2020 14:17:26
- -  disable debug traces ([0dd9083adee87fc](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/0dd9083adee87fccc76b3e97475af58eabefdd14))
+ -  disable debug traces ([0dd9083adee87fc](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/0dd9083adee87fccc76b3e97475af58eabefdd14))
  		Fecha: 04-08-2020 11:40:26
- -  test ([f64c393324c7ed5](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/f64c393324c7ed539e5264c0ecff8a6dd924310c))
+ -  test ([f64c393324c7ed5](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/f64c393324c7ed539e5264c0ecff8a6dd924310c))
  		Fecha: 04-08-2020 11:28:11
- -  gitignore ([de5705e628852fd](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/de5705e628852fd7620e52b402a33c13e5db547b))
+ -  gitignore ([de5705e628852fd](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/de5705e628852fd7620e52b402a33c13e5db547b))
  		Fecha: 30-07-2020 18:04:51
- -  a ([c48d945cc16e818](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/c48d945cc16e818a52319eb4841bfaea5ec3f4a8))
+ -  a ([c48d945cc16e818](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/c48d945cc16e818a52319eb4841bfaea5ec3f4a8))
  		Fecha: 30-07-2020 17:39:19
- -  Merge branch 'master' into develop ([5f9ce7f13e5dd18](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/5f9ce7f13e5dd18dd93414c32b6af92b7010aa7a))
+ -  Merge branch 'master' into develop ([5f9ce7f13e5dd18](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/5f9ce7f13e5dd18dd93414c32b6af92b7010aa7a))
  		Fecha: 30-07-2020 17:19:44
- -  add checkstyle ([35bcf27a0c7d495](https://git.santalucia.net/projects/slarqsofamsback/repos/example-app-11/commits/35bcf27a0c7d4953a25387657353dee476738a7e))
+ -  add checkstyle ([35bcf27a0c7d495](https://git.santalucia.net/projects/actraiser2/repos/example-11/commits/35bcf27a0c7d4953a25387657353dee476738a7e))
  		Fecha: 30-07-2020 16:37:22

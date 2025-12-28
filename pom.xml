@@ -4,7 +4,7 @@
   <parent>
     <groupId>com.santalucia.arq.ams</groupId>
     <artifactId>ams-parent-sl-sw</artifactId>
-    <version>3.1.0-SNAPSHOT</version>
+    <version>3.0.0-RELEASE</version>
     <relativePath />
   </parent>
   <groupId>com.santalucia.example</groupId>
@@ -12,7 +12,7 @@
   <version>3.0.1-SNAPSHOT</version>
   <name>example-app-11</name>
   <description>Demo project for Spring Boot</description>
-  <url>https://git.santalucia.net/scm/slarqsofamsback/example-app-11.git</url>
+  <url>https://github.com/actraiser2/example-11.git</url>
   <organization>
     <name>Santalucia Seguros</name>
     <url>https://www.santalucia.es/</url>
@@ -54,6 +54,7 @@
     </notifiers>
   </ciManagement>
   <properties>
+    <enforcer.check.aot.skip>false</enforcer.check.aot.skip>
     <repositorio-documental-java-21-feign-api-client.version>1.5.0-SNAPSHOT</repositorio-documental-java-21-feign-api-client.version>
     <skip.it>true</skip.it>
     <surfire.output.skip>false</surfire.output.skip>
@@ -61,7 +62,6 @@
     <swagger.codegen.package>${project.groupId}</swagger.codegen.package>
     <swagger.codegen.skip.client>true</swagger.codegen.skip.client>
     <swagger.codegen.skip.server>false</swagger.codegen.skip.server>
-    <enforcer.check.aot.skip>false</enforcer.check.aot.skip>
   </properties>
   <dependencies>
     <dependency>
@@ -136,11 +136,6 @@
       <artifactId>spring-boot-devtools</artifactId>
       <scope>runtime</scope>
       <optional>true</optional>
-    </dependency>
-    
-   <dependency>
-      <groupId>com.santalucia.arq.ams.cloud</groupId>
-      <artifactId>ams-spring-cloud-kubernetes-loadbalancer</artifactId>
     </dependency>
     <dependency>
       <groupId>com.santalucia.arq.ams</groupId>
